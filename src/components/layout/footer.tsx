@@ -18,16 +18,16 @@ export default function Footer() {
 
     const footerLinks = {
         platform: [
-            { name: "How it works", href: "#como-funciona" },
-            { name: "Our services", href: "#servicos" },
-            { name: "Plans & pricing", href: "#planos" },
-            { name: "Locations", href: "#localizacao" }
+            { name: "How it works", href: "/#como-funciona" },
+            { name: "Our services", href: "/#servicos" },
+            { name: "Plans & pricing", href: "/#planos" },
+            { name: "Locations", href: "/#localizacao" }
         ],
         support: [
-            { name: "Help center", href: "#ajuda" },
-            { name: "Contact us", href: "#contato" },
-            { name: "WhatsApp", href: "#whatsapp" },
-            { name: "Platform status", href: "#status" }
+            { name: "Help center", href: "/#ajuda" },
+            { name: "Contact us", href: "/#contato" },
+            { name: "WhatsApp", href: "/#whatsapp" },
+            { name: "Platform status", href: "/#status" }
         ],
         company: [
             { name: "About us", href: "/info/about" },
@@ -44,9 +44,9 @@ export default function Footer() {
     };
 
     const socialLinks = [
-        { name: "Instagram", icon: Instagram, href: "#instagram" },
-        { name: "Facebook", icon: Facebook, href: "#facebook" },
-        { name: "Twitter", icon: Twitter, href: "#twitter" }
+        { name: "Instagram", icon: Instagram, href: "/#instagram" },
+        { name: "Facebook", icon: Facebook, href: "/#facebook" },
+        { name: "Twitter", icon: Twitter, href: "/#twitter" }
     ];
 
     return (

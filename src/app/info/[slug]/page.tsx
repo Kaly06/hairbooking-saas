@@ -27,6 +27,16 @@ const icons: Record<string, LucideIcon> = {
     "data-protection": ShieldCheck,
 };
 
+const siteLinks = [
+    { name: "Home", href: "/#inicio" },
+    { name: "About", href: "/#sobre" },
+    { name: "Features", href: "/#servicos" },
+    { name: "Plans", href: "/#planos" },
+    { name: "Testimonials", href: "/#depoimentos" },
+    { name: "FAQ", href: "/#faq" },
+    { name: "Contact", href: "/#contato" },
+];
+
 export function generateStaticParams() {
     return infoPages.map((page) => ({ slug: page.slug }));
 }
@@ -46,12 +56,19 @@ export default async function InfoPage({ params }: { params: Promise<{ slug: str
                     <Link href="/" className="font-extrabold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         HairBooking
                     </Link>
+                    <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
+                        {siteLinks.map((item) => (
+                            <Link key={item.href} href={item.href} className="hover:text-purple-700 transition-colors">
+                                {item.name}
+                            </Link>
+                        ))}
+                    </nav>
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-purple-700 transition-colors"
+                        className="md:hidden inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-purple-700 transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to home
+                        Home
                     </Link>
                 </div>
             </header>
