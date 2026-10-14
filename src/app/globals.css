@@ -140,9 +140,9 @@ img {
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #a5b4fc;
   background-color: white;
-  color: #0a0a0a;
+  color: #4338ca;
   height: 2.75rem;
   padding: 0 1.5rem;
   cursor: pointer;
@@ -426,4 +426,61 @@ textarea:focus {
 .text-spotlight:hover::before {
   left: 100%;
   transition: left 1s ease-out;
+}
+/* ---------------------------------------------------------------
+   Brand theme: blue → purple gradient across the whole site.
+   Remaps the monochrome neutral utilities to the brand palette.
+   Body text and white cards keep their colours for readability.
+   --------------------------------------------------------------- */
+.bg-black,
+.bg-gray-800,
+.bg-gray-900,
+.bg-neutral-900 {
+  background: var(--brand-gradient);
+}
+
+h1.text-gray-900,
+h2.text-gray-900,
+h3.text-gray-900,
+h1.text-black,
+h2.text-black,
+h3.text-black {
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gray-900,
+.text-black {
+  color: #312e81;
+}
+
+.bg-gray-50 {
+  background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+}
+
+.bg-gray-100 {
+  background: #f5f3ff;
+}
+
+.bg-gray-200 {
+  background: #e0e7ff;
+}
+
+.border-gray-100,
+.border-gray-200,
+.border-gray-300,
+.border-gray-400 {
+  border-color: #c7d2fe;
+}
+
+.border-black,
+.border-gray-900 {
+  border-color: #7c3aed;
+}
+
+.ring-black,
+.ring-gray-900 {
+  --tw-ring-color: #7c3aed;
 }
