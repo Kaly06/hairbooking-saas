@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-start: #2563eb;
+  --brand-end: #7c3aed;
+  --brand-gradient: linear-gradient(90deg, var(--brand-start), var(--brand-end));
   --primary: #0a0a0a;
   --primary-foreground: #fafafa;
   --secondary: #f5f5f5;
@@ -102,7 +105,7 @@ img {
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
-  background-color: #0a0a0a;
+  background: var(--brand-gradient);
   color: white;
   height: 2.75rem;
   padding: 0 1.5rem;
@@ -120,7 +123,7 @@ img {
 }
 
 .btn-primary:hover {
-  background-color: #171717;
+  filter: brightness(1.08);
   transform: translateY(-1px);
 }
 
@@ -190,7 +193,7 @@ img {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #171717, #525252);
+  background: var(--brand-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -359,11 +362,11 @@ textarea:focus {
   position: relative;
   display: block;
   background: linear-gradient(90deg,
-      #6b7280 0%,
-      #6b7280 35%,
-      #000000 50%,
-      #6b7280 65%,
-      #6b7280 100%);
+      #2563eb 0%,
+      #2563eb 35%,
+      #7c3aed 50%,
+      #2563eb 65%,
+      #2563eb 100%);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -374,11 +377,11 @@ textarea:focus {
 
 .gradient-follow-text:hover {
   background: linear-gradient(90deg,
-      #6b7280 0%,
-      #000000 25%,
-      #ffffff 50%,
-      #000000 75%,
-      #6b7280 100%);
+      #2563eb 0%,
+      #7c3aed 25%,
+      #c4b5fd 50%,
+      #7c3aed 75%,
+      #2563eb 100%);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;

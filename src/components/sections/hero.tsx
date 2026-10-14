@@ -30,10 +30,10 @@ export default function Hero() {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900">
                                 <span className="animate-title-word">Modernize</span>{' '}
                                 <span className="animate-title-word">your</span>{' '}
-                                <span className="animate-title-word gradient-word bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">salon</span>{' '}
+                                <span className="animate-title-word gradient-word bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">salon</span>{' '}
                                 <span className="animate-title-word">with</span>{' '}
                                 <span className="animate-title-word">our</span>{' '}
-                                <span className="animate-title-word gradient-word bg-gradient-to-r from-gray-700 via-black to-gray-700 bg-clip-text text-transparent">platform</span>
+                                <span className="animate-title-word gradient-word bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">platform</span>
                             </h1>
 
                             <MouseFollowText
