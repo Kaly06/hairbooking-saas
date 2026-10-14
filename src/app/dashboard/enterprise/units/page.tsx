@@ -21,7 +21,7 @@ export default function EnterpriseUnitsPage() {
                             New Branch
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Report Consolidado
+                            Report Consolidated
                         </button>
                     </div>
                 </div>
@@ -318,7 +318,7 @@ export default function EnterpriseUnitsPage() {
                                     Analysis of Mercado
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
-                                    Configurar Metas
+                                    Set targets
                                 </button>
                             </div>
                         </div>

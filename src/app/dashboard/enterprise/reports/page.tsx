@@ -37,7 +37,7 @@ export default function EnterpriseReportsPage() {
                                     <p className="text-2xl font-bold text-gray-900">{formatUSD(5240000)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
-                                        <span className="text-sm text-green-600">+24.7% vs ano anterior</span>
+                                        <span className="text-sm text-green-600">+24.7% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function EnterpriseReportsPage() {
                                     <p className="text-2xl font-bold text-gray-900">98.547</p>
                                     <div className="flex items-center mt-1">
                                         <Users className="h-3 w-3 text-blue-500 mr-1" />
-                                        <span className="text-sm text-blue-600">+18.3% vs ano anterior</span>
+                                        <span className="text-sm text-blue-600">+18.3% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -73,7 +73,7 @@ export default function EnterpriseReportsPage() {
                                     <p className="text-2xl font-bold text-purple-600">87</p>
                                     <div className="flex items-center mt-1">
                                         <Target className="h-3 w-3 text-purple-500 mr-1" />
-                                        <span className="text-sm text-purple-600">Excelente qualidade</span>
+                                        <span className="text-sm text-purple-600">Excellent quality</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -91,7 +91,7 @@ export default function EnterpriseReportsPage() {
                                     <p className="text-2xl font-bold text-orange-600">84.2%</p>
                                     <div className="flex items-center mt-1">
                                         <Clock className="h-3 w-3 text-orange-500 mr-1" />
-                                        <span className="text-sm text-orange-600">+6.1% vs ano anterior</span>
+                                        <span className="text-sm text-orange-600">+6.1% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -116,7 +116,7 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">DRE Consolidado</p>
+                                        <p className="font-medium text-green-900">Consolidated P&L</p>
                                         <p className="text-sm text-green-700">Income statement by branch</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
@@ -136,8 +136,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">Margin por Service</p>
-                                        <p className="text-sm text-green-700">Analysis of rentabilidade detalhada</p>
+                                        <p className="font-medium text-green-900">Margin by service</p>
+                                        <p className="text-sm text-green-700">Detailed profitability analysis</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
                                 </div>
@@ -146,7 +146,7 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">ROI por Branch</p>
+                                        <p className="font-medium text-green-900">ROI by branch</p>
                                         <p className="text-sm text-green-700">Return on investment</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
@@ -197,7 +197,7 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-blue-900">Efficiency por Branch</p>
+                                        <p className="font-medium text-blue-900">Efficiency by branch</p>
                                         <p className="text-sm text-blue-700">Performance comparison</p>
                                     </div>
                                     <Download className="h-4 w-4 text-blue-600" />
@@ -288,7 +288,7 @@ export default function EnterpriseReportsPage() {
                                     </div>
                                     <div className="text-center p-3 bg-purple-50 rounded-lg">
                                         <p className="text-lg font-bold text-purple-600">+15.7%</p>
-                                        <p className="text-xs text-gray-600">Crescimento</p>
+                                        <p className="text-xs text-gray-600">Growth</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +304,7 @@ export default function EnterpriseReportsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
-                                        <span className="text-sm">Fidelidade Alta (8+ visitas/ano)</span>
+                                        <span className="text-sm">High loyalty (8+ visits/year)</span>
                                         <span className="font-medium text-blue-600">42.3%</span>
                                     </div>
                                     <div className="flex justify-between items-center p-2 bg-green-50 rounded">
@@ -312,7 +312,7 @@ export default function EnterpriseReportsPage() {
                                         <span className="font-medium text-green-600">35.7%</span>
                                     </div>
                                     <div className="flex justify-between items-center p-2 bg-orange-50 rounded">
-                                        <span className="text-sm">Fidelidade Baixa (1-3 visitas/ano)</span>
+                                        <span className="text-sm">Low loyalty (1-3 visits/year)</span>
                                         <span className="font-medium text-orange-600">22.0%</span>
                                     </div>
                                 </div>
@@ -482,7 +482,7 @@ export default function EnterpriseReportsPage() {
                                         <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                                         <div>
                                             <p className="font-medium text-green-900">Positive Trend</p>
-                                            <p className="text-sm text-green-700">VIP clients grew 45% in the last 3 months. Consider a program de fidelidade premium.</p>
+                                            <p className="text-sm text-green-700">VIP clients grew 45% in the last 3 months. Consider a premium loyalty program.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -492,7 +492,7 @@ export default function EnterpriseReportsPage() {
                                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
                                         <div>
                                             <p className="font-medium text-orange-900">Seasonality alert</p>
-                                            <p className="text-sm text-orange-700">December historically sees a drop of 15%. Planejar campanhas promocionais.</p>
+                                            <p className="text-sm text-orange-700">December historically sees a drop of 15%. Plan promotional campaigns.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -516,7 +516,7 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <FileText className="h-5 w-5 text-purple-600" />
-                            Construtor de Reports Personalizado
+                            Construtor de Reports Custom
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -525,7 +525,7 @@ export default function EnterpriseReportsPage() {
                                 <h4 className="font-semibold text-gray-900">Available Dimensions</h4>
                                 <div className="grid grid-cols-2 gap-2">
                                     {[
-                                        "Tempo", "Branch", "Professional", "Service",
+                                        "Time", "Branch", "Professional", "Service",
                                         "Client", "Payment Method", "Time", "Day of the Week",
                                         "Product", "Category", "Promotion", "Acquisition Channel"
                                     ].map((dimension) => (
@@ -555,7 +555,7 @@ export default function EnterpriseReportsPage() {
                         <div className="mt-6 pt-6 border-t border-gray-200">
                             <div className="flex gap-3">
                                 <button className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                                    Create Report Personalizado
+                                    Create Report Custom
                                 </button>
                                 <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     Save Template

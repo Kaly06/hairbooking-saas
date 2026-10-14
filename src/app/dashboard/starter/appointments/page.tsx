@@ -25,7 +25,7 @@ export default function StarterAppointments() {
     const appointments = [
         {
             id: 1,
-            client: "Maria Silva",
+            client: "Akosua Frimpong",
             phone: "+233 24 999 1234",
             service: "Haircut + Escova",
             date: "2025-11-05",
@@ -34,11 +34,11 @@ export default function StarterAppointments() {
             price: "$20",
             status: "confirmed",
             professional: "Ana",
-            notes: "Client regular, prefere corte em camadas"
+            notes: "Regular client, prefers layered cut"
         },
         {
             id: 2,
-            client: "João Santos",
+            client: "Kofi Boateng",
             phone: "+233 24 888 5678",
             service: "Men's Haircut",
             date: "2025-11-05",
@@ -51,7 +51,7 @@ export default function StarterAppointments() {
         },
         {
             id: 3,
-            client: "Ana Costa",
+            client: "Abena Ofori",
             phone: "+233 24 777 9012",
             service: "Coloring",
             date: "2025-11-05",
@@ -64,9 +64,9 @@ export default function StarterAppointments() {
         },
         {
             id: 4,
-            client: "Pedro Lima",
+            client: "Yaw Addo",
             phone: "+233 24 666 3456",
-            service: "Barba",
+            service: "Beard",
             date: "2025-11-05",
             time: "15:30",
             duration: "30min",
@@ -77,7 +77,7 @@ export default function StarterAppointments() {
         },
         {
             id: 5,
-            client: "Carla Souza",
+            client: "Efua Mensah",
             phone: "+233 24 555 7890",
             service: "Hair Treatment",
             date: "2025-11-06",
@@ -86,7 +86,7 @@ export default function StarterAppointments() {
             price: "$13",
             status: "confirmed",
             professional: "Ana",
-            notes: "Cabelo muito ressecado"
+            notes: "Very dry hair"
         }
     ];
 

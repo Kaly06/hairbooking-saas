@@ -5,18 +5,18 @@ import { Star } from "lucide-react";
 export default function Testimonials() {
     const testimonials = [
         {
-            name: "Marina Silva",
+            name: "Abena Owusu",
             business: "Bella Hair Studio",
             text: "A practical system that organized our schedule. Clients love the online booking."
         },
         {
-            name: "Carlos Montenegro", 
-            business: "Barbearia Montenegro",
+            name: "Kojo Mensah", 
+            business: "Kojo's Barbershop",
             text: "The custom app brought real professionalism. Highly recommended."
         },
         {
-            name: "Ana Paula Ribeiro",
-            business: "Studio Ana Paula", 
+            name: "Adwoa Sarpong",
+            business: "Studio Adwoa", 
             text: "Revenue went up 40%. The reports help a lot."
         }
     ];

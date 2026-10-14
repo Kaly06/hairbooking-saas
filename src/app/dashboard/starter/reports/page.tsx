@@ -30,7 +30,7 @@ export default function StarterReports() {
     };
 
     const serviceData = [
-        { name: "Haircut Feminino", quantity: 45, revenue: 2700, percentage: 32 },
+        { name: "Women's haircut", quantity: 45, revenue: 2700, percentage: 32 },
         { name: "Men's Haircut", quantity: 38, revenue: 1710, percentage: 24 },
         { name: "Coloring", quantity: 22, revenue: 1980, percentage: 23 },
         { name: "Escova", quantity: 28, revenue: 840, percentage: 10 },
@@ -38,9 +38,9 @@ export default function StarterReports() {
     ];
 
     const professionalData = [
-        { name: "Ana Silva", appointments: 52, revenue: 3120, rating: 4.8 },
-        { name: "Carlos Santos", appointments: 47, revenue: 2350, rating: 4.6 },
-        { name: "Maria Costa", appointments: 41, revenue: 2980, rating: 4.9 }
+        { name: "Ama Owusu", appointments: 52, revenue: 3120, rating: 4.8 },
+        { name: "Kwesi Asare", appointments: 47, revenue: 2350, rating: 4.6 },
+        { name: "Akua Darko", appointments: 41, revenue: 2980, rating: 4.9 }
     ];
 
     const weeklyAppointments = [
@@ -181,7 +181,7 @@ export default function StarterReports() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Weekly Appointments Chart */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Bookings por Day of the Week</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Bookings by day of the week</h3>
                         <div className="space-y-4">
                             {weeklyAppointments.map((day, index) => (
                                 <div key={index} className="flex items-center">
@@ -230,7 +230,7 @@ export default function StarterReports() {
                 {/* Professional Performance */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
-                        <h3 className="text-lg font-medium text-gray-900">Performance dos Professionals</h3>
+                        <h3 className="text-lg font-medium text-gray-900">Professional performance</h3>
                     </div>
                     <div className="p-6">
                         <div className="overflow-x-auto">

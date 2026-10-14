@@ -117,7 +117,7 @@ export default function EnterpriseClientsPage() {
                                     <option>Airport Residential Branch</option>
                                 </select>
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                    <option>All os segmentos</option>
+                                    <option>All segments</option>
                                     <option>VIP</option>
                                     <option>Frequentes</option>
                                     <option>Ocasionais</option>
@@ -125,7 +125,7 @@ export default function EnterpriseClientsPage() {
                                 </select>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     <Filter className="h-4 w-4 inline mr-2" />
-                                    Mais Filters
+                                    More filters
                                 </button>
                             </div>
                         </div>
@@ -248,13 +248,13 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Maria Silva Santos</h4>
+                                            <h4 className="font-semibold text-gray-900">Akosua Frimpong</h4>
                                             <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">VIP</span>
                                         </div>
                                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                                             <div className="flex items-center gap-1">
                                                 <Mail className="h-4 w-4" />
-                                                maria.silva@email.com
+                                                akosua.frimpong@email.com
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
@@ -286,13 +286,13 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">João Santos</h4>
+                                            <h4 className="font-semibold text-gray-900">Kofi Boateng</h4>
                                             <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Frequente</span>
                                         </div>
                                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                                             <div className="flex items-center gap-1">
                                                 <Mail className="h-4 w-4" />
-                                                joao.santos@email.com
+                                                kofi.boateng@email.com
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
@@ -324,13 +324,13 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Carla Oliveira</h4>
+                                            <h4 className="font-semibold text-gray-900">Grace Oppong</h4>
                                             <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Ocasional</span>
                                         </div>
                                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                                             <div className="flex items-center gap-1">
                                                 <Mail className="h-4 w-4" />
-                                                carla.oliveira@email.com
+                                                grace.oppong@email.com
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
@@ -362,13 +362,13 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Pedro Costa</h4>
+                                            <h4 className="font-semibold text-gray-900">Yaw Darko</h4>
                                             <span className="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Inactive</span>
                                         </div>
                                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                                             <div className="flex items-center gap-1">
                                                 <Mail className="h-4 w-4" />
-                                                pedro.costa@email.com
+                                                yaw.darko@email.com
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
@@ -396,7 +396,7 @@ export default function EnterpriseClientsPage() {
 
                         <div className="mt-6 text-center">
                             <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                Carregar Mais Clients
+                                Load more clients
                             </button>
                         </div>
                     </CardContent>

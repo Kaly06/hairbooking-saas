@@ -45,7 +45,7 @@ export default function EnterpriseSecurityPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Tentativas Bloqueadas</p>
+                                    <p className="text-sm font-medium text-gray-600">Blocked attempts</p>
                                     <p className="text-2xl font-bold text-red-600">47</p>
                                     <p className="text-sm text-gray-500 mt-1">Last 24h</p>
                                 </div>
@@ -62,7 +62,7 @@ export default function EnterpriseSecurityPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Active Sessions</p>
                                     <p className="text-2xl font-bold text-blue-600">284</p>
-                                    <p className="text-sm text-gray-500 mt-1">Multi-dispositivo</p>
+                                    <p className="text-sm text-gray-500 mt-1">Multi-device</p>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                                     <Users className="h-6 w-6 text-blue-600" />
@@ -94,7 +94,7 @@ export default function EnterpriseSecurityPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <UserCheck className="h-5 w-5 text-purple-600" />
-                                Management de Acesso
+                                Access management
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
@@ -121,7 +121,7 @@ export default function EnterpriseSecurityPage() {
                                             <Settings className="h-5 w-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <p className="font-medium">Gerentes</p>
+                                            <p className="font-medium">Managers</p>
                                             <p className="text-sm text-gray-600">Branch management</p>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@ export default function EnterpriseSecurityPage() {
                                         </div>
                                         <div>
                                             <p className="font-medium">Staff</p>
-                                            <p className="text-sm text-gray-600">Acesso operacional</p>
+                                            <p className="text-sm text-gray-600">Operational access</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -180,7 +180,7 @@ export default function EnterpriseSecurityPage() {
 
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <p className="font-medium">Login por Biometria</p>
+                                        <p className="font-medium">Biometric login</p>
                                         <p className="text-sm text-gray-600">Mobile biometric authentication</p>
                                     </div>
                                     <div className="flex items-center">
@@ -204,7 +204,7 @@ export default function EnterpriseSecurityPage() {
 
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <p className="font-medium">Bloqueio por Tentativas</p>
+                                        <p className="font-medium">Lockout after attempts</p>
                                         <p className="text-sm text-gray-600">5 tentativas incorretas</p>
                                     </div>
                                     <div className="flex items-center">
@@ -255,7 +255,7 @@ export default function EnterpriseSecurityPage() {
                                 <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                                        <span className="text-sm font-medium">Acesso Negado</span>
+                                        <span className="text-sm font-medium">Access denied</span>
                                     </div>
                                     <span className="text-xs text-gray-500">3h ago</span>
                                 </div>
@@ -389,7 +389,7 @@ export default function EnterpriseSecurityPage() {
                                     <Eye className="h-5 w-5 text-yellow-600" />
                                     <div>
                                         <p className="font-medium text-yellow-800">Multiple simultaneous logins</p>
-                                        <p className="text-sm text-yellow-600">User: maria.silva@empresa.com</p>
+                                        <p className="text-sm text-yellow-600">User: akosua.frimpong@empresa.com</p>
                                     </div>
                                 </div>
                                 <div className="text-right text-sm text-yellow-600">
@@ -416,7 +416,7 @@ export default function EnterpriseSecurityPage() {
                                 <div className="flex items-center gap-3">
                                     <UserCheck className="h-5 w-5 text-green-600" />
                                     <div>
-                                        <p className="font-medium text-green-800">Certificado SSL renovado</p>
+                                        <p className="font-medium text-green-800">SSL certificate renewed</p>
                                         <p className="text-sm text-green-600">Valid until 15/03/2025</p>
                                     </div>
                                 </div>

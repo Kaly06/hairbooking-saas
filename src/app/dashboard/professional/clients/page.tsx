@@ -39,8 +39,8 @@ export default function ProfessionalClients() {
     const clients = [
         {
             id: 1,
-            name: "Maria Santos",
-            email: "maria.santos@email.com",
+            name: "Akua Adjei",
+            email: "akua.adjei@email.com",
             phone: "+233 24 999 0001",
             address: "Cantonments Road, 123 - Cantonments, Accra",
             birthDate: "1985-05-15",
@@ -51,7 +51,7 @@ export default function ProfessionalClients() {
             averageTicket: 180,
             lastVisit: "2024-01-10",
             nextAppointment: "2024-01-20",
-            preferredProfessional: "Ana Silva",
+            preferredProfessional: "Ama Owusu",
             favoriteServices: ["Haircut + Coloring", "Hair Treatment"],
             rating: 4.9,
             segment: "premium",
@@ -64,8 +64,8 @@ export default function ProfessionalClients() {
         },
         {
             id: 2,
-            name: "João Silva",
-            email: "joao.silva@email.com",
+            name: "Kwame Mensah",
+            email: "kwame.mensah@email.com",
             phone: "+233 24 999 0002",
             address: "Labone Crescent, 456 - Labone, Accra",
             birthDate: "1990-08-22",
@@ -76,21 +76,21 @@ export default function ProfessionalClients() {
             averageTicket: 35,
             lastVisit: "2024-01-05",
             nextAppointment: null,
-            preferredProfessional: "Carlos Santos",
+            preferredProfessional: "Kwesi Asare",
             favoriteServices: ["Men's Haircut"],
             rating: 4.5,
             segment: "standard",
             loyaltyPoints: 28,
             referrals: 0,
             socialMedia: null,
-            notes: "Client pontual. Gosta de conversar sobre futebol.",
+            notes: "Punctual client. Enjoys talking about football.",
             marketingConsent: false,
             communicationPreference: "phone"
         },
         {
             id: 3,
-            name: "Ana Costa",
-            email: "ana.costa@email.com",
+            name: "Abena Ofori",
+            email: "abena.ofori@email.com",
             phone: "+233 24 999 0003",
             address: "Liberation Road, 789 - Airport Residential, Accra",
             birthDate: "1992-12-03",
@@ -101,7 +101,7 @@ export default function ProfessionalClients() {
             averageTicket: 190,
             lastVisit: "2024-01-08",
             nextAppointment: "2024-01-18",
-            preferredProfessional: "Maria Costa",
+            preferredProfessional: "Akua Darko",
             favoriteServices: ["Escova Progressiva"],
             rating: 5.0,
             segment: "potential_vip",
@@ -132,13 +132,13 @@ export default function ProfessionalClients() {
             name: "Premium VIP",
             count: clients.filter(c => c.segment === "premium").length,
             color: "bg-purple-100 text-purple-800",
-            description: "Clients de alto valor com gastos > $500"
+            description: "High-value clients spending > $500"
         },
         {
             name: "VIP Potencial",
             count: clients.filter(c => c.segment === "potential_vip").length,
             color: "bg-blue-100 text-blue-800",
-            description: "Clients promissores com potencial de growth"
+            description: "Promising clients with growth potential"
         },
         {
             name: "Standard",
@@ -147,10 +147,10 @@ export default function ProfessionalClients() {
             description: "Regular clients with stable frequency"
         },
         {
-            name: "Em Risco",
+            name: "At risk",
             count: 0,
             color: "bg-red-100 text-red-800",
-            description: "Clients com risco de churn"
+            description: "Clients at risk of churn"
         }
     ];
 
@@ -335,7 +335,7 @@ export default function ProfessionalClients() {
                             onChange={(e) => setStatusFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">All os Status</option>
+                            <option value="all">All statuses</option>
                             <option value="new">New</option>
                             <option value="regular">Regular</option>
                             <option value="vip">VIP</option>
@@ -347,7 +347,7 @@ export default function ProfessionalClients() {
                             onChange={(e) => setSegmentFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">All os Segmentos</option>
+                            <option value="all">All segments</option>
                             <option value="premium">Premium VIP</option>
                             <option value="potential_vip">VIP Potencial</option>
                             <option value="standard">Standard</option>

@@ -73,16 +73,16 @@ export default function ProfessionalDashboard() {
     ];
 
     const recentAppointments = [
-        { id: 1, client: "Maria Silva", service: "Haircut + Escova + Coloring", time: "09:00", value: "$30", status: "completed", professional: "Ana" },
-        { id: 2, client: "João Santos", service: "Men's Haircut Premium", time: "10:30", value: "$11", status: "completed", professional: "Carlos" },
-        { id: 3, client: "Ana Costa", service: "Coloring + Tratamento", time: "14:00", value: "$37", status: "confirmed", professional: "Maria" },
-        { id: 4, client: "Pedro Lima", service: "Barba + Haircut", time: "15:30", value: "$14", status: "pending", professional: "Carlos" },
-        { id: 5, client: "Carla Souza", service: "Hair Treatment Premium", time: "16:00", value: "$20", status: "confirmed", professional: "Ana" }
+        { id: 1, client: "Akosua Frimpong", service: "Haircut + Escova + Coloring", time: "09:00", value: "$30", status: "completed", professional: "Ana" },
+        { id: 2, client: "Kofi Boateng", service: "Men's Haircut Premium", time: "10:30", value: "$11", status: "completed", professional: "Carlos" },
+        { id: 3, client: "Abena Ofori", service: "Coloring + Tratamento", time: "14:00", value: "$37", status: "confirmed", professional: "Maria" },
+        { id: 4, client: "Yaw Addo", service: "Beard + Haircut", time: "15:30", value: "$14", status: "pending", professional: "Carlos" },
+        { id: 5, client: "Efua Mensah", service: "Hair Treatment Premium", time: "16:00", value: "$20", status: "confirmed", professional: "Ana" }
     ];
 
     const marketingStats = [
-        { name: "Campanhas SMS", sent: 245, opened: 189, conversion: "12%" },
-        { name: "E-mail Marketing", sent: 567, opened: 423, conversion: "8%" },
+        { name: "SMS campaigns", sent: 245, opened: 189, conversion: "12%" },
+        { name: "Email marketing", sent: 567, opened: 423, conversion: "8%" },
         { name: "WhatsApp", sent: 89, opened: 85, conversion: "32%" }
     ];
 
@@ -161,7 +161,7 @@ export default function ProfessionalDashboard() {
 
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {/* Bookings com Valores */}
+                    {/* Bookings with values */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                             <h3 className="text-lg font-medium text-gray-900">Today's Bookings</h3>
@@ -205,7 +205,7 @@ export default function ProfessionalDashboard() {
                         </div>
                     </div>
 
-                    {/* Sidebar com mais funcionalidades */}
+                    {/* Sidebar with more features */}
                     <div className="space-y-6">
                         {/* Marketing Performance */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -234,15 +234,15 @@ export default function ProfessionalDashboard() {
                             </h3>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Ana Silva</span>
+                                    <span className="text-sm text-gray-600">Ama Owusu</span>
                                     <span className="text-sm font-medium text-gray-900">{formatUSD(1250)}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Carlos Santos</span>
+                                    <span className="text-sm text-gray-600">Kwesi Asare</span>
                                     <span className="text-sm font-medium text-gray-900">{formatUSD(980)}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Maria Costa</span>
+                                    <span className="text-sm text-gray-600">Akua Darko</span>
                                     <span className="text-sm font-medium text-gray-900">{formatUSD(1020)}</span>
                                 </div>
                                 <div className="pt-2 border-t border-gray-200">
@@ -267,7 +267,7 @@ export default function ProfessionalDashboard() {
                                 <button className="w-full text-left p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                                     <div className="flex items-center">
                                         <MessageSquare className="w-5 h-5 text-green-600 mr-3" />
-                                        <span className="text-sm font-medium text-green-900">Send Campanha</span>
+                                        <span className="text-sm font-medium text-green-900">Send campaign</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
@@ -285,7 +285,7 @@ export default function ProfessionalDashboard() {
                             </div>
                         </div>
 
-                        {/* Resumo do Plan Professional */}
+                        {/* Professional plan summary */}
                         <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-6 text-white">
                             <h3 className="text-lg font-medium mb-2 flex items-center">
                                 <Crown className="w-5 h-5 mr-2" />

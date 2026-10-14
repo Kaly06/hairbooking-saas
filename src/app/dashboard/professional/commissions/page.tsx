@@ -32,14 +32,14 @@ export default function ProfessionalCommissions() {
         paidThisMonth: 2360,
         averageCommission: 15.5,
         totalProfessionals: 3,
-        topPerformer: "Ana Silva"
+        topPerformer: "Ama Owusu"
     };
 
     // Commission settings per professional
     const professionals = [
         {
             id: 1,
-            name: "Ana Silva",
+            name: "Ama Owusu",
             role: "Hairdresser Senior",
             commissionRate: 18,
             services: ["Haircut", "Coloring", "Hair Treatment"],
@@ -56,10 +56,10 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 2,
-            name: "Carlos Santos",
+            name: "Kwesi Asare",
             role: "Barber",
             commissionRate: 15,
-            services: ["Men's Haircut", "Barba", "Bigode"],
+            services: ["Men's Haircut", "Beard", "Bigode"],
             thisMonth: {
                 revenue: 4680,
                 commission: 702,
@@ -73,7 +73,7 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 3,
-            name: "Maria Costa",
+            name: "Akua Darko",
             role: "Esthetician",
             commissionRate: 20,
             services: ["Escova", "Progressiva", "Tratamentos"],
@@ -94,8 +94,8 @@ export default function ProfessionalCommissions() {
     const commissionHistory = [
         {
             id: 1,
-            professional: "Ana Silva",
-            period: "Janeiro 2024",
+            professional: "Ama Owusu",
+            period: "January 2024",
             revenue: 8920,
             commission: 1605,
             rate: 18,
@@ -104,8 +104,8 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 2,
-            professional: "Carlos Santos",
-            period: "Janeiro 2024",
+            professional: "Kwesi Asare",
+            period: "January 2024",
             revenue: 4680,
             commission: 702,
             rate: 15,
@@ -114,8 +114,8 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 3,
-            professional: "Maria Costa",
-            period: "Janeiro 2024",
+            professional: "Akua Darko",
+            period: "January 2024",
             revenue: 4850,
             commission: 970,
             rate: 20,
@@ -127,19 +127,19 @@ export default function ProfessionalCommissions() {
     // Commission goals
     const targets = [
         {
-            professional: "Ana Silva",
+            professional: "Ama Owusu",
             monthlyTarget: 1800,
             current: 1605,
             percentage: 89.2
         },
         {
-            professional: "Carlos Santos",
+            professional: "Kwesi Asare",
             monthlyTarget: 800,
             current: 702,
             percentage: 87.8
         },
         {
-            professional: "Maria Costa",
+            professional: "Akua Darko",
             monthlyTarget: 1000,
             current: 970,
             percentage: 97.0
@@ -287,7 +287,7 @@ export default function ProfessionalCommissions() {
                 {/* Professionals Commission Overview */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Commissions por Professional</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Commissions by professional</h3>
                     </div>
                     <div className="divide-y divide-gray-200">
                         {filteredProfessionals.map((professional) => (

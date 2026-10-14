@@ -37,16 +37,16 @@ export default function ProfessionalAppointments() {
     const appointments = [
         {
             id: 1,
-            clientName: "Maria Santos",
+            clientName: "Akua Adjei",
             clientPhone: "+233 24 999 0001",
             service: "Haircut + Coloring",
-            professional: "Ana Silva",
+            professional: "Ama Owusu",
             date: "2024-01-15",
             time: "09:00",
             duration: 120,
             price: 180,
             status: "confirmed",
-            notes: "Client quer corte bob e luzes mel",
+            notes: "Client wants a bob cut and honey highlights",
             clientRating: 4.8,
             isRecurring: true,
             source: "whatsapp",
@@ -54,10 +54,10 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 2,
-            clientName: "João Silva",
+            clientName: "Kwame Mensah",
             clientPhone: "+233 24 999 0002",
             service: "Men's Haircut",
-            professional: "Carlos Santos",
+            professional: "Kwesi Asare",
             date: "2024-01-15",
             time: "10:30",
             duration: 45,
@@ -71,10 +71,10 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 3,
-            clientName: "Ana Costa",
+            clientName: "Abena Ofori",
             clientPhone: "+233 24 999 0003",
             service: "Escova Progressiva",
-            professional: "Maria Costa",
+            professional: "Akua Darko",
             date: "2024-01-15",
             time: "14:00",
             duration: 180,
@@ -88,10 +88,10 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 4,
-            clientName: "Pedro Lima",
+            clientName: "Yaw Addo",
             clientPhone: "+233 24 999 0004",
-            service: "Barba + Bigode",
-            professional: "Carlos Santos",
+            service: "Beard + Moustache",
+            professional: "Kwesi Asare",
             date: "2024-01-15",
             time: "16:00",
             duration: 30,
@@ -233,7 +233,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Finalizados</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Completed</p>
                                 <p className="text-2xl font-semibold text-gray-600">{todayStats.completed}</p>
                             </div>
                             <CheckCircle className="w-8 h-8 text-gray-600" />
@@ -280,11 +280,11 @@ export default function ProfessionalAppointments() {
                             onChange={(e) => setStatusFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">All os Status</option>
+                            <option value="all">All statuses</option>
                             <option value="pending">Pending</option>
                             <option value="confirmed">Confirmed</option>
-                            <option value="in_progress">Em Andamento</option>
-                            <option value="completed">Finalizado</option>
+                            <option value="in_progress">In progress</option>
+                            <option value="completed">Completed</option>
                             <option value="cancelled">Cancelled</option>
                         </select>
 
@@ -305,9 +305,9 @@ export default function ProfessionalAppointments() {
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
                             <option value="all">All Professionals</option>
-                            <option value="Ana Silva">Ana Silva</option>
-                            <option value="Carlos Santos">Carlos Santos</option>
-                            <option value="Maria Costa">Maria Costa</option>
+                            <option value="Ama Owusu">Ama Owusu</option>
+                            <option value="Kwesi Asare">Kwesi Asare</option>
+                            <option value="Akua Darko">Akua Darko</option>
                         </select>
 
                         <div className="flex space-x-2">
@@ -389,7 +389,7 @@ export default function ProfessionalAppointments() {
                                                 {appointment.reminderSent && (
                                                     <div className="flex items-center">
                                                         <Bell className="w-4 h-4 mr-1 text-green-500" />
-                                                        <span className="text-green-600">Reminder enviado</span>
+                                                        <span className="text-green-600">Reminder sent</span>
                                                     </div>
                                                 )}
                                             </div>

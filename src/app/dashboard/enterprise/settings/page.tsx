@@ -49,7 +49,7 @@ export default function EnterpriseSettingsPage() {
                                 <div className="p-3 bg-gray-50 rounded-lg">
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Fuso Time</label>
                                     <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
-                                        <option>America/Sao_Paulo</option>
+                                        <option>America/Accra</option>
                                         <option>Africa/Accra</option>
                                         <option>Africa/Accra</option>
                                     </select>
@@ -70,7 +70,7 @@ export default function EnterpriseSettingsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Users className="h-5 w-5 text-blue-600" />
-                                Management de Users
+                                User management
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -88,7 +88,7 @@ export default function EnterpriseSettingsPage() {
                                         <span className="font-medium text-green-900">Branch managers</span>
                                         <span className="text-sm bg-green-200 text-green-800 px-2 py-1 rounded">12 users</span>
                                     </div>
-                                    <button className="text-sm text-green-600 hover:text-green-800">Gerenciar gerentes</button>
+                                    <button className="text-sm text-green-600 hover:text-green-800">Manage managers</button>
                                 </div>
 
                                 <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
@@ -125,7 +125,7 @@ export default function EnterpriseSettingsPage() {
                                         <Lock className="h-4 w-4 text-red-600" />
                                         <span className="text-sm font-medium text-red-900">Two-Factor Auth (2FA)</span>
                                     </div>
-                                    <button className="bg-red-600 text-white px-3 py-1 rounded text-sm">Ativado</button>
+                                    <button className="bg-red-600 text-white px-3 py-1 rounded text-sm">Activedo</button>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
@@ -167,7 +167,7 @@ export default function EnterpriseSettingsPage() {
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Notifications por Email</h4>
+                                <h4 className="font-semibold text-gray-900">Email notifications</h4>
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
                                         <div>
@@ -250,7 +250,7 @@ export default function EnterpriseSettingsPage() {
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Integrations Ativas</h4>
+                                <h4 className="font-semibold text-gray-900">Active integrations</h4>
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-lg">
                                         <div className="flex items-center gap-3">
@@ -285,7 +285,7 @@ export default function EnterpriseSettingsPage() {
                                             </div>
                                             <div>
                                                 <p className="font-medium text-purple-900">Twilio SMS</p>
-                                                <p className="text-sm text-purple-700">Notifications por SMS</p>
+                                                <p className="text-sm text-purple-700">SMS notifications</p>
                                             </div>
                                         </div>
                                         <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
@@ -299,7 +299,7 @@ export default function EnterpriseSettingsPage() {
                                     <div className="p-3 bg-gray-50 border border-gray-200 rounded-lg">
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="font-medium text-gray-900">API REST v2</span>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Ativa</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Active</span>
                                         </div>
                                         <p className="text-sm text-gray-600 mb-2">Full data access</p>
                                         <button className="text-sm text-blue-600 hover:text-blue-800">View documentation</button>
@@ -308,7 +308,7 @@ export default function EnterpriseSettingsPage() {
                                     <div className="p-3 bg-gray-50 border border-gray-200 rounded-lg">
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="font-medium text-gray-900">Webhooks</span>
-                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Configurado</span>
+                                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Configured</span>
                                         </div>
                                         <p className="text-sm text-gray-600 mb-2">Real-time events</p>
                                         <button className="text-sm text-blue-600 hover:text-blue-800">Configurar endpoints</button>
@@ -320,7 +320,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Beta</span>
                                         </div>
                                         <p className="text-sm text-gray-600 mb-2">Flexible queries</p>
-                                        <button className="text-sm text-blue-600 hover:text-blue-800">Solicitar acesso</button>
+                                        <button className="text-sm text-blue-600 hover:text-blue-800">Request access</button>
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +381,7 @@ export default function EnterpriseSettingsPage() {
 
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                         <div className="flex justify-between items-center mb-2">
-                                            <span className="font-medium text-green-900">Certificado SSL</span>
+                                            <span className="font-medium text-green-900">SSL certificate</span>
                                             <span className="text-xs bg-green-500 text-white px-2 py-1 rounded">Valid</span>
                                         </div>
                                         <p className="text-sm text-green-700">Expires 12/03/2025</p>
@@ -392,7 +392,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="font-medium text-purple-900">App Mobile</span>
                                             <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded">Available</span>
                                         </div>
-                                        <p className="text-sm text-purple-700">iOS & Android customizados</p>
+                                        <p className="text-sm text-purple-700">Custom iOS & Android apps</p>
                                         <button className="text-sm text-purple-600 hover:text-purple-800 mt-1">Configurar apps</button>
                                     </div>
                                 </div>
@@ -427,7 +427,7 @@ export default function EnterpriseSettingsPage() {
                                 <h4 className="font-semibold text-gray-900">Data retention</h4>
                                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                     <p className="text-sm font-medium text-blue-900 mb-1">Local backups: 30 days</p>
-                                    <p className="text-sm text-blue-700 mb-1">Cloud backup: 1 ano</p>
+                                    <p className="text-sm text-blue-700 mb-1">Cloud backup: 1 year</p>
                                     <p className="text-sm text-blue-700">Arquivos: 2 anos</p>
                                 </div>
                                 <button className="w-full px-3 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">
@@ -438,8 +438,8 @@ export default function EnterpriseSettingsPage() {
                             <div className="space-y-3">
                                 <h4 className="font-semibold text-gray-900">Recovery</h4>
                                 <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
-                                    <p className="text-sm font-medium text-purple-900 mb-1">RTO: &lt; 1 hora</p>
-                                    <p className="text-sm text-purple-700 mb-1">RPO: &lt; 15 minutos</p>
+                                    <p className="text-sm font-medium text-purple-900 mb-1">RTO: &lt; 1 hour</p>
+                                    <p className="text-sm text-purple-700 mb-1">RPO: &lt; 15 minutes</p>
                                     <p className="text-sm text-purple-700">Last recovery: N/A</p>
                                 </div>
                                 <button className="w-full px-3 py-2 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700">

@@ -1026,7 +1026,7 @@ export default function ClientBookingPage() {
 
                                                     {/* Afternoon */}
                                                     <div>
-                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Tarde</h4>
+                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Afternoon</h4>
                                                         <div className="grid grid-cols-4 gap-3">
                                                             {['14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00'].map((time) => (
                                                                 <button
@@ -1191,7 +1191,7 @@ export default function ClientBookingPage() {
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
-                                                <label className="block text-sm font-bold text-black mb-2">E-mail *</label>
+                                                <label className="block text-sm font-bold text-black mb-2">Email *</label>
                                                 <input
                                                     type="email"
                                                     value={customerInfo.email}

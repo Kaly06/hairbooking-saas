@@ -7,23 +7,23 @@ export default function Services() {
     const features = [
         {
             icon: Calendar,
-            title: "Agendamento Online",
-            description: "Site com agendamento 24/7"
+            title: "Online Booking",
+            description: "Website with 24/7 booking"
         },
         {
             icon: Smartphone,
             title: "App Mobile",
-            description: "App personalizado com sua marca"
+            description: "Custom app with your brand"
         },
         {
             icon: BarChart3,
-            title: "Relatórios",
-            description: "Analytics completos do negócio"
+            title: "Reports",
+            description: "Complete business analytics"
         },
         {
             icon: CreditCard,
-            title: "Gestão Financeira",
-            description: "Controle de pagamentos e comissões"
+            title: "Financial management",
+            description: "Payment and commission tracking"
         }
     ];
 
@@ -55,7 +55,7 @@ export default function Services() {
 
                 <div className="text-center mt-12">
                     <Link href="#planos" className="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                        Ver Planos
+                        View plans
                     </Link>
                 </div>
             </div>

@@ -29,7 +29,7 @@ export default function ProfessionalMarketing() {
     const [activeTab, setActiveTab] = useState("overview");
     const [campaignFilter, setCampaignFilter] = useState("all");
 
-    // Data de marketing
+    // Marketing data
     const marketingStats = {
         totalReach: 12450,
         engagement: 8.7,
@@ -39,7 +39,7 @@ export default function ProfessionalMarketing() {
         socialFollowers: 2840
     };
 
-    // Campanhas de marketing
+    // Marketing campaigns
     const campaigns = [
         {
             id: 1,
@@ -88,7 +88,7 @@ export default function ProfessionalMarketing() {
         }
     ];
 
-    // Performance das redes sociais
+    // Social media performance
     const socialMedia = [
         {
             platform: "Instagram",
@@ -135,7 +135,7 @@ export default function ProfessionalMarketing() {
         ]
     };
 
-    // Templates de campanha
+    // Campaign templates
     const templates = [
         {
             id: 1,
@@ -203,7 +203,7 @@ export default function ProfessionalMarketing() {
                         </button>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
-                            New Campanha
+                            New Campaign
                         </button>
                     </div>
                 </div>
@@ -226,7 +226,7 @@ export default function ProfessionalMarketing() {
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
                     >
-                        Campanhas
+                        Campaigns
                     </button>
                     <button
                         onClick={() => setActiveTab("social")}
@@ -293,7 +293,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Campanhas Ativas</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Active campaigns</p>
                                 <p className="text-2xl font-semibold text-blue-600">{marketingStats.campaignsActive}</p>
                             </div>
                             <Zap className="w-8 h-8 text-blue-600" />
@@ -303,7 +303,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Seguidores</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Followers</p>
                                 <p className="text-2xl font-semibold text-pink-600">{marketingStats.socialFollowers}</p>
                             </div>
                             <Share2 className="w-8 h-8 text-pink-600" />
@@ -377,10 +377,10 @@ export default function ProfessionalMarketing() {
                                     onChange={(e) => setCampaignFilter(e.target.value)}
                                     className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                                 >
-                                    <option value="all">Todas as Campanhas</option>
-                                    <option value="active">Ativas</option>
-                                    <option value="paused">Pausadas</option>
-                                    <option value="completed">Finalizadas</option>
+                                    <option value="all">All campaigns</option>
+                                    <option value="active">Active</option>
+                                    <option value="paused">Paused</option>
+                                    <option value="completed">Completed</option>
                                 </select>
                                 <div className="text-sm text-gray-500">
                                     {filteredCampaigns.length} campanhas encontradas
@@ -473,7 +473,7 @@ export default function ProfessionalMarketing() {
                                 <div className="space-y-4">
                                     <div className="grid grid-cols-2 gap-4 text-sm">
                                         <div>
-                                            <p className="text-gray-600">Seguidores</p>
+                                            <p className="text-gray-600">Followers</p>
                                             <p className="text-xl font-semibold text-gray-900">{platform.followers.toLocaleString()}</p>
                                         </div>
                                         <div>
@@ -515,7 +515,7 @@ export default function ProfessionalMarketing() {
                                 </div>
                                 <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">Leads Convertidos</p>
+                                        <p className="text-sm font-medium text-gray-900">Converted leads</p>
                                         <p className="text-2xl font-semibold text-green-600">{leadsData.convertedLeads}</p>
                                     </div>
                                     <Target className="w-8 h-8 text-green-600" />

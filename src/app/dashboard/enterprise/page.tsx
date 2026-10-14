@@ -32,7 +32,7 @@ export default function EnterpriseDashboard() {
             color: "bg-green-500"
         },
         {
-            name: "Branches Ativas",
+            name: "Active branches",
             value: "8",
             change: "+2 novas",
             changeType: "increase" as const,
@@ -175,12 +175,12 @@ export default function EnterpriseDashboard() {
 
                 {/* Main Dashboard Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                    {/* Performance das Branches */}
+                    {/* Branch performance */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200">
                             <h3 className="text-lg font-medium text-gray-900 flex items-center">
                                 <Building className="w-5 h-5 text-blue-600 mr-2" />
-                                Performance por Branch
+                                Performance by branch
                             </h3>
                         </div>
                         <div className="p-6">
@@ -341,7 +341,7 @@ export default function EnterpriseDashboard() {
                         <div className="space-y-2 text-sm">
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>Branches ilimitadas</span>
+                                <span>Unlimited branches</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
@@ -349,11 +349,11 @@ export default function EnterpriseDashboard() {
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>APIs personalizadas</span>
+                                <span>Custom APIs</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>Suporte dedicado</span>
+                                <span>Dedicated support</span>
                             </div>
                         </div>
                         <div className="mt-4 flex items-center">

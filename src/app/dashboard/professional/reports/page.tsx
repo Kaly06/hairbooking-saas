@@ -54,10 +54,10 @@ export default function ProfessionalReports() {
         }
     };
 
-    // Data de performance por profissional
+    // Performance data by professional
     const professionalPerformance = [
         {
-            name: "Ana Silva",
+            name: "Ama Owusu",
             appointments: 89,
             revenue: 8920,
             averageTicket: 100.22,
@@ -66,7 +66,7 @@ export default function ProfessionalReports() {
             efficiency: 92
         },
         {
-            name: "Carlos Santos",
+            name: "Kwesi Asare",
             appointments: 78,
             revenue: 4680,
             averageTicket: 60.00,
@@ -75,7 +75,7 @@ export default function ProfessionalReports() {
             efficiency: 88
         },
         {
-            name: "Maria Costa",
+            name: "Akua Darko",
             appointments: 67,
             revenue: 4850,
             averageTicket: 72.39,
@@ -97,7 +97,7 @@ export default function ProfessionalReports() {
             satisfaction: 4.8
         },
         {
-            name: "Haircut Feminino",
+            name: "Women's haircut",
             quantity: 52,
             revenue: 3640,
             averagePrice: 70,
@@ -155,7 +155,7 @@ export default function ProfessionalReports() {
             "Increase availability between 2pm-4pm (peak hours)",
             "Promote coloring services (higher margin and growth)",
             "Focus on retaining new clients (14 new this month)",
-            "Otimizar agenda da Ana Silva (maior performance)"
+            "Optimise Ama Owusu's schedule (highest performance)"
         ]
     };
 
@@ -320,7 +320,7 @@ export default function ProfessionalReports() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Professional Performance */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Performance dos Professionals</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Professional performance</h3>
                         <div className="space-y-4">
                             {professionalPerformance.map((professional, index) => (
                                 <div key={index} className="border border-gray-200 rounded-lg p-4">

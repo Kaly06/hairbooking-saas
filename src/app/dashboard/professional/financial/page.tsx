@@ -36,18 +36,18 @@ export default function ProfessionalFinancial() {
         cashFlow: 7810
     };
 
-    // Receitas por categoria
+    // Revenues por categoria
     const revenueCategories = [
-        { name: "Cortes", amount: 6780, percentage: 36.7, change: 12.5 },
+        { name: "Cuts", amount: 6780, percentage: 36.7, change: 12.5 },
         { name: "Coloring", amount: 5940, percentage: 32.2, change: 18.3 },
         { name: "Tratamentos", amount: 3420, percentage: 18.5, change: 8.7 },
         { name: "Products", amount: 1890, percentage: 10.2, change: -2.1 },
         { name: "Outros", amount: 420, percentage: 2.3, change: 5.2 }
     ];
 
-    // Despesas por categoria
+    // Expenses por categoria
     const expenseCategories = [
-        { name: "Aluguel", amount: 2200, percentage: 41.4, type: "fixed" },
+        { name: "Rent", amount: 2200, percentage: 41.4, type: "fixed" },
         { name: "Products", amount: 1580, percentage: 29.7, type: "variable" },
         { name: "Salaries", amount: 850, percentage: 16.0, type: "fixed" },
         { name: "Energia", amount: 420, percentage: 7.9, type: "fixed" },
@@ -65,7 +65,7 @@ export default function ProfessionalFinancial() {
         { day: "07", income: 680, expenses: 120, balance: 560 }
     ];
 
-    // Formas de pagamento
+    // Payment methods
     const paymentMethods = [
         { method: "Credit Card", amount: 8920, percentage: 48.4, transactions: 156 },
         { method: "Debit Card", amount: 4560, percentage: 24.7, transactions: 89 },
@@ -78,7 +78,7 @@ export default function ProfessionalFinancial() {
         {
             id: 1,
             type: "receive",
-            description: "Booking - Maria Silva",
+            description: "Booking - Akosua Frimpong",
             amount: 180,
             dueDate: "2024-01-18",
             status: "pending",
@@ -96,7 +96,7 @@ export default function ProfessionalFinancial() {
         {
             id: 3,
             type: "pay",
-            description: "Aluguel Janeiro",
+            description: "January rent",
             amount: 2200,
             dueDate: "2024-01-25",
             status: "overdue",
@@ -105,7 +105,7 @@ export default function ProfessionalFinancial() {
         {
             id: 4,
             type: "receive",
-            description: "Treatment - João Santos",
+            description: "Treatment - Kofi Boateng",
             amount: 250,
             dueDate: "2024-01-22",
             status: "paid",
@@ -200,7 +200,7 @@ export default function ProfessionalFinancial() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Despesas Totais</p>
+                            <p className="text-sm font-medium text-gray-600">Total expenses</p>
                             <p className="text-2xl font-bold text-gray-900">{formatUSD(financialStats.expenses.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
                                 {((financialStats.expenses / financialStats.totalRevenue) * 100).toFixed(1)}% da receita
@@ -265,10 +265,10 @@ export default function ProfessionalFinancial() {
                                 onChange={(e) => setCategoryFilter(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="all">Todas Categorias</option>
+                                <option value="all">All categories</option>
                                 <option value="services">Services</option>
                                 <option value="products">Products</option>
-                                <option value="expenses">Despesas</option>
+                                <option value="expenses">Expenses</option>
                             </select>
                         </div>
                         <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
@@ -282,7 +282,7 @@ export default function ProfessionalFinancial() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Revenue Categories */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Receitas por Category</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Income by category</h3>
                         <div className="space-y-4">
                             {revenueCategories.map((category, index) => (
                                 <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -307,7 +307,7 @@ export default function ProfessionalFinancial() {
 
                     {/* Expense Categories */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Despesas por Category</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Expenses by category</h3>
                         <div className="space-y-4">
                             {expenseCategories.map((category, index) => (
                                 <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -315,7 +315,7 @@ export default function ProfessionalFinancial() {
                                         <div className={`w-4 h-4 rounded-full ${category.type === 'fixed' ? 'bg-red-600' : 'bg-orange-600'}`}></div>
                                         <div>
                                             <p className="font-medium text-gray-900">{category.name}</p>
-                                            <p className="text-sm text-gray-600">{category.percentage}% • {category.type === 'fixed' ? 'Fixed' : 'Variável'}</p>
+                                            <p className="text-sm text-gray-600">{category.percentage}% • {category.type === 'fixed' ? 'Fixed' : 'Variable'}</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -338,7 +338,7 @@ export default function ProfessionalFinancial() {
                                     <p className="font-medium text-gray-900">Jan</p>
                                 </div>
                                 <div className="text-center">
-                                    <p className="text-sm text-gray-600">Entrada</p>
+                                    <p className="text-sm text-gray-600">Income</p>
                                     <p className="font-semibold text-green-600">{formatUSD(day.income)}</p>
                                 </div>
                                 <div className="text-center">
@@ -346,7 +346,7 @@ export default function ProfessionalFinancial() {
                                     <p className="font-semibold text-red-600">{formatUSD(day.expenses)}</p>
                                 </div>
                                 <div className="text-center">
-                                    <p className="text-sm text-gray-600">Saldo</p>
+                                    <p className="text-sm text-gray-600">Balance</p>
                                     <p className="font-semibold text-blue-600">{formatUSD(day.balance)}</p>
                                 </div>
                             </div>
@@ -390,7 +390,7 @@ export default function ProfessionalFinancial() {
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vencimento</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Due date</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                                 </tr>

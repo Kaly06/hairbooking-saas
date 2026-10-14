@@ -160,7 +160,7 @@ export default function BookingSuccessPage() {
                         <div className="flex items-center justify-center gap-8 text-sm">
                             <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Support</a>
                         </div>
                     </div>
                 </div>

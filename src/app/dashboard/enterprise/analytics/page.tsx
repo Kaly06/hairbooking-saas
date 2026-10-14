@@ -262,7 +262,7 @@ export default function EnterpriseAnalyticsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 text-lg">
                                 <Clock className="h-5 w-5 text-purple-600" />
-                                Analysis Temporal
+                                Analysis Timeral
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -276,7 +276,7 @@ export default function EnterpriseAnalyticsPage() {
                                     <span className="font-medium text-green-600">Saturday</span>
                                 </div>
                                 <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-                                    <span className="text-sm">Sazonalidade</span>
+                                    <span className="text-sm">Seasonality</span>
                                     <span className="font-medium text-blue-600">Alta</span>
                                 </div>
                                 <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
@@ -324,7 +324,7 @@ export default function EnterpriseAnalyticsPage() {
                                         <span className="font-medium text-orange-600">2.3%</span>
                                     </div>
                                     <div className="flex justify-between items-center">
-                                        <span className="text-sm">Capacidade Ociosa</span>
+                                        <span className="text-sm">Idle capacity</span>
                                         <span className="font-medium text-yellow-600">13%</span>
                                     </div>
                                     <div className="flex justify-between items-center">
@@ -346,7 +346,7 @@ export default function EnterpriseAnalyticsPage() {
                                         <p className="text-xs text-blue-600">+{formatUSD(120000)} potencial</p>
                                     </div>
                                     <div className="p-3 bg-purple-50 rounded-lg">
-                                        <p className="text-sm font-medium text-purple-800">Programa Fidelidade</p>
+                                        <p className="text-sm font-medium text-purple-800">Loyalty program</p>
                                         <p className="text-xs text-purple-600">+15% retention</p>
                                     </div>
                                 </div>

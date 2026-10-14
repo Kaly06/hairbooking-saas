@@ -28,8 +28,8 @@ export default function StarterClients() {
     const clients = [
         {
             id: 1,
-            name: "Maria Silva",
-            email: "maria.silva@email.com",
+            name: "Akosua Frimpong",
+            email: "akosua.frimpong@email.com",
             phone: "+233 24 999 1234",
             address: "Boundary Road, 123 - East Legon, Accra",
             registeredAt: "2024-05-15",
@@ -37,14 +37,14 @@ export default function StarterClients() {
             totalVisits: 12,
             totalSpent: "$240",
             status: "active",
-            preferences: "Haircut em camadas, gosta de produtos naturais",
+            preferences: "Layered haircut, prefers natural products",
             birthday: "1990-03-15",
             rating: 5
         },
         {
             id: 2,
-            name: "João Santos",
-            email: "joao.santos@email.com",
+            name: "Kofi Boateng",
+            email: "kofi.boateng@email.com",
             phone: "+233 24 888 5678",
             address: "Labone Crescent, 456 - Labone, Accra",
             registeredAt: "2024-08-22",
@@ -58,8 +58,8 @@ export default function StarterClients() {
         },
         {
             id: 3,
-            name: "Ana Costa",
-            email: "ana.costa@email.com",
+            name: "Abena Ofori",
+            email: "abena.ofori@email.com",
             phone: "+233 24 777 9012",
             address: "Liberation Road, 789 - Airport Residential, Accra",
             registeredAt: "2024-01-10",
@@ -73,8 +73,8 @@ export default function StarterClients() {
         },
         {
             id: 4,
-            name: "Pedro Lima",
-            email: "pedro.lima@email.com",
+            name: "Yaw Addo",
+            email: "yaw.addo@email.com",
             phone: "+233 24 666 3456",
             address: "Cantonments Road, 321 - Cantonments, Accra",
             registeredAt: "2024-09-03",
@@ -82,14 +82,14 @@ export default function StarterClients() {
             totalVisits: 3,
             totalSpent: "$12",
             status: "inactive",
-            preferences: "Barba bem aparada",
+            preferences: "Well-groomed beard",
             birthday: "1992-11-30",
             rating: 3
         },
         {
             id: 5,
-            name: "Carla Souza",
-            email: "carla.souza@email.com",
+            name: "Efua Mensah",
+            email: "efua.mensah@email.com",
             phone: "+233 24 555 7890",
             address: "Ring Road Central, 654 - Accra Central",
             registeredAt: "2024-06-18",
@@ -97,7 +97,7 @@ export default function StarterClients() {
             totalVisits: 15,
             totalSpent: "$200",
             status: "active",
-            preferences: "Cabelo cacheado, produtos sem sulfato",
+            preferences: "Curly hair, sulphate-free products",
             birthday: "1995-04-10",
             rating: 5
         }
@@ -125,7 +125,7 @@ export default function StarterClients() {
             case "inactive":
                 return "Inactive";
             default:
-                return "Desconhecido";
+                return "Unknown";
         }
     };
 
@@ -230,7 +230,7 @@ export default function StarterClients() {
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                                 <input
                                     type="text"
-                                    placeholder="Search by nome, email ou telefone..."
+                                    placeholder="Search by name, email or phone..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"

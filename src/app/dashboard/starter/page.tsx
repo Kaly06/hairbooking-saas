@@ -50,11 +50,11 @@ export default function StarterDashboard() {
     ];
 
     const recentAppointments = [
-        { id: 1, client: "Maria Silva", service: "Haircut + Escova", time: "09:00", status: "confirmed" },
-        { id: 2, client: "João Santos", service: "Men's Haircut", time: "10:30", status: "completed" },
-        { id: 3, client: "Ana Costa", service: "Coloring", time: "14:00", status: "confirmed" },
-        { id: 4, client: "Pedro Lima", service: "Barba", time: "15:30", status: "pending" },
-        { id: 5, client: "Carla Souza", service: "Haircut + Hair Treatment", time: "16:00", status: "confirmed" }
+        { id: 1, client: "Akosua Frimpong", service: "Haircut + Escova", time: "09:00", status: "confirmed" },
+        { id: 2, client: "Kofi Boateng", service: "Men's Haircut", time: "10:30", status: "completed" },
+        { id: 3, client: "Abena Ofori", service: "Coloring", time: "14:00", status: "confirmed" },
+        { id: 4, client: "Yaw Addo", service: "Beard", time: "15:30", status: "pending" },
+        { id: 5, client: "Efua Mensah", service: "Haircut + Hair Treatment", time: "16:00", status: "confirmed" }
     ];
 
     const getStatusIcon = (status: string) => {
@@ -198,7 +198,7 @@ export default function StarterDashboard() {
                             </div>
                         </div>
 
-                        {/* Resumo do Plan */}
+                        {/* Plan summary */}
                         <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-6 text-white">
                             <h3 className="text-lg font-medium mb-2">Plan Starter</h3>
                             <p className="text-blue-100 text-sm mb-4">

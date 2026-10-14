@@ -118,7 +118,7 @@ export default function EnterpriseAppointmentsPage() {
                                     <option>Custom period</option>
                                 </select>
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                    <option>All os status</option>
+                                    <option>All statuses</option>
                                     <option>Confirmed</option>
                                     <option>Pending</option>
                                     <option>Cancelled</option>
@@ -146,7 +146,7 @@ export default function EnterpriseAppointmentsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Maria Silva</h4>
+                                            <h4 className="font-semibold text-gray-900">Akosua Frimpong</h4>
                                             <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Confirmed</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -159,7 +159,7 @@ export default function EnterpriseAppointmentsPage() {
                                                 Osu Branch
                                             </div>
                                             <span>Haircut + Escova</span>
-                                            <span>Ana Paula (Professional)</span>
+                                            <span>Adwoa (Professional)</span>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -180,7 +180,7 @@ export default function EnterpriseAppointmentsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">João Santos</h4>
+                                            <h4 className="font-semibold text-gray-900">Kofi Boateng</h4>
                                             <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Pending</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -193,7 +193,7 @@ export default function EnterpriseAppointmentsPage() {
                                                 Shopping Branch
                                             </div>
                                             <span>Men's Haircut</span>
-                                            <span>Carlos Lima (Professional)</span>
+                                            <span>Kwame Addo (Professional)</span>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -214,7 +214,7 @@ export default function EnterpriseAppointmentsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Carla Oliveira</h4>
+                                            <h4 className="font-semibold text-gray-900">Grace Oppong</h4>
                                             <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Confirmed</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -227,7 +227,7 @@ export default function EnterpriseAppointmentsPage() {
                                                 Osu Branch
                                             </div>
                                             <span>Coloring + Haircut</span>
-                                            <span>Fernanda Costa (Professional)</span>
+                                            <span>Efua Darko (Professional)</span>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -248,7 +248,7 @@ export default function EnterpriseAppointmentsPage() {
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
-                                            <h4 className="font-semibold text-gray-900">Pedro Costa</h4>
+                                            <h4 className="font-semibold text-gray-900">Yaw Darko</h4>
                                             <span className="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Cancelled</span>
                                         </div>
                                         <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -260,7 +260,7 @@ export default function EnterpriseAppointmentsPage() {
                                                 <Building className="h-4 w-4" />
                                                 Airport Residential Branch
                                             </div>
-                                            <span>Barba + Bigode</span>
+                                            <span>Beard + Moustache</span>
                                             <span>Motivo: Client cancelou</span>
                                         </div>
                                     </div>
@@ -277,7 +277,7 @@ export default function EnterpriseAppointmentsPage() {
 
                         <div className="mt-6 text-center">
                             <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                Carregar Mais Bookings
+                                Load more bookings
                             </button>
                         </div>
                     </CardContent>
@@ -299,7 +299,7 @@ export default function EnterpriseAppointmentsPage() {
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                <span>Gerenciar Times por Branch</span>
+                                <span>Manage teams by branch</span>
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
@@ -311,7 +311,7 @@ export default function EnterpriseAppointmentsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle>Performance por Branch</CardTitle>
+                            <CardTitle>Performance by branch</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div className="flex items-center justify-between">

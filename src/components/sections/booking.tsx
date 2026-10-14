@@ -18,8 +18,8 @@ export default function BookingForm() {
     });
 
     const services = [
-        { id: "classic", name: "Corte Clássico", price: 45, duration: "45 min" },
-        { id: "custom", name: "Corte Personalizado com IA", price: 85, duration: "60 min" },
+        { id: "classic", name: "Classic Cut", price: 45, duration: "45 min" },
+        { id: "custom", name: "AI Custom Cut", price: 85, duration: "60 min" },
         { id: "color", name: "Colouring", price: 120, duration: "120 min" },
         { id: "treatment", name: "Tratamento Capilar", price: 80, duration: "90 min" }
     ];
@@ -31,9 +31,9 @@ export default function BookingForm() {
     ];
 
     const professionals = [
-        { id: "ana", name: "Ana Silva", rating: 4.9, specialty: "Women's Cuts", image: "ana" },
-        { id: "carlos", name: "Carlos Santos", rating: 4.8, specialty: "Beard & Cuts", image: "carlos" },
-        { id: "maria", name: "Maria Costa", rating: 5.0, specialty: "Colouring", image: "maria" }
+        { id: "ana", name: "Ama Owusu", rating: 4.9, specialty: "Women's Cuts", image: "ana" },
+        { id: "carlos", name: "Kwesi Asare", rating: 4.8, specialty: "Beard & Cuts", image: "carlos" },
+        { id: "maria", name: "Akua Darko", rating: 5.0, specialty: "Colouring", image: "maria" }
     ];
 
     const timeSlots = [
@@ -63,11 +63,11 @@ export default function BookingForm() {
                     {/* Header */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Agende seu
+                            Book your
                             <span className="gradient-text"> time</span>
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Processo simples e rápido para garantir seu atendimento
+                            Simple, quick process to secure your appointment
                         </p>
                     </div>
 
@@ -102,7 +102,7 @@ export default function BookingForm() {
                                     <div className="flex items-center mb-6">
                                         <Scissors className="w-6 h-6 text-gray-600 mr-3" />
                                         <h3 className="text-xl font-semibold text-gray-900">
-                                            Escolha seu serviço
+                                            Choose your service
                                         </h3>
                                     </div>
 
@@ -149,7 +149,7 @@ export default function BookingForm() {
                                         <div className="flex items-center mb-6">
                                             <MapPin className="w-6 h-6 text-gray-600 mr-3" />
                                             <h3 className="text-xl font-semibold text-gray-900">
-                                                Escolha a unidade
+                                                Choose a branch
                                             </h3>
                                         </div>
 
@@ -189,7 +189,7 @@ export default function BookingForm() {
                                         <div className="flex items-center mb-6">
                                             <User className="w-6 h-6 text-gray-600 mr-3" />
                                             <h3 className="text-xl font-semibold text-gray-900">
-                                                Escolha o profissional
+                                                Choose a professional
                                             </h3>
                                         </div>
 
@@ -235,7 +235,7 @@ export default function BookingForm() {
                                         <div className="flex items-center mb-6">
                                             <Calendar className="w-6 h-6 text-gray-600 mr-3" />
                                             <h3 className="text-xl font-semibold text-gray-900">
-                                                Escolha a data
+                                                Choose a date
                                             </h3>
                                         </div>
 
@@ -254,7 +254,7 @@ export default function BookingForm() {
                                         <div className="flex items-center mb-6">
                                             <Clock className="w-6 h-6 text-gray-600 mr-3" />
                                             <h3 className="text-xl font-semibold text-gray-900">
-                                                Escolha o horário
+                                                Choose a time
                                             </h3>
                                         </div>
 
@@ -291,14 +291,14 @@ export default function BookingForm() {
                                     <div className="flex items-center mb-6">
                                         <User className="w-6 h-6 text-gray-600 mr-3" />
                                         <h3 className="text-xl font-semibold text-gray-900">
-                                            Seus dados
+                                            Your details
                                         </h3>
                                     </div>
 
                                     <div className="space-y-4">
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Nome completo
+                                                Full name
                                             </label>
                                             <input
                                                 type="text"
@@ -348,23 +348,23 @@ export default function BookingForm() {
                                     {/* Summary */}
                                     <div className="bg-gray-50 rounded-xl p-6 mt-8">
                                         <h4 className="font-semibold text-gray-900 mb-4">
-                                            Resumo do agendamento
+                                            Booking summary
                                         </h4>
                                         <div className="space-y-2 text-sm">
                                             <div className="flex justify-between">
-                                                <span className="text-gray-600">Serviço:</span>
+                                                <span className="text-gray-600">Service:</span>
                                                 <span className="font-medium">
                                                     {services.find(s => s.id === formData.service)?.name}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-600">Local:</span>
+                                                <span className="text-gray-600">Location:</span>
                                                 <span className="font-medium">
                                                     {locations.find(l => l.id === formData.location)?.name}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-600">Profissional:</span>
+                                                <span className="text-gray-600">Professional:</span>
                                                 <span className="font-medium">
                                                     {professionals.find(p => p.id === formData.professional)?.name}
                                                 </span>
@@ -372,7 +372,7 @@ export default function BookingForm() {
                                             <div className="flex justify-between">
                                                 <span className="text-gray-600">Date & time:</span>
                                                 <span className="font-medium">
-                                                    {formData.date} às {formData.time}
+                                                    {formData.date} at {formData.time}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between pt-2 border-t border-gray-200">
@@ -418,7 +418,7 @@ export default function BookingForm() {
                                             type="submit"
                                             className="btn-primary"
                                         >
-                                            Confirmar Agendamento
+                                            Confirm booking
                                         </button>
                                     )}
                                 </div>

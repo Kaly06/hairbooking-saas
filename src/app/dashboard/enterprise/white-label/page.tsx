@@ -216,16 +216,16 @@ export default function EnterpriseWhiteLabelPage() {
                                 <div>
                                     <label className="text-sm font-medium text-gray-700 mb-2 block">Button Style</label>
                                     <div className="grid grid-cols-3 gap-2">
-                                        <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm">Arredondado</button>
-                                        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded text-sm">Quadrado</button>
+                                        <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm">Rounded</button>
+                                        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded text-sm">Square</button>
                                         <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-full text-sm">Circular</button>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Estilo dos Cards</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Card style</label>
                                     <div className="grid grid-cols-2 gap-2">
-                                        <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm">Com Sombra</button>
+                                        <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm">With shadow</button>
                                         <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm">Flat</button>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Application Name</label>
                                 <input
                                     type="text"
-                                    defaultValue="SalãoPro"
+                                    defaultValue="SalonPro"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg"
                                 />
                             </div>
@@ -294,7 +294,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 />
                             </div>
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">URL Personalizada</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">Custom URL</label>
                                 <input
                                     type="text"
                                     defaultValue="salaopro.app"
@@ -362,15 +362,15 @@ export default function EnterpriseWhiteLabelPage() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">Meta Title</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">Target title</label>
                                 <input
                                     type="text"
-                                    defaultValue="SalãoPro - Management System"
+                                    defaultValue="SalonPro - Management System"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg"
                                 />
                             </div>
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">Meta Description</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">Target description</label>
                                 <textarea
                                     defaultValue="Complete management system for beauty salons"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg h-20 resize-none"
@@ -415,7 +415,7 @@ export default function EnterpriseWhiteLabelPage() {
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-8 h-8 bg-purple-600 rounded"></div>
                                             <div>
-                                                <h3 className="font-semibold text-gray-900">SalãoPro</h3>
+                                                <h3 className="font-semibold text-gray-900">SalonPro</h3>
                                                 <p className="text-xs text-gray-600">Your beauty, our priority</p>
                                             </div>
                                         </div>
@@ -485,7 +485,7 @@ export default function EnterpriseWhiteLabelPage() {
                                             Publish Agora
                                         </button>
                                         <button className="px-3 py-1 border border-purple-300 text-purple-600 rounded text-sm">
-                                            Agendar
+                                            Book
                                         </button>
                                     </div>
                                 </div>

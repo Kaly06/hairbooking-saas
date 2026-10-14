@@ -30,9 +30,9 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Integrations Ativas</p>
+                                    <p className="text-sm font-medium text-gray-600">Active integrations</p>
                                     <p className="text-2xl font-bold text-green-600">18</p>
-                                    <p className="text-sm text-gray-500 mt-1">Funcionando</p>
+                                    <p className="text-sm text-gray-500 mt-1">Working</p>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
                                     <CheckCircle className="h-6 w-6 text-green-600" />
@@ -60,7 +60,7 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Com Erro</p>
+                                    <p className="text-sm font-medium text-gray-600">With error</p>
                                     <p className="text-2xl font-bold text-red-600">1</p>
                                     <p className="text-sm text-gray-500 mt-1">Needs attention</p>
                                 </div>
@@ -75,7 +75,7 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Chamadas API</p>
+                                    <p className="text-sm font-medium text-gray-600">API calls</p>
                                     <p className="text-2xl font-bold text-blue-600">45.2K</p>
                                     <p className="text-sm text-gray-500 mt-1">This month</p>
                                 </div>
@@ -92,7 +92,7 @@ export default function EnterpriseIntegrationsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Plug className="h-5 w-5 text-purple-600" />
-                            Integrations Ativas
+                            Active integrations
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -266,7 +266,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">ERP Legacy</h4>
-                                            <p className="text-sm text-gray-600">Sistema Legado</p>
+                                            <p className="text-sm text-gray-600">Legacy system</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -347,7 +347,7 @@ export default function EnterpriseIntegrationsPage() {
                                         <Code className="h-6 w-6 text-red-600" />
                                     </div>
                                     <h4 className="font-semibold mb-1">Webhook</h4>
-                                    <p className="text-sm text-gray-600 mb-3">API personalizada</p>
+                                    <p className="text-sm text-gray-600 mb-3">Custom API</p>
                                     <button className="w-full px-3 py-2 bg-purple-600 text-white rounded text-sm hover:bg-purple-700 transition-colors">
                                         Configurar
                                     </button>
@@ -435,7 +435,7 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <CheckCircle className="h-4 w-4 text-blue-600" />
                                         <div>
-                                            <p className="text-sm font-medium">SendGrid - Email enviado</p>
+                                            <p className="text-sm font-medium">SendGrid - email sent</p>
                                             <p className="text-xs text-gray-600">Booking confirmation</p>
                                         </div>
                                     </div>
@@ -446,8 +446,8 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <Clock className="h-4 w-4 text-yellow-600" />
                                         <div>
-                                            <p className="text-sm font-medium">Google Calendar - Sincronizando</p>
-                                            <p className="text-xs text-gray-600">Aguardando resposta</p>
+                                            <p className="text-sm font-medium">Google Calendar - syncing</p>
+                                            <p className="text-xs text-gray-600">Awaiting response</p>
                                         </div>
                                     </div>
                                     <span className="text-xs text-gray-500">14:20</span>

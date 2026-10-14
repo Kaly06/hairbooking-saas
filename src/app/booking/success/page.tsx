@@ -35,7 +35,7 @@ export default function BookingSuccessPage() {
             phone: "(21) 3325-4400"
         },
         customer: {
-            name: "João Silva",
+            name: "Kwame Mensah",
             email: "joao@email.com",
             phone: "(21) 99999-9999"
         },
@@ -44,7 +44,7 @@ export default function BookingSuccessPage() {
             { name: "Hair Treatment", price: 65, duration: 60 },
             { name: "Eyebrow Design", price: 25, duration: 30 }
         ],
-        professional: "Marina Silva",
+        professional: "Abena Owusu",
         paymentMethod: "Credit Card"
     };
 
@@ -296,7 +296,7 @@ export default function BookingSuccessPage() {
                         <p className="mb-2">© 2024 HairBooking. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-6 text-sm">
                             <a href="#" className="hover:text-purple-600 transition-colors">Cancellation Policy</a>
-                            <a href="#" className="hover:text-purple-600 transition-colors">Suporte</a>
+                            <a href="#" className="hover:text-purple-600 transition-colors">Support</a>
                             <a href="#" className="hover:text-purple-600 transition-colors">Rate your visit</a>
                         </div>
                     </div>

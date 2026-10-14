@@ -25,7 +25,7 @@ import { useState } from "react";
 export default function ProfessionalMobileApp() {
     const [activeTab, setActiveTab] = useState("overview");
 
-    // Data do app mobile
+    // Mobile app data
     const appStats = {
         downloads: 1247,
         activeUsers: 892,
@@ -35,12 +35,12 @@ export default function ProfessionalMobileApp() {
         lastUpdate: "2024-01-10"
     };
 
-    // Features do app
+    // App features
     const appFeatures = [
         {
             icon: <Calendar className="w-6 h-6" />,
             title: "Booking Online",
-            description: "Clients podem agendar diretamente pelo app",
+            description: "Clients can book directly in the app",
             status: "active",
             usage: 89
         },
@@ -53,7 +53,7 @@ export default function ProfessionalMobileApp() {
         },
         {
             icon: <MessageSquare className="w-6 h-6" />,
-            title: "Chat Integrado",
+            title: "Built-in chat",
             description: "Direct communication between salon and clients",
             status: "active",
             usage: 73
@@ -81,7 +81,7 @@ export default function ProfessionalMobileApp() {
         }
     ];
 
-    // Analytics do app
+    // App analytics
     const analytics = {
         dailyUsers: [
             { day: "Mon", users: 124 },
@@ -100,7 +100,7 @@ export default function ProfessionalMobileApp() {
         ]
     };
 
-    // Settings do app
+    // App settings
     const appSettings = [
         {
             category: "Notifications",
@@ -114,8 +114,8 @@ export default function ProfessionalMobileApp() {
             category: "Appearance",
             settings: [
                 { name: "Tema escuro", enabled: false },
-                { name: "Cores personalizadas", enabled: true },
-                { name: "Logo customizada", enabled: true }
+                { name: "Custom colours", enabled: true },
+                { name: "Custom logo", enabled: true }
             ]
         },
         {
@@ -123,7 +123,7 @@ export default function ProfessionalMobileApp() {
             settings: [
                 { name: "Booking online", enabled: true },
                 { name: "Chat with clients", enabled: true },
-                { name: "Programa fidelidade", enabled: false }
+                { name: "Loyalty program", enabled: false }
             ]
         }
     ];
@@ -415,7 +415,7 @@ export default function ProfessionalMobileApp() {
 
                         {/* Top Features */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Features Mais Usadas</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Most used features</h3>
                             <div className="space-y-4">
                                 {analytics.topFeatures.map((feature, index) => (
                                     <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">

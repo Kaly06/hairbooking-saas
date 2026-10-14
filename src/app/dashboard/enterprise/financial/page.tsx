@@ -21,7 +21,7 @@ export default function EnterpriseFinancialPage() {
                             Report Executivo
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Configurar Metas
+                            Set targets
                         </button>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-semibold text-blue-900">{formatUSD(67200)}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-sm text-blue-700">Lucro:</span>
+                                        <span className="text-sm text-blue-700">Profit:</span>
                                         <span className="font-semibold text-green-600">{formatUSD(131300)}</span>
                                     </div>
                                     <div className="flex justify-between">
@@ -153,7 +153,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-semibold text-green-900">{formatUSD(62100)}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-sm text-green-700">Lucro:</span>
+                                        <span className="text-sm text-green-700">Profit:</span>
                                         <span className="font-semibold text-green-600">{formatUSD(94200)}</span>
                                     </div>
                                     <div className="flex justify-between">
@@ -179,7 +179,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-semibold text-orange-900">{formatUSD(58500)}</span>
                                     </div>
                                     <div className="flex justify-between">
-                                        <span className="text-sm text-orange-700">Lucro:</span>
+                                        <span className="text-sm text-orange-700">Profit:</span>
                                         <span className="font-semibold text-green-600">{formatUSD(71900)}</span>
                                     </div>
                                     <div className="flex justify-between">
@@ -346,7 +346,7 @@ export default function EnterpriseFinancialPage() {
                             <div className="space-y-3">
                                 <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                     <div className="flex justify-between items-center">
-                                        <span className="font-medium text-green-900">Entradas Previstas</span>
+                                        <span className="font-medium text-green-900">Expected income</span>
                                         <span className="font-bold text-green-600">{formatUSD(526800)}</span>
                                     </div>
                                     <p className="text-sm text-green-600 mt-1">Confirmed and estimated revenue</p>
@@ -362,7 +362,7 @@ export default function EnterpriseFinancialPage() {
 
                                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                     <div className="flex justify-between items-center">
-                                        <span className="font-medium text-blue-900">Saldo Projetado</span>
+                                        <span className="font-medium text-blue-900">Projected balance</span>
                                         <span className="font-bold text-blue-600">{formatUSD(331500)}</span>
                                     </div>
                                     <p className="text-sm text-blue-600 mt-1">Projected net result</p>
@@ -401,7 +401,7 @@ export default function EnterpriseFinancialPage() {
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Indicadores Chave</h4>
+                                <h4 className="font-semibold text-gray-900">Key indicators</h4>
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                                         <span className="text-sm font-medium">ROI (Return on Investment)</span>
@@ -416,7 +416,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-bold text-blue-600">{formatUSD(298500)}</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                                        <span className="text-sm font-medium">Crescimento MoM</span>
+                                        <span className="text-sm font-medium">Month-on-month growth</span>
                                         <span className="font-bold text-green-600">+12.5%</span>
                                     </div>
                                 </div>
@@ -434,7 +434,7 @@ export default function EnterpriseFinancialPage() {
                                         <p className="text-xs text-blue-600">High demand - potential +{formatUSD(45000)}/month</p>
                                     </div>
                                     <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
-                                        <p className="text-sm font-medium text-purple-800">Implementar Programa Fidelidade</p>
+                                        <p className="text-sm font-medium text-purple-800">Launch loyalty program</p>
                                         <p className="text-xs text-purple-600">Increase average ticket and recurring revenue</p>
                                     </div>
                                     <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">

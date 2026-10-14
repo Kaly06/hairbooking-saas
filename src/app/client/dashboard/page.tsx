@@ -269,7 +269,7 @@ export default function ClientDashboardPage() {
                             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Phone className="h-6 w-6 text-black" />
                             </div>
-                            <h3 className="font-semibold text-black mb-2">Suporte</h3>
+                            <h3 className="font-semibold text-black mb-2">Support</h3>
                             <p className="text-sm text-gray-600">Get in touch</p>
                         </CardContent>
                     </Card>
@@ -284,7 +284,7 @@ export default function ClientDashboardPage() {
                         <div className="flex items-center justify-center gap-8 text-sm">
                             <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Support</a>
                         </div>
                     </div>
                 </div>

@@ -90,7 +90,7 @@ export default function EnterpriseCommissionsPage() {
                                     <p className="text-2xl font-bold text-orange-600">{formatUSD(8500)}</p>
                                     <div className="flex items-center mt-1">
                                         <Star className="h-3 w-3 text-orange-500 mr-1" />
-                                        <span className="text-sm text-orange-600">Marina Silva</span>
+                                        <span className="text-sm text-orange-600">Abena Owusu</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -118,7 +118,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="text-white font-bold text-lg">1</span>
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-yellow-900">Marina Silva</p>
+                                        <p className="font-semibold text-yellow-900">Abena Owusu</p>
                                         <p className="text-sm text-yellow-700">Shopping Branch • Senior Hairdresser</p>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="text-white font-bold text-lg">2</span>
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900">Carlos Mendes</p>
+                                        <p className="font-semibold text-gray-900">Kwabena Mensah</p>
                                         <p className="text-sm text-gray-700">Osu Branch • Barber Specialist</p>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="text-white font-bold text-lg">3</span>
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-orange-900">Ana Rodriguez</p>
+                                        <p className="font-semibold text-orange-900">Afia Asante</p>
                                         <p className="text-sm text-orange-700">Shopping Branch • Colorist</p>
                                     </div>
                                 </div>
@@ -165,13 +165,13 @@ export default function EnterpriseCommissionsPage() {
                             {/* Remaining Top 10 */}
                             <div className="space-y-2">
                                 {[
-                                    { name: "Paula Costa", unit: "Osu", role: "Manicure", commission: "6.451", services: "98", rate: "18.7%" },
-                                    { name: "Roberto Lima", unit: "Airport Residential", role: "Cabeleireiro", commission: "5.873", services: "85", rate: "17.9%" },
+                                    { name: "Esi Amoah", unit: "Osu", role: "Manicurist", commission: "6.451", services: "98", rate: "18.7%" },
+                                    { name: "Samuel Tetteh", unit: "Airport Residential", role: "Hairdresser", commission: "5.873", services: "85", rate: "17.9%" },
                                     { name: "Lucia Ferreira", unit: "Shopping", role: "Esthetician", commission: "5.629", services: "92", rate: "19.3%" },
-                                    { name: "Jorge Santos", unit: "Osu", role: "Barber", commission: "5.284", services: "74", rate: "16.8%" },
-                                    { name: "Carla Oliveira", unit: "Airport Residential", role: "Hairdresser", commission: "4.932", services: "67", rate: "18.1%" },
-                                    { name: "Fernando Souza", unit: "Shopping", role: "Barber", commission: "4.657", services: "71", rate: "17.2%" },
-                                    { name: "Mariana Alves", unit: "Osu", role: "Colorist", commission: "4.389", services: "59", rate: "20.4%" }
+                                    { name: "Joseph Quaye", unit: "Osu", role: "Barber", commission: "5.284", services: "74", rate: "16.8%" },
+                                    { name: "Grace Oppong", unit: "Airport Residential", role: "Hairdresser", commission: "4.932", services: "67", rate: "18.1%" },
+                                    { name: "Fred Agyeman", unit: "Shopping", role: "Barber", commission: "4.657", services: "71", rate: "17.2%" },
+                                    { name: "Mavis Ansah", unit: "Osu", role: "Colorist", commission: "4.389", services: "59", rate: "20.4%" }
                                 ].map((professional, index) => (
                                     <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                         <div className="flex items-center gap-3">
@@ -278,7 +278,7 @@ export default function EnterpriseCommissionsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <BarChart3 className="h-5 w-5 text-purple-600" />
-                                Performance por Branch
+                                Performance by branch
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -315,7 +315,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
                                 <div className="flex justify-between items-center mb-3">
                                     <h4 className="font-semibold text-green-900">Osu Branch</h4>
-                                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">Crescimento</span>
+                                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">Growth</span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
@@ -386,15 +386,15 @@ export default function EnterpriseCommissionsPage() {
                             <div className="grid grid-cols-3 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
                                     <p className="text-lg font-bold text-blue-600">{formatUSD(89000)}</p>
-                                    <p className="text-xs text-gray-600">Novembro</p>
+                                    <p className="text-xs text-gray-600">November</p>
                                 </div>
                                 <div className="text-center p-3 bg-green-50 rounded-lg">
                                     <p className="text-lg font-bold text-green-600">{formatUSD(77000)}</p>
-                                    <p className="text-xs text-gray-600">Outubro</p>
+                                    <p className="text-xs text-gray-600">October</p>
                                 </div>
                                 <div className="text-center p-3 bg-purple-50 rounded-lg">
                                     <p className="text-lg font-bold text-purple-600">+15.8%</p>
-                                    <p className="text-xs text-gray-600">Crescimento</p>
+                                    <p className="text-xs text-gray-600">Growth</p>
                                 </div>
                             </div>
                         </CardContent>
@@ -432,7 +432,7 @@ export default function EnterpriseCommissionsPage() {
                                 {/* Quarterly Challenge */}
                                 <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
                                     <div className="flex justify-between items-center mb-2">
-                                        <h4 className="font-semibold text-blue-900">Desafio Trimestral</h4>
+                                        <h4 className="font-semibold text-blue-900">Quarterly challenge</h4>
                                         <span className="text-xs bg-blue-500 text-white px-2 py-1 rounded-full">Q4 2024</span>
                                     </div>
                                     <p className="text-sm text-blue-700 mb-3">Top 5 receive a training trip + bonus</p>
@@ -443,7 +443,7 @@ export default function EnterpriseCommissionsPage() {
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Current leader:</span>
-                                            <span className="font-medium text-blue-600">Marina Silva</span>
+                                            <span className="font-medium text-blue-600">Abena Owusu</span>
                                         </div>
                                     </div>
                                 </div>
@@ -457,7 +457,7 @@ export default function EnterpriseCommissionsPage() {
                                     <p className="text-sm text-purple-700 mb-3">{formatUSD(100000)} in commissions = team celebration</p>
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
-                                            <span>Meta:</span>
+                                            <span>Target:</span>
                                             <span className="font-medium">{formatUSD(100000)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
@@ -507,17 +507,17 @@ export default function EnterpriseCommissionsPage() {
                                 <h4 className="font-semibold text-gray-900">Goals & achievements</h4>
                                 <div className="space-y-3">
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                                        <p className="text-sm font-medium text-green-800">Metas Atingidas</p>
+                                        <p className="text-sm font-medium text-green-800">Targets achieved</p>
                                         <p className="text-2xl font-bold text-green-600">28</p>
                                         <p className="text-xs text-green-600">59.6% of professionals</p>
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                                        <p className="text-sm font-medium text-blue-800">Em Progresso</p>
+                                        <p className="text-sm font-medium text-blue-800">In progress</p>
                                         <p className="text-2xl font-bold text-blue-600">13</p>
                                         <p className="text-xs text-blue-600">27.7% of professionals</p>
                                     </div>
                                     <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                                        <p className="text-sm font-medium text-orange-800">Necessitam Suporte</p>
+                                        <p className="text-sm font-medium text-orange-800">Necessitam Support</p>
                                         <p className="text-2xl font-bold text-orange-600">6</p>
                                         <p className="text-xs text-orange-600">12.7% of professionals</p>
                                     </div>
