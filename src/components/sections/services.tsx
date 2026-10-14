@@ -1,27 +1,26 @@
 "use client";
 
-import { Calendar, BarChart3, Smartphone, CreditCard } from "lucide-react";
 import Link from "next/link";
 
 export default function Services() {
     const features = [
         {
-            icon: Calendar,
+            image: "/services/online-booking.jpg",
             title: "Online Booking",
             description: "Website with 24/7 booking"
         },
         {
-            icon: Smartphone,
+            image: "/services/mobile-app.jpg",
             title: "Mobile App",
             description: "Custom app with your own brand"
         },
         {
-            icon: BarChart3,
+            image: "/services/reports.jpg",
             title: "Reports",
             description: "Complete business analytics"
         },
         {
-            icon: CreditCard,
+            image: "/services/financial-management.jpg",
             title: "Financial Management",
             description: "Payment and commission tracking"
         }
@@ -40,8 +39,13 @@ export default function Services() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {features.map((feature, index) => (
                         <div key={index} className="text-center">
-                            <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-lg mx-auto mb-4">
-                                <feature.icon className="w-6 h-6 text-gray-700" />
+                            <div className="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 mb-4">
+                                <img
+                                    src={feature.image}
+                                    alt={feature.title}
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                />
                             </div>
                             <h3 className="font-semibold text-gray-900 mb-2">
                                 {feature.title}
