@@ -44,14 +44,14 @@ export default function Location() {
     ];
 
     const coverage = [
-        { state: "São Paulo", regions: "Capital, Inland, Coast", status: "active" },
-        { state: "Rio de Janeiro", regions: "Capital, Metropolitan Area", status: "active" },
-        { state: "Minas Gerais", regions: "Belo Horizonte, Metropolitan Area", status: "active" },
-        { state: "Paraná", regions: "Curitiba, Maringá, Londrina", status: "active" },
-        { state: "Rio Grande do Sul", regions: "Porto Alegre, Metropolitan Area", status: "active" },
-        { state: "Santa Catarina", regions: "Florianópolis, Blumenau", status: "active" },
-        { state: "Bahia", regions: "Salvador and surroundings", status: "coming-soon" },
-        { state: "Pernambuco", regions: "Recife and surroundings", status: "coming-soon" }
+        { state: "Greater Accra", regions: "Accra, Tema", status: "active" },
+        { state: "Ashanti", regions: "Kumasi and surroundings", status: "active" },
+        { state: "Western", regions: "Takoradi, Tarkwa", status: "active" },
+        { state: "Central", regions: "Cape Coast, Winneba", status: "active" },
+        { state: "Eastern", regions: "Koforidua, Nkawkaw", status: "active" },
+        { state: "Bono", regions: "Sunyani, Berekum", status: "active" },
+        { state: "Northern", regions: "Tamale and surroundings", status: "coming-soon" },
+        { state: "Volta", regions: "Ho and surroundings", status: "coming-soon" }
     ];
 
     return (
@@ -70,7 +70,7 @@ export default function Location() {
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        Our platform works across Brazil. Wherever your salon is located,
+                        Our platform works across Ghana. Wherever your salon is located,
                         you get full access to all features.
                     </p>
                 </div>
@@ -150,7 +150,7 @@ export default function Location() {
                 <div className="bg-white rounded-2xl p-8">
                     <div className="text-center mb-8">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                            Available Across Brazil
+                            Available Across Ghana
                         </h3>
                         <p className="text-gray-600">
                             We're constantly expanding to serve salons in every region
