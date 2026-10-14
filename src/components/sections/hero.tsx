@@ -33,7 +33,7 @@ export default function Hero() {
                                 <span className="animate-title-word gradient-word bg-gradient-to-r from-black via-gray-800 to-black bg-clip-text text-transparent">salon</span>{' '}
                                 <span className="animate-title-word">with</span>{' '}
                                 <span className="animate-title-word">our</span>{' '}
-                                <span className="animate-title-word gradient-word bg-gradient-to-r from-gray-700 via-black to-gray-700 bg-clip-text text-transparent">plataforma</span>
+                                <span className="animate-title-word gradient-word bg-gradient-to-r from-gray-700 via-black to-gray-700 bg-clip-text text-transparent">platform</span>
                             </h1>
 
                             <MouseFollowText
