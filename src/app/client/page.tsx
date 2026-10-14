@@ -74,6 +74,9 @@ export default function ClientBookingPage() {
     const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
     const [paymentMethod, setPaymentMethod] = useState<string>("mtn");
     const [mobileMoneyNumber, setMobileMoneyNumber] = useState("");
+    const [rideOpen, setRideOpen] = useState(false);
+    const [rideAddress, setRideAddress] = useState("");
+    const [rideSent, setRideSent] = useState(false);
     const [customServices, setCustomServices] = useState<Service[]>([]);
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
@@ -451,10 +454,42 @@ export default function ClientBookingPage() {
                                                 <h4 className="font-bold text-black mb-1">Need a ride?</h4>
                                                 <p className="text-sm text-gray-600">We offer pickup and delivery service (additional fee)</p>
                                             </div>
-                                            <button className="text-black hover:bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition-colors">
-                                                Request
-                                            </button>
+                                            {!rideSent && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setRideOpen((open) => !open)}
+                                                    className="text-black hover:bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition-colors"
+                                                >
+                                                    {rideOpen ? "Cancel" : "Request"}
+                                                </button>
+                                            )}
                                         </div>
+
+                                        {rideOpen && !rideSent && (
+                                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                                                <input
+                                                    type="text"
+                                                    value={rideAddress}
+                                                    onChange={(e) => setRideAddress(e.target.value)}
+                                                    placeholder="Pickup address"
+                                                    className="flex-1 p-3 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    disabled={!rideAddress.trim()}
+                                                    onClick={() => setRideSent(true)}
+                                                    className="px-6 py-3 bg-black text-white rounded-xl font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                                                >
+                                                    Send request
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {rideSent && (
+                                            <p className="mt-4 text-sm text-green-700 font-medium">
+                                                Ride requested to {rideAddress}. We'll confirm the pickup time and the additional fee before your appointment.
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             </div>
