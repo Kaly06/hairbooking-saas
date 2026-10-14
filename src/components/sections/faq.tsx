@@ -5,6 +5,20 @@ import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 
 export default function FAQ() {
     const [openItems, setOpenItems] = useState<number[]>([]);
+    const [showSpecialist, setShowSpecialist] = useState(false);
+    const [copied, setCopied] = useState(false);
+
+    const specialistPhone = "(11) 93204-9040";
+
+    const copyPhone = async () => {
+        try {
+            await navigator.clipboard.writeText(specialistPhone);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            setCopied(false);
+        }
+    };
 
     const toggleItem = (index: number) => {
         setOpenItems(prev =>
@@ -132,13 +146,15 @@ export default function FAQ() {
                         help you understand how our platform can transform your salon.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href="https://wa.me/5511932049040"
+                        <button
+                            type="button"
+                            onClick={() => setShowSpecialist((v) => !v)}
+                            aria-expanded={showSpecialist}
                             className="btn-primary"
                         >
                             <HelpCircle className="w-5 h-5 mr-2" />
                             Talk to a Specialist
-                        </a>
+                        </button>
                         <a
                             href="#contato"
                             onClick={(e) => {
@@ -150,6 +166,22 @@ export default function FAQ() {
                             Book a Demo
                         </a>
                     </div>
+                    {showSpecialist && (
+                        <div className="mt-6 mx-auto max-w-md bg-white border border-gray-200 rounded-xl p-6 text-left">
+                            <p className="text-sm text-gray-600 mb-3">
+                                Call or message our specialists, Monday to Saturday:
+                            </p>
+                            <p className="text-lg font-semibold text-gray-900 mb-4">{specialistPhone}</p>
+                            <div className="flex flex-col sm:flex-row gap-3">
+                                <a href="tel:+5511932049040" className="btn-primary text-center">
+                                    Call Now
+                                </a>
+                                <button type="button" onClick={copyPhone} className="btn-secondary">
+                                    {copied ? "Copied!" : "Copy number"}
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
