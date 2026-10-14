@@ -3,7 +3,7 @@
 import { Award, Clock, Heart, Shield, Users, TrendingUp, DollarSign } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const CARD_WIDTH = 320;
+const CARD_WIDTH = 340;
 const CARD_GAP = 50;
 const AUTOPLAY_MS = 3000;
 
@@ -14,31 +14,37 @@ export default function About() {
     const features = [
         {
             icon: Clock,
+            image: "/features/bookings-24-7.jpg",
             title: "24/7 Bookings",
             description: "Your clients can book at any time, even while you're asleep."
         },
         {
             icon: DollarSign,
+            image: "/features/revenue-growth.jpg",
             title: "Grow Your Revenue",
             description: "A smart system that optimizes your schedule and increases earnings."
         },
         {
             icon: Users,
+            image: "/features/client-management.jpg",
             title: "Client Management",
             description: "Full client history and automatic reminders to keep clients coming back."
         },
         {
             icon: Shield,
+            image: "/features/secure-data.jpg",
             title: "Secure Data",
             description: "Bank-level protection and automatic backups of your data."
         },
         {
             icon: TrendingUp,
+            image: "/features/sales-reports.jpg",
             title: "Sales Reports",
             description: "Track revenue and performance in real time."
         },
         {
             icon: Award,
+            image: "/features/dedicated-support.jpg",
             title: "Dedicated Support",
             description: "Specialized team and free training for your staff."
         }
@@ -96,7 +102,7 @@ export default function About() {
 
                 <div
                     className="relative overflow-hidden"
-                    style={{ perspective: "1000px", height: "360px", width: "100%" }}
+                    style={{ perspective: "1000px", height: "460px", width: "100%" }}
                     aria-roledescription="carousel"
                     aria-live={paused ? "polite" : "off"}
                 >
@@ -107,10 +113,10 @@ export default function About() {
                         return (
                             <div
                                 key={feature.title}
-                                className="absolute bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
+                                className="absolute bg-white rounded-2xl p-5 border border-gray-200 shadow-lg flex flex-col"
                                 style={{
                                     width: `${CARD_WIDTH}px`,
-                                    height: "280px",
+                                    height: "400px",
                                     left: "50%",
                                     top: "50%",
                                     transform: `translate(-50%, -50%) translateX(${offset * (CARD_WIDTH + CARD_GAP)}px) scale(${offset === 0 ? 1 : 0.8}) rotateY(${-offset * 15}deg)`,
@@ -121,11 +127,16 @@ export default function About() {
                                     pointerEvents: offset === 0 ? "auto" : "none",
                                 }}
                             >
-                                <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-xl mb-6 mx-auto">
-                                    <feature.icon className="w-8 h-8 text-gray-700" />
+                                <div className="w-full h-44 rounded-xl overflow-hidden bg-gray-100 mb-5">
+                                    <img
+                                        src={feature.image}
+                                        alt={feature.title}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                                     {feature.title}
                                 </h3>
 
