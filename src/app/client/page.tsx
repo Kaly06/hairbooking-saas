@@ -401,7 +401,7 @@ export default function ClientBookingPage() {
                                                                 <div className="flex items-center gap-6 mt-3 text-xs">
                                                                     <div className="flex items-center gap-1">
                                                                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                                                        <span className="text-gray-600">Estacionamento gratuito</span>
+                                                                        <span className="text-gray-600">Free parking</span>
                                                                     </div>
                                                                     <div className="flex items-center gap-1">
                                                                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
@@ -538,7 +538,7 @@ export default function ClientBookingPage() {
                                                             )}
                                                         </div>
                                                         <div>
-                                                            <h3 className="text-lg font-black text-black">Plan Mensal</h3>
+                                                            <h3 className="text-lg font-black text-black">Monthly Plan</h3>
                                                             <p className="text-sm text-gray-600 mt-1">2x or 4x per month with progressive discounts</p>
                                                             <div className="flex items-center gap-3 mt-2 text-xs">
                                                                 <span className="text-gray-600">✓ Priority booking</span>

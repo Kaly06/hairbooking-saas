@@ -79,7 +79,7 @@ export default function StarterDashboard() {
             case "pending":
                 return "Pending";
             default:
-                return "Agendado";
+                return "Scheduled";
         }
     };
 

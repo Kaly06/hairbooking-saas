@@ -116,7 +116,7 @@ export default function StarterAppointments() {
             case "cancelled":
                 return "Cancelled";
             default:
-                return "Agendado";
+                return "Scheduled";
         }
     };
 

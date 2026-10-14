@@ -388,7 +388,7 @@ export default function ProfessionalCommissions() {
                                 </div>
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm text-gray-600">Meta Mensal</span>
+                                        <span className="text-sm text-gray-600">Monthly Target</span>
                                         <span className="font-medium text-gray-900">{formatUSD(target.monthlyTarget.toLocaleString())}</span>
                                     </div>
                                     <div className="flex items-center justify-between">

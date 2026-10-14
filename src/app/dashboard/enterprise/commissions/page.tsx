@@ -21,7 +21,7 @@ export default function EnterpriseCommissionsPage() {
                             Configurar Plans
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Report Mensal
+                            Monthly Report
                         </button>
                     </div>
                 </div>
@@ -413,7 +413,7 @@ export default function EnterpriseCommissionsPage() {
                                 {/* Monthly Goal */}
                                 <div className="p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border border-green-200">
                                     <div className="flex justify-between items-center mb-2">
-                                        <h4 className="font-semibold text-green-900">Meta Mensal</h4>
+                                        <h4 className="font-semibold text-green-900">Monthly Target</h4>
                                         <span className="text-xs bg-green-500 text-white px-2 py-1 rounded-full">Active</span>
                                     </div>
                                     <p className="text-sm text-green-700 mb-3">{formatUSD(500)} bonus for anyone reaching {formatUSD(8)} in commissions</p>

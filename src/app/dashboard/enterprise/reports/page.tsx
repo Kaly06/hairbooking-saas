@@ -51,7 +51,7 @@ export default function EnterpriseReportsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Atendimentos YTD</p>
+                                    <p className="text-sm font-medium text-gray-600">Appointments YTD</p>
                                     <p className="text-2xl font-bold text-gray-900">98.547</p>
                                     <div className="flex items-center mt-1">
                                         <Users className="h-3 w-3 text-blue-500 mr-1" />
@@ -336,7 +336,7 @@ export default function EnterpriseReportsPage() {
                                     <tr className="border-b border-gray-200">
                                         <th className="text-left py-3 px-4 font-semibold">Branch</th>
                                         <th className="text-right py-3 px-4 font-semibold">Revenue YTD</th>
-                                        <th className="text-right py-3 px-4 font-semibold">Atendimentos</th>
+                                        <th className="text-right py-3 px-4 font-semibold">Appointments</th>
                                         <th className="text-right py-3 px-4 font-semibold">Average Ticket</th>
                                         <th className="text-right py-3 px-4 font-semibold">Occupancy</th>
                                         <th className="text-right py-3 px-4 font-semibold">NPS</th>
