@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import {
     Check,
@@ -25,7 +26,7 @@ export default function BookingSuccessPage() {
                         </div>
                         <div>
                             <h1 className="text-xl font-bold text-black">HairBooking</h1>
-                            <p className="text-sm text-gray-600">Agendamento Confirmado</p>
+                            <p className="text-sm text-gray-600">Booking Confirmed</p>
                         </div>
                     </div>
                 </div>
@@ -37,16 +38,16 @@ export default function BookingSuccessPage() {
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <Check className="h-10 w-10 text-green-600" />
                     </div>
-                    <h1 className="text-4xl font-bold text-black mb-4">Agendamento Confirmado!</h1>
+                    <h1 className="text-4xl font-bold text-black mb-4">Booking Confirmed!</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Seu agendamento foi realizado com sucesso. Você receberá um email de confirmação em breve.
+                        Your booking was successful. You will receive a confirmation email shortly.
                     </p>
                 </div>
 
                 {/* Booking Details */}
                 <Card className="max-w-2xl mx-auto mb-8 border-gray-200">
                     <CardContent className="p-8">
-                        <h2 className="text-2xl font-bold text-black mb-6">Detalhes do Agendamento</h2>
+                        <h2 className="text-2xl font-bold text-black mb-6">Booking Details</h2>
 
                         <div className="space-y-6">
                             <div className="flex items-start gap-4">
@@ -54,8 +55,8 @@ export default function BookingSuccessPage() {
                                     <Calendar className="h-5 w-5 text-black" />
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="font-semibold text-black">Data e Horário</h3>
-                                    <p className="text-gray-600">Terça-feira, 12 de Novembro de 2024</p>
+                                    <h3 className="font-semibold text-black">Date & Time</h3>
+                                    <p className="text-gray-600">Tuesday, November 12, 2024</p>
                                     <p className="text-gray-600">14:30 - 15:15</p>
                                 </div>
                             </div>
@@ -66,8 +67,8 @@ export default function BookingSuccessPage() {
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-semibold text-black">Local</h3>
-                                    <p className="text-gray-600">Unidade Centro</p>
-                                    <p className="text-gray-600">Rua das Flores, 123 - Centro</p>
+                                    <p className="text-gray-600">Osu Branch</p>
+                                    <p className="text-gray-600">Oxford Street, 123 - Osu, Accra</p>
                                 </div>
                             </div>
 
@@ -76,9 +77,9 @@ export default function BookingSuccessPage() {
                                     <Clock className="h-5 w-5 text-black" />
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="font-semibold text-black">Serviços</h3>
-                                    <p className="text-gray-600">Corte de Cabelo</p>
-                                    <p className="text-gray-600">Duração: 45 minutos</p>
+                                    <h3 className="font-semibold text-black">Services</h3>
+                                    <p className="text-gray-600">Haircut</p>
+                                    <p className="text-gray-600">Duration: 45 minutes</p>
                                 </div>
                             </div>
 
@@ -87,17 +88,17 @@ export default function BookingSuccessPage() {
                                     <Phone className="h-5 w-5 text-black" />
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="font-semibold text-black">Contato da Unidade</h3>
-                                    <p className="text-gray-600">(11) 3325-4400</p>
+                                    <h3 className="font-semibold text-black">Branch Contact</h3>
+                                    <p className="text-gray-600">+233 24 325 4400</p>
                                 </div>
                             </div>
 
                             <div className="border-t pt-6">
                                 <div className="flex justify-between items-center">
-                                    <span className="text-lg font-medium text-black">Total Pago</span>
-                                    <span className="text-2xl font-bold text-black">R$ 47,50</span>
+                                    <span className="text-lg font-medium text-black">Total paid</span>
+                                    <span className="text-2xl font-bold text-black">{formatUSD(47.5)}</span>
                                 </div>
-                                <p className="text-sm text-gray-500 mt-1">Pagamento processado com sucesso</p>
+                                <p className="text-sm text-gray-500 mt-1">Payment processed successfully</p>
                             </div>
                         </div>
                     </CardContent>
@@ -108,11 +109,11 @@ export default function BookingSuccessPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <button className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-all duration-200">
                             <Download className="h-4 w-4" />
-                            Baixar Comprovante
+                            Download Receipt
                         </button>
                         <button className="flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all duration-200">
                             <Share2 className="h-4 w-4" />
-                            Compartilhar
+                            Share
                         </button>
                     </div>
 
@@ -120,7 +121,7 @@ export default function BookingSuccessPage() {
                         onClick={() => window.location.href = '/client'}
                         className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 text-black rounded-lg font-medium hover:bg-gray-200 transition-all duration-200"
                     >
-                        Fazer Novo Agendamento
+                        Make a New Booking
                         <ArrowRight className="h-4 w-4" />
                     </button>
                 </div>
@@ -128,23 +129,23 @@ export default function BookingSuccessPage() {
                 {/* Important Information */}
                 <Card className="max-w-2xl mx-auto mt-8 border-gray-200">
                     <CardContent className="p-6">
-                        <h3 className="font-semibold text-black mb-4">Informações Importantes</h3>
+                        <h3 className="font-semibold text-black mb-4">Important Information</h3>
                         <div className="space-y-3 text-sm text-gray-600">
                             <div className="flex items-start gap-2">
                                 <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                <span>Chegue com 10 minutos de antecedência</span>
+                                <span>Arrive 10 minutes early</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                <span>Cancelamentos devem ser feitos com até 2 horas de antecedência</span>
+                                <span>Cancellations must be made at least 2 hours in advance</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <Check className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                                <span>Em caso de dúvidas, entre em contato com a unidade</span>
+                                <span>For questions, please contact the branch</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <Mail className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                                <span>Você receberá um lembrete por email 1 dia antes do agendamento</span>
+                                <span>You will receive an email reminder 1 day before your booking</span>
                             </div>
                         </div>
                     </CardContent>
@@ -155,11 +156,11 @@ export default function BookingSuccessPage() {
             <footer className="bg-gray-50 border-t border-gray-200">
                 <div className="max-w-6xl mx-auto px-4 py-8">
                     <div className="text-center text-gray-600">
-                        <p className="mb-4">© 2024 HairBooking. Todos os direitos reservados.</p>
+                        <p className="mb-4">© 2024 HairBooking. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-8 text-sm">
-                            <a href="#" className="hover:text-black transition-colors font-medium">Termos de Uso</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Política de Privacidade</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Support</a>
                         </div>
                     </div>
                 </div>

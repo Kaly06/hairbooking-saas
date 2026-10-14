@@ -16,52 +16,52 @@ export default function FAQ() {
 
     const faqs = [
         {
-            question: "Como funciona a implementação da plataforma no meu salão?",
-            answer: "O processo é simples e rápido. Nossa equipe técnica configura toda a plataforma com os dados do seu salão, cadastra serviços e preços, treina sua equipe e migra dados de clientes (se necessário). A implementação completa leva em média 2-3 dias úteis."
+            question: "How does the platform get set up in my salon?",
+            answer: "The process is simple and quick. Our technical team sets up the entire platform with your salon's data, adds your services and prices, trains your staff and migrates client data (if needed). Full setup takes about 2-3 working days."
         },
         {
-            question: "Preciso de conhecimento técnico para usar a plataforma?",
-            answer: "Não! Nossa plataforma foi desenvolvida para ser intuitiva e fácil de usar. Oferecemos treinamento completo para você e sua equipe, além de suporte contínuo. A maioria dos salões consegue usar todas as funcionalidades no primeiro dia."
+            question: "Do I need technical knowledge to use the platform?",
+            answer: "No! Our platform is designed to be intuitive and easy to use. We provide full training for you and your team, plus ongoing support. Most salons can use all the features on day one."
         },
         {
-            question: "Meus dados e dos clientes ficam seguros?",
-            answer: "Sim! Utilizamos as melhores práticas de segurança, incluindo criptografia de dados, backup automático e servidores seguros. Todos os dados ficam protegidos e acessíveis apenas por você e sua equipe autorizada."
+            question: "Are my data and my clients' data safe?",
+            answer: "Yes! We use industry-best security practices, including data encryption, automatic backups and secure servers. All data stays protected and is accessible only to you and your authorised team."
         },
         {
-            question: "Posso cancelar a assinatura a qualquer momento?",
-            answer: "Sim! Não temos contrato de fidelidade. Você pode cancelar quando quiser e continuará tendo acesso à plataforma até o final do período pago. Oferecemos backup completo dos seus dados para download."
+            question: "Can I cancel my subscription at any time?",
+            answer: "Yes! There is no long-term contract. You can cancel whenever you like and keep access to the platform until the end of the paid period. We provide a full backup of your data for download."
         },
         {
-            question: "Como a plataforma vai aumentar meu faturamento?",
-            answer: "A plataforma reduz cancelamentos em até 70%, permite agendamentos 24/7, automatiza lembretes, organiza sua agenda, facilita reagendamentos e oferece relatórios para você tomar decisões estratégicas baseadas em dados."
+            question: "How will the platform grow my revenue?",
+            answer: "The platform cuts cancellations by up to 70%, enables 24/7 bookings, automates reminders, organises your schedule, makes rescheduling easy and gives you reports to make data-driven decisions."
         },
         {
-            question: "Preciso ter um computador específico ou tablet?",
-            answer: "Não! Nossa plataforma funciona em qualquer dispositivo: computador, tablet, smartphone ou notebook. Tudo que você precisa é de uma conexão com internet. Também oferecemos suporte para uso offline básico."
+            question: "Do I need a specific computer or tablet?",
+            answer: "No! Our platform works on any device: computer, tablet, smartphone or laptop. All you need is an internet connection. We also offer basic offline support."
         },
         {
-            question: "E se minha internet cair durante o atendimento?",
-            answer: "A plataforma possui funcionalidades offline que permitem continuar agendamentos e atendimentos mesmo sem internet. Quando a conexão voltar, tudo é sincronizado automaticamente."
+            question: "What if my internet goes down during an appointment?",
+            answer: "The platform has offline features that let you keep working on bookings and appointments without internet. When the connection returns, everything syncs automatically."
         },
         {
-            question: "Posso personalizar a plataforma com minha marca?",
-            answer: "Sim! No plano Professional e Enterprise, você pode personalizar cores, logo, nome do salão no app e site. Seus clientes verão sua marca em todas as interações, criando uma experiência consistente."
+            question: "Can I customise the platform with my brand?",
+            answer: "Yes! On the Professional and Enterprise plans you can customise colours, logo and salon name in the app and website. Your clients will see your brand at every touchpoint, for a consistent experience."
         },
         {
-            question: "Como funciona o suporte técnico?",
-            answer: "Oferecemos suporte via WhatsApp (Professional), telefone e videoconferência (Enterprise). Nossa equipe está disponível de segunda a sábado para resolver qualquer dúvida ou problema rapidamente."
+            question: "How does technical support work?",
+            answer: "We offer support via WhatsApp (Professional), phone and video calls (Enterprise). Our team is available Monday to Saturday to quickly answer any question or solve any problem."
         },
         {
-            question: "Posso integrar com meu sistema atual de pagamentos?",
-            answer: "Sim! Nossa plataforma se integra com os principais gateways de pagamento do mercado, incluindo Mercado Pago, PagSeguro, Stripe e outros. Também suportamos cartões, PIX e dinheiro."
+            question: "Can I connect my current payment system?",
+            answer: "Yes! Our platform integrates with the main payment gateways, including Paystack, Flutterwave, Stripe and others. We also support cards, PIX and cash."
         },
         {
-            question: "Quantos profissionais podem usar a plataforma?",
-            answer: "Depende do plano: Starter (até 3 profissionais), Professional (até 10 profissionais) e Enterprise (ilimitado). Você pode fazer upgrade do plano a qualquer momento conforme seu salão cresce."
+            question: "How many professionals can use the platform?",
+            answer: "It depends on the plan: Starter (up to 3 professionals), Professional (up to 10 professionals) and Enterprise (unlimited). You can upgrade at any time as your salon grows."
         },
         {
-            question: "A plataforma gera relatórios financeiros?",
-            answer: "Sim! Geramos relatórios completos de faturamento, comissões, serviços mais vendidos, performance por profissional, fluxo de caixa e muito mais. Tudo em tempo real para você acompanhar seu negócio."
+            question: "Does the platform generate financial reports?",
+            answer: "Yes! We generate full reports on revenue, commissions, best-selling services, performance by professional, cash flow and more. Everything is real-time, so you can track your business."
         }
     ];
 
@@ -72,17 +72,17 @@ export default function FAQ() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <div className="inline-flex items-center px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-600 mb-4">
                         <HelpCircle className="w-4 h-4 mr-2 text-gray-700" />
-                        Dúvidas Frequentes
+                        Frequently Asked Questions
                     </div>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Tire suas
-                        <span className="gradient-text"> dúvidas</span>
+                        Get your
+                        <span className="gradient-text"> questions answered</span>
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        Respostas para as principais questões sobre nossa plataforma,
-                        implementação e como ela pode transformar seu salão.
+                        Answers to the most common questions about our platform,
+                        setup and how it can transform your salon.
                     </p>
                 </div>
 
@@ -125,19 +125,19 @@ export default function FAQ() {
                 {/* CTA Section */}
                 <div className="mt-16 text-center bg-gray-50 rounded-2xl p-12">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        Ainda tem dúvidas?
+                        Still have questions?
                     </h3>
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Nossa equipe está pronta para esclarecer qualquer questão e
-                        ajudar você a entender como nossa plataforma pode transformar seu salão.
+                        Our team is ready to answer any question and
+                        help you see how our platform can transform your salon.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button className="btn-primary">
                             <HelpCircle className="w-5 h-5 mr-2" />
-                            Falar com Especialista
+                            Talk to a Specialist
                         </button>
                         <button className="btn-secondary">
-                            Agendar Demonstração
+                            Book a Demo
                         </button>
                     </div>
                 </div>

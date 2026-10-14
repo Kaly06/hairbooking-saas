@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -18,6 +19,14 @@ import {
     Minus,
     Trash2
 } from "lucide-react";
+import { searchPlaces, type Place } from "@/lib/places";
+
+interface Professional {
+    id: number;
+    name: string;
+    specialty: string;
+    rating: number;
+}
 
 interface Unit {
     id: number;
@@ -62,6 +71,15 @@ export default function ClientBookingPage() {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
     const [selectedService, setSelectedService] = useState("simple");
     const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+    const [professionalMode, setProfessionalMode] = useState<"any" | "specific">("any");
+    const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
+    const [paymentMethod, setPaymentMethod] = useState<string>("mtn");
+    const [mobileMoneyNumber, setMobileMoneyNumber] = useState("");
+    const [rideOpen, setRideOpen] = useState(false);
+    const [rideAddress, setRideAddress] = useState("");
+    const [rideSent, setRideSent] = useState(false);
+    const [rideSuggestionsOpen, setRideSuggestionsOpen] = useState(false);
+    const rideSuggestions: Place[] = searchPlaces(rideAddress);
     const [customServices, setCustomServices] = useState<Service[]>([]);
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
@@ -93,50 +111,56 @@ export default function ClientBookingPage() {
     const units = [
         {
             id: 1,
-            name: "Unidade Centro",
-            address: "Rua das Flores, 123 - Centro",
+            name: "Osu Branch",
+            address: "Oxford Street, 123 - Osu, Accra",
             rating: 4.9,
             reviews: 847,
-            phone: "(11) 3325-4400",
+            phone: "+233 24 325 4400",
             distance: "2.3 km"
         },
         {
             id: 2,
-            name: "Unidade Zona Sul",
-            address: "Av. Paulista, 1000 - Bela Vista",
+            name: "East Legon Branch",
+            address: "Boundary Road, 1000 - East Legon, Accra",
             rating: 4.8,
             reviews: 623,
-            phone: "(11) 2240-5500",
+            phone: "+233 24 240 5500",
             distance: "5.7 km"
         },
         {
             id: 3,
-            name: "Unidade Zona Norte",
-            address: "Rua Augusta, 500 - Consolação",
+            name: "Airport Residential Branch",
+            address: "Liberation Road, 500 - Airport Residential, Accra",
             rating: 4.7,
             reviews: 412,
-            phone: "(11) 2596-7800",
+            phone: "+233 24 596 7800",
             distance: "8.1 km"
         }
     ];
 
+    const professionals: Professional[] = [
+        { id: 1, name: "Ama Owusu", specialty: "Women's cuts & styling", rating: 4.9 },
+        { id: 2, name: "Kwesi Asare", specialty: "Beard & cuts", rating: 4.8 },
+        { id: 3, name: "Akua Darko", specialty: "Colour & highlights", rating: 5.0 }
+    ];
+
     const services = {
         hair: [
-            { id: "cut", name: "Corte de Cabelo", price: 45, duration: 45, category: "hair" },
-            { id: "wash", name: "Lavagem + Escova", price: 35, duration: 30, category: "hair" },
-            { id: "hydration", name: "Hidratação", price: 65, duration: 60, category: "hair" },
-            { id: "straightening", name: "Alisamento", price: 120, duration: 120, category: "hair" },
-            { id: "coloring", name: "Coloração", price: 85, duration: 90, category: "hair" }
+            { id: "cut", name: "Haircut", price: 45, duration: 45, category: "hair" },
+            { id: "wash", name: "Wash + Blow-dry", price: 35, duration: 30, category: "hair" },
+            { id: "hydration", name: "Hair Treatment", price: 65, duration: 60, category: "hair" },
+            { id: "straightening", name: "Straightening", price: 120, duration: 120, category: "hair" },
+            { id: "coloring", name: "Coloring", price: 85, duration: 90, category: "hair" }
         ],
         face: [
-            { id: "eyebrow", name: "Design de Sobrancelha", price: 25, duration: 30, category: "face" },
-            { id: "beard", name: "Barba Completa", price: 30, duration: 30, category: "face" },
-            { id: "mustache", name: "Bigode", price: 15, duration: 15, category: "face" }
+            { id: "eyebrow", name: "Eyebrow Design", price: 25, duration: 30, category: "face" },
+            { id: "beard", name: "Full Beard Trim", price: 30, duration: 30, category: "face" },
+            { id: "mustache", name: "Mustache", price: 15, duration: 15, category: "face" }
         ],
         packages: [
             {
                 id: "complete",
-                name: "Pacote Completo",
+                name: "Complete Package",
                 price: 85,
                 duration: 90,
                 category: "package"
@@ -154,23 +178,23 @@ export default function ClientBookingPage() {
     const monthlyPlans = [
         {
             id: "basic",
-            name: "Plano Básico",
-            frequency: "2x por mês",
+            name: "Basic Plan",
+            frequency: "2x per month",
             price: 75,
             originalPrice: 90,
             savings: 15,
-            services: ["Corte de Cabelo", "Lavagem + Escova"],
+            services: ["Haircut", "Wash + Blow-dry"],
             popular: false,
             sessionsPerMonth: 2
         },
         {
             id: "premium",
-            name: "Plano Premium",
-            frequency: "4x por mês",
+            name: "Premium Plan",
+            frequency: "4x per month",
             price: 140,
             originalPrice: 180,
             savings: 40,
-            services: ["Corte de Cabelo", "Lavagem + Escova", "Design de Sobrancelha"],
+            services: ["Haircut", "Wash + Blow-dry", "Eyebrow Design"],
             popular: true,
             sessionsPerMonth: 4
         }
@@ -218,18 +242,18 @@ export default function ClientBookingPage() {
                             </div>
                             <div>
                                 <h1 className="text-xl sm:text-2xl font-black text-black tracking-tight">HairBooking</h1>
-                                <p className="text-xs sm:text-sm text-gray-500 font-medium hidden sm:block">Sistema de Agendamento Profissional</p>
+                                <p className="text-xs sm:text-sm text-gray-500 font-medium hidden sm:block">Professional Booking System</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-2 sm:gap-3">
                             <div className="hidden md:flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 sm:px-4 py-2 rounded-full">
                                 <Shield className="h-3 w-3 sm:h-4 sm:w-4 text-black" />
-                                <span className="font-medium text-xs sm:text-sm">Pagamento Seguro SSL</span>
+                                <span className="font-medium text-xs sm:text-sm">Secure SSL payment</span>
                             </div>
                             <div className="text-xs sm:text-sm text-gray-500">
                                 <div className="flex items-center gap-1">
                                     <Clock className="h-3 w-3" />
-                                    <span className="hidden sm:inline">Atendimento 24h</span>
+                                    <span className="hidden sm:inline">24/7 Service</span>
                                     <span className="sm:hidden">24h</span>
                                 </div>
                             </div>
@@ -244,8 +268,8 @@ export default function ClientBookingPage() {
                     {/* Mobile Progress Bar */}
                     <div className="block sm:hidden">
                         <div className="flex items-center justify-between mb-3">
-                            <span className="text-sm font-bold text-black">Etapa {step} de 5</span>
-                            <span className="text-xs text-gray-500">{Math.round((step / 5) * 100)}% concluído</span>
+                            <span className="text-sm font-bold text-black">Step {step} of 5</span>
+                            <span className="text-xs text-gray-500">{Math.round((step / 5) * 100)}% complete</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
@@ -256,11 +280,11 @@ export default function ClientBookingPage() {
                         <div className="mt-2 text-center">
                             <div className="text-sm font-semibold text-black">
                                 {[
-                                    "Escolha da Unidade",
-                                    "Tipo de Serviço",
-                                    "Seus Serviços",
-                                    "Agendamento",
-                                    "Confirmação"
+                                    "Choose Branch",
+                                    "Service Type",
+                                    "Your Services",
+                                    "Booking",
+                                    "Confirmation"
                                 ][step - 1]}
                             </div>
                         </div>
@@ -270,11 +294,11 @@ export default function ClientBookingPage() {
                     <div className="hidden sm:block">
                         <div className="flex items-center justify-between mb-4">
                             {[
-                                { num: 1, icon: MapPin, label: "Unidade" },
-                                { num: 2, icon: Star, label: "Tipo" },
-                                { num: 3, icon: Scissors, label: "Serviços" },
-                                { num: 4, icon: Calendar, label: "Data/Hora" },
-                                { num: 5, icon: CreditCard, label: "Pagamento" }
+                                { num: 1, icon: MapPin, label: "Branch" },
+                                { num: 2, icon: Star, label: "Type" },
+                                { num: 3, icon: Scissors, label: "Services" },
+                                { num: 4, icon: Calendar, label: "Date/Time" },
+                                { num: 5, icon: CreditCard, label: "Payment" }
                             ].map((item, index) => {
                                 const Icon = item.icon;
                                 return (
@@ -312,11 +336,11 @@ export default function ClientBookingPage() {
                         </div>
                         <div className="flex justify-between">
                             {[
-                                { label: "Escolha da Unidade", desc: "Selecione sua localização" },
-                                { label: "Tipo de Serviço", desc: "Simples, plano ou personalizado" },
-                                { label: "Seus Serviços", desc: "Configure seu atendimento" },
-                                { label: "Agendamento", desc: "Data e horário ideais" },
-                                { label: "Confirmação", desc: "Dados e pagamento" }
+                                { label: "Choose Branch", desc: "Select your location" },
+                                { label: "Service Type", desc: "Single, plan or custom" },
+                                { label: "Your Services", desc: "Set up your appointment" },
+                                { label: "Booking", desc: "Pick your ideal date and time" },
+                                { label: "Confirmation", desc: "Details and payment" }
                             ].map((item, index) => (
                                 <div key={index} className="text-center flex-1 px-1">
                                     <div className={`text-xs sm:text-sm font-semibold transition-colors ${step >= index + 1 ? 'text-black' : step === index + 1 ? 'text-black' : 'text-gray-400'
@@ -338,8 +362,8 @@ export default function ClientBookingPage() {
                     <div className="space-y-6 sm:space-y-8">
                         <div className="max-w-4xl mx-auto">
                             <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Localização do Atendimento</h2>
-                                <p className="text-gray-600 text-base sm:text-lg">Onde você gostaria de ser atendido?</p>
+                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Service Location</h2>
+                                <p className="text-gray-600 text-base sm:text-lg">Where would you like to be served?</p>
                             </div>
 
                             {/* Unit Selection Form */}
@@ -349,7 +373,7 @@ export default function ClientBookingPage() {
                                     <div>
                                         <label className="block text-sm font-bold text-black mb-4">
                                             <MapPin className="h-4 w-4 inline mr-2" />
-                                            Escolha a unidade mais próxima:
+                                            Choose the closest branch:
                                         </label>
 
                                         <div className="space-y-3">
@@ -400,11 +424,11 @@ export default function ClientBookingPage() {
                                                                 <div className="flex items-center gap-6 mt-3 text-xs">
                                                                     <div className="flex items-center gap-1">
                                                                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                                                        <span className="text-gray-600">Estacionamento gratuito</span>
+                                                                        <span className="text-gray-600">Free parking</span>
                                                                     </div>
                                                                     <div className="flex items-center gap-1">
                                                                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                                                        <span className="text-gray-600">WiFi disponível</span>
+                                                                        <span className="text-gray-600">WiFi available</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -430,13 +454,73 @@ export default function ClientBookingPage() {
                                     <div className="pt-6 border-t border-gray-200">
                                         <div className="flex items-center justify-between">
                                             <div>
-                                                <h4 className="font-bold text-black mb-1">Precisa de transporte?</h4>
-                                                <p className="text-sm text-gray-600">Oferecemos serviço de busca e entrega (taxa adicional)</p>
+                                                <h4 className="font-bold text-black mb-1">Need a ride?</h4>
+                                                <p className="text-sm text-gray-600">We offer pickup and delivery service (additional fee)</p>
                                             </div>
-                                            <button className="text-black hover:bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition-colors">
-                                                Solicitar
-                                            </button>
+                                            {!rideSent && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setRideOpen((open) => !open)}
+                                                    className="text-black hover:bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition-colors"
+                                                >
+                                                    {rideOpen ? "Cancel" : "Request"}
+                                                </button>
+                                            )}
                                         </div>
+
+                                        {rideOpen && !rideSent && (
+                                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                                                <div className="relative flex-1">
+                                                    <input
+                                                        type="text"
+                                                        value={rideAddress}
+                                                        onChange={(e) => {
+                                                            setRideAddress(e.target.value);
+                                                            setRideSuggestionsOpen(true);
+                                                        }}
+                                                        onFocus={() => setRideSuggestionsOpen(true)}
+                                                        onBlur={() => setRideSuggestionsOpen(false)}
+                                                        placeholder="Pickup address, e.g. Cape Coast or Kotokuraba"
+                                                        autoComplete="off"
+                                                        className="w-full p-3 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
+                                                    />
+                                                    {rideSuggestionsOpen && rideSuggestions.length > 0 && (
+                                                        <ul className="absolute z-20 left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-72 overflow-auto">
+                                                            {rideSuggestions.map((place) => (
+                                                                <li key={`${place.city}-${place.name}`}>
+                                                                    <button
+                                                                        type="button"
+                                                                        onMouseDown={(e) => e.preventDefault()}
+                                                                        onClick={() => {
+                                                                            setRideAddress(`${place.name}, ${place.city}`);
+                                                                            setRideSuggestionsOpen(false);
+                                                                        }}
+                                                                        className="w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
+                                                                    >
+                                                                        <span className="font-semibold text-black">{place.name}</span>
+                                                                        <span className="text-gray-500">, {place.city}</span>
+                                                                    </button>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    disabled={!rideAddress.trim()}
+                                                    onClick={() => setRideSent(true)}
+                                                    className="px-6 py-3 bg-black text-white rounded-xl font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                                                >
+                                                    Send request
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {rideSent && (
+                                            <p className="mt-4 text-sm text-green-700 font-medium">
+                                                Ride requested to {rideAddress}. We'll confirm the pickup time and the additional fee before your appointment.
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -451,7 +535,7 @@ export default function ClientBookingPage() {
                                         : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                                         }`}
                                 >
-                                    Continuar
+                                    Continue
                                     <ArrowRight className="h-4 sm:h-5 w-4 sm:w-5" />
                                 </button>
                             </div>
@@ -464,8 +548,8 @@ export default function ClientBookingPage() {
                     <div className="space-y-6 sm:space-y-8">
                         <div className="max-w-4xl mx-auto">
                             <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Tipo de Atendimento</h2>
-                                <p className="text-gray-600 text-base sm:text-lg">Qual modalidade você prefere?</p>
+                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Service Type</h2>
+                                <p className="text-gray-600 text-base sm:text-lg">Which option do you prefer?</p>
                             </div>
 
                             {/* Service Type Selection */}
@@ -474,7 +558,7 @@ export default function ClientBookingPage() {
                                     <div>
                                         <label className="block text-sm font-bold text-black mb-4">
                                             <Scissors className="h-4 w-4 inline mr-2" />
-                                            Selecione o tipo de serviço:
+                                            Select a service type:
                                         </label>
 
                                         <div className="space-y-4">
@@ -497,12 +581,12 @@ export default function ClientBookingPage() {
                                                             )}
                                                         </div>
                                                         <div>
-                                                            <h3 className="text-lg font-black text-black">Atendimento Avulso</h3>
-                                                            <p className="text-sm text-gray-600 mt-1">Corte profissional com lavagem e finalização</p>
+                                                            <h3 className="text-lg font-black text-black">One-Time Service</h3>
+                                                            <p className="text-sm text-gray-600 mt-1">Professional haircut with wash and styling</p>
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-2xl font-black text-black">R$ 45</div>
+                                                        <div className="text-2xl font-black text-black">{formatUSD(45)}</div>
                                                         <div className="text-xs text-gray-500 flex items-center gap-1">
                                                             <Clock className="h-3 w-3" />
                                                             <span>45 min</span>
@@ -522,7 +606,7 @@ export default function ClientBookingPage() {
                                                 {/* Discount Badge */}
                                                 <div className="absolute -top-2 left-6">
                                                     <div className="bg-black text-white px-3 py-1 rounded-full text-xs font-bold">
-                                                        Economize até 40%
+                                                        Save up to 40%
                                                     </div>
                                                 </div>
 
@@ -537,17 +621,17 @@ export default function ClientBookingPage() {
                                                             )}
                                                         </div>
                                                         <div>
-                                                            <h3 className="text-lg font-black text-black">Plano Mensal</h3>
-                                                            <p className="text-sm text-gray-600 mt-1">2x ou 4x por mês com desconto progressivo</p>
+                                                            <h3 className="text-lg font-black text-black">Monthly Plan</h3>
+                                                            <p className="text-sm text-gray-600 mt-1">2x or 4x per month with progressive discounts</p>
                                                             <div className="flex items-center gap-3 mt-2 text-xs">
-                                                                <span className="text-gray-600">✓ Prioridade no agendamento</span>
-                                                                <span className="text-gray-600">✓ Transferência entre unidades</span>
+                                                                <span className="text-gray-600">✓ Priority booking</span>
+                                                                <span className="text-gray-600">✓ Transfers between branches</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-2xl font-black text-black">R$ 75<span className="text-sm text-gray-500">/mês</span></div>
-                                                        <div className="text-xs text-gray-500 line-through">R$ 120</div>
+                                                        <div className="text-2xl font-black text-black">{formatUSD(75)}<span className="text-sm text-gray-500">/month</span></div>
+                                                        <div className="text-xs text-gray-500 line-through">{formatUSD(120)}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -571,17 +655,17 @@ export default function ClientBookingPage() {
                                                             )}
                                                         </div>
                                                         <div>
-                                                            <h3 className="text-lg font-black text-black">Atendimento Personalizado</h3>
-                                                            <p className="text-sm text-gray-600 mt-1">Monte seu combo com múltiplos serviços</p>
+                                                            <h3 className="text-lg font-black text-black">Custom Service</h3>
+                                                            <p className="text-sm text-gray-600 mt-1">Build your combo with multiple services</p>
                                                             <div className="flex items-center gap-3 mt-2 text-xs">
-                                                                <span className="text-gray-600">✓ Corte + Barba + Sobrancelha</span>
-                                                                <span className="text-gray-600">✓ Duração flexível</span>
+                                                                <span className="text-gray-600">✓ Haircut + Beard + Eyebrows</span>
+                                                                <span className="text-gray-600">✓ Flexible duration</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-lg font-black text-black">Personalizar</div>
-                                                        <div className="text-xs text-gray-500">A partir de R$ 60</div>
+                                                        <div className="text-lg font-black text-black">Customise</div>
+                                                        <div className="text-xs text-gray-500">From {formatUSD(60)}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -590,17 +674,46 @@ export default function ClientBookingPage() {
 
                                     {/* Professional Preference */}
                                     <div className="pt-6 border-t border-gray-200">
-                                        <h4 className="font-bold text-black mb-3">Preferência de Profissional</h4>
-                                        <div className="flex gap-4">
+                                        <h4 className="font-bold text-black mb-3">Professional Preference</h4>
+                                        <div className="flex flex-wrap gap-4">
                                             <label className="flex items-center gap-2 cursor-pointer">
-                                                <input type="radio" name="professional" className="text-black" defaultChecked />
-                                                <span className="text-sm">Qualquer profissional disponível</span>
+                                                <input
+                                                    type="radio"
+                                                    name="professional"
+                                                    className="text-black"
+                                                    checked={professionalMode === "any"}
+                                                    onChange={() => { setProfessionalMode("any"); setSelectedProfessional(null); }}
+                                                />
+                                                <span className="text-sm">Any available professional</span>
                                             </label>
                                             <label className="flex items-center gap-2 cursor-pointer">
-                                                <input type="radio" name="professional" className="text-black" />
-                                                <span className="text-sm">Escolher profissional específico</span>
+                                                <input
+                                                    type="radio"
+                                                    name="professional"
+                                                    className="text-black"
+                                                    checked={professionalMode === "specific"}
+                                                    onChange={() => setProfessionalMode("specific")}
+                                                />
+                                                <span className="text-sm">Choose a specific professional</span>
                                             </label>
                                         </div>
+
+                                        {professionalMode === "specific" && (
+                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+                                                {professionals.map((pro) => (
+                                                    <button
+                                                        type="button"
+                                                        key={pro.id}
+                                                        onClick={() => setSelectedProfessional(pro)}
+                                                        className={`text-left p-4 border-2 rounded-xl transition-all ${selectedProfessional?.id === pro.id ? "border-black bg-gray-50" : "border-gray-200 hover:border-gray-400"}`}
+                                                    >
+                                                        <div className="font-bold text-black">{pro.name}</div>
+                                                        <div className="text-sm text-gray-600">{pro.specialty}</div>
+                                                        <div className="text-xs text-gray-500 mt-1">★ {pro.rating}</div>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -612,13 +725,13 @@ export default function ClientBookingPage() {
                                     className="order-2 sm:order-1 w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2"
                                 >
                                     <ArrowRight className="h-4 w-4 rotate-180" />
-                                    Voltar
+                                    Back
                                 </button>
                                 <button
                                     onClick={() => handleStepChange(3)}
                                     className="order-1 sm:order-2 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-xl font-bold hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-3"
                                 >
-                                    Continuar
+                                    Continue
                                     <ArrowRight className="h-4 sm:h-5 w-4 sm:w-5" />
                                 </button>
                             </div>
@@ -629,11 +742,30 @@ export default function ClientBookingPage() {
                 {/* Step 3: Service Details */}
                 {step === 3 && (
                     <div className="space-y-6 sm:space-y-8">
+                        {selectedService === "simple" && (
+                            <div className="max-w-4xl mx-auto">
+                                <div className="mb-6 sm:mb-8 text-center sm:text-left">
+                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Single Service</h2>
+                                    <p className="text-gray-600 text-base sm:text-lg">One professional haircut, pay only for this visit</p>
+                                </div>
+
+                                <div className="bg-white border-2 border-black rounded-2xl p-6 sm:p-8 shadow-sm">
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                        <div>
+                                            <h3 className="text-xl font-black text-black">Professional Haircut</h3>
+                                            <p className="text-gray-600 mt-1">Duration: {calculateDuration()} min</p>
+                                        </div>
+                                        <div className="text-3xl font-black text-black">{formatUSD(calculateTotal())}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
                         {selectedService === "plan" && (
                             <div className="max-w-4xl mx-auto">
                                 <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Escolha seu Plano</h2>
-                                    <p className="text-gray-600 text-base sm:text-lg">Economia garantida com nossos planos mensais</p>
+                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Choose Your Plan</h2>
+                                    <p className="text-gray-600 text-base sm:text-lg">Guaranteed savings with our monthly plans</p>
                                 </div>
 
                                 <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm">
@@ -641,7 +773,7 @@ export default function ClientBookingPage() {
                                         <div>
                                             <label className="block text-sm font-bold text-black mb-4">
                                                 <Calendar className="h-4 w-4 inline mr-2" />
-                                                Selecione a frequência mensal:
+                                                Select a monthly frequency:
                                             </label>
 
                                             <div className="space-y-4">
@@ -658,7 +790,7 @@ export default function ClientBookingPage() {
                                                         {plan.popular && (
                                                             <div className="absolute -top-2 left-6">
                                                                 <div className="bg-black text-white px-3 py-1 rounded-full text-xs font-bold">
-                                                                    Mais Popular
+                                                                    Most Popular
                                                                 </div>
                                                             </div>
                                                         )}
@@ -680,10 +812,10 @@ export default function ClientBookingPage() {
                                                                     </div>
 
                                                                     <div className="flex items-center gap-3 mb-3">
-                                                                        <div className="text-3xl font-black text-black">R$ {plan.price}</div>
-                                                                        <div className="text-sm text-gray-500 line-through">R$ {plan.originalPrice}</div>
+                                                                        <div className="text-3xl font-black text-black">{formatUSD(plan.price)}</div>
+                                                                        <div className="text-sm text-gray-500 line-through">{formatUSD(plan.originalPrice)}</div>
                                                                         <div className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-bold">
-                                                                            Economize R$ {plan.savings}
+                                                                            Economize {formatUSD(plan.savings)}
                                                                         </div>
                                                                     </div>
 
@@ -699,7 +831,7 @@ export default function ClientBookingPage() {
                                                             </div>
 
                                                             <div className="text-right">
-                                                                <div className="text-sm text-gray-500 mb-1">{plan.sessionsPerMonth}x por mês</div>
+                                                                <div className="text-sm text-gray-500 mb-1">{plan.sessionsPerMonth}x per month</div>
                                                                 {selectedPlan?.id === plan.id && (
                                                                     <div className="text-black">
                                                                         <Check className="h-5 w-5" />
@@ -714,23 +846,23 @@ export default function ClientBookingPage() {
 
                                         {/* Additional Benefits */}
                                         <div className="pt-6 border-t border-gray-200">
-                                            <h4 className="font-bold text-black mb-4">Benefícios dos Planos Mensais:</h4>
+                                            <h4 className="font-bold text-black mb-4">Monthly Plan Benefits:</h4>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                                                 <div className="flex items-center gap-2 text-gray-700">
                                                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                                    <span>Prioridade no agendamento</span>
+                                                    <span>Priority booking</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 text-gray-700">
                                                     <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                                                    <span>Transferência gratuita entre unidades</span>
+                                                    <span>Free transfers between branches</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 text-gray-700">
                                                     <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                                                    <span>Reagendamento sem taxa</span>
+                                                    <span>Free rescheduling</span>
                                                 </div>
                                                 <div className="flex items-center gap-2 text-gray-700">
                                                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                                    <span>Desconto em serviços extras</span>
+                                                    <span>Discount on extra services</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -742,8 +874,8 @@ export default function ClientBookingPage() {
                         {selectedService === "custom" && (
                             <div className="max-w-6xl mx-auto">
                                 <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Monte seu Atendimento</h2>
-                                    <p className="text-gray-600 text-base sm:text-lg">Selecione os serviços que deseja incluir</p>
+                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Build Your Service</h2>
+                                    <p className="text-gray-600 text-base sm:text-lg">Select the services you want to include</p>
                                 </div>
 
                                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -754,7 +886,7 @@ export default function ClientBookingPage() {
                                             <div className="mb-8">
                                                 <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                                     <Scissors className="h-5 w-5" />
-                                                    Serviços de Cabelo
+                                                    Hair Services
                                                 </h3>
                                                 <div className="space-y-3">
                                                     {services.hair.map((service) => (
@@ -762,9 +894,9 @@ export default function ClientBookingPage() {
                                                             <div className="flex-1">
                                                                 <h4 className="font-semibold text-black">{service.name}</h4>
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
-                                                                    <span className="font-medium">R$ {service.price}</span>
+                                                                    <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
-                                                                    <span>{service.duration} minutos</span>
+                                                                    <span>{service.duration} min</span>
                                                                 </div>
                                                             </div>
                                                             <button
@@ -772,7 +904,7 @@ export default function ClientBookingPage() {
                                                                 className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium flex items-center gap-2"
                                                             >
                                                                 <Plus className="h-4 w-4" />
-                                                                Adicionar
+                                                                Add
                                                             </button>
                                                         </div>
                                                     ))}
@@ -783,7 +915,7 @@ export default function ClientBookingPage() {
                                             <div className="mb-8">
                                                 <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                                     <User className="h-5 w-5" />
-                                                    Serviços de Rosto
+                                                    Face Services
                                                 </h3>
                                                 <div className="space-y-3">
                                                     {services.face.map((service) => (
@@ -791,9 +923,9 @@ export default function ClientBookingPage() {
                                                             <div className="flex-1">
                                                                 <h4 className="font-semibold text-black">{service.name}</h4>
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
-                                                                    <span className="font-medium">R$ {service.price}</span>
+                                                                    <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
-                                                                    <span>{service.duration} minutos</span>
+                                                                    <span>{service.duration} min</span>
                                                                 </div>
                                                             </div>
                                                             <button
@@ -801,7 +933,7 @@ export default function ClientBookingPage() {
                                                                 className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium flex items-center gap-2"
                                                             >
                                                                 <Plus className="h-4 w-4" />
-                                                                Adicionar
+                                                                Add
                                                             </button>
                                                         </div>
                                                     ))}
@@ -812,7 +944,7 @@ export default function ClientBookingPage() {
                                             <div>
                                                 <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                                     <Star className="h-5 w-5" />
-                                                    Pacotes Promocionais
+                                                    Promotional Packages
                                                 </h3>
                                                 <div className="space-y-3">
                                                     {services.packages.map((pkg) => (
@@ -824,9 +956,9 @@ export default function ClientBookingPage() {
                                                                         <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-bold">PROMO</span>
                                                                     </div>
                                                                     <div className="flex items-center gap-4 text-sm text-gray-600">
-                                                                        <span className="text-xl font-black text-black">R$ {pkg.price}</span>
+                                                                        <span className="text-xl font-black text-black">{formatUSD(pkg.price)}</span>
                                                                         <span>•</span>
-                                                                        <span>{pkg.duration} minutos</span>
+                                                                        <span>{pkg.duration} min</span>
                                                                     </div>
                                                                 </div>
                                                                 <button
@@ -834,7 +966,7 @@ export default function ClientBookingPage() {
                                                                     className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-bold flex items-center gap-2"
                                                                 >
                                                                     <Plus className="h-4 w-4" />
-                                                                    Adicionar Pacote
+                                                                    Add Package
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -849,7 +981,7 @@ export default function ClientBookingPage() {
                                         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm sticky top-24">
                                             <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                                 <Star className="h-5 w-5" />
-                                                Seu Combo
+                                                Your Combo
                                             </h3>
 
                                             {customServices.length === 0 ? (
@@ -857,7 +989,7 @@ export default function ClientBookingPage() {
                                                     <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                                         <Star className="h-8 w-8 text-gray-400" />
                                                     </div>
-                                                    <p className="text-sm">Adicione serviços ao seu combo</p>
+                                                    <p className="text-sm">Add services to your combo</p>
                                                 </div>
                                             ) : (
                                                 <>
@@ -889,7 +1021,7 @@ export default function ClientBookingPage() {
                                                                             <Plus className="h-3 w-3" />
                                                                         </button>
                                                                     </div>
-                                                                    <span className="font-bold text-black">R$ {service.price * (service.quantity || 1)}</span>
+                                                                    <span className="font-bold text-black">{formatUSD(service.price * (service.quantity || 1))}</span>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -899,18 +1031,18 @@ export default function ClientBookingPage() {
                                                     <div className="border-t border-gray-200 pt-4">
                                                         <div className="flex justify-between items-center mb-3">
                                                             <span className="text-sm font-medium text-gray-600">Subtotal:</span>
-                                                            <span className="font-bold text-black">R$ {calculateTotal()}</span>
+                                                            <span className="font-bold text-black">{formatUSD(calculateTotal())}</span>
                                                         </div>
                                                         <div className="flex justify-between items-center mb-4">
                                                             <span className="text-sm font-medium text-gray-600 flex items-center gap-1">
                                                                 <Clock className="h-3 w-3" />
-                                                                Duração total:
+                                                                Total duration:
                                                             </span>
                                                             <span className="font-bold text-black">{calculateDuration()} min</span>
                                                         </div>
                                                         <div className="bg-black text-white p-3 rounded-lg text-center">
-                                                            <div className="text-sm mb-1">Total do Combo</div>
-                                                            <div className="text-2xl font-black">R$ {calculateTotal()}</div>
+                                                            <div className="text-sm mb-1">Combo total</div>
+                                                            <div className="text-2xl font-black">{formatUSD(calculateTotal())}</div>
                                                         </div>
                                                     </div>
                                                 </>
@@ -927,14 +1059,14 @@ export default function ClientBookingPage() {
                                 className="order-2 sm:order-1 w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2"
                             >
                                 <ArrowRight className="h-4 w-4 rotate-180" />
-                                Voltar
+                                Back
                             </button>
                             <button
                                 onClick={() => handleStepChange(4)}
-                                disabled={selectedService === "plan" && !selectedPlan || selectedService === "custom" && customServices.length === 0}
+                                disabled={selectedService === "plan" && !selectedPlan || selectedService === "custom" && customServices.length === 0 || professionalMode === "specific" && !selectedProfessional}
                                 className="order-1 sm:order-2 w-full sm:w-auto px-6 sm:px-8 py-3 bg-black text-white rounded-xl font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-all duration-200 flex items-center justify-center gap-2"
                             >
-                                Continuar
+                                Continue
                                 <ArrowRight className="h-4 w-4" />
                             </button>
                         </div>
@@ -946,8 +1078,8 @@ export default function ClientBookingPage() {
                     <div className="space-y-6 sm:space-y-8">
                         <div className="max-w-6xl mx-auto">
                             <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Agendamento</h2>
-                                <p className="text-gray-600 text-base sm:text-lg">Quando você gostaria de ser atendido?</p>
+                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Booking</h2>
+                                <p className="text-gray-600 text-base sm:text-lg">When would you like to be served?</p>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -956,13 +1088,13 @@ export default function ClientBookingPage() {
                                     <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm">
                                         <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                             <Calendar className="h-5 w-5" />
-                                            Selecione a Data
+                                            Select a Date
                                         </h3>
 
                                         {/* Calendar Grid */}
                                         <div className="mb-8">
                                             <div className="grid grid-cols-7 gap-2 mb-4">
-                                                {['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].map((day) => (
+                                                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
                                                     <div key={day} className="text-center text-sm font-bold text-gray-500 py-3">
                                                         {day}
                                                     </div>
@@ -989,7 +1121,7 @@ export default function ClientBookingPage() {
                                         <div>
                                             <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                                 <Clock className="h-5 w-5" />
-                                                Horários Disponíveis
+                                                Available Times
                                             </h3>
 
                                             {!selectedDate ? (
@@ -997,13 +1129,13 @@ export default function ClientBookingPage() {
                                                     <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                                         <Calendar className="h-8 w-8 text-gray-400" />
                                                     </div>
-                                                    <p>Primeiro selecione uma data acima</p>
+                                                    <p>Select a date above first</p>
                                                 </div>
                                             ) : (
                                                 <div>
                                                     {/* Morning */}
                                                     <div className="mb-6">
-                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Manhã</h4>
+                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Morning</h4>
                                                         <div className="grid grid-cols-4 gap-3">
                                                             {['09:00', '09:30', '10:00', '10:30', '11:00', '11:30'].map((time) => (
                                                                 <button
@@ -1025,7 +1157,7 @@ export default function ClientBookingPage() {
 
                                                     {/* Afternoon */}
                                                     <div>
-                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Tarde</h4>
+                                                        <h4 className="text-sm font-bold text-gray-700 mb-3">Afternoon</h4>
                                                         <div className="grid grid-cols-4 gap-3">
                                                             {['14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00'].map((time) => (
                                                                 <button
@@ -1053,42 +1185,46 @@ export default function ClientBookingPage() {
                                 {/* Booking Summary Sidebar */}
                                 <div className="lg:col-span-1">
                                     <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm sticky top-24">
-                                        <h3 className="text-xl font-black text-black mb-6">Resumo do Agendamento</h3>
+                                        <h3 className="text-xl font-black text-black mb-6">Booking Summary</h3>
 
                                         <div className="space-y-4 mb-6">
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                                                <span className="text-gray-600">Unidade:</span>
+                                                <span className="text-gray-600">Branch:</span>
                                                 <span className="font-semibold text-black text-right">{selectedUnit?.name}</span>
                                             </div>
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                                                <span className="text-gray-600">Data:</span>
+                                                <span className="text-gray-600">Professional:</span>
+                                                <span className="font-semibold text-black text-right">{professionalMode === "specific" && selectedProfessional ? selectedProfessional.name : "Any available professional"}</span>
+                                            </div>
+                                            <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                                                <span className="text-gray-600">Date:</span>
                                                 <span className="font-semibold text-black">
-                                                    {selectedDate ? new Date(selectedDate).toLocaleDateString('pt-BR', {
+                                                    {selectedDate ? new Date(selectedDate).toLocaleDateString('en-US', {
                                                         weekday: 'long',
                                                         year: 'numeric',
                                                         month: 'long',
                                                         day: 'numeric'
-                                                    }) : 'Não selecionada'}
+                                                    }) : 'Not selected'}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                                                <span className="text-gray-600">Horário:</span>
+                                                <span className="text-gray-600">Time:</span>
                                                 <span className="font-semibold text-black">
-                                                    {selectedTime || 'Não selecionado'}
+                                                    {selectedTime || 'Not selected'}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                                                <span className="text-gray-600">Duração estimada:</span>
+                                                <span className="text-gray-600">Estimated duration:</span>
                                                 <span className="font-semibold text-black">{calculateDuration()} min</span>
                                             </div>
                                         </div>
 
                                         {/* Service Summary */}
                                         <div className="mb-6">
-                                            <h4 className="font-bold text-black mb-3">Serviços:</h4>
+                                            <h4 className="font-bold text-black mb-3">Services:</h4>
                                             {selectedService === "simple" && (
                                                 <div className="text-sm text-gray-600">
-                                                    • Corte de cabelo profissional
+                                                    • Professional haircut
                                                 </div>
                                             )}
                                             {selectedService === "plan" && selectedPlan && (
@@ -1109,16 +1245,16 @@ export default function ClientBookingPage() {
 
                                         {/* Total */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center">
-                                            <div className="text-sm mb-1">Valor Total</div>
-                                            <div className="text-3xl font-black">R$ {calculateTotal()}</div>
+                                            <div className="text-sm mb-1">Total amount</div>
+                                            <div className="text-3xl font-black">{formatUSD(calculateTotal())}</div>
                                         </div>
 
                                         {/* Additional Info */}
                                         <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                                             <div className="text-xs text-gray-600 text-center">
-                                                ✓ Confirmação por WhatsApp<br />
-                                                ✓ Lembrete 1 hora antes<br />
-                                                ✓ Reagendamento gratuito
+                                                ✓ WhatsApp confirmation<br />
+                                                ✓ Reminder 1 hour before<br />
+                                                ✓ Free rescheduling
                                             </div>
                                         </div>
                                     </div>
@@ -1132,7 +1268,7 @@ export default function ClientBookingPage() {
                                     className="order-2 sm:order-1 w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2"
                                 >
                                     <ArrowRight className="h-4 w-4 rotate-180" />
-                                    Voltar
+                                    Back
                                 </button>
                                 <button
                                     onClick={() => handleStepChange(5)}
@@ -1142,7 +1278,7 @@ export default function ClientBookingPage() {
                                         : 'bg-black text-white hover:bg-gray-800 shadow-lg'
                                         }`}
                                 >
-                                    Finalizar Agendamento
+                                    Complete Booking
                                     <ArrowRight className="h-4 sm:h-5 w-4 sm:w-5" />
                                 </button>
                             </div>
@@ -1155,8 +1291,8 @@ export default function ClientBookingPage() {
                     <div className="space-y-6 sm:space-y-8">
                         <div className="max-w-6xl mx-auto">
                             <div className="mb-6 sm:mb-8 text-center sm:text-left">
-                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Finalizar Agendamento</h2>
-                                <p className="text-gray-600 text-base sm:text-lg">Confirme seus dados e forma de pagamento</p>
+                                <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Complete Booking</h2>
+                                <p className="text-gray-600 text-base sm:text-lg">Confirm your details and payment method</p>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -1165,47 +1301,47 @@ export default function ClientBookingPage() {
                                     <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm mb-6 sm:mb-8">
                                         <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                             <User className="h-5 w-5" />
-                                            Dados Pessoais
+                                            Personal Details
                                         </h3>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div>
-                                                <label className="block text-sm font-bold text-black mb-2">Nome Completo *</label>
+                                                <label className="block text-sm font-bold text-black mb-2">Full Name *</label>
                                                 <input
                                                     type="text"
                                                     value={customerInfo.name}
                                                     onChange={(e) => setCustomerInfo({ ...customerInfo, name: e.target.value })}
                                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-black transition-colors"
-                                                    placeholder="Seu nome completo"
+                                                    placeholder="Your full name"
                                                 />
                                             </div>
                                             <div>
-                                                <label className="block text-sm font-bold text-black mb-2">Telefone/WhatsApp *</label>
+                                                <label className="block text-sm font-bold text-black mb-2">Phone/WhatsApp *</label>
                                                 <input
                                                     type="tel"
                                                     value={customerInfo.phone}
                                                     onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
                                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-black transition-colors"
-                                                    placeholder="(11) 99999-9999"
+                                                    placeholder="+233 24 999 9999"
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
-                                                <label className="block text-sm font-bold text-black mb-2">E-mail *</label>
+                                                <label className="block text-sm font-bold text-black mb-2">Email *</label>
                                                 <input
                                                     type="email"
                                                     value={customerInfo.email}
                                                     onChange={(e) => setCustomerInfo({ ...customerInfo, email: e.target.value })}
                                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-black transition-colors"
-                                                    placeholder="seu@email.com"
+                                                    placeholder="you@email.com"
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
-                                                <label className="block text-sm font-bold text-black mb-2">Observações (opcional)</label>
+                                                <label className="block text-sm font-bold text-black mb-2">Notes (optional)</label>
                                                 <textarea
                                                     value={customerInfo.observations}
                                                     onChange={(e) => setCustomerInfo({ ...customerInfo, observations: e.target.value })}
                                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-black transition-colors"
-                                                    placeholder="Alguma preferência, tipo de corte ou observação especial..."
+                                                    placeholder="Any preferences, haircut style or special notes..."
                                                     rows={3}
                                                 />
                                             </div>
@@ -1216,30 +1352,53 @@ export default function ClientBookingPage() {
                                     <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
                                         <h3 className="text-xl font-black text-black mb-6 flex items-center gap-2">
                                             <CreditCard className="h-5 w-5" />
-                                            Forma de Pagamento
+                                            Payment Method
                                         </h3>
 
                                         {/* Payment Methods */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                            <div className="p-4 border-2 border-black rounded-xl bg-gray-50">
-                                                <div className="flex items-center gap-3">
-                                                    <input type="radio" name="payment" defaultChecked className="w-5 h-5" />
-                                                    <div>
-                                                        <h4 className="font-bold text-black">PIX</h4>
-                                                        <p className="text-sm text-gray-600">Pagamento instantâneo</p>
+                                            {[
+                                                { id: "mtn", name: "MTN MoMo", desc: "Mobile money wallet" },
+                                                { id: "telecel", name: "Telecel Cash", desc: "Formerly Vodafone Cash" },
+                                                { id: "at", name: "AT Money", desc: "Formerly AirtelTigo Money" },
+                                                { id: "card", name: "Card", desc: "Credit or debit" }
+                                            ].map((method) => (
+                                                <label
+                                                    key={method.id}
+                                                    className={`p-4 border-2 rounded-xl cursor-pointer transition-colors ${paymentMethod === method.id ? "border-black bg-gray-50" : "border-gray-200 hover:border-gray-400"}`}
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <input
+                                                            type="radio"
+                                                            name="payment"
+                                                            className="w-5 h-5"
+                                                            checked={paymentMethod === method.id}
+                                                            onChange={() => setPaymentMethod(method.id)}
+                                                        />
+                                                        <div>
+                                                            <h4 className="font-bold text-black">{method.name}</h4>
+                                                            <p className="text-sm text-gray-600">{method.desc}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div className="p-4 border-2 border-gray-200 rounded-xl hover:border-gray-400 transition-colors cursor-pointer">
-                                                <div className="flex items-center gap-3">
-                                                    <input type="radio" name="payment" className="w-5 h-5" />
-                                                    <div>
-                                                        <h4 className="font-bold text-black">Cartão</h4>
-                                                        <p className="text-sm text-gray-600">Crédito ou débito</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                </label>
+                                            ))}
                                         </div>
+
+                                        {/* Mobile money number */}
+                                        {paymentMethod !== "card" && (
+                                            <div className="mb-6">
+                                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                                    Mobile money number (you'll get a prompt to approve the booking fee)
+                                                </label>
+                                                <input
+                                                    type="tel"
+                                                    value={mobileMoneyNumber}
+                                                    onChange={(e) => setMobileMoneyNumber(e.target.value)}
+                                                    placeholder="+233 24 000 0000"
+                                                    className="w-full p-4 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
+                                                />
+                                            </div>
+                                        )}
 
                                         {/* Payment Notice */}
                                         <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
@@ -1248,11 +1407,11 @@ export default function ClientBookingPage() {
                                                     <span className="text-white text-xs font-bold">i</span>
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-bold text-blue-900 mb-1">Como funciona o pagamento</h4>
+                                                    <h4 className="font-bold text-blue-900 mb-1">How payment works</h4>
                                                     <p className="text-sm text-blue-800">
-                                                        • Você paga apenas <strong>R$ 5,00 como taxa de agendamento</strong><br />
-                                                        • O restante (R$ {calculateTotal() - 5}) será pago diretamente na unidade<br />
-                                                        • Se cancelar com mais de 24h, devolvemos a taxa
+                                                        • You only pay <strong>{formatUSD(5)} as a booking fee</strong><br />
+                                                        • The remainder ({formatUSD(calculateTotal() - 5)}) will be paid directly at the branch<br />
+                                                        • If you cancel more than 24h in advance, we refund the fee
                                                     </p>
                                                 </div>
                                             </div>
@@ -1262,9 +1421,9 @@ export default function ClientBookingPage() {
                                         <div className="flex items-start gap-3">
                                             <input type="checkbox" className="w-5 h-5 mt-0.5" />
                                             <p className="text-sm text-gray-700">
-                                                Aceito os <a href="#" className="text-black font-bold underline">termos de uso</a> e
-                                                <a href="#" className="text-black font-bold underline ml-1">política de privacidade</a>.
-                                                Confirmo que os dados informados estão corretos.
+                                                I accept the <a href="#" className="text-black font-bold underline">terms of use</a> and
+                                                <a href="#" className="text-black font-bold underline ml-1">privacy policy</a>.
+                                                I confirm that the information provided is correct.
                                             </p>
                                         </div>
                                     </div>
@@ -1273,18 +1432,22 @@ export default function ClientBookingPage() {
                                 {/* Summary Sidebar */}
                                 <div className="lg:col-span-1">
                                     <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm sticky top-24">
-                                        <h3 className="text-xl font-black text-black mb-6">Resumo Final</h3>
+                                        <h3 className="text-xl font-black text-black mb-6">Final summary</h3>
 
                                         {/* Booking Details */}
                                         <div className="space-y-4 mb-6">
                                             <div className="pb-3 border-b border-gray-100">
-                                                <div className="text-sm text-gray-600 mb-1">Unidade</div>
+                                                <div className="text-sm text-gray-600 mb-1">Branch</div>
                                                 <div className="font-semibold text-black">{selectedUnit?.name}</div>
                                             </div>
                                             <div className="pb-3 border-b border-gray-100">
-                                                <div className="text-sm text-gray-600 mb-1">Data e Horário</div>
+                                                <div className="text-sm text-gray-600 mb-1">Professional</div>
+                                                <div className="font-semibold text-black">{professionalMode === "specific" && selectedProfessional ? selectedProfessional.name : "Any available professional"}</div>
+                                            </div>
+                                            <div className="pb-3 border-b border-gray-100">
+                                                <div className="text-sm text-gray-600 mb-1">Date & Time</div>
                                                 <div className="font-semibold text-black">
-                                                    {selectedDate && new Date(selectedDate).toLocaleDateString('pt-BR', {
+                                                    {selectedDate && new Date(selectedDate).toLocaleDateString('en-US', {
                                                         weekday: 'short',
                                                         day: '2-digit',
                                                         month: 'short'
@@ -1292,10 +1455,10 @@ export default function ClientBookingPage() {
                                                 </div>
                                             </div>
                                             <div className="pb-3 border-b border-gray-100">
-                                                <div className="text-sm text-gray-600 mb-1">Serviços</div>
+                                                <div className="text-sm text-gray-600 mb-1">Services</div>
                                                 {selectedService === "simple" && (
                                                     <div className="font-semibold text-black text-sm">
-                                                        • Corte Profissional
+                                                        • Professional Haircut
                                                     </div>
                                                 )}
                                                 {selectedService === "plan" && selectedPlan && (
@@ -1318,30 +1481,30 @@ export default function ClientBookingPage() {
                                         {/* Payment Breakdown */}
                                         <div className="bg-gray-50 p-4 rounded-xl mb-6">
                                             <div className="flex justify-between items-center mb-2">
-                                                <span className="text-sm text-gray-600">Valor total do serviço:</span>
-                                                <span className="font-semibold">R$ {calculateTotal()}</span>
+                                                <span className="text-sm text-gray-600">Total service value:</span>
+                                                <span className="font-semibold">{formatUSD(calculateTotal())}</span>
                                             </div>
                                             <div className="flex justify-between items-center mb-2">
-                                                <span className="text-sm text-gray-600">Taxa de agendamento:</span>
-                                                <span className="font-semibold">R$ 5,00</span>
+                                                <span className="text-sm text-gray-600">Booking fee:</span>
+                                                <span className="font-semibold">{formatUSD(5)}</span>
                                             </div>
                                             <div className="flex justify-between items-center">
-                                                <span className="text-sm text-gray-600">Pagamento na unidade:</span>
-                                                <span className="font-semibold">R$ {calculateTotal() - 5}</span>
+                                                <span className="text-sm text-gray-600">Payment at the branch:</span>
+                                                <span className="font-semibold">{formatUSD(calculateTotal() - 5)}</span>
                                             </div>
                                         </div>
 
                                         {/* Total to Pay Now */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center mb-6">
-                                            <div className="text-sm mb-1">Pagar Agora</div>
-                                            <div className="text-3xl font-black">R$ 5,00</div>
-                                            <div className="text-xs mt-1 opacity-75">Taxa de agendamento</div>
+                                            <div className="text-sm mb-1">Pay now</div>
+                                            <div className="text-3xl font-black">{formatUSD(5)}</div>
+                                            <div className="text-xs mt-1 opacity-75">Booking fee</div>
                                         </div>
 
                                         {/* Security */}
                                         <div className="flex items-center gap-2 text-xs text-gray-600 bg-gray-50 p-3 rounded-lg">
                                             <Shield className="h-4 w-4 text-green-600" />
-                                            <span>Pagamento seguro e criptografado</span>
+                                            <span>Secure, encrypted payment</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1354,7 +1517,7 @@ export default function ClientBookingPage() {
                                     className="order-2 sm:order-1 w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-all duration-200 flex items-center justify-center gap-2"
                                 >
                                     <ArrowRight className="h-4 w-4 rotate-180" />
-                                    Voltar
+                                    Back
                                 </button>
                                 <button
                                     onClick={() => window.location.href = '/client/success'}
@@ -1365,8 +1528,8 @@ export default function ClientBookingPage() {
                                         }`}
                                 >
                                     <Shield className="h-4 sm:h-5 w-4 sm:w-5" />
-                                    <span className="hidden sm:inline">Confirmar e Pagar R$ 5,00</span>
-                                    <span className="sm:hidden">Pagar R$ 5,00</span>
+                                    <span className="hidden sm:inline">Confirm and pay {formatUSD(5)}</span>
+                                    <span className="sm:hidden">Pay {formatUSD(5)}</span>
                                 </button>
                             </div>
                         </div>
@@ -1388,24 +1551,24 @@ export default function ClientBookingPage() {
 
                         {/* Description */}
                         <p className="text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base px-4 sm:px-0">
-                            A plataforma completa para agendamento de serviços de beleza.
+                            The complete platform for booking beauty services.
                             <br className="hidden sm:block" />
-                            <span className="sm:hidden"> </span>Conectamos você aos melhores profissionais com a praticidade que você merece.
+                            <span className="sm:hidden"> </span>We connect you with the best professionals with the convenience you deserve.
                         </p>
 
                         {/* Links */}
                         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm mb-6 sm:mb-8">
                             <a href="#" className="text-gray-600 hover:text-black transition-colors font-medium hover:underline">
-                                Termos de Uso
+                                Terms of Use
                             </a>
                             <a href="#" className="text-gray-600 hover:text-black transition-colors font-medium hover:underline">
-                                Política de Privacidade
+                                Privacy Policy
                             </a>
                             <a href="#" className="text-gray-600 hover:text-black transition-colors font-medium hover:underline">
-                                Suporte 24h
+                                24/7 Support
                             </a>
                             <a href="#" className="text-gray-600 hover:text-black transition-colors font-medium hover:underline">
-                                Central de Ajuda
+                                Help Center
                             </a>
                         </div>
 
@@ -1413,25 +1576,25 @@ export default function ClientBookingPage() {
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
                             <div className="flex items-center gap-2">
                                 <Shield className="h-4 w-4" />
-                                <span>Pagamentos Seguros</span>
+                                <span>Secure Payments</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                <span>(11) 4000-0000</span>
+                                <span>+233 24 000 0000</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Clock className="h-4 w-4" />
-                                <span>Atendimento 24h</span>
+                                <span>24/7 Service</span>
                             </div>
                         </div>
 
                         {/* Copyright */}
                         <div className="border-t border-gray-200 pt-4 sm:pt-6">
                             <p className="text-gray-500 text-xs sm:text-sm text-center">
-                                © 2024 HairBooking SaaS. Todos os direitos reservados.
+                                © 2024 HairBooking SaaS. All rights reserved.
                                 <span className="block sm:inline mx-0 sm:mx-2 mt-1 sm:mt-0">
                                     <span className="hidden sm:inline">•</span>
-                                    CNPJ: 12.345.678/0001-90
+                                    Business Reg. No.: GH-000000
                                 </span>
                             </p>
                         </div>

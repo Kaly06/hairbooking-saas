@@ -24,80 +24,80 @@ export default function StarterClients() {
     const [filter, setFilter] = useState("all");
     const [searchTerm, setSearchTerm] = useState("");
 
-    // Dados simulados de clientes
+    // Mock client data
     const clients = [
         {
             id: 1,
-            name: "Maria Silva",
-            email: "maria.silva@email.com",
-            phone: "(11) 99999-1234",
-            address: "Rua das Flores, 123 - Vila Madalena",
+            name: "Akosua Frimpong",
+            email: "akosua.frimpong@email.com",
+            phone: "+233 24 999 1234",
+            address: "Boundary Road, 123 - East Legon, Accra",
             registeredAt: "2024-05-15",
             lastVisit: "2025-11-01",
             totalVisits: 12,
-            totalSpent: "R$ 1.440",
+            totalSpent: "$240",
             status: "active",
-            preferences: "Corte em camadas, gosta de produtos naturais",
+            preferences: "Layered haircut, prefers natural products",
             birthday: "1990-03-15",
             rating: 5
         },
         {
             id: 2,
-            name: "João Santos",
-            email: "joao.santos@email.com",
-            phone: "(11) 98888-5678",
-            address: "Av. Paulista, 456 - Bela Vista",
+            name: "Kofi Boateng",
+            email: "kofi.boateng@email.com",
+            phone: "+233 24 888 5678",
+            address: "Labone Crescent, 456 - Labone, Accra",
             registeredAt: "2024-08-22",
             lastVisit: "2025-10-28",
             totalVisits: 8,
-            totalSpent: "R$ 360",
+            totalSpent: "$60",
             status: "active",
-            preferences: "Corte simples, sempre às terças",
+            preferences: "Simple haircut, always on Tuesdays",
             birthday: "1985-07-20",
             rating: 4
         },
         {
             id: 3,
-            name: "Ana Costa",
-            email: "ana.costa@email.com",
-            phone: "(11) 97777-9012",
-            address: "Rua Augusta, 789 - Consolação",
+            name: "Abena Ofori",
+            email: "abena.ofori@email.com",
+            phone: "+233 24 777 9012",
+            address: "Liberation Road, 789 - Airport Residential, Accra",
             registeredAt: "2024-01-10",
             lastVisit: "2025-10-15",
             totalVisits: 25,
-            totalSpent: "R$ 3.750",
+            totalSpent: "$625",
             status: "vip",
-            preferences: "Coloração loira, hidratação mensal",
+            preferences: "Blonde coloring, monthly hair treatment",
             birthday: "1988-12-05",
             rating: 5
         },
         {
             id: 4,
-            name: "Pedro Lima",
-            email: "pedro.lima@email.com",
-            phone: "(11) 96666-3456",
-            address: "Rua Oscar Freire, 321 - Jardins",
+            name: "Yaw Addo",
+            email: "yaw.addo@email.com",
+            phone: "+233 24 666 3456",
+            address: "Cantonments Road, 321 - Cantonments, Accra",
             registeredAt: "2024-09-03",
             lastVisit: "2025-09-20",
             totalVisits: 3,
-            totalSpent: "R$ 75",
+            totalSpent: "$12",
             status: "inactive",
-            preferences: "Barba bem aparada",
+            preferences: "Well-groomed beard",
             birthday: "1992-11-30",
             rating: 3
         },
         {
             id: 5,
-            name: "Carla Souza",
-            email: "carla.souza@email.com",
-            phone: "(11) 95555-7890",
-            address: "Rua da Consolação, 654 - Centro",
+            name: "Efua Mensah",
+            email: "efua.mensah@email.com",
+            phone: "+233 24 555 7890",
+            address: "Ring Road Central, 654 - Accra Central",
             registeredAt: "2024-06-18",
             lastVisit: "2025-11-03",
             totalVisits: 15,
-            totalSpent: "R$ 1.200",
+            totalSpent: "$200",
             status: "active",
-            preferences: "Cabelo cacheado, produtos sem sulfato",
+            preferences: "Curly hair, sulphate-free products",
             birthday: "1995-04-10",
             rating: 5
         }
@@ -119,13 +119,13 @@ export default function StarterClients() {
     const getStatusText = (status: string) => {
         switch (status) {
             case "active":
-                return "Ativo";
+                return "Active";
             case "vip":
                 return "VIP";
             case "inactive":
-                return "Inativo";
+                return "Inactive";
             default:
-                return "Desconhecido";
+                return "Unknown";
         }
     };
 
@@ -163,13 +163,13 @@ export default function StarterClients() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <Users className="w-6 h-6 text-green-600 mr-2" />
-                            Clientes
+                            Clients
                         </h1>
-                        <p className="text-gray-600">Gerencie o cadastro de todos os seus clientes</p>
+                        <p className="text-gray-600">Manage the records of all your clients</p>
                     </div>
                     <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center">
                         <Plus className="w-4 h-4 mr-2" />
-                        Novo Cliente
+                        New Client
                     </button>
                 </div>
 
@@ -192,7 +192,7 @@ export default function StarterClients() {
                                 <User className="w-5 h-5 text-green-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Ativos</p>
+                                <p className="text-sm font-medium text-gray-600">Active</p>
                                 <p className="text-2xl font-semibold text-gray-900">{activeClients}</p>
                             </div>
                         </div>
@@ -214,7 +214,7 @@ export default function StarterClients() {
                                 <Plus className="w-5 h-5 text-orange-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Novos (mês)</p>
+                                <p className="text-sm font-medium text-gray-600">New (this month)</p>
                                 <p className="text-2xl font-semibold text-gray-900">{thisMonthClients}</p>
                             </div>
                         </div>
@@ -230,7 +230,7 @@ export default function StarterClients() {
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                                 <input
                                     type="text"
-                                    placeholder="Buscar por nome, email ou telefone..."
+                                    placeholder="Search by name, email or phone..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
@@ -246,8 +246,8 @@ export default function StarterClients() {
                                 onChange={(e) => setFilter(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-green-500"
                             >
-                                <option value="all">Todos</option>
-                                <option value="active">Ativos</option>
+                                <option value="all">All</option>
+                                <option value="active">Active</option>
                                 <option value="vip">VIP</option>
                                 <option value="inactive">Inativos</option>
                             </select>
@@ -259,15 +259,15 @@ export default function StarterClients() {
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
                         <h3 className="text-lg font-medium text-gray-900">
-                            Lista de Clientes ({filteredClients.length})
+                            List of Clients ({filteredClients.length})
                         </h3>
                     </div>
                     <div className="overflow-hidden">
                         {filteredClients.length === 0 ? (
                             <div className="text-center py-12">
                                 <Users className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                                <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhum cliente encontrado</h3>
-                                <p className="text-gray-500">Tente ajustar os filtros ou adicionar um novo cliente.</p>
+                                <h3 className="text-lg font-medium text-gray-900 mb-2">No clients found</h3>
+                                <p className="text-gray-500">Try adjusting the filters or adding a new client.</p>
                             </div>
                         ) : (
                             <div className="divide-y divide-gray-200">
@@ -325,7 +325,7 @@ export default function StarterClients() {
                                                     </div>
                                                     <div className="text-sm text-gray-500 flex items-center">
                                                         <Clock className="w-3 h-3 mr-1" />
-                                                        Última: {new Date(client.lastVisit).toLocaleDateString('pt-BR')}
+                                                        Last: {new Date(client.lastVisit).toLocaleDateString('en-US')}
                                                     </div>
                                                 </div>
                                                 <div className="flex items-center space-x-2">

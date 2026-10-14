@@ -15,7 +15,7 @@ export default function LoginPage() {
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
-    // Credenciais válidas por plano
+    // Valid credentials per plan
     const validCredentials = {
         startadm: { password: "start1", plan: "starter", redirect: "/dashboard/starter" },
         proadm: { password: "pro1", plan: "professional", redirect: "/dashboard/professional" },
@@ -27,23 +27,23 @@ export default function LoginPage() {
         setIsLoading(true);
         setError("");
 
-        // Simular delay de autenticação
+        // Simulate authentication delay
         await new Promise(resolve => setTimeout(resolve, 1000));
 
         const user = validCredentials[credentials.username as keyof typeof validCredentials];
 
         if (user && user.password === credentials.password) {
-            // Salvar dados de autenticação no localStorage
+            // Save auth data to localStorage
             localStorage.setItem("user", JSON.stringify({
                 username: credentials.username,
                 plan: user.plan,
                 isAuthenticated: true
             }));
 
-            // Redirecionar para o dashboard correspondente
+            // Redirect to the matching dashboard
             router.push(user.redirect);
         } else {
-            setError("Usuário ou senha incorretos. Verifique suas credenciais.");
+            setError("Incorrect username or password. Please check your credentials.");
         }
 
         setIsLoading(false);
@@ -69,10 +69,10 @@ export default function LoginPage() {
                 </Link>
 
                 <h2 className="text-center text-3xl font-bold text-gray-900">
-                    Acesse sua conta
+                    Sign in to your account
                 </h2>
                 <p className="mt-2 text-center text-sm text-gray-600">
-                    Entre com suas credenciais para acessar o dashboard
+                    Enter your credentials to access the dashboard
                 </p>
             </div>
 
@@ -94,7 +94,7 @@ export default function LoginPage() {
                         {/* Username Field */}
                         <div>
                             <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-                                Usuário
+                                Username
                             </label>
                             <div className="mt-1 relative">
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -108,7 +108,7 @@ export default function LoginPage() {
                                     value={credentials.username}
                                     onChange={handleChange}
                                     className="appearance-none block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-black focus:border-black sm:text-sm"
-                                    placeholder="Digite seu usuário"
+                                    placeholder="Enter your username"
                                 />
                             </div>
                         </div>
@@ -116,7 +116,7 @@ export default function LoginPage() {
                         {/* Password Field */}
                         <div>
                             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                                Senha
+                                Password
                             </label>
                             <div className="mt-1 relative">
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -130,7 +130,7 @@ export default function LoginPage() {
                                     value={credentials.password}
                                     onChange={handleChange}
                                     className="appearance-none block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-black focus:border-black sm:text-sm"
-                                    placeholder="Digite sua senha"
+                                    placeholder="Enter your password"
                                 />
                                 <button
                                     type="button"
@@ -156,10 +156,10 @@ export default function LoginPage() {
                                 {isLoading ? (
                                     <div className="flex items-center">
                                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                                        Entrando...
+                                        Signing in...
                                     </div>
                                 ) : (
-                                    "Entrar"
+                                    "Sign in"
                                 )}
                             </button>
                         </div>
@@ -172,13 +172,13 @@ export default function LoginPage() {
                                 <div className="w-full border-t border-gray-300" />
                             </div>
                             <div className="relative flex justify-center text-sm">
-                                <span className="px-2 bg-white text-gray-500">Credenciais de teste</span>
+                                <span className="px-2 bg-white text-gray-500">Test credentials</span>
                             </div>
                         </div>
 
                         <div className="mt-4 space-y-3 text-xs text-gray-600">
                             <div className="bg-gray-50 p-3 rounded-md">
-                                <p className="font-medium text-gray-700 mb-2">Planos disponíveis:</p>
+                                <p className="font-medium text-gray-700 mb-2">Available plans:</p>
                                 <div className="space-y-1">
                                     <p><span className="font-medium">Starter:</span> startadm / start1</p>
                                     <p><span className="font-medium">Professional:</span> proadm / pro1</p>
@@ -191,7 +191,7 @@ export default function LoginPage() {
                     {/* Back to Home */}
                     <div className="mt-6 text-center">
                         <Link href="/" className="text-sm text-gray-600 hover:text-black transition-colors">
-                            ← Voltar para página inicial
+                            ← Back to home page
                         </Link>
                     </div>
                 </div>

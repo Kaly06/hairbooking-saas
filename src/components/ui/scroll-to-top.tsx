@@ -33,7 +33,7 @@ export default function ScrollToTop() {
                 <button
                     onClick={scrollToTop}
                     className="fixed bottom-8 right-8 z-50 bg-gray-900 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105"
-                    aria-label="Voltar ao topo"
+                    aria-label="Back to top"
                 >
                     <ArrowUp className="w-5 h-5" />
                 </button>

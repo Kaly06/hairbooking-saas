@@ -32,39 +32,39 @@ export default function Sidebar({ plan }: SidebarProps) {
     const pathname = usePathname();
     const [isCollapsed, setIsCollapsed] = useState(false);
 
-    // Definir quais funcionalidades cada plano tem acesso
+    // Features available for each plan
     const planFeatures = {
         starter: [
             { name: "Dashboard", href: "/dashboard/starter", icon: LayoutDashboard },
-            { name: "Agendamentos", href: "/dashboard/starter/appointments", icon: Calendar },
-            { name: "Clientes", href: "/dashboard/starter/clients", icon: Users },
-            { name: "Relatórios Básicos", href: "/dashboard/starter/reports", icon: BarChart3 },
-            { name: "Configurações", href: "/dashboard/starter/settings", icon: Settings },
+            { name: "Bookings", href: "/dashboard/starter/appointments", icon: Calendar },
+            { name: "Clients", href: "/dashboard/starter/clients", icon: Users },
+            { name: "Basic Reports", href: "/dashboard/starter/reports", icon: BarChart3 },
+            { name: "Settings", href: "/dashboard/starter/settings", icon: Settings },
         ],
         professional: [
             { name: "Dashboard", href: "/dashboard/professional", icon: LayoutDashboard },
-            { name: "Agendamentos", href: "/dashboard/professional/appointments", icon: Calendar },
-            { name: "Clientes", href: "/dashboard/professional/clients", icon: Users },
-            { name: "Financeiro", href: "/dashboard/professional/financial", icon: DollarSign },
-            { name: "Comissões", href: "/dashboard/professional/commissions", icon: CreditCard },
-            { name: "Relatórios Completos", href: "/dashboard/professional/reports", icon: BarChart3 },
+            { name: "Bookings", href: "/dashboard/professional/appointments", icon: Calendar },
+            { name: "Clients", href: "/dashboard/professional/clients", icon: Users },
+            { name: "Financial", href: "/dashboard/professional/financial", icon: DollarSign },
+            { name: "Commissions", href: "/dashboard/professional/commissions", icon: CreditCard },
+            { name: "Full Reports", href: "/dashboard/professional/reports", icon: BarChart3 },
             { name: "Marketing", href: "/dashboard/professional/marketing", icon: MessageSquare },
-            { name: "App Mobile", href: "/dashboard/professional/mobile-app", icon: Smartphone },
-            { name: "Configurações", href: "/dashboard/professional/settings", icon: Settings },
+            { name: "Mobile App", href: "/dashboard/professional/mobile-app", icon: Smartphone },
+            { name: "Settings", href: "/dashboard/professional/settings", icon: Settings },
         ],
         enterprise: [
             { name: "Dashboard", href: "/dashboard/enterprise", icon: LayoutDashboard },
-            { name: "Multi-unidades", href: "/dashboard/enterprise/units", icon: Building },
-            { name: "Agendamentos", href: "/dashboard/enterprise/appointments", icon: Calendar },
-            { name: "Clientes", href: "/dashboard/enterprise/clients", icon: Users },
-            { name: "Financeiro Avançado", href: "/dashboard/enterprise/financial", icon: DollarSign },
-            { name: "Comissões", href: "/dashboard/enterprise/commissions", icon: CreditCard },
-            { name: "Relatórios Personalizados", href: "/dashboard/enterprise/reports", icon: PieChart },
+            { name: "Multi-location", href: "/dashboard/enterprise/units", icon: Building },
+            { name: "Bookings", href: "/dashboard/enterprise/appointments", icon: Calendar },
+            { name: "Clients", href: "/dashboard/enterprise/clients", icon: Users },
+            { name: "Advanced Financial", href: "/dashboard/enterprise/financial", icon: DollarSign },
+            { name: "Commissions", href: "/dashboard/enterprise/commissions", icon: CreditCard },
+            { name: "Custom Reports", href: "/dashboard/enterprise/reports", icon: PieChart },
             { name: "Analytics", href: "/dashboard/enterprise/analytics", icon: TrendingUp },
             { name: "White-label", href: "/dashboard/enterprise/white-label", icon: Globe },
-            { name: "Segurança", href: "/dashboard/enterprise/security", icon: Shield },
-            { name: "Integrações API", href: "/dashboard/enterprise/integrations", icon: UserCheck },
-            { name: "Configurações", href: "/dashboard/enterprise/settings", icon: Settings },
+            { name: "Security", href: "/dashboard/enterprise/security", icon: Shield },
+            { name: "API Integrations", href: "/dashboard/enterprise/integrations", icon: UserCheck },
+            { name: "Settings", href: "/dashboard/enterprise/settings", icon: Settings },
         ]
     };
 
@@ -140,7 +140,7 @@ export default function Sidebar({ plan }: SidebarProps) {
                         {!isCollapsed ? (
                             <>
                                 <div className="text-xs text-gray-400 uppercase tracking-wide mb-2">
-                                    Plano Atual
+                                    Current Plan
                                 </div>
                                 <div className="text-sm text-white font-medium capitalize">
                                     {plan}
@@ -150,7 +150,7 @@ export default function Sidebar({ plan }: SidebarProps) {
                                         href="/#planos"
                                         className="text-xs text-blue-400 hover:text-blue-300 mt-1 inline-block"
                                     >
-                                        Fazer upgrade →
+                                        Upgrade →
                                     </Link>
                                 )}
                             </>

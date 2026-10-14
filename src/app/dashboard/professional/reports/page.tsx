@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     BarChart3,
@@ -21,7 +22,7 @@ export default function ProfessionalReports() {
     const [dateRange, setDateRange] = useState("thisMonth");
     const [reportType, setReportType] = useState("overview");
 
-    // Dados simulados para relatórios avançados
+    // Mock data for advanced reports
     const advancedData = {
         revenue: {
             current: 18450,
@@ -53,10 +54,10 @@ export default function ProfessionalReports() {
         }
     };
 
-    // Dados de performance por profissional
+    // Performance data by professional
     const professionalPerformance = [
         {
-            name: "Ana Silva",
+            name: "Ama Owusu",
             appointments: 89,
             revenue: 8920,
             averageTicket: 100.22,
@@ -65,7 +66,7 @@ export default function ProfessionalReports() {
             efficiency: 92
         },
         {
-            name: "Carlos Santos",
+            name: "Kwesi Asare",
             appointments: 78,
             revenue: 4680,
             averageTicket: 60.00,
@@ -74,7 +75,7 @@ export default function ProfessionalReports() {
             efficiency: 88
         },
         {
-            name: "Maria Costa",
+            name: "Akua Darko",
             appointments: 67,
             revenue: 4850,
             averageTicket: 72.39,
@@ -84,10 +85,10 @@ export default function ProfessionalReports() {
         }
     ];
 
-    // Análise de serviços
+    // Analysis of services
     const serviceAnalysis = [
         {
-            name: "Corte + Coloração",
+            name: "Haircut + Coloring",
             quantity: 45,
             revenue: 8100,
             averagePrice: 180,
@@ -96,7 +97,7 @@ export default function ProfessionalReports() {
             satisfaction: 4.8
         },
         {
-            name: "Corte Feminino",
+            name: "Women's haircut",
             quantity: 52,
             revenue: 3640,
             averagePrice: 70,
@@ -114,7 +115,7 @@ export default function ProfessionalReports() {
             satisfaction: 4.9
         },
         {
-            name: "Corte Masculino",
+            name: "Men's Haircut",
             quantity: 64,
             revenue: 2240,
             averagePrice: 35,
@@ -124,7 +125,7 @@ export default function ProfessionalReports() {
         }
     ];
 
-    // Análise de horários de pico
+    // Peak hours analysis
     const peakHours = [
         { hour: "08:00", appointments: 8, revenue: 560 },
         { hour: "09:00", appointments: 15, revenue: 1200 },
@@ -137,7 +138,7 @@ export default function ProfessionalReports() {
         { hour: "18:00", appointments: 14, revenue: 980 }
     ];
 
-    // Tendências e previsões
+    // Trends and forecasts
     const trends = {
         nextMonthPrediction: {
             revenue: 19200,
@@ -151,10 +152,10 @@ export default function ProfessionalReports() {
             { month: "Abr", revenue: 19200, appointments: 245 }
         ],
         recommendations: [
-            "Aumentar disponibilidade entre 14h-16h (horário de pico)",
-            "Promover serviços de coloração (maior margem e crescimento)",
-            "Focar na retenção de clientes novos (14 novos este mês)",
-            "Otimizar agenda da Ana Silva (maior performance)"
+            "Increase availability between 2pm-4pm (peak hours)",
+            "Promote coloring services (higher margin and growth)",
+            "Focus on retaining new clients (14 new this month)",
+            "Optimise Ama Owusu's schedule (highest performance)"
         ]
     };
 
@@ -169,9 +170,9 @@ export default function ProfessionalReports() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <BarChart3 className="w-6 h-6 text-purple-600 mr-2" />
-                            Relatórios Avançados
+                            Advanced Reports
                         </h1>
-                        <p className="text-gray-600">Analytics completos com insights e previsões</p>
+                        <p className="text-gray-600">Complete analytics with insights and forecasts</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <select
@@ -179,9 +180,9 @@ export default function ProfessionalReports() {
                             onChange={(e) => setReportType(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="overview">Visão Geral</option>
+                            <option value="overview">Overview</option>
                             <option value="performance">Performance</option>
-                            <option value="financial">Financeiro</option>
+                            <option value="financial">Financial</option>
                             <option value="predictive">Preditivo</option>
                         </select>
                         <select
@@ -189,11 +190,11 @@ export default function ProfessionalReports() {
                             onChange={(e) => setDateRange(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="thisWeek">Esta Semana</option>
-                            <option value="thisMonth">Este Mês</option>
-                            <option value="lastMonth">Mês Passado</option>
+                            <option value="thisWeek">This Week</option>
+                            <option value="thisMonth">This Month</option>
+                            <option value="lastMonth">Last Month</option>
                             <option value="quarter">Trimestre</option>
-                            <option value="year">Ano</option>
+                            <option value="year">Year</option>
                         </select>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Download className="w-4 h-4 mr-2" />
@@ -215,9 +216,9 @@ export default function ProfessionalReports() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Faturamento</p>
+                            <p className="text-sm font-medium text-gray-600">Revenue</p>
                             <p className="text-2xl font-semibold text-gray-900">
-                                R$ {advancedData.revenue.current.toLocaleString('pt-BR')}
+                                {formatUSD(advancedData.revenue.current.toLocaleString('en-US'))}
                             </p>
                             <div className="mt-2 bg-gray-200 rounded-full h-2">
                                 <div
@@ -226,7 +227,7 @@ export default function ProfessionalReports() {
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mt-1">
-                                {((advancedData.revenue.current / advancedData.revenue.target) * 100).toFixed(1)}% da meta
+                                {((advancedData.revenue.current / advancedData.revenue.target) * 100).toFixed(1)}% of target
                             </p>
                         </div>
                     </div>
@@ -242,7 +243,7 @@ export default function ProfessionalReports() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Agendamentos</p>
+                            <p className="text-sm font-medium text-gray-600">Bookings</p>
                             <p className="text-2xl font-semibold text-gray-900">{advancedData.appointments.current}</p>
                             <div className="mt-2 bg-gray-200 rounded-full h-2">
                                 <div
@@ -251,7 +252,7 @@ export default function ProfessionalReports() {
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mt-1">
-                                {((advancedData.appointments.current / advancedData.appointments.target) * 100).toFixed(1)}% da meta
+                                {((advancedData.appointments.current / advancedData.appointments.target) * 100).toFixed(1)}% of target
                             </p>
                         </div>
                     </div>
@@ -266,10 +267,10 @@ export default function ProfessionalReports() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Clientes Ativos</p>
+                            <p className="text-sm font-medium text-gray-600">Active Clients</p>
                             <p className="text-2xl font-semibold text-gray-900">{advancedData.clients.current}</p>
                             <div className="mt-2 flex items-center">
-                                <span className="text-sm text-gray-600">Retenção: </span>
+                                <span className="text-sm text-gray-600">Retention: </span>
                                 <span className="text-sm font-medium text-green-600 ml-1">{advancedData.clients.retention}%</span>
                             </div>
                         </div>
@@ -286,12 +287,12 @@ export default function ProfessionalReports() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Ticket Médio</p>
+                            <p className="text-sm font-medium text-gray-600">Average Ticket</p>
                             <p className="text-2xl font-semibold text-gray-900">
-                                R$ {advancedData.averageTicket.current.toFixed(2)}
+                                {formatUSD(advancedData.averageTicket.current.toFixed(2))}
                             </p>
                             <p className="text-xs text-gray-500 mt-1">
-                                +R$ {(advancedData.averageTicket.current - advancedData.averageTicket.previous).toFixed(2)} vs período anterior
+                                +{formatUSD((advancedData.averageTicket.current - advancedData.averageTicket.previous).toFixed(2))} vs previous period
                             </p>
                         </div>
                     </div>
@@ -306,10 +307,10 @@ export default function ProfessionalReports() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Satisfação</p>
+                            <p className="text-sm font-medium text-gray-600">Satisfaction</p>
                             <p className="text-2xl font-semibold text-gray-900">{advancedData.satisfaction.current.toFixed(1)}</p>
                             <p className="text-xs text-gray-500 mt-1">
-                                {advancedData.satisfaction.totalReviews} avaliações
+                                {advancedData.satisfaction.totalReviews} reviews
                             </p>
                         </div>
                     </div>
@@ -319,7 +320,7 @@ export default function ProfessionalReports() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Professional Performance */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Performance dos Profissionais</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Professional performance</h3>
                         <div className="space-y-4">
                             {professionalPerformance.map((professional, index) => (
                                 <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -337,19 +338,19 @@ export default function ProfessionalReports() {
                                     </div>
                                     <div className="grid grid-cols-2 gap-4 text-sm">
                                         <div>
-                                            <p className="text-gray-600">Agendamentos</p>
+                                            <p className="text-gray-600">Bookings</p>
                                             <p className="font-medium">{professional.appointments}</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-600">Faturamento</p>
-                                            <p className="font-medium text-green-600">R$ {professional.revenue.toLocaleString('pt-BR')}</p>
+                                            <p className="text-gray-600">Revenue</p>
+                                            <p className="font-medium text-green-600">{formatUSD(professional.revenue.toLocaleString('en-US'))}</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-600">Ticket Médio</p>
-                                            <p className="font-medium">R$ {professional.averageTicket.toFixed(2)}</p>
+                                            <p className="text-gray-600">Average Ticket</p>
+                                            <p className="font-medium">{formatUSD(professional.averageTicket.toFixed(2))}</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-600">Satisfação</p>
+                                            <p className="text-gray-600">Satisfaction</p>
                                             <div className="flex items-center">
                                                 <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
                                                 <span className="font-medium">{professional.satisfaction}</span>
@@ -358,7 +359,7 @@ export default function ProfessionalReports() {
                                     </div>
                                     <div className="mt-3">
                                         <div className="flex items-center justify-between text-sm mb-1">
-                                            <span className="text-gray-600">Eficiência</span>
+                                            <span className="text-gray-600">Efficiency</span>
                                             <span className="font-medium">{professional.efficiency}%</span>
                                         </div>
                                         <div className="bg-gray-200 rounded-full h-2">
@@ -378,7 +379,7 @@ export default function ProfessionalReports() {
 
                     {/* Service Analysis */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Análise de Serviços</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Services Analysis</h3>
                         <div className="space-y-4">
                             {serviceAnalysis.map((service, index) => (
                                 <div key={index} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
@@ -388,12 +389,12 @@ export default function ProfessionalReports() {
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium text-gray-900">{service.name}</p>
-                                            <p className="text-xs text-gray-500">{service.quantity} serviços • Margem {service.margin}%</p>
+                                            <p className="text-xs text-gray-500">{service.quantity} services • Margin {service.margin}%</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
                                         <p className="text-sm font-medium text-green-600">
-                                            R$ {service.revenue.toLocaleString('pt-BR')}
+                                            {formatUSD(service.revenue.toLocaleString('en-US'))}
                                         </p>
                                         <div className="flex items-center">
                                             {service.growth > 0 ? <TrendingUp className="w-3 h-3 text-green-600 mr-1" /> : <TrendingDown className="w-3 h-3 text-red-600 mr-1" />}
@@ -410,7 +411,7 @@ export default function ProfessionalReports() {
 
                 {/* Peak Hours Analysis */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-6">Análise de Horários de Pico</h3>
+                    <h3 className="text-lg font-medium text-gray-900 mb-6">Peak Hours Analysis</h3>
                     <div className="space-y-4">
                         {peakHours.map((hour, index) => (
                             <div key={index} className="flex items-center">
@@ -425,7 +426,7 @@ export default function ProfessionalReports() {
                                                 <span className="text-xs text-white font-medium">{hour.appointments}</span>
                                             </div>
                                         </div>
-                                        <p className="text-xs text-gray-500 mt-1">Agendamentos</p>
+                                        <p className="text-xs text-gray-500 mt-1">Bookings</p>
                                     </div>
                                     <div>
                                         <div className="bg-gray-200 rounded-full h-4">
@@ -433,10 +434,10 @@ export default function ProfessionalReports() {
                                                 className="bg-green-600 h-4 rounded-full transition-all duration-300 flex items-center justify-end pr-2"
                                                 style={{ width: `${(hour.revenue / getMaxRevenue()) * 100}%` }}
                                             >
-                                                <span className="text-xs text-white font-medium">R$ {hour.revenue}</span>
+                                                <span className="text-xs text-white font-medium">{formatUSD(hour.revenue)}</span>
                                             </div>
                                         </div>
-                                        <p className="text-xs text-gray-500 mt-1">Faturamento</p>
+                                        <p className="text-xs text-gray-500 mt-1">Revenue</p>
                                     </div>
                                 </div>
                             </div>
@@ -449,24 +450,24 @@ export default function ProfessionalReports() {
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                         <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center">
                             <Zap className="w-5 h-5 text-purple-600 mr-2" />
-                            Previsões para o Próximo Mês
+                            Forecast for Next Month
                         </h3>
                         <div className="space-y-4">
                             <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-900">Faturamento Previsto</p>
+                                    <p className="text-sm font-medium text-gray-900">Revenue Previsto</p>
                                     <p className="text-2xl font-semibold text-blue-600">
-                                        R$ {trends.nextMonthPrediction.revenue.toLocaleString('pt-BR')}
+                                        {formatUSD(trends.nextMonthPrediction.revenue.toLocaleString('en-US'))}
                                     </p>
                                 </div>
                                 <div className="text-right">
-                                    <p className="text-sm text-gray-600">Confiança</p>
+                                    <p className="text-sm text-gray-600">Confidence</p>
                                     <p className="text-lg font-medium text-blue-600">{trends.nextMonthPrediction.confidence}%</p>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-900">Agendamentos Previstos</p>
+                                    <p className="text-sm font-medium text-gray-900">Bookings Previstos</p>
                                     <p className="text-2xl font-semibold text-green-600">{trends.nextMonthPrediction.appointments}</p>
                                 </div>
                                 <div className="text-right">
@@ -482,7 +483,7 @@ export default function ProfessionalReports() {
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                         <h3 className="text-lg font-medium text-gray-900 mb-6 flex items-center">
                             <Award className="w-5 h-5 text-orange-600 mr-2" />
-                            Recomendações Inteligentes
+                            Smart Recommendations
                         </h3>
                         <div className="space-y-3">
                             {trends.recommendations.map((recommendation, index) => (

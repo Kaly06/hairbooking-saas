@@ -33,7 +33,7 @@ export default function DashboardHeader({ plan, username }: DashboardHeaderProps
     return (
         <header className="bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-                {/* Logo e Plano */}
+                {/* Logo e Plan */}
                 <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
                         <div className="flex items-center justify-center w-8 h-8 bg-black rounded-lg">
@@ -55,7 +55,7 @@ export default function DashboardHeader({ plan, username }: DashboardHeaderProps
                         <input
                             type="text"
                             className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-black focus:border-black sm:text-sm"
-                            placeholder="Buscar clientes, agendamentos..."
+                            placeholder="Search clients, bookings..."
                         />
                     </div>
                 </div>
@@ -85,18 +85,18 @@ export default function DashboardHeader({ plan, username }: DashboardHeaderProps
                             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
                                 <div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-100">
                                     <p className="font-medium">{username}</p>
-                                    <p className="text-gray-500">Plano {planNames[plan]}</p>
+                                    <p className="text-gray-500">{planNames[plan]} plan</p>
                                 </div>
                                 <button className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
                                     <Settings className="w-4 h-4 mr-2" />
-                                    Configurações
+                                    Settings
                                 </button>
                                 <button
                                     onClick={handleLogout}
                                     className="flex items-center w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-100 transition-colors"
                                 >
                                     <LogOut className="w-4 h-4 mr-2" />
-                                    Sair
+                                    Log out
                                 </button>
                             </div>
                         )}

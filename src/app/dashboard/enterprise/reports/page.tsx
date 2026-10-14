@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, TrendingUp, Download, Calendar, FileText, Filter, PieChart, LineChart, Target, Users, DollarSign, Clock, Building } from "lucide-react";
@@ -11,8 +12,8 @@ export default function EnterpriseReportsPage() {
                 {/* Header */}
                 <div className="flex justify-between items-start">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Relatórios Executivos</h1>
-                        <p className="text-gray-600 mt-2">Business Intelligence e Analytics avançado multi-unidades</p>
+                        <h1 className="text-3xl font-bold text-gray-900">Reports Executivos</h1>
+                        <p className="text-gray-600 mt-2">Business intelligence and advanced analytics across branches</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
@@ -21,7 +22,7 @@ export default function EnterpriseReportsPage() {
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             <Filter className="h-4 w-4 inline mr-2" />
-                            Filtros Avançados
+                            Advanced Filters
                         </button>
                     </div>
                 </div>
@@ -33,10 +34,10 @@ export default function EnterpriseReportsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Revenue YTD</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 5.24M</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(5240000)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
-                                        <span className="text-sm text-green-600">+24.7% vs ano anterior</span>
+                                        <span className="text-sm text-green-600">+24.7% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -50,11 +51,11 @@ export default function EnterpriseReportsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Atendimentos YTD</p>
+                                    <p className="text-sm font-medium text-gray-600">Appointments YTD</p>
                                     <p className="text-2xl font-bold text-gray-900">98.547</p>
                                     <div className="flex items-center mt-1">
                                         <Users className="h-3 w-3 text-blue-500 mr-1" />
-                                        <span className="text-sm text-blue-600">+18.3% vs ano anterior</span>
+                                        <span className="text-sm text-blue-600">+18.3% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -72,7 +73,7 @@ export default function EnterpriseReportsPage() {
                                     <p className="text-2xl font-bold text-purple-600">87</p>
                                     <div className="flex items-center mt-1">
                                         <Target className="h-3 w-3 text-purple-500 mr-1" />
-                                        <span className="text-sm text-purple-600">Excelente qualidade</span>
+                                        <span className="text-sm text-purple-600">Excellent quality</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -86,11 +87,11 @@ export default function EnterpriseReportsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Ocupação Média</p>
+                                    <p className="text-sm font-medium text-gray-600">Average Occupancy</p>
                                     <p className="text-2xl font-bold text-orange-600">84.2%</p>
                                     <div className="flex items-center mt-1">
                                         <Clock className="h-3 w-3 text-orange-500 mr-1" />
-                                        <span className="text-sm text-orange-600">+6.1% vs ano anterior</span>
+                                        <span className="text-sm text-orange-600">+6.1% vs previous year</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -108,15 +109,15 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <DollarSign className="h-5 w-5 text-green-600" />
-                                Relatórios Financeiros
+                                Reports Financeiros
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">DRE Consolidado</p>
-                                        <p className="text-sm text-green-700">Demonstração de resultados por unidade</p>
+                                        <p className="font-medium text-green-900">Consolidated P&L</p>
+                                        <p className="text-sm text-green-700">Income statement by branch</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
                                 </div>
@@ -125,8 +126,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">Fluxo de Caixa</p>
-                                        <p className="text-sm text-green-700">Análise de entrada e saída por período</p>
+                                        <p className="font-medium text-green-900">Cash flow</p>
+                                        <p className="text-sm text-green-700">Inflow and outflow analysis by period</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
                                 </div>
@@ -135,8 +136,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">Margem por Serviço</p>
-                                        <p className="text-sm text-green-700">Análise de rentabilidade detalhada</p>
+                                        <p className="font-medium text-green-900">Margin by service</p>
+                                        <p className="text-sm text-green-700">Detailed profitability analysis</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
                                 </div>
@@ -145,8 +146,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-green-50 hover:bg-green-100 rounded-lg border border-green-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-green-900">ROI por Unidade</p>
-                                        <p className="text-sm text-green-700">Retorno sobre investimento</p>
+                                        <p className="font-medium text-green-900">ROI by branch</p>
+                                        <p className="text-sm text-green-700">Return on investment</p>
                                     </div>
                                     <Download className="h-4 w-4 text-green-600" />
                                 </div>
@@ -159,15 +160,15 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <BarChart3 className="h-5 w-5 text-blue-600" />
-                                Relatórios Operacionais
+                                Reports Operacionais
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                             <button className="w-full p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-blue-900">Performance de Profissionais</p>
-                                        <p className="text-sm text-blue-700">Ranking e produtividade individual</p>
+                                        <p className="font-medium text-blue-900">Professional performance</p>
+                                        <p className="text-sm text-blue-700">Individual ranking and productivity</p>
                                     </div>
                                     <Download className="h-4 w-4 text-blue-600" />
                                 </div>
@@ -176,8 +177,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-blue-900">Ocupação por Horário</p>
-                                        <p className="text-sm text-blue-700">Análise de picos e horários ociosos</p>
+                                        <p className="font-medium text-blue-900">Occupancy by Time Slot</p>
+                                        <p className="text-sm text-blue-700">Peak and idle hour analysis</p>
                                     </div>
                                     <Download className="h-4 w-4 text-blue-600" />
                                 </div>
@@ -186,8 +187,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-blue-900">Cancelamentos e No-shows</p>
-                                        <p className="text-sm text-blue-700">Análise de perdas operacionais</p>
+                                        <p className="font-medium text-blue-900">Cancellations & no-shows</p>
+                                        <p className="text-sm text-blue-700">Analysis of perdas operacionais</p>
                                     </div>
                                     <Download className="h-4 w-4 text-blue-600" />
                                 </div>
@@ -196,8 +197,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-blue-900">Eficiência por Unidade</p>
-                                        <p className="text-sm text-blue-700">Comparativo de performance</p>
+                                        <p className="font-medium text-blue-900">Efficiency by branch</p>
+                                        <p className="text-sm text-blue-700">Performance comparison</p>
                                     </div>
                                     <Download className="h-4 w-4 text-blue-600" />
                                 </div>
@@ -210,15 +211,15 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Users className="h-5 w-5 text-purple-600" />
-                                Relatórios de Clientes
+                                Client reports
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                             <button className="w-full p-4 text-left bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-purple-900">Segmentação Avançada</p>
-                                        <p className="text-sm text-purple-700">Perfil e comportamento de clientes</p>
+                                        <p className="font-medium text-purple-900">Advanced Segmentation</p>
+                                        <p className="text-sm text-purple-700">Client profile and behavior</p>
                                     </div>
                                     <Download className="h-4 w-4 text-purple-600" />
                                 </div>
@@ -228,7 +229,7 @@ export default function EnterpriseReportsPage() {
                                 <div className="flex justify-between items-center">
                                     <div>
                                         <p className="font-medium text-purple-900">Churn Analysis</p>
-                                        <p className="text-sm text-purple-700">Análise de perdas de clientes</p>
+                                        <p className="text-sm text-purple-700">Client loss analysis</p>
                                     </div>
                                     <Download className="h-4 w-4 text-purple-600" />
                                 </div>
@@ -238,7 +239,7 @@ export default function EnterpriseReportsPage() {
                                 <div className="flex justify-between items-center">
                                     <div>
                                         <p className="font-medium text-purple-900">LTV (Lifetime Value)</p>
-                                        <p className="text-sm text-purple-700">Valor vitalício dos clientes</p>
+                                        <p className="text-sm text-purple-700">Customer lifetime value</p>
                                     </div>
                                     <Download className="h-4 w-4 text-purple-600" />
                                 </div>
@@ -247,8 +248,8 @@ export default function EnterpriseReportsPage() {
                             <button className="w-full p-4 text-left bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 transition-colors">
                                 <div className="flex justify-between items-center">
                                     <div>
-                                        <p className="font-medium text-purple-900">Satisfação (NPS)</p>
-                                        <p className="text-sm text-purple-700">Análise de feedback e recomendações</p>
+                                        <p className="font-medium text-purple-900">Satisfaction (NPS)</p>
+                                        <p className="text-sm text-purple-700">Feedback and recommendation analysis</p>
                                     </div>
                                     <Download className="h-4 w-4 text-purple-600" />
                                 </div>
@@ -262,56 +263,56 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <LineChart className="h-5 w-5 text-purple-600" />
-                            Dashboard de Analytics Avançado
+                            Advanced Analytics Dashboard
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Revenue Forecast */}
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Previsão de Receita (Próximos 6 meses)</h4>
+                                <h4 className="font-semibold text-gray-900">Revenue Forecast (Next 6 months)</h4>
                                 <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
                                     <div className="text-center">
                                         <LineChart className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                                        <p className="text-gray-500">Gráfico de Previsão com Machine Learning</p>
+                                        <p className="text-gray-500">Forecast chart with Machine Learning</p>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-4">
                                     <div className="text-center p-3 bg-blue-50 rounded-lg">
-                                        <p className="text-lg font-bold text-blue-600">R$ 2.8M</p>
-                                        <p className="text-xs text-gray-600">Previsão Q1</p>
+                                        <p className="text-lg font-bold text-blue-600">{formatUSD(2800000)}</p>
+                                        <p className="text-xs text-gray-600">Forecast Q1</p>
                                     </div>
                                     <div className="text-center p-3 bg-green-50 rounded-lg">
-                                        <p className="text-lg font-bold text-green-600">R$ 3.1M</p>
-                                        <p className="text-xs text-gray-600">Previsão Q2</p>
+                                        <p className="text-lg font-bold text-green-600">{formatUSD(3100000)}</p>
+                                        <p className="text-xs text-gray-600">Forecast Q2</p>
                                     </div>
                                     <div className="text-center p-3 bg-purple-50 rounded-lg">
                                         <p className="text-lg font-bold text-purple-600">+15.7%</p>
-                                        <p className="text-xs text-gray-600">Crescimento</p>
+                                        <p className="text-xs text-gray-600">Growth</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Customer Behavior Analysis */}
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Análise de Comportamento de Clientes</h4>
+                                <h4 className="font-semibold text-gray-900">Client behaviour analysis</h4>
                                 <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
                                     <div className="text-center">
                                         <PieChart className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                                        <p className="text-gray-500">Heatmap de Comportamento</p>
+                                        <p className="text-gray-500">Behaviour heatmap</p>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
-                                        <span className="text-sm">Fidelidade Alta (8+ visitas/ano)</span>
+                                        <span className="text-sm">High loyalty (8+ visits/year)</span>
                                         <span className="font-medium text-blue-600">42.3%</span>
                                     </div>
                                     <div className="flex justify-between items-center p-2 bg-green-50 rounded">
-                                        <span className="text-sm">Fidelidade Média (4-7 visitas/ano)</span>
+                                        <span className="text-sm">Average Loyalty (4-7 visits/year)</span>
                                         <span className="font-medium text-green-600">35.7%</span>
                                     </div>
                                     <div className="flex justify-between items-center p-2 bg-orange-50 rounded">
-                                        <span className="text-sm">Fidelidade Baixa (1-3 visitas/ano)</span>
+                                        <span className="text-sm">Low loyalty (1-3 visits/year)</span>
                                         <span className="font-medium text-orange-600">22.0%</span>
                                     </div>
                                 </div>
@@ -325,7 +326,7 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Building className="h-5 w-5 text-purple-600" />
-                            Comparativo Detalhado por Unidade
+                            Detailed comparison by branch
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -333,11 +334,11 @@ export default function EnterpriseReportsPage() {
                             <table className="w-full">
                                 <thead>
                                     <tr className="border-b border-gray-200">
-                                        <th className="text-left py-3 px-4 font-semibold">Unidade</th>
-                                        <th className="text-right py-3 px-4 font-semibold">Receita YTD</th>
-                                        <th className="text-right py-3 px-4 font-semibold">Atendimentos</th>
-                                        <th className="text-right py-3 px-4 font-semibold">Ticket Médio</th>
-                                        <th className="text-right py-3 px-4 font-semibold">Ocupação</th>
+                                        <th className="text-left py-3 px-4 font-semibold">Branch</th>
+                                        <th className="text-right py-3 px-4 font-semibold">Revenue YTD</th>
+                                        <th className="text-right py-3 px-4 font-semibold">Appointments</th>
+                                        <th className="text-right py-3 px-4 font-semibold">Average Ticket</th>
+                                        <th className="text-right py-3 px-4 font-semibold">Occupancy</th>
                                         <th className="text-right py-3 px-4 font-semibold">NPS</th>
                                         <th className="text-right py-3 px-4 font-semibold">Performance</th>
                                     </tr>
@@ -350,9 +351,9 @@ export default function EnterpriseReportsPage() {
                                                 <span className="font-medium">Shopping Center</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-blue-600">R$ 2.14M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-blue-600">{formatUSD(2140000)}</td>
                                         <td className="py-3 px-4 text-right">42.389</td>
-                                        <td className="py-3 px-4 text-right">R$ 135</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(135)}</td>
                                         <td className="py-3 px-4 text-right">91.2%</td>
                                         <td className="py-3 px-4 text-right">92</td>
                                         <td className="py-3 px-4 text-right">
@@ -365,17 +366,17 @@ export default function EnterpriseReportsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                                <span className="font-medium">Centro</span>
+                                                <span className="font-medium">Osu</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-green-600">R$ 1.68M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-green-600">{formatUSD(1680000)}</td>
                                         <td className="py-3 px-4 text-right">34.256</td>
-                                        <td className="py-3 px-4 text-right">R$ 118</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(118)}</td>
                                         <td className="py-3 px-4 text-right">87.4%</td>
                                         <td className="py-3 px-4 text-right">89</td>
                                         <td className="py-3 px-4 text-right">
                                             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                                Muito Bom
+                                                Very good
                                             </span>
                                         </td>
                                     </tr>
@@ -383,12 +384,12 @@ export default function EnterpriseReportsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                                <span className="font-medium">Zona Norte</span>
+                                                <span className="font-medium">Airport Residential</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-orange-600">R$ 1.42M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-orange-600">{formatUSD(1420000)}</td>
                                         <td className="py-3 px-4 text-right">21.902</td>
-                                        <td className="py-3 px-4 text-right">R$ 104</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(104)}</td>
                                         <td className="py-3 px-4 text-right">76.8%</td>
                                         <td className="py-3 px-4 text-right">81</td>
                                         <td className="py-3 px-4 text-right">
@@ -410,23 +411,23 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Calendar className="h-5 w-5 text-purple-600" />
-                                Relatórios Automáticos
+                                Automatic Reports
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between p-3 bg-green-50 border border-green-200 rounded-lg">
                                     <div>
-                                        <p className="font-medium text-green-900">Relatório Diário</p>
-                                        <p className="text-sm text-green-700">Enviado às 22:00 para gerentes</p>
+                                        <p className="font-medium text-green-900">Daily Report</p>
+                                        <p className="text-sm text-green-700">Sent at 22:00 to managers</p>
                                     </div>
                                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                     <div>
-                                        <p className="font-medium text-blue-900">Resumo Semanal</p>
-                                        <p className="text-sm text-blue-700">Enviado segunda-feira às 09:00</p>
+                                        <p className="font-medium text-blue-900">Weekly summary</p>
+                                        <p className="text-sm text-blue-700">Sent Monday at 09:00</p>
                                     </div>
                                     <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                                 </div>
@@ -434,15 +435,15 @@ export default function EnterpriseReportsPage() {
                                 <div className="flex items-center justify-between p-3 bg-purple-50 border border-purple-200 rounded-lg">
                                     <div>
                                         <p className="font-medium text-purple-900">Dashboard Executivo</p>
-                                        <p className="text-sm text-purple-700">Enviado mensalmente para diretoria</p>
+                                        <p className="text-sm text-purple-700">Sent monthly to the board</p>
                                     </div>
                                     <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-orange-50 border border-orange-200 rounded-lg">
                                     <div>
-                                        <p className="font-medium text-orange-900">Alertas de Performance</p>
-                                        <p className="text-sm text-orange-700">Notificações em tempo real</p>
+                                        <p className="font-medium text-orange-900">Performance alerts</p>
+                                        <p className="text-sm text-orange-700">Real-time notifications</p>
                                     </div>
                                     <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
                                 </div>
@@ -450,7 +451,7 @@ export default function EnterpriseReportsPage() {
 
                             <div className="pt-4 border-t border-gray-200">
                                 <button className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                                    Configurar Novos Relatórios
+                                    Configure new reports
                                 </button>
                             </div>
                         </CardContent>
@@ -461,7 +462,7 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Target className="h-5 w-5 text-purple-600" />
-                                Insights de IA
+                                AI insights
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -470,8 +471,8 @@ export default function EnterpriseReportsPage() {
                                     <div className="flex items-start gap-2">
                                         <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                                         <div>
-                                            <p className="font-medium text-blue-900">Oportunidade de Crescimento</p>
-                                            <p className="text-sm text-blue-700">Unidade Zona Norte tem potencial para +30% de receita com otimização de horários.</p>
+                                            <p className="font-medium text-blue-900">Growth opportunity</p>
+                                            <p className="text-sm text-blue-700">Airport Residential branch has potential for +30% revenue with optimization of schedules.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -480,8 +481,8 @@ export default function EnterpriseReportsPage() {
                                     <div className="flex items-start gap-2">
                                         <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                                         <div>
-                                            <p className="font-medium text-green-900">Tendência Positiva</p>
-                                            <p className="text-sm text-green-700">Clientes VIP aumentaram 45% nos últimos 3 meses. Considere programa de fidelidade premium.</p>
+                                            <p className="font-medium text-green-900">Positive Trend</p>
+                                            <p className="text-sm text-green-700">VIP clients grew 45% in the last 3 months. Consider a premium loyalty program.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -490,8 +491,8 @@ export default function EnterpriseReportsPage() {
                                     <div className="flex items-start gap-2">
                                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
                                         <div>
-                                            <p className="font-medium text-orange-900">Alerta de Sazonalidade</p>
-                                            <p className="text-sm text-orange-700">Dezembro historicamente tem queda de 15%. Planejar campanhas promocionais.</p>
+                                            <p className="font-medium text-orange-900">Seasonality alert</p>
+                                            <p className="text-sm text-orange-700">December historically sees a drop of 15%. Plan promotional campaigns.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -500,8 +501,8 @@ export default function EnterpriseReportsPage() {
                                     <div className="flex items-start gap-2">
                                         <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                                         <div>
-                                            <p className="font-medium text-purple-900">Previsão de Demanda</p>
-                                            <p className="text-sm text-purple-700">Próxima semana terá pico de 23% na demanda. Considere profissionais extras.</p>
+                                            <p className="font-medium text-purple-900">Demand Forecast</p>
+                                            <p className="text-sm text-purple-700">Next week will see a 23% demand peak. Consider professionals extras.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -515,18 +516,18 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <FileText className="h-5 w-5 text-purple-600" />
-                            Construtor de Relatórios Personalizado
+                            Custom report builder
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Dimensões Disponíveis</h4>
+                                <h4 className="font-semibold text-gray-900">Available Dimensions</h4>
                                 <div className="grid grid-cols-2 gap-2">
                                     {[
-                                        "Tempo", "Unidade", "Profissional", "Serviço",
-                                        "Cliente", "Método Pagamento", "Horário", "Dia da Semana",
-                                        "Produto", "Categoria", "Promoção", "Canal de Aquisição"
+                                        "Time", "Branch", "Professional", "Service",
+                                        "Client", "Payment Method", "Time", "Day of the Week",
+                                        "Product", "Category", "Promotion", "Acquisition Channel"
                                     ].map((dimension) => (
                                         <button key={dimension} className="p-2 text-sm bg-gray-50 hover:bg-purple-50 border border-gray-200 hover:border-purple-200 rounded transition-colors">
                                             {dimension}
@@ -536,12 +537,12 @@ export default function EnterpriseReportsPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Métricas Disponíveis</h4>
+                                <h4 className="font-semibold text-gray-900">Available Metrics</h4>
                                 <div className="grid grid-cols-2 gap-2">
                                     {[
-                                        "Receita", "Quantidade", "Ticket Médio", "Margem",
-                                        "Ocupação", "Conversão", "Churn", "LTV",
-                                        "NPS", "Satisfação", "ROI", "EBITDA"
+                                        "Revenue", "Quantity", "Average Ticket", "Margin",
+                                        "Occupancy", "Conversion", "Churn", "LTV",
+                                        "NPS", "Satisfaction", "ROI", "EBITDA"
                                     ].map((metric) => (
                                         <button key={metric} className="p-2 text-sm bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-200 rounded transition-colors">
                                             {metric}
@@ -554,10 +555,10 @@ export default function EnterpriseReportsPage() {
                         <div className="mt-6 pt-6 border-t border-gray-200">
                             <div className="flex gap-3">
                                 <button className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                                    Criar Relatório Personalizado
+                                    Create Report Custom
                                 </button>
                                 <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                    Salvar Template
+                                    Save Template
                                 </button>
                             </div>
                         </div>

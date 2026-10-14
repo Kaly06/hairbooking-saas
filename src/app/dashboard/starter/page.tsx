@@ -13,10 +13,10 @@ import {
 } from "lucide-react";
 
 export default function StarterDashboard() {
-    // Dados simulados para o dashboard Starter
+    // Mock data for the dashboard Starter
     const stats = [
         {
-            name: "Agendamentos Hoje",
+            name: "Today's Bookings",
             value: "12",
             change: "+2.1%",
             changeType: "increase" as const,
@@ -24,7 +24,7 @@ export default function StarterDashboard() {
             color: "bg-blue-500"
         },
         {
-            name: "Total de Clientes",
+            name: "Total Clients",
             value: "248",
             change: "+5.4%",
             changeType: "increase" as const,
@@ -32,15 +32,15 @@ export default function StarterDashboard() {
             color: "bg-green-500"
         },
         {
-            name: "Faturamento Mensal",
-            value: "R$ 8.450",
+            name: "Monthly Revenue",
+            value: "$1,408",
             change: "+12.3%",
             changeType: "increase" as const,
             icon: DollarSign,
             color: "bg-purple-500"
         },
         {
-            name: "Taxa de Ocupação",
+            name: "Occupancy Rate",
             value: "78%",
             change: "+3.2%",
             changeType: "increase" as const,
@@ -50,11 +50,11 @@ export default function StarterDashboard() {
     ];
 
     const recentAppointments = [
-        { id: 1, client: "Maria Silva", service: "Corte + Escova", time: "09:00", status: "confirmed" },
-        { id: 2, client: "João Santos", service: "Corte Masculino", time: "10:30", status: "completed" },
-        { id: 3, client: "Ana Costa", service: "Coloração", time: "14:00", status: "confirmed" },
-        { id: 4, client: "Pedro Lima", service: "Barba", time: "15:30", status: "pending" },
-        { id: 5, client: "Carla Souza", service: "Corte + Hidratação", time: "16:00", status: "confirmed" }
+        { id: 1, client: "Akosua Frimpong", service: "Haircut + Escova", time: "09:00", status: "confirmed" },
+        { id: 2, client: "Kofi Boateng", service: "Men's Haircut", time: "10:30", status: "completed" },
+        { id: 3, client: "Abena Ofori", service: "Coloring", time: "14:00", status: "confirmed" },
+        { id: 4, client: "Yaw Addo", service: "Beard", time: "15:30", status: "pending" },
+        { id: 5, client: "Efua Mensah", service: "Haircut + Hair Treatment", time: "16:00", status: "confirmed" }
     ];
 
     const getStatusIcon = (status: string) => {
@@ -73,13 +73,13 @@ export default function StarterDashboard() {
     const getStatusText = (status: string) => {
         switch (status) {
             case "completed":
-                return "Concluído";
+                return "Completed";
             case "confirmed":
-                return "Confirmado";
+                return "Confirmed";
             case "pending":
-                return "Pendente";
+                return "Pending";
             default:
-                return "Agendado";
+                return "Scheduled";
         }
     };
 
@@ -102,7 +102,7 @@ export default function StarterDashboard() {
                 {/* Header */}
                 <div>
                     <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-                    <p className="text-gray-600">Bem-vindo ao seu painel de controle</p>
+                    <p className="text-gray-600">Welcome to your control panel</p>
                 </div>
 
                 {/* Stats Grid */}
@@ -130,10 +130,10 @@ export default function StarterDashboard() {
 
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {/* Agendamentos Recentes */}
+                    {/* Recent Bookings */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200">
-                            <h3 className="text-lg font-medium text-gray-900">Agendamentos de Hoje</h3>
+                            <h3 className="text-lg font-medium text-gray-900">Today's Bookings</h3>
                         </div>
                         <div className="overflow-hidden">
                             <div className="divide-y divide-gray-200">
@@ -173,53 +173,53 @@ export default function StarterDashboard() {
 
                     {/* Quick Actions */}
                     <div className="space-y-6">
-                        {/* Ações Rápidas */}
+                        {/* Quick Actions */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-4">Ações Rápidas</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
                             <div className="space-y-3">
                                 <button className="w-full text-left p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                                     <div className="flex items-center">
                                         <Calendar className="w-5 h-5 text-blue-600 mr-3" />
-                                        <span className="text-sm font-medium text-blue-900">Novo Agendamento</span>
+                                        <span className="text-sm font-medium text-blue-900">New Booking</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                                     <div className="flex items-center">
                                         <Users className="w-5 h-5 text-green-600 mr-3" />
-                                        <span className="text-sm font-medium text-green-900">Cadastrar Cliente</span>
+                                        <span className="text-sm font-medium text-green-900">Register Client</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
                                     <div className="flex items-center">
                                         <DollarSign className="w-5 h-5 text-purple-600 mr-3" />
-                                        <span className="text-sm font-medium text-purple-900">Ver Relatórios</span>
+                                        <span className="text-sm font-medium text-purple-900">View Reports</span>
                                     </div>
                                 </button>
                             </div>
                         </div>
 
-                        {/* Resumo do Plano */}
+                        {/* Plan summary */}
                         <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-6 text-white">
-                            <h3 className="text-lg font-medium mb-2">Plano Starter</h3>
+                            <h3 className="text-lg font-medium mb-2">Plan Starter</h3>
                             <p className="text-blue-100 text-sm mb-4">
-                                Você está usando o plano básico com funcionalidades essenciais para seu salão.
+                                You're on the basic plan with the essential features for your salon.
                             </p>
                             <div className="space-y-2 text-sm">
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Até 3 profissionais</span>
+                                    <span>Up to 3 professionals</span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Agendamento online</span>
+                                    <span>Booking online</span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Relatórios básicos</span>
+                                    <span>Basic reports</span>
                                 </div>
                             </div>
                             <button className="mt-4 bg-white text-blue-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">
-                                Fazer Upgrade
+                                Upgrade
                             </button>
                         </div>
                     </div>

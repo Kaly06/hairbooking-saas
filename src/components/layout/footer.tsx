@@ -17,29 +17,29 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     const footerLinks = {
-        plataforma: [
-            { name: "Como funciona", href: "#como-funciona" },
-            { name: "Nossos serviços", href: "#servicos" },
-            { name: "Planos e preços", href: "#planos" },
-            { name: "Localização", href: "#localizacao" }
+        platform: [
+            { name: "How it works", href: "#como-funciona" },
+            { name: "Our services", href: "#servicos" },
+            { name: "Plans & pricing", href: "#planos" },
+            { name: "Locations", href: "#localizacao" }
         ],
-        suporte: [
-            { name: "Central de ajuda", href: "#ajuda" },
-            { name: "Fale conosco", href: "#contato" },
+        support: [
+            { name: "Help center", href: "#ajuda" },
+            { name: "Contact us", href: "#contato" },
             { name: "WhatsApp", href: "#whatsapp" },
-            { name: "Status da plataforma", href: "#status" }
+            { name: "Platform status", href: "#status" }
         ],
-        empresa: [
-            { name: "Sobre nós", href: "#sobre" },
-            { name: "Carreiras", href: "#carreiras" },
-            { name: "Parceiros", href: "#parceiros" },
-            { name: "Imprensa", href: "#imprensa" }
+        company: [
+            { name: "About us", href: "/info/about" },
+            { name: "Careers", href: "/info/careers" },
+            { name: "Partners", href: "/info/partners" },
+            { name: "Press", href: "/info/press" }
         ],
         legal: [
-            { name: "Termos de uso", href: "#termos" },
-            { name: "Política de privacidade", href: "#privacidade" },
-            { name: "Cookies", href: "#cookies" },
-            { name: "LGPD", href: "#lgpd" }
+            { name: "Terms of use", href: "/info/terms" },
+            { name: "Privacy policy", href: "/info/privacy" },
+            { name: "Cookies", href: "/info/cookies" },
+            { name: "Data Protection", href: "/info/data-protection" }
         ]
     };
 
@@ -63,37 +63,37 @@ export default function Footer() {
                             <span className="text-xl font-bold text-white">HairBooking</span>
                         </Link>
 
-                        <p className="text-gray-300 leading-relaxed mb-6">
-                            A plataforma que revoluciona a experiência em salões de beleza,
-                            conectando você aos melhores profissionais com tecnologia de ponta
-                            e atendimento personalizado.
+                        <p className="text-white leading-relaxed mb-6">
+                            The platform that transforms the salon experience,
+                            connecting you with the best professionals through cutting-edge technology
+                            and personalized service.
                         </p>
 
                         {/* Contact Info */}
                         <div className="space-y-3">
-                            <div className="flex items-center text-gray-300">
+                            <div className="flex items-center text-white">
                                 <Phone className="w-4 h-4 mr-3" />
-                                <span className="text-sm">(11) 4000-0000</span>
+                                <span className="text-sm">+233 24 000 0000</span>
                             </div>
 
-                            <div className="flex items-center text-gray-300">
+                            <div className="flex items-center text-white">
                                 <Mail className="w-4 h-4 mr-3" />
-                                <span className="text-sm">contato@hairbooking.com</span>
+                                <span className="text-sm">contact@hairbooking.com</span>
                             </div>
 
-                            <div className="flex items-start text-gray-300">
+                            <div className="flex items-start text-white">
                                 <MapPin className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
-                                    Rua Augusta, 123 - Centro<br />
-                                    São Paulo, SP - 01305-000
+                                    Oxford Street, 123, Osu, Accra<br />
+                                    Accra, Greater Accra, Ghana
                                 </span>
                             </div>
 
-                            <div className="flex items-start text-gray-300">
+                            <div className="flex items-start text-white">
                                 <Clock className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
-                                    Atendimento: Seg-Sex 8h às 18h<br />
-                                    Suporte 24/7 via WhatsApp
+                                    Support: Mon-Fri 8am to 6pm<br />
+                                    24/7 support via WhatsApp
                                 </span>
                             </div>
                         </div>
@@ -101,13 +101,13 @@ export default function Footer() {
 
                     {/* Links Columns */}
                     <div>
-                        <h3 className="font-semibold text-white mb-4">Plataforma</h3>
+                        <h3 className="font-semibold text-white mb-4">Platform</h3>
                         <ul className="space-y-3">
-                            {footerLinks.plataforma.map((link, index) => (
+                            {footerLinks.platform.map((link, index) => (
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -117,13 +117,13 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="font-semibold text-white mb-4">Suporte</h3>
+                        <h3 className="font-semibold text-white mb-4">Support</h3>
                         <ul className="space-y-3">
-                            {footerLinks.suporte.map((link, index) => (
+                            {footerLinks.support.map((link, index) => (
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -133,13 +133,13 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="font-semibold text-white mb-4">Empresa</h3>
+                        <h3 className="font-semibold text-white mb-4">Company</h3>
                         <ul className="space-y-3">
-                            {footerLinks.empresa.map((link, index) => (
+                            {footerLinks.company.map((link, index) => (
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -155,7 +155,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -170,21 +170,21 @@ export default function Footer() {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <h3 className="text-xl font-semibold text-white mb-2">
-                                Fique por dentro das novidades
+                                Stay up to date
                             </h3>
-                            <p className="text-gray-300">
-                                Receba dicas de beleza, promoções exclusivas e novidades da plataforma
+                            <p className="text-white">
+                                Get beauty tips, exclusive offers and platform news
                             </p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3">
                             <input
                                 type="email"
-                                placeholder="Seu melhor e-mail"
-                                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-white focus:outline-none"
+                                placeholder="Your email address"
+                                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-white focus:border-white focus:outline-none"
                             />
                             <button className="btn-primary whitespace-nowrap">
-                                Inscrever-se
+                                Subscribe
                             </button>
                         </div>
                     </div>
@@ -196,13 +196,13 @@ export default function Footer() {
                 <div className="container-width section-padding py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         {/* Copyright */}
-                        <div className="text-sm text-gray-400">
-                            © {currentYear} HairBooking. Todos os direitos reservados.
+                        <div className="text-sm text-white">
+                            © {currentYear} HairBooking. All rights reserved.
                         </div>
 
                         {/* Social Links */}
                         <div className="flex items-center space-x-4">
-                            <span className="text-sm text-gray-400 mr-2">Siga-nos:</span>
+                            <span className="text-sm text-white mr-2">Follow us:</span>
                             {socialLinks.map((social, index) => (
                                 <Link
                                     key={index}
@@ -210,16 +210,16 @@ export default function Footer() {
                                     className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
                                     aria-label={social.name}
                                 >
-                                    <social.icon className="w-4 h-4 text-gray-300" />
+                                    <social.icon className="w-4 h-4 text-white" />
                                 </Link>
                             ))}
                         </div>
 
                         {/* Made with love */}
-                        <div className="flex items-center text-sm text-gray-400">
-                            <span>Feito com</span>
+                        <div className="flex items-center text-sm text-white">
+                            <span>Made with</span>
                             <Heart className="w-4 h-4 mx-1 text-red-500" />
-                            <span>em São Paulo</span>
+                            <span>in Accra</span>
                         </div>
                     </div>
                 </div>

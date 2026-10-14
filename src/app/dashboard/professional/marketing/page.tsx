@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Megaphone,
@@ -28,7 +29,7 @@ export default function ProfessionalMarketing() {
     const [activeTab, setActiveTab] = useState("overview");
     const [campaignFilter, setCampaignFilter] = useState("all");
 
-    // Dados de marketing
+    // Marketing data
     const marketingStats = {
         totalReach: 12450,
         engagement: 8.7,
@@ -38,11 +39,11 @@ export default function ProfessionalMarketing() {
         socialFollowers: 2840
     };
 
-    // Campanhas de marketing
+    // Marketing campaigns
     const campaigns = [
         {
             id: 1,
-            name: "Promoção Verão 2024",
+            name: "Summer Promotion 2024",
             type: "instagram",
             status: "active",
             budget: 500,
@@ -53,11 +54,11 @@ export default function ProfessionalMarketing() {
             conversions: 12,
             startDate: "2024-01-01",
             endDate: "2024-01-31",
-            description: "Desconto de 20% em colorações"
+            description: "20% discount on coloring"
         },
         {
             id: 2,
-            name: "Cliente Novo - Desconto",
+            name: "Client New - Discount",
             type: "facebook",
             status: "active",
             budget: 300,
@@ -68,11 +69,11 @@ export default function ProfessionalMarketing() {
             conversions: 8,
             startDate: "2024-01-10",
             endDate: "2024-02-10",
-            description: "50% de desconto para novos clientes"
+            description: "50% off for new clients"
         },
         {
             id: 3,
-            name: "Email - Reativação",
+            name: "Email - Reactivation",
             type: "email",
             status: "completed",
             budget: 100,
@@ -83,11 +84,11 @@ export default function ProfessionalMarketing() {
             conversions: 6,
             startDate: "2023-12-15",
             endDate: "2024-01-15",
-            description: "Reativação de clientes inativos"
+            description: "Reactivation of inactive clients"
         }
     ];
 
-    // Performance das redes sociais
+    // Social media performance
     const socialMedia = [
         {
             platform: "Instagram",
@@ -121,7 +122,7 @@ export default function ProfessionalMarketing() {
         }
     ];
 
-    // Leads e conversões
+    // Leads and conversions
     const leadsData = {
         totalLeads: 89,
         convertedLeads: 34,
@@ -130,31 +131,31 @@ export default function ProfessionalMarketing() {
             { source: "Instagram", leads: 35, conversions: 15 },
             { source: "Facebook", leads: 24, conversions: 10 },
             { source: "Google", leads: 18, conversions: 6 },
-            { source: "Indicação", leads: 12, conversions: 3 }
+            { source: "Referral", leads: 12, conversions: 3 }
         ]
     };
 
-    // Templates de campanha
+    // Campaign templates
     const templates = [
         {
             id: 1,
-            name: "Promoção Flash",
+            name: "Promotion Flash",
             type: "social",
-            description: "Template para promoções de curta duração",
+            description: "Template for short-term promotions",
             usage: 15
         },
         {
             id: 2,
-            name: "Cliente Novo",
+            name: "Client New",
             type: "email",
-            description: "Campanha de boas-vindas para novos clientes",
+            description: "Welcome campaign for new clients",
             usage: 8
         },
         {
             id: 3,
-            name: "Aniversário",
+            name: "Birthday",
             type: "whatsapp",
-            description: "Mensagem personalizada de aniversário",
+            description: "Birthday personalized message",
             usage: 42
         }
     ];
@@ -193,16 +194,16 @@ export default function ProfessionalMarketing() {
                             <Megaphone className="w-6 h-6 text-purple-600 mr-2" />
                             Marketing Digital
                         </h1>
-                        <p className="text-gray-600">Gerencie campanhas e monitore performance</p>
+                        <p className="text-gray-600">Manage campaigns and monitor performance</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                             <Play className="w-4 h-4 mr-2" />
-                            Boost Automático
+                            Automatic Boost
                         </button>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
-                            Nova Campanha
+                            New Campaign
                         </button>
                     </div>
                 </div>
@@ -216,7 +217,7 @@ export default function ProfessionalMarketing() {
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
                     >
-                        Visão Geral
+                        Overview
                     </button>
                     <button
                         onClick={() => setActiveTab("campaigns")}
@@ -225,7 +226,7 @@ export default function ProfessionalMarketing() {
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
                     >
-                        Campanhas
+                        Campaigns
                     </button>
                     <button
                         onClick={() => setActiveTab("social")}
@@ -234,7 +235,7 @@ export default function ProfessionalMarketing() {
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
                     >
-                        Redes Sociais
+                        Social media
                     </button>
                     <button
                         onClick={() => setActiveTab("leads")}
@@ -252,7 +253,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Alcance Total</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Total Reach</p>
                                 <p className="text-2xl font-semibold text-gray-900">{marketingStats.totalReach.toLocaleString()}</p>
                             </div>
                             <Eye className="w-8 h-8 text-blue-600" />
@@ -272,7 +273,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Novos Clientes</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">New Clients</p>
                                 <p className="text-2xl font-semibold text-green-600">{marketingStats.newClients}</p>
                             </div>
                             <Users className="w-8 h-8 text-green-600" />
@@ -292,7 +293,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Campanhas Ativas</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Active campaigns</p>
                                 <p className="text-2xl font-semibold text-blue-600">{marketingStats.campaignsActive}</p>
                             </div>
                             <Zap className="w-8 h-8 text-blue-600" />
@@ -302,7 +303,7 @@ export default function ProfessionalMarketing() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Seguidores</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Followers</p>
                                 <p className="text-2xl font-semibold text-pink-600">{marketingStats.socialFollowers}</p>
                             </div>
                             <Share2 className="w-8 h-8 text-pink-600" />
@@ -315,7 +316,7 @@ export default function ProfessionalMarketing() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {/* Top Performing Campaigns */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-4">Campanhas com Melhor Performance</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-4">Top-performing campaigns</h3>
                             <div className="space-y-4">
                                 {campaigns.slice(0, 3).map((campaign) => (
                                     <div key={campaign.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
@@ -330,7 +331,7 @@ export default function ProfessionalMarketing() {
                                         </div>
                                         <div className="text-right">
                                             <p className="text-sm font-medium text-green-600">{campaign.engagement}%</p>
-                                            <p className="text-xs text-gray-500">{campaign.conversions} conversões</p>
+                                            <p className="text-xs text-gray-500">{campaign.conversions} conversions</p>
                                         </div>
                                     </div>
                                 ))}
@@ -339,27 +340,27 @@ export default function ProfessionalMarketing() {
 
                         {/* Quick Actions */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-4">Ações Rápidas</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
                             <div className="grid grid-cols-2 gap-3">
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Instagram className="w-6 h-6 text-pink-600 mb-2" />
                                     <p className="text-sm font-medium text-gray-900">Post Instagram</p>
-                                    <p className="text-xs text-gray-500">Criar novo post</p>
+                                    <p className="text-xs text-gray-500">Create new post</p>
                                 </button>
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Mail className="w-6 h-6 text-blue-600 mb-2" />
                                     <p className="text-sm font-medium text-gray-900">Email Marketing</p>
-                                    <p className="text-xs text-gray-500">Enviar newsletter</p>
+                                    <p className="text-xs text-gray-500">Send newsletter</p>
                                 </button>
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <MessageSquare className="w-6 h-6 text-green-600 mb-2" />
                                     <p className="text-sm font-medium text-gray-900">WhatsApp</p>
-                                    <p className="text-xs text-gray-500">Mensagem em massa</p>
+                                    <p className="text-xs text-gray-500">Bulk message</p>
                                 </button>
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Award className="w-6 h-6 text-purple-600 mb-2" />
-                                    <p className="text-sm font-medium text-gray-900">Promoção</p>
-                                    <p className="text-xs text-gray-500">Criar promoção</p>
+                                    <p className="text-sm font-medium text-gray-900">Promotion</p>
+                                    <p className="text-xs text-gray-500">Create promotion</p>
                                 </button>
                             </div>
                         </div>
@@ -376,13 +377,13 @@ export default function ProfessionalMarketing() {
                                     onChange={(e) => setCampaignFilter(e.target.value)}
                                     className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                                 >
-                                    <option value="all">Todas as Campanhas</option>
-                                    <option value="active">Ativas</option>
-                                    <option value="paused">Pausadas</option>
-                                    <option value="completed">Finalizadas</option>
+                                    <option value="all">All campaigns</option>
+                                    <option value="active">Active</option>
+                                    <option value="paused">Paused</option>
+                                    <option value="completed">Completed</option>
                                 </select>
                                 <div className="text-sm text-gray-500">
-                                    {filteredCampaigns.length} campanhas encontradas
+                                    {filteredCampaigns.length} campaigns found
                                 </div>
                             </div>
                         </div>
@@ -408,8 +409,8 @@ export default function ProfessionalMarketing() {
 
                                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                                                         <div>
-                                                            <p className="text-gray-600">Orçamento</p>
-                                                            <p className="font-medium">R$ {campaign.budget}</p>
+                                                            <p className="text-gray-600">Budget</p>
+                                                            <p className="font-medium">{formatUSD(campaign.budget)}</p>
                                                             <div className="mt-1 bg-gray-200 rounded-full h-2">
                                                                 <div
                                                                     className="bg-blue-600 h-2 rounded-full"
@@ -426,7 +427,7 @@ export default function ProfessionalMarketing() {
                                                             <p className="font-medium text-purple-600">{campaign.engagement}%</p>
                                                         </div>
                                                         <div>
-                                                            <p className="text-gray-600">Conversões</p>
+                                                            <p className="text-gray-600">Conversions</p>
                                                             <p className="font-medium text-green-600">{campaign.conversions}</p>
                                                         </div>
                                                     </div>
@@ -472,7 +473,7 @@ export default function ProfessionalMarketing() {
                                 <div className="space-y-4">
                                     <div className="grid grid-cols-2 gap-4 text-sm">
                                         <div>
-                                            <p className="text-gray-600">Seguidores</p>
+                                            <p className="text-gray-600">Followers</p>
                                             <p className="text-xl font-semibold text-gray-900">{platform.followers.toLocaleString()}</p>
                                         </div>
                                         <div>
@@ -491,7 +492,7 @@ export default function ProfessionalMarketing() {
 
                                     <button className="w-full bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center">
                                         <Send className="w-4 h-4 mr-2" />
-                                        Criar Post
+                                        Create Post
                                     </button>
                                 </div>
                             </div>
@@ -503,25 +504,25 @@ export default function ProfessionalMarketing() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {/* Leads Overview */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-6">Resumo de Leads</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-6">Lead summary</h3>
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">Total de Leads</p>
+                                        <p className="text-sm font-medium text-gray-900">Total Leads</p>
                                         <p className="text-2xl font-semibold text-blue-600">{leadsData.totalLeads}</p>
                                     </div>
                                     <Users className="w-8 h-8 text-blue-600" />
                                 </div>
                                 <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">Leads Convertidos</p>
+                                        <p className="text-sm font-medium text-gray-900">Converted leads</p>
                                         <p className="text-2xl font-semibold text-green-600">{leadsData.convertedLeads}</p>
                                     </div>
                                     <Target className="w-8 h-8 text-green-600" />
                                 </div>
                                 <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">Taxa de Conversão</p>
+                                        <p className="text-sm font-medium text-gray-900">Conversion fee</p>
                                         <p className="text-2xl font-semibold text-purple-600">{leadsData.conversionRate}%</p>
                                     </div>
                                     <Award className="w-8 h-8 text-purple-600" />
@@ -531,7 +532,7 @@ export default function ProfessionalMarketing() {
 
                         {/* Lead Sources */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-6">Fontes de Leads</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-6">Lead sources</h3>
                             <div className="space-y-4">
                                 {leadsData.leadSources.map((source, index) => (
                                     <div key={index} className="flex items-center justify-between">
@@ -541,7 +542,7 @@ export default function ProfessionalMarketing() {
                                         </div>
                                         <div className="text-right">
                                             <p className="text-sm font-medium text-gray-900">{source.leads} leads</p>
-                                            <p className="text-xs text-green-600">{source.conversions} conversões</p>
+                                            <p className="text-xs text-green-600">{source.conversions} conversions</p>
                                         </div>
                                     </div>
                                 ))}
@@ -553,10 +554,10 @@ export default function ProfessionalMarketing() {
                 {/* Templates Section */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                     <div className="flex items-center justify-between mb-6">
-                        <h3 className="text-lg font-medium text-gray-900">Templates de Campanha</h3>
+                        <h3 className="text-lg font-medium text-gray-900">Campaign templates</h3>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
-                            Novo Template
+                            New Template
                         </button>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

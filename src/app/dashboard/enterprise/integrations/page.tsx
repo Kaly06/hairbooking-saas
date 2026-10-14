@@ -11,15 +11,15 @@ export default function EnterpriseIntegrationsPage() {
                 {/* Header */}
                 <div className="flex justify-between items-start">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Integrações</h1>
-                        <p className="text-gray-600 mt-2">APIs e conectores para sistemas externos</p>
+                        <h1 className="text-3xl font-bold text-gray-900">Integrations</h1>
+                        <p className="text-gray-600 mt-2">APIs and connectors for external systems</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                            Nova Integração
+                            New Integration
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Documentação API
+                            API Documentation
                         </button>
                     </div>
                 </div>
@@ -30,9 +30,9 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Integrações Ativas</p>
+                                    <p className="text-sm font-medium text-gray-600">Active integrations</p>
                                     <p className="text-2xl font-bold text-green-600">18</p>
-                                    <p className="text-sm text-gray-500 mt-1">Funcionando</p>
+                                    <p className="text-sm text-gray-500 mt-1">Working</p>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
                                     <CheckCircle className="h-6 w-6 text-green-600" />
@@ -45,9 +45,9 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Pendentes</p>
+                                    <p className="text-sm font-medium text-gray-600">Pending</p>
                                     <p className="text-2xl font-bold text-yellow-600">3</p>
-                                    <p className="text-sm text-gray-500 mt-1">Configuração</p>
+                                    <p className="text-sm text-gray-500 mt-1">Setup</p>
                                 </div>
                                 <div className="h-12 w-12 bg-yellow-100 rounded-full flex items-center justify-center">
                                     <Clock className="h-6 w-6 text-yellow-600" />
@@ -60,9 +60,9 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Com Erro</p>
+                                    <p className="text-sm font-medium text-gray-600">With error</p>
                                     <p className="text-2xl font-bold text-red-600">1</p>
-                                    <p className="text-sm text-gray-500 mt-1">Requer atenção</p>
+                                    <p className="text-sm text-gray-500 mt-1">Needs attention</p>
                                 </div>
                                 <div className="h-12 w-12 bg-red-100 rounded-full flex items-center justify-center">
                                     <AlertCircle className="h-6 w-6 text-red-600" />
@@ -75,9 +75,9 @@ export default function EnterpriseIntegrationsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Chamadas API</p>
+                                    <p className="text-sm font-medium text-gray-600">API calls</p>
                                     <p className="text-2xl font-bold text-blue-600">45.2K</p>
-                                    <p className="text-sm text-gray-500 mt-1">Este mês</p>
+                                    <p className="text-sm text-gray-500 mt-1">This month</p>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                                     <Code className="h-6 w-6 text-blue-600" />
@@ -92,7 +92,7 @@ export default function EnterpriseIntegrationsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Plug className="h-5 w-5 text-purple-600" />
-                            Integrações Ativas
+                            Active integrations
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -106,7 +106,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">Stripe</h4>
-                                            <p className="text-sm text-gray-600">Gateway de Pagamento</p>
+                                            <p className="text-sm text-gray-600">Payment gateway</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -116,16 +116,16 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Transações hoje:</span>
+                                        <span>Transactions today:</span>
                                         <span className="font-medium">247</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Taxa de sucesso:</span>
+                                        <span>Success fee:</span>
                                         <span className="font-medium text-green-600">98.5%</span>
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -138,7 +138,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">SendGrid</h4>
-                                            <p className="text-sm text-gray-600">Serviço de Email</p>
+                                            <p className="text-sm text-gray-600">Email service</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -148,16 +148,16 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Emails enviados:</span>
+                                        <span>Emails sent:</span>
                                         <span className="font-medium">1.2K</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Taxa de entrega:</span>
+                                        <span>Delivery fee:</span>
                                         <span className="font-medium text-green-600">97.8%</span>
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -170,7 +170,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">WhatsApp Business</h4>
-                                            <p className="text-sm text-gray-600">Mensagens</p>
+                                            <p className="text-sm text-gray-600">Messages</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -180,16 +180,16 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Mensagens hoje:</span>
+                                        <span>Messages today:</span>
                                         <span className="font-medium">89</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Taxa de leitura:</span>
+                                        <span>Read fee:</span>
                                         <span className="font-medium text-green-600">94.2%</span>
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -202,7 +202,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">Google Calendar</h4>
-                                            <p className="text-sm text-gray-600">Sincronização</p>
+                                            <p className="text-sm text-gray-600">Sync</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -212,16 +212,16 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Sincronizações:</span>
+                                        <span>Syncs:</span>
                                         <span className="font-medium">156</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Última sync:</span>
-                                        <span className="font-medium text-blue-600">há 5min</span>
+                                        <span>Last sync:</span>
+                                        <span className="font-medium text-blue-600">5 min ago</span>
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -234,7 +234,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">Slack</h4>
-                                            <p className="text-sm text-gray-600">Notificações</p>
+                                            <p className="text-sm text-gray-600">Notifications</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -244,16 +244,16 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Notificações:</span>
+                                        <span>Notifications:</span>
                                         <span className="font-medium">45</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Canal ativo:</span>
+                                        <span>Active channel:</span>
                                         <span className="font-medium text-indigo-600">#alerts</span>
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -266,7 +266,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">ERP Legacy</h4>
-                                            <p className="text-sm text-gray-600">Sistema Legado</p>
+                                            <p className="text-sm text-gray-600">Legacy system</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -276,8 +276,8 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Último sucesso:</span>
-                                        <span className="font-medium text-red-600">há 2h</span>
+                                        <span>Last success:</span>
+                                        <span className="font-medium text-red-600">2h ago</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
                                         <span>Erro:</span>
@@ -297,7 +297,7 @@ export default function EnterpriseIntegrationsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Cloud className="h-5 w-5 text-purple-600" />
-                            Integrações Disponíveis
+                            Available Integrations
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -308,7 +308,7 @@ export default function EnterpriseIntegrationsPage() {
                                         <Smartphone className="h-6 w-6 text-blue-600" />
                                     </div>
                                     <h4 className="font-semibold mb-1">Zapier</h4>
-                                    <p className="text-sm text-gray-600 mb-3">Automação de workflows</p>
+                                    <p className="text-sm text-gray-600 mb-3">Workflow automation</p>
                                     <button className="w-full px-3 py-2 bg-purple-600 text-white rounded text-sm hover:bg-purple-700 transition-colors">
                                         Conectar
                                     </button>
@@ -347,9 +347,9 @@ export default function EnterpriseIntegrationsPage() {
                                         <Code className="h-6 w-6 text-red-600" />
                                     </div>
                                     <h4 className="font-semibold mb-1">Webhook</h4>
-                                    <p className="text-sm text-gray-600 mb-3">API personalizada</p>
+                                    <p className="text-sm text-gray-600 mb-3">Custom API</p>
                                     <button className="w-full px-3 py-2 bg-purple-600 text-white rounded text-sm hover:bg-purple-700 transition-colors">
-                                        Configurar
+                                        Configure
                                     </button>
                                 </div>
                             </div>
@@ -372,31 +372,31 @@ export default function EnterpriseIntegrationsPage() {
                                 <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div>
                                         <p className="font-medium text-sm">GET /api/appointments</p>
-                                        <p className="text-xs text-gray-600">Listar agendamentos</p>
+                                        <p className="text-xs text-gray-600">List bookings</p>
                                     </div>
-                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Ativo</span>
+                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Active</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div>
                                         <p className="font-medium text-sm">POST /api/clients</p>
-                                        <p className="text-xs text-gray-600">Criar cliente</p>
+                                        <p className="text-xs text-gray-600">Create client</p>
                                     </div>
-                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Ativo</span>
+                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Active</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div>
                                         <p className="font-medium text-sm">PUT /api/services</p>
-                                        <p className="text-xs text-gray-600">Atualizar serviço</p>
+                                        <p className="text-xs text-gray-600">Update service</p>
                                     </div>
-                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Ativo</span>
+                                    <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Active</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div>
                                         <p className="font-medium text-sm">DELETE /api/users</p>
-                                        <p className="text-xs text-gray-600">Remover usuário</p>
+                                        <p className="text-xs text-gray-600">Remove user</p>
                                     </div>
                                     <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Beta</span>
                                 </div>
@@ -404,7 +404,7 @@ export default function EnterpriseIntegrationsPage() {
 
                             <div className="pt-4 border-t">
                                 <button className="w-full px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                    Ver Documentação Completa
+                                    View Full Documentation
                                 </button>
                             </div>
                         </CardContent>
@@ -415,7 +415,7 @@ export default function EnterpriseIntegrationsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Database className="h-5 w-5 text-purple-600" />
-                                Logs de Integração
+                                Integration Logs
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -424,8 +424,8 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <CheckCircle className="h-4 w-4 text-green-600" />
                                         <div>
-                                            <p className="text-sm font-medium">Stripe - Pagamento processado</p>
-                                            <p className="text-xs text-gray-600">Transação ID: tx_1234567890</p>
+                                            <p className="text-sm font-medium">Stripe - payment processed</p>
+                                            <p className="text-xs text-gray-600">Transaction ID: tx_1234567890</p>
                                         </div>
                                     </div>
                                     <span className="text-xs text-gray-500">14:30</span>
@@ -435,8 +435,8 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <CheckCircle className="h-4 w-4 text-blue-600" />
                                         <div>
-                                            <p className="text-sm font-medium">SendGrid - Email enviado</p>
-                                            <p className="text-xs text-gray-600">Confirmação de agendamento</p>
+                                            <p className="text-sm font-medium">SendGrid - email sent</p>
+                                            <p className="text-xs text-gray-600">Booking confirmation</p>
                                         </div>
                                     </div>
                                     <span className="text-xs text-gray-500">14:25</span>
@@ -446,8 +446,8 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <Clock className="h-4 w-4 text-yellow-600" />
                                         <div>
-                                            <p className="text-sm font-medium">Google Calendar - Sincronizando</p>
-                                            <p className="text-xs text-gray-600">Aguardando resposta</p>
+                                            <p className="text-sm font-medium">Google Calendar - syncing</p>
+                                            <p className="text-xs text-gray-600">Awaiting response</p>
                                         </div>
                                     </div>
                                     <span className="text-xs text-gray-500">14:20</span>
@@ -457,8 +457,8 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <AlertCircle className="h-4 w-4 text-red-600" />
                                         <div>
-                                            <p className="text-sm font-medium">ERP Legacy - Falha na conexão</p>
-                                            <p className="text-xs text-gray-600">Timeout após 30s</p>
+                                            <p className="text-sm font-medium">ERP Legacy - Connection failed</p>
+                                            <p className="text-xs text-gray-600">Timeout after 30s</p>
                                         </div>
                                     </div>
                                     <span className="text-xs text-gray-500">14:15</span>
@@ -467,7 +467,7 @@ export default function EnterpriseIntegrationsPage() {
 
                             <div className="pt-4 border-t">
                                 <button className="w-full px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                    Ver Logs Completos
+                                    View Logs Completos
                                 </button>
                             </div>
                         </CardContent>

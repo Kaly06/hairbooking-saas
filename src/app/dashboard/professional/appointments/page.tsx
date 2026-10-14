@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Calendar,
@@ -32,20 +33,20 @@ export default function ProfessionalAppointments() {
     const [professionalFilter, setProfessionalFilter] = useState("all");
     const [view, setView] = useState("list"); // list, calendar, analytics
 
-    // Dados simulados para agendamentos
+    // Mock booking data
     const appointments = [
         {
             id: 1,
-            clientName: "Maria Santos",
-            clientPhone: "(11) 99999-0001",
-            service: "Corte + Coloração",
-            professional: "Ana Silva",
+            clientName: "Akua Adjei",
+            clientPhone: "+233 24 999 0001",
+            service: "Haircut + Coloring",
+            professional: "Ama Owusu",
             date: "2024-01-15",
             time: "09:00",
             duration: 120,
             price: 180,
             status: "confirmed",
-            notes: "Cliente quer corte bob e luzes mel",
+            notes: "Client wants a bob cut and honey highlights",
             clientRating: 4.8,
             isRecurring: true,
             source: "whatsapp",
@@ -53,10 +54,10 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 2,
-            clientName: "João Silva",
-            clientPhone: "(11) 99999-0002",
-            service: "Corte Masculino",
-            professional: "Carlos Santos",
+            clientName: "Kwame Mensah",
+            clientPhone: "+233 24 999 0002",
+            service: "Men's Haircut",
+            professional: "Kwesi Asare",
             date: "2024-01-15",
             time: "10:30",
             duration: 45,
@@ -70,16 +71,16 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 3,
-            clientName: "Ana Costa",
-            clientPhone: "(11) 99999-0003",
+            clientName: "Abena Ofori",
+            clientPhone: "+233 24 999 0003",
             service: "Escova Progressiva",
-            professional: "Maria Costa",
+            professional: "Akua Darko",
             date: "2024-01-15",
             time: "14:00",
             duration: 180,
             price: 250,
             status: "in_progress",
-            notes: "Primeira vez no salão",
+            notes: "First visit to the salon",
             clientRating: 5.0,
             isRecurring: false,
             source: "instagram",
@@ -87,16 +88,16 @@ export default function ProfessionalAppointments() {
         },
         {
             id: 4,
-            clientName: "Pedro Lima",
-            clientPhone: "(11) 99999-0004",
-            service: "Barba + Bigode",
-            professional: "Carlos Santos",
+            clientName: "Yaw Addo",
+            clientPhone: "+233 24 999 0004",
+            service: "Beard + Moustache",
+            professional: "Kwesi Asare",
             date: "2024-01-15",
             time: "16:00",
             duration: 30,
             price: 25,
             status: "completed",
-            notes: "Cliente regular - corte padrão",
+            notes: "Regular client - standard haircut",
             clientRating: 4.9,
             isRecurring: true,
             source: "indicacao",
@@ -104,7 +105,7 @@ export default function ProfessionalAppointments() {
         }
     ];
 
-    // Estatísticas do dia
+    // Today's statistics
     const todayStats = {
         total: appointments.length,
         confirmed: appointments.filter(apt => apt.status === "confirmed").length,
@@ -165,9 +166,9 @@ export default function ProfessionalAppointments() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <Calendar className="w-6 h-6 text-purple-600 mr-2" />
-                            Agendamentos Avançados
+                            Advanced Bookings
                         </h1>
-                        <p className="text-gray-600">Gestão completa com analytics e automação</p>
+                        <p className="text-gray-600">Full management with analytics and automation</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <div className="flex rounded-lg border border-gray-300 bg-white">
@@ -181,7 +182,7 @@ export default function ProfessionalAppointments() {
                                 onClick={() => setView("calendar")}
                                 className={`px-3 py-2 text-sm font-medium ${view === "calendar" ? "bg-purple-600 text-white" : "text-gray-700 hover:bg-gray-50"}`}
                             >
-                                Calendário
+                                Calendar
                             </button>
                             <button
                                 onClick={() => setView("analytics")}
@@ -192,7 +193,7 @@ export default function ProfessionalAppointments() {
                         </div>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
-                            Novo Agendamento
+                            New Booking
                         </button>
                     </div>
                 </div>
@@ -202,7 +203,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Total Hoje</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Total Today</p>
                                 <p className="text-2xl font-semibold text-gray-900">{todayStats.total}</p>
                             </div>
                             <CalendarIcon className="w-8 h-8 text-blue-600" />
@@ -212,7 +213,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Confirmados</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Confirmed</p>
                                 <p className="text-2xl font-semibold text-green-600">{todayStats.confirmed}</p>
                             </div>
                             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -222,7 +223,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Pendentes</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Pending</p>
                                 <p className="text-2xl font-semibold text-yellow-600">{todayStats.pending}</p>
                             </div>
                             <AlertCircle className="w-8 h-8 text-yellow-600" />
@@ -232,7 +233,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Finalizados</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Completed</p>
                                 <p className="text-2xl font-semibold text-gray-600">{todayStats.completed}</p>
                             </div>
                             <CheckCircle className="w-8 h-8 text-gray-600" />
@@ -242,8 +243,8 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Faturamento</p>
-                                <p className="text-2xl font-semibold text-green-600">R$ {todayStats.revenue}</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Revenue</p>
+                                <p className="text-2xl font-semibold text-green-600">{formatUSD(todayStats.revenue)}</p>
                             </div>
                             <DollarSign className="w-8 h-8 text-green-600" />
                         </div>
@@ -252,7 +253,7 @@ export default function ProfessionalAppointments() {
                     <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-xs font-medium text-gray-600 uppercase">Tempo Médio</p>
+                                <p className="text-xs font-medium text-gray-600 uppercase">Average Time</p>
                                 <p className="text-2xl font-semibold text-purple-600">{todayStats.avgDuration}min</p>
                             </div>
                             <Clock className="w-8 h-8 text-purple-600" />
@@ -267,7 +268,7 @@ export default function ProfessionalAppointments() {
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                             <input
                                 type="text"
-                                placeholder="Buscar por cliente, serviço..."
+                                placeholder="Search by client, service..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -279,12 +280,12 @@ export default function ProfessionalAppointments() {
                             onChange={(e) => setStatusFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">Todos os Status</option>
-                            <option value="pending">Pendente</option>
-                            <option value="confirmed">Confirmado</option>
-                            <option value="in_progress">Em Andamento</option>
-                            <option value="completed">Finalizado</option>
-                            <option value="cancelled">Cancelado</option>
+                            <option value="all">All statuses</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="in_progress">In progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
                         </select>
 
                         <select
@@ -292,10 +293,10 @@ export default function ProfessionalAppointments() {
                             onChange={(e) => setDateFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="today">Hoje</option>
-                            <option value="tomorrow">Amanhã</option>
-                            <option value="week">Esta Semana</option>
-                            <option value="month">Este Mês</option>
+                            <option value="today">Today</option>
+                            <option value="tomorrow">Tomorrow</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
                         </select>
 
                         <select
@@ -303,10 +304,10 @@ export default function ProfessionalAppointments() {
                             onChange={(e) => setProfessionalFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">Todos Profissionais</option>
-                            <option value="Ana Silva">Ana Silva</option>
-                            <option value="Carlos Santos">Carlos Santos</option>
-                            <option value="Maria Costa">Maria Costa</option>
+                            <option value="all">All Professionals</option>
+                            <option value="Ama Owusu">Ama Owusu</option>
+                            <option value="Kwesi Asare">Kwesi Asare</option>
+                            <option value="Akua Darko">Akua Darko</option>
                         </select>
 
                         <div className="flex space-x-2">
@@ -325,9 +326,9 @@ export default function ProfessionalAppointments() {
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
                         <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-medium text-gray-900">Agendamentos ({filteredAppointments.length})</h3>
+                            <h3 className="text-lg font-medium text-gray-900">Bookings ({filteredAppointments.length})</h3>
                             <div className="flex items-center space-x-2">
-                                <span className="text-sm text-gray-500">Mostrando {filteredAppointments.length} de {appointments.length}</span>
+                                <span className="text-sm text-gray-500">Showing {filteredAppointments.length} of {appointments.length}</span>
                             </div>
                         </div>
                     </div>
@@ -379,7 +380,7 @@ export default function ProfessionalAppointments() {
                                                 </div>
                                                 <div className="flex items-center">
                                                     <DollarSign className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span className="font-medium text-green-600">R$ {appointment.price}</span>
+                                                    <span className="font-medium text-green-600">{formatUSD(appointment.price)}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Star className="w-4 h-4 mr-1 text-yellow-400 fill-current" />
@@ -388,14 +389,14 @@ export default function ProfessionalAppointments() {
                                                 {appointment.reminderSent && (
                                                     <div className="flex items-center">
                                                         <Bell className="w-4 h-4 mr-1 text-green-500" />
-                                                        <span className="text-green-600">Lembrete enviado</span>
+                                                        <span className="text-green-600">Reminder sent</span>
                                                     </div>
                                                 )}
                                             </div>
 
                                             {appointment.notes && (
                                                 <div className="mt-2 text-sm text-gray-600 bg-gray-50 rounded-lg p-2">
-                                                    <span className="font-medium">Observações:</span> {appointment.notes}
+                                                    <span className="font-medium">Notes:</span> {appointment.notes}
                                                 </div>
                                             )}
                                         </div>
@@ -424,11 +425,11 @@ export default function ProfessionalAppointments() {
                 {filteredAppointments.length === 0 && (
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
                         <Calendar className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                        <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhum agendamento encontrado</h3>
-                        <p className="text-gray-600 mb-6">Ajuste os filtros ou crie um novo agendamento para começar.</p>
+                        <h3 className="text-lg font-medium text-gray-900 mb-2">No bookings found</h3>
+                        <p className="text-gray-600 mb-6">Adjust the filters or create a new booking to get started.</p>
                         <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center mx-auto">
                             <Plus className="w-4 h-4 mr-2" />
-                            Novo Agendamento
+                            New Booking
                         </button>
                     </div>
                 )}

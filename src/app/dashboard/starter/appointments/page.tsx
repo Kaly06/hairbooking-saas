@@ -21,72 +21,72 @@ export default function StarterAppointments() {
     const [filter, setFilter] = useState("all");
     const [searchTerm, setSearchTerm] = useState("");
 
-    // Dados simulados de agendamentos
+    // Mock booking data
     const appointments = [
         {
             id: 1,
-            client: "Maria Silva",
-            phone: "(11) 99999-1234",
-            service: "Corte + Escova",
+            client: "Akosua Frimpong",
+            phone: "+233 24 999 1234",
+            service: "Haircut + Escova",
             date: "2025-11-05",
             time: "09:00",
             duration: "1h 30min",
-            price: "R$ 120",
+            price: "$20",
             status: "confirmed",
             professional: "Ana",
-            notes: "Cliente regular, prefere corte em camadas"
+            notes: "Regular client, prefers layered cut"
         },
         {
             id: 2,
-            client: "João Santos",
-            phone: "(11) 98888-5678",
-            service: "Corte Masculino",
+            client: "Kofi Boateng",
+            phone: "+233 24 888 5678",
+            service: "Men's Haircut",
             date: "2025-11-05",
             time: "10:30",
             duration: "45min",
-            price: "R$ 45",
+            price: "$7.50",
             status: "completed",
             professional: "Carlos",
             notes: ""
         },
         {
             id: 3,
-            client: "Ana Costa",
-            phone: "(11) 97777-9012",
-            service: "Coloração",
+            client: "Abena Ofori",
+            phone: "+233 24 777 9012",
+            service: "Coloring",
             date: "2025-11-05",
             time: "14:00",
             duration: "2h",
-            price: "R$ 180",
+            price: "$30",
             status: "confirmed",
             professional: "Maria",
-            notes: "Primeira coloração"
+            notes: "First coloring session"
         },
         {
             id: 4,
-            client: "Pedro Lima",
-            phone: "(11) 96666-3456",
-            service: "Barba",
+            client: "Yaw Addo",
+            phone: "+233 24 666 3456",
+            service: "Beard",
             date: "2025-11-05",
             time: "15:30",
             duration: "30min",
-            price: "R$ 25",
+            price: "$4.17",
             status: "pending",
             professional: "Carlos",
             notes: ""
         },
         {
             id: 5,
-            client: "Carla Souza",
-            phone: "(11) 95555-7890",
-            service: "Hidratação",
+            client: "Efua Mensah",
+            phone: "+233 24 555 7890",
+            service: "Hair Treatment",
             date: "2025-11-06",
             time: "09:00",
             duration: "1h",
-            price: "R$ 80",
+            price: "$13",
             status: "confirmed",
             professional: "Ana",
-            notes: "Cabelo muito ressecado"
+            notes: "Very dry hair"
         }
     ];
 
@@ -108,15 +108,15 @@ export default function StarterAppointments() {
     const getStatusText = (status: string) => {
         switch (status) {
             case "completed":
-                return "Concluído";
+                return "Completed";
             case "confirmed":
-                return "Confirmado";
+                return "Confirmed";
             case "pending":
-                return "Pendente";
+                return "Pending";
             case "cancelled":
-                return "Cancelado";
+                return "Cancelled";
             default:
-                return "Agendado";
+                return "Scheduled";
         }
     };
 
@@ -154,13 +154,13 @@ export default function StarterAppointments() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <Calendar className="w-6 h-6 text-blue-600 mr-2" />
-                            Agendamentos
+                            Bookings
                         </h1>
-                        <p className="text-gray-600">Gerencie todos os agendamentos do seu salão</p>
+                        <p className="text-gray-600">Manage all bookings for your salon</p>
                     </div>
                     <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                         <Plus className="w-4 h-4 mr-2" />
-                        Novo Agendamento
+                        New Booking
                     </button>
                 </div>
 
@@ -172,7 +172,7 @@ export default function StarterAppointments() {
                                 <Calendar className="w-5 h-5 text-blue-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Hoje</p>
+                                <p className="text-sm font-medium text-gray-600">Today</p>
                                 <p className="text-2xl font-semibold text-gray-900">{todayAppointments}</p>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ export default function StarterAppointments() {
                                 <CheckCircle className="w-5 h-5 text-green-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Concluídos</p>
+                                <p className="text-sm font-medium text-gray-600">Completed</p>
                                 <p className="text-2xl font-semibold text-gray-900">{completedToday}</p>
                             </div>
                         </div>
@@ -194,7 +194,7 @@ export default function StarterAppointments() {
                                 <AlertCircle className="w-5 h-5 text-orange-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Pendentes</p>
+                                <p className="text-sm font-medium text-gray-600">Pending</p>
                                 <p className="text-2xl font-semibold text-gray-900">{pendingToday}</p>
                             </div>
                         </div>
@@ -205,7 +205,7 @@ export default function StarterAppointments() {
                                 <Clock className="w-5 h-5 text-purple-600" />
                             </div>
                             <div className="ml-3">
-                                <p className="text-sm font-medium text-gray-600">Próximo</p>
+                                <p className="text-sm font-medium text-gray-600">Next</p>
                                 <p className="text-lg font-semibold text-gray-900">14:00</p>
                             </div>
                         </div>
@@ -221,7 +221,7 @@ export default function StarterAppointments() {
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                                 <input
                                     type="text"
-                                    placeholder="Buscar cliente ou serviço..."
+                                    placeholder="Search client or service..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -237,11 +237,11 @@ export default function StarterAppointments() {
                                 onChange={(e) => setFilter(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             >
-                                <option value="all">Todos</option>
-                                <option value="confirmed">Confirmados</option>
-                                <option value="pending">Pendentes</option>
-                                <option value="completed">Concluídos</option>
-                                <option value="cancelled">Cancelados</option>
+                                <option value="all">All</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="pending">Pending</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
                             </select>
                         </div>
                     </div>
@@ -251,15 +251,15 @@ export default function StarterAppointments() {
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
                         <h3 className="text-lg font-medium text-gray-900">
-                            Lista de Agendamentos ({filteredAppointments.length})
+                            List of Bookings ({filteredAppointments.length})
                         </h3>
                     </div>
                     <div className="overflow-hidden">
                         {filteredAppointments.length === 0 ? (
                             <div className="text-center py-12">
                                 <Calendar className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                                <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhum agendamento encontrado</h3>
-                                <p className="text-gray-500">Tente ajustar os filtros ou adicionar um novo agendamento.</p>
+                                <h3 className="text-lg font-medium text-gray-900 mb-2">No bookings found</h3>
+                                <p className="text-gray-500">Try adjusting the filters or adding a new booking.</p>
                             </div>
                         ) : (
                             <div className="divide-y divide-gray-200">

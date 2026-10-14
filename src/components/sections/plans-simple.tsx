@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Link from "next/link";
 
@@ -8,18 +9,18 @@ export default function Plans() {
         {
             name: "Starter",
             price: 89,
-            features: ["Agendamento online", "Site personalizado", "1 profissional", "Suporte básico"]
+            features: ["Online booking", "Custom website", "1 professional", "Basic support"]
         },
         {
             name: "Professional",
             price: 149,
             popular: true,
-            features: ["Tudo do Starter", "App mobile", "3 profissionais", "Relatórios", "Suporte prioritário"]
+            features: ["Everything in Starter", "Mobile app", "3 professionals", "Reports", "Priority support"]
         },
         {
             name: "Enterprise",
             price: 299,
-            features: ["Tudo do Professional", "Profissionais ilimitados", "Multi-unidades", "API personalizada"]
+            features: ["Everything in Professional", "Unlimited professionals", "Multi-branch", "Custom API"]
         }
     ];
 
@@ -28,9 +29,9 @@ export default function Plans() {
             <div className="container-width section-padding">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Planos <span className="text-gray-600">simples</span>
+                        Simple <span className="text-gray-600">plans</span>
                     </h2>
-                    <p className="text-gray-600">Escolha o que faz sentido para seu negócio</p>
+                    <p className="text-gray-600">Choose what works best for your business</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -55,7 +56,7 @@ export default function Plans() {
                                     {plan.name}
                                 </h3>
                                 <div className="text-2xl font-bold text-gray-900">
-                                    R$ {plan.price}<span className="text-sm text-gray-500">/mês</span>
+                                    {formatUSD(plan.price)}<span className="text-sm text-gray-500">/month</span>
                                 </div>
                             </div>
 
@@ -75,7 +76,7 @@ export default function Plans() {
                                         : 'border border-gray-300 text-gray-700 hover:border-gray-900'
                                     }`}
                             >
-                                Começar
+                                Get started
                             </Link>
                         </div>
                     ))}

@@ -1,255 +1,182 @@
 "use client";
 
 import { Award, Clock, Heart, Shield, Users, TrendingUp, DollarSign } from "lucide-react";
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useState } from "react";
+
+const CARD_WIDTH = 340;
+const CARD_GAP = 50;
+const AUTOPLAY_MS = 1500;
 
 export default function About() {
-    const sectionRef = useRef<HTMLElement>(null);
-    const cardsContainerRef = useRef<HTMLDivElement>(null);
+    const [active, setActive] = useState(0);
+    const [paused, setPaused] = useState(false);
 
     const features = [
         {
             icon: Clock,
-            title: "Agendamentos 24/7",
-            description: "Seus clientes podem agendar a qualquer hora, mesmo quando você está dormindo."
+            image: "/features/bookings-24-7.jpg",
+            title: "24/7 Bookings",
+            description: "Your clients can book at any time, even while you're asleep."
         },
         {
             icon: DollarSign,
-            title: "Aumente sua Receita",
-            description: "Sistema inteligente que otimiza sua agenda e aumenta o faturamento."
+            image: "/features/revenue-growth.jpg",
+            title: "Grow Your Revenue",
+            description: "A smart system that optimizes your schedule and increases earnings."
         },
         {
             icon: Users,
-            title: "Gestão de Clientes",
-            description: "Histórico completo e lembretes automáticos para fidelizar clientes."
+            image: "/features/client-management.jpg",
+            title: "Client Management",
+            description: "Full client history and automatic reminders to keep clients coming back."
         },
         {
             icon: Shield,
-            title: "Dados Seguros",
-            description: "Proteção bancária e backup automático dos seus dados."
+            image: "/features/secure-data.jpg",
+            title: "Secure Data",
+            description: "Bank-level protection and automatic backups of your data."
         },
         {
             icon: TrendingUp,
-            title: "Relatórios de Vendas",
-            description: "Acompanhe faturamento e performance em tempo real."
+            image: "/features/sales-reports.jpg",
+            title: "Sales Reports",
+            description: "Track revenue and performance in real time."
         },
         {
             icon: Award,
-            title: "Suporte Dedicado",
-            description: "Equipe especializada e treinamento gratuito para sua equipe."
+            image: "/features/dedicated-support.jpg",
+            title: "Dedicated Support",
+            description: "Specialized team and free training for your staff."
         }
     ];
 
+    const total = features.length;
+
+    // Automatically advance the carousel. Paused on hover/focus and when the
+    // user prefers reduced motion.
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        if (paused) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        const section = sectionRef.current;
+        const timer = setInterval(() => {
+            setActive((prev) => (prev + 1) % total);
+        }, AUTOPLAY_MS);
 
-        if (!section) return;
+        return () => clearInterval(timer);
+    }, [paused, total]);
 
-        const cards = gsap.utils.toArray(".horizontal-card");
-        const totalCards = cards.length;
-
-        // Cálculos precisos para movimento horizontal
-        const cardWidth = 350;
-        const cardGap = 50;
-        const viewportWidth = window.innerWidth;
-        const totalWidth = (cardWidth + cardGap) * totalCards;
-        // Adiciona padding extra para garantir que o último card apareça completamente
-        const maxScroll = totalWidth + cardWidth;
-
-        // Setup inicial dos cards - começando mais à esquerda
-        gsap.set(cards, {
-            x: (index: number) => (index * (cardWidth + cardGap)) + (viewportWidth / 2),
-            opacity: 1,
-            scale: 1
-        });
-
-        // ScrollTrigger principal
-        ScrollTrigger.create({
-            trigger: section,
-            start: "top 20%",
-            end: () => `+=${maxScroll + (window.innerHeight * 2)}`,
-            scrub: 1.2,
-            pin: true,
-            anticipatePin: 1,
-            snap: {
-                snapTo: (progress: number) => {
-                    // Snap customizado para cada card
-                    const snapPoints = [];
-                    for (let i = 0; i < totalCards; i++) {
-                        snapPoints.push(i / (totalCards - 1));
-                    }
-                    // Encontra o snap point mais próximo
-                    let closest = snapPoints[0];
-                    let minDistance = Math.abs(progress - closest);
-
-                    snapPoints.forEach(point => {
-                        const distance = Math.abs(progress - point);
-                        if (distance < minDistance) {
-                            minDistance = distance;
-                            closest = point;
-                        }
-                    });
-                    return closest;
-                },
-                duration: 0.6,
-                delay: 0.1,
-                ease: "power2.inOut"
-            },
-            toggleActions: "restart pause resume reverse",
-            onUpdate: (self) => {
-                const progress = self.progress;
-
-                gsap.set(cards, {
-                    x: (index: number) => {
-                        const baseX = (index * (cardWidth + cardGap)) + (viewportWidth / 2);
-                        const moveAmount = progress * maxScroll;
-                        return baseX - moveAmount;
-                    },
-                    rotationY: (index: number) => {
-                        const cardCenter = index / Math.max(totalCards - 1, 1);
-                        const distance = Math.abs(progress - cardCenter);
-                        return distance * 20; // Reduzido para menos distorção
-                    },
-                    scale: (index: number) => {
-                        const cardCenter = index / Math.max(totalCards - 1, 1);
-                        const distance = Math.abs(progress - cardCenter);
-                        return Math.max(0.7, 1 - (distance * 0.3)); // Melhor range de scale
-                    },
-                    opacity: (index: number) => {
-                        const cardCenter = index / Math.max(totalCards - 1, 1);
-                        const distance = Math.abs(progress - cardCenter);
-                        return Math.max(0.3, 1 - (distance * 0.5)); // Mantém cards mais visíveis
-                    },
-                    zIndex: (index: number) => {
-                        const cardCenter = index / Math.max(totalCards - 1, 1);
-                        const distance = Math.abs(progress - cardCenter);
-                        return Math.round((1 - distance) * 100); // Z-index baseado na proximidade
-                    }
-                });
-
-                // Background gradient
-                const hue = progress * 60;
-                gsap.set(section, {
-                    background: `linear-gradient(135deg, 
-                        hsl(${200 + hue}, 20%, 97%) 0%, 
-                        hsl(${220 + hue}, 25%, 95%) 100%)`
-                });
-
-                // Header movement
-                const header = section.querySelector('.section-header');
-                if (header) {
-                    gsap.set(header, {
-                        y: -progress * 150,
-                        opacity: 1 - progress * 0.8
-                    });
-                }
-            },
-            onEnter: () => {
-                gsap.fromTo(cards, {
-                    rotationX: 90,
-                    opacity: 0,
-                    y: 100
-                }, {
-                    rotationX: 0,
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.15,
-                    ease: "back.out(1.4)"
-                });
-            }
-        });
-
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
-    }, []);
+    // Position each card relative to the active one, wrapping around so the
+    // carousel loops endlessly.
+    const getOffset = (index: number) => {
+        let offset = (index - active + total) % total;
+        if (offset > total / 2) offset -= total;
+        return offset;
+    };
 
     return (
         <section
-            ref={sectionRef}
             id="sobre"
-            className="relative overflow-hidden bg-gray-50"
-            style={{
-                minHeight: "100vh",
-                perspective: "1000px"
-            }}
+            className="relative overflow-hidden bg-gray-50 py-20"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocus={() => setPaused(true)}
+            onBlur={() => setPaused(false)}
         >
             <div className="container-width section-padding">
-                <div className="section-header text-center max-w-3xl mx-auto pt-20 pb-16">
+                <div className="section-header text-center max-w-3xl mx-auto pb-16">
                     <div className="inline-flex items-center px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-600 mb-4">
                         <Heart className="w-4 h-4 mr-2 text-red-500" />
-                        Por que escolher a HairBooking
+                        Why choose HairBooking
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Transforme seu salão em um
-                        <span className="gradient-text"> negócio digital</span>
+                        Turn your salon into a
+                        <span className="gradient-text"> digital business</span>
                     </h2>
 
                     <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                        Nossa plataforma oferece todas as ferramentas que você precisa para
-                        modernizar seu salão e aumentar a receita.
+                        Our platform gives you every tool you need to
+                        modernize your salon and grow your revenue.
                     </p>
                 </div>
 
                 <div
-                    ref={cardsContainerRef}
-                    className="relative overflow-visible"
-                    style={{
-                        perspective: "1000px",
-                        height: "400px",
-                        width: "100%"
-                    }}
+                    className="relative overflow-hidden"
+                    style={{ perspective: "1000px", height: "460px", width: "100%" }}
+                    aria-roledescription="carousel"
+                    aria-live={paused ? "polite" : "off"}
                 >
-                    {features.map((feature, index) => (
-                        <div
-                            key={index}
-                            className="horizontal-card absolute bg-white rounded-2xl p-8 border border-gray-200 shadow-lg cursor-pointer"
-                            style={{
-                                width: "320px",
-                                height: "280px",
-                                left: "50%",
-                                top: "50%",
-                                transform: "translate(-50%, -50%)",
-                                willChange: "transform, opacity"
-                            }}
-                        >
-                            <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-xl mb-6 mx-auto">
-                                <feature.icon className="w-8 h-8 text-gray-700" />
+                    {features.map((feature, index) => {
+                        const offset = getOffset(index);
+                        const distance = Math.abs(offset);
+                        const isVisible = distance <= 1;
+                        return (
+                            <div
+                                key={feature.title}
+                                className="absolute bg-white rounded-2xl p-5 border border-gray-200 shadow-lg flex flex-col"
+                                style={{
+                                    width: `${CARD_WIDTH}px`,
+                                    height: "400px",
+                                    left: "50%",
+                                    top: "50%",
+                                    transform: `translate(-50%, -50%) translateX(${offset * (CARD_WIDTH + CARD_GAP)}px) scale(${offset === 0 ? 1 : 0.8}) rotateY(${-offset * 15}deg)`,
+                                    opacity: isVisible ? (offset === 0 ? 1 : 0.5) : 0,
+                                    zIndex: total - distance,
+                                    transition: "transform 0.5s ease, opacity 0.5s ease",
+                                    willChange: "transform, opacity",
+                                    pointerEvents: offset === 0 ? "auto" : "none",
+                                }}
+                            >
+                                <div className="w-full h-44 rounded-xl overflow-hidden bg-gray-100 mb-5">
+                                    <img
+                                        src={feature.image}
+                                        alt={feature.title}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
+                                    {feature.title}
+                                </h3>
+
+                                <p className="text-sm text-gray-600 leading-relaxed text-center">
+                                    {feature.description}
+                                </p>
                             </div>
+                        );
+                    })}
+                </div>
 
-                            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                                {feature.title}
-                            </h3>
-
-                            <p className="text-sm text-gray-600 leading-relaxed text-center">
-                                {feature.description}
-                            </p>
-                        </div>
+                {/* Indicators */}
+                <div className="flex justify-center gap-2 mt-8">
+                    {features.map((feature, index) => (
+                        <button
+                            key={feature.title}
+                            type="button"
+                            onClick={() => setActive(index)}
+                            aria-label={`Show ${feature.title}`}
+                            className={`h-2 rounded-full transition-all duration-300 ${index === active ? "w-6 bg-gray-900" : "w-2 bg-gray-300"}`}
+                        />
                     ))}
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-32">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-24">
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">+40%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Aumento na Receita</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Revenue Increase</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">-60%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Menos Cancelamentos</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Fewer Cancellations</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">24/7</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Agendamentos Online</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Online Bookings</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">100%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Agenda Organizada</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Organized Schedule</div>
                     </div>
                 </div>
             </div>

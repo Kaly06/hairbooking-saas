@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     CreditCard,
@@ -24,24 +25,24 @@ export default function ProfessionalCommissions() {
     const [dateRange, setDateRange] = useState("thisMonth");
     const [professionalFilter, setProfessionalFilter] = useState("all");
 
-    // Dados de comissões
+    // Commission data
     const commissionStats = {
         totalCommissions: 3250,
         pendingPayment: 890,
         paidThisMonth: 2360,
         averageCommission: 15.5,
         totalProfessionals: 3,
-        topPerformer: "Ana Silva"
+        topPerformer: "Ama Owusu"
     };
 
-    // Configurações de comissão por profissional
+    // Commission settings per professional
     const professionals = [
         {
             id: 1,
-            name: "Ana Silva",
-            role: "Cabeleireira Senior",
+            name: "Ama Owusu",
+            role: "Hairdresser Senior",
             commissionRate: 18,
-            services: ["Corte", "Coloração", "Hidratação"],
+            services: ["Haircut", "Coloring", "Hair Treatment"],
             thisMonth: {
                 revenue: 8920,
                 commission: 1605,
@@ -55,10 +56,10 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 2,
-            name: "Carlos Santos",
-            role: "Barbeiro",
+            name: "Kwesi Asare",
+            role: "Barber",
             commissionRate: 15,
-            services: ["Corte Masculino", "Barba", "Bigode"],
+            services: ["Men's Haircut", "Beard", "Bigode"],
             thisMonth: {
                 revenue: 4680,
                 commission: 702,
@@ -72,8 +73,8 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 3,
-            name: "Maria Costa",
-            role: "Esteticista",
+            name: "Akua Darko",
+            role: "Esthetician",
             commissionRate: 20,
             services: ["Escova", "Progressiva", "Tratamentos"],
             thisMonth: {
@@ -89,12 +90,12 @@ export default function ProfessionalCommissions() {
         }
     ];
 
-    // Histórico de comissões
+    // Commission history
     const commissionHistory = [
         {
             id: 1,
-            professional: "Ana Silva",
-            period: "Janeiro 2024",
+            professional: "Ama Owusu",
+            period: "January 2024",
             revenue: 8920,
             commission: 1605,
             rate: 18,
@@ -103,8 +104,8 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 2,
-            professional: "Carlos Santos",
-            period: "Janeiro 2024",
+            professional: "Kwesi Asare",
+            period: "January 2024",
             revenue: 4680,
             commission: 702,
             rate: 15,
@@ -113,8 +114,8 @@ export default function ProfessionalCommissions() {
         },
         {
             id: 3,
-            professional: "Maria Costa",
-            period: "Janeiro 2024",
+            professional: "Akua Darko",
+            period: "January 2024",
             revenue: 4850,
             commission: 970,
             rate: 20,
@@ -123,22 +124,22 @@ export default function ProfessionalCommissions() {
         }
     ];
 
-    // Metas de comissão
+    // Commission goals
     const targets = [
         {
-            professional: "Ana Silva",
+            professional: "Ama Owusu",
             monthlyTarget: 1800,
             current: 1605,
             percentage: 89.2
         },
         {
-            professional: "Carlos Santos",
+            professional: "Kwesi Asare",
             monthlyTarget: 800,
             current: 702,
             percentage: 87.8
         },
         {
-            professional: "Maria Costa",
+            professional: "Akua Darko",
             monthlyTarget: 1000,
             current: 970,
             percentage: 97.0
@@ -177,18 +178,18 @@ export default function ProfessionalCommissions() {
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 flex items-center">
                             <CreditCard className="w-7 h-7 text-purple-600 mr-3" />
-                            Gestão de Comissões
+                            Commission Management
                         </h1>
-                        <p className="text-gray-600 mt-2">Controle e pagamento de comissões dos profissionais</p>
+                        <p className="text-gray-600 mt-2">Track and pay professional commissions</p>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center font-medium">
                             <DollarSign className="w-5 h-5 mr-2" />
-                            Processar Pagamentos
+                            Processar Payments
                         </button>
                         <button className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center font-medium">
                             <Download className="w-5 h-5 mr-2" />
-                            Relatório
+                            Report
                         </button>
                     </div>
                 </div>
@@ -198,11 +199,11 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Total de Comissões</p>
-                                <p className="text-2xl font-bold text-gray-900">R$ {commissionStats.totalCommissions.toLocaleString()}</p>
+                                <p className="text-sm font-medium text-gray-600">Total Commissions</p>
+                                <p className="text-2xl font-bold text-gray-900">{formatUSD(commissionStats.totalCommissions.toLocaleString())}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
-                                    <span className="text-sm font-medium text-green-600">+12% vs mês anterior</span>
+                                    <span className="text-sm font-medium text-green-600">+12% vs last month</span>
                                 </div>
                             </div>
                             <div className="p-3 bg-purple-100 rounded-lg">
@@ -214,9 +215,9 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Pendente Pagamento</p>
-                                <p className="text-2xl font-bold text-yellow-600">R$ {commissionStats.pendingPayment.toLocaleString()}</p>
-                                <p className="text-sm text-gray-600 mt-2">2 profissionais</p>
+                                <p className="text-sm font-medium text-gray-600">Pending payment</p>
+                                <p className="text-2xl font-bold text-yellow-600">{formatUSD(commissionStats.pendingPayment.toLocaleString())}</p>
+                                <p className="text-sm text-gray-600 mt-2">2 professionals</p>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-lg">
                                 <Clock className="w-6 h-6 text-yellow-600" />
@@ -227,9 +228,9 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Pago Este Mês</p>
-                                <p className="text-2xl font-bold text-green-600">R$ {commissionStats.paidThisMonth.toLocaleString()}</p>
-                                <p className="text-sm text-gray-600 mt-2">1 profissional</p>
+                                <p className="text-sm font-medium text-gray-600">Pago This Month</p>
+                                <p className="text-2xl font-bold text-green-600">{formatUSD(commissionStats.paidThisMonth.toLocaleString())}</p>
+                                <p className="text-sm text-gray-600 mt-2">1 professional</p>
                             </div>
                             <div className="p-3 bg-green-100 rounded-lg">
                                 <CheckCircle className="w-6 h-6 text-green-600" />
@@ -240,9 +241,9 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Comissão Média</p>
+                                <p className="text-sm font-medium text-gray-600">Average Commission</p>
                                 <p className="text-2xl font-bold text-blue-600">{commissionStats.averageCommission}%</p>
-                                <p className="text-sm text-gray-600 mt-2">{commissionStats.totalProfessionals} profissionais</p>
+                                <p className="text-sm text-gray-600 mt-2">{commissionStats.totalProfessionals} professionals</p>
                             </div>
                             <div className="p-3 bg-blue-100 rounded-lg">
                                 <Calculator className="w-6 h-6 text-blue-600" />
@@ -260,17 +261,17 @@ export default function ProfessionalCommissions() {
                                 onChange={(e) => setDateRange(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="thisMonth">Este Mês</option>
-                                <option value="lastMonth">Mês Passado</option>
+                                <option value="thisMonth">This Month</option>
+                                <option value="lastMonth">Last Month</option>
                                 <option value="quarter">Trimestre</option>
-                                <option value="year">Ano</option>
+                                <option value="year">Year</option>
                             </select>
                             <select
                                 value={professionalFilter}
                                 onChange={(e) => setProfessionalFilter(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="all">Todos Profissionais</option>
+                                <option value="all">All Professionals</option>
                                 {professionals.map(prof => (
                                     <option key={prof.id} value={prof.name}>{prof.name}</option>
                                 ))}
@@ -278,7 +279,7 @@ export default function ProfessionalCommissions() {
                         </div>
                         <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
                             <Filter className="w-4 h-4 mr-2" />
-                            Filtros Avançados
+                            Advanced Filters
                         </button>
                     </div>
                 </div>
@@ -286,7 +287,7 @@ export default function ProfessionalCommissions() {
                 {/* Professionals Commission Overview */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Comissões por Profissional</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Commissions by professional</h3>
                     </div>
                     <div className="divide-y divide-gray-200">
                         {filteredProfessionals.map((professional) => (
@@ -308,19 +309,19 @@ export default function ProfessionalCommissions() {
 
                                             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Taxa de Comissão</p>
+                                                    <p className="text-sm text-gray-600">Commission fee</p>
                                                     <p className="text-lg font-semibold text-purple-600">{professional.commissionRate}%</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Faturamento</p>
-                                                    <p className="text-lg font-semibold text-gray-900">R$ {professional.thisMonth.revenue.toLocaleString()}</p>
+                                                    <p className="text-sm text-gray-600">Revenue</p>
+                                                    <p className="text-lg font-semibold text-gray-900">{formatUSD(professional.thisMonth.revenue.toLocaleString())}</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Comissão</p>
-                                                    <p className="text-lg font-semibold text-green-600">R$ {professional.thisMonth.commission.toLocaleString()}</p>
+                                                    <p className="text-sm text-gray-600">Commission</p>
+                                                    <p className="text-lg font-semibold text-green-600">{formatUSD(professional.thisMonth.commission.toLocaleString())}</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Agendamentos</p>
+                                                    <p className="text-sm text-gray-600">Bookings</p>
                                                     <p className="text-lg font-semibold text-blue-600">{professional.thisMonth.appointments}</p>
                                                 </div>
                                             </div>
@@ -328,23 +329,23 @@ export default function ProfessionalCommissions() {
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                                 <div className="flex items-center">
                                                     <DollarSign className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Ticket médio: </span>
-                                                    <span className="font-medium text-gray-900 ml-1">R$ {professional.averageTicket.toFixed(2)}</span>
+                                                    <span className="text-gray-600">Average ticket: </span>
+                                                    <span className="font-medium text-gray-900 ml-1">{formatUSD(professional.averageTicket.toFixed(2))}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Award className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Satisfação: </span>
+                                                    <span className="text-gray-600">Satisfaction: </span>
                                                     <span className="font-medium text-gray-900 ml-1">{professional.clientSatisfaction}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Total ganho: </span>
-                                                    <span className="font-medium text-gray-900 ml-1">R$ {professional.totalEarned.toLocaleString()}</span>
+                                                    <span className="text-gray-600">Total earned: </span>
+                                                    <span className="font-medium text-gray-900 ml-1">{formatUSD(professional.totalEarned.toLocaleString())}</span>
                                                 </div>
                                             </div>
 
                                             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                                                <p className="text-sm font-medium text-gray-900 mb-2">Serviços:</p>
+                                                <p className="text-sm font-medium text-gray-900 mb-2">Services:</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {professional.services.map((service, index) => (
                                                         <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
@@ -364,7 +365,7 @@ export default function ProfessionalCommissions() {
                                             <Edit className="w-5 h-5" />
                                         </button>
                                         <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                                            Pagar
+                                            Pay
                                         </button>
                                     </div>
                                 </div>
@@ -375,7 +376,7 @@ export default function ProfessionalCommissions() {
 
                 {/* Targets */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Metas de Comissão</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Commission targets</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {targets.map((target, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-6">
@@ -387,12 +388,12 @@ export default function ProfessionalCommissions() {
                                 </div>
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm text-gray-600">Meta Mensal</span>
-                                        <span className="font-medium text-gray-900">R$ {target.monthlyTarget.toLocaleString()}</span>
+                                        <span className="text-sm text-gray-600">Monthly Target</span>
+                                        <span className="font-medium text-gray-900">{formatUSD(target.monthlyTarget.toLocaleString())}</span>
                                     </div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-sm text-gray-600">Atual</span>
-                                        <span className="font-medium text-green-600">R$ {target.current.toLocaleString()}</span>
+                                        <span className="font-medium text-green-600">{formatUSD(target.current.toLocaleString())}</span>
                                     </div>
                                     <div>
                                         <div className="flex items-center justify-between mb-2">
@@ -418,19 +419,19 @@ export default function ProfessionalCommissions() {
                 {/* Commission History */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Histórico de Pagamentos</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Payment history</h3>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profissional</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Período</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Faturamento</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Taxa</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comissão</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Professional</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Period</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fee</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Commission</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Pagamento</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Payment</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
@@ -443,13 +444,13 @@ export default function ProfessionalCommissions() {
                                             {record.period}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            R$ {record.revenue.toLocaleString()}
+                                            {formatUSD(record.revenue.toLocaleString())}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {record.rate}%
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm font-medium text-green-600">
-                                            R$ {record.commission.toLocaleString()}
+                                            {formatUSD(record.commission.toLocaleString())}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap">
                                             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(record.status)}`}>

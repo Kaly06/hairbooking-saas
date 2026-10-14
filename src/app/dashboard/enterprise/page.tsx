@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Calendar,
@@ -20,26 +21,26 @@ import {
 } from "lucide-react";
 
 export default function EnterpriseDashboard() {
-    // Dados simulados para o dashboard Enterprise (mais completo)
+    // Mock data for the dashboard Enterprise (most complete)
     const globalStats = [
         {
-            name: "Receita Total",
-            value: "R$ 87.450",
+            name: "Total Revenue",
+            value: "$14,575",
             change: "+23.1%",
             changeType: "increase" as const,
             icon: DollarSign,
             color: "bg-green-500"
         },
         {
-            name: "Unidades Ativas",
+            name: "Active branches",
             value: "8",
-            change: "+2 novas",
+            change: "+2 new",
             changeType: "increase" as const,
             icon: Building,
             color: "bg-blue-500"
         },
         {
-            name: "Total de Clientes",
+            name: "Total Clients",
             value: "2.847",
             change: "+18.2%",
             changeType: "increase" as const,
@@ -47,7 +48,7 @@ export default function EnterpriseDashboard() {
             color: "bg-purple-500"
         },
         {
-            name: "Agendamentos",
+            name: "Bookings",
             value: "156",
             change: "+12.4%",
             changeType: "increase" as const,
@@ -55,7 +56,7 @@ export default function EnterpriseDashboard() {
             color: "bg-orange-500"
         },
         {
-            name: "Conversão Geral",
+            name: "Overall Conversion",
             value: "34%",
             change: "+5.7%",
             changeType: "increase" as const,
@@ -73,25 +74,25 @@ export default function EnterpriseDashboard() {
     ];
 
     const unitsData = [
-        { name: "Unidade Centro", revenue: "R$ 23.450", clients: 487, appointments: 45, growth: "+15%" },
-        { name: "Unidade Shopping", revenue: "R$ 19.230", clients: 398, appointments: 38, growth: "+22%" },
-        { name: "Unidade Bela Vista", revenue: "R$ 16.890", clients: 356, appointments: 32, growth: "+8%" },
-        { name: "Unidade Vila Madalena", revenue: "R$ 14.320", clients: 289, appointments: 28, growth: "+18%" },
-        { name: "Unidade Moema", revenue: "R$ 13.560", clients: 267, appointments: 13, growth: "+12%" }
+        { name: "Osu Branch", revenue: "$3,908", clients: 487, appointments: 45, growth: "+15%" },
+        { name: "Shopping Branch", revenue: "$3,205", clients: 398, appointments: 38, growth: "+22%" },
+        { name: "Branch Labone", revenue: "$2,815", clients: 356, appointments: 32, growth: "+8%" },
+        { name: "Branch East Legon", revenue: "$2,387", clients: 289, appointments: 28, growth: "+18%" },
+        { name: "Branch Airport Residential", revenue: "$2,260", clients: 267, appointments: 13, growth: "+12%" }
     ];
 
     const securityAlerts = [
-        { type: "info", message: "Backup automático realizado com sucesso", time: "2 min atrás" },
-        { type: "warning", message: "Tentativa de login suspeita detectada", time: "15 min atrás" },
-        { type: "success", message: "Certificado SSL renovado automaticamente", time: "1 hora atrás" }
+        { type: "info", message: "Automatic backup completed successfully", time: "2 min ago" },
+        { type: "warning", message: "Suspicious login attempt detected", time: "15 min ago" },
+        { type: "success", message: "SSL certificate renewed automatically", time: "1 hour ago" }
     ];
 
     const integrationStatus = [
-        { name: "Google Meu Negócio", status: "active", sync: "100%" },
+        { name: "Google Business Profile", status: "active", sync: "100%" },
         { name: "WhatsApp Business", status: "active", sync: "98%" },
         { name: "Instagram", status: "active", sync: "95%" },
         { name: "Facebook", status: "pending", sync: "0%" },
-        { name: "PagSeguro", status: "active", sync: "100%" },
+        { name: "Paystack", status: "active", sync: "100%" },
         { name: "Stripe", status: "active", sync: "100%" }
     ];
 
@@ -131,7 +132,7 @@ export default function EnterpriseDashboard() {
                             <Crown className="w-6 h-6 text-amber-600 mr-2" />
                             Dashboard Enterprise
                         </h1>
-                        <p className="text-gray-600">Visão executiva completa de todas as unidades e operações</p>
+                        <p className="text-gray-600">Complete executive overview of all branches and operations</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <button className="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors flex items-center">
@@ -140,7 +141,7 @@ export default function EnterpriseDashboard() {
                         </button>
                         <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                             <Building className="w-4 h-4 mr-2" />
-                            Multi-unidades
+                            Multi-branch
                         </button>
                         <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center">
                             <PieChart className="w-4 h-4 mr-2" />
@@ -174,12 +175,12 @@ export default function EnterpriseDashboard() {
 
                 {/* Main Dashboard Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                    {/* Performance das Unidades */}
+                    {/* Branch performance */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200">
                             <h3 className="text-lg font-medium text-gray-900 flex items-center">
                                 <Building className="w-5 h-5 text-blue-600 mr-2" />
-                                Performance por Unidade
+                                Performance by branch
                             </h3>
                         </div>
                         <div className="p-6">
@@ -188,7 +189,7 @@ export default function EnterpriseDashboard() {
                                     <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                                         <div>
                                             <h4 className="text-sm font-medium text-gray-900">{unit.name}</h4>
-                                            <p className="text-xs text-gray-500">{unit.clients} clientes • {unit.appointments} agendamentos hoje</p>
+                                            <p className="text-xs text-gray-500">{unit.clients} clients • {unit.appointments} bookings today</p>
                                         </div>
                                         <div className="text-right">
                                             <p className="text-sm font-semibold text-gray-900">{unit.revenue}</p>
@@ -200,12 +201,12 @@ export default function EnterpriseDashboard() {
                         </div>
                     </div>
 
-                    {/* Segurança e Monitoramento */}
+                    {/* Security e Monitoramento */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200">
                             <h3 className="text-lg font-medium text-gray-900 flex items-center">
                                 <Shield className="w-5 h-5 text-red-600 mr-2" />
-                                Segurança
+                                Security
                             </h3>
                         </div>
                         <div className="p-6">
@@ -218,17 +219,17 @@ export default function EnterpriseDashboard() {
                                 ))}
                             </div>
                             <button className="w-full mt-4 bg-red-50 text-red-700 py-2 px-4 rounded-lg hover:bg-red-100 transition-colors text-sm font-medium">
-                                Ver Logs Completos
+                                View Logs Completos
                             </button>
                         </div>
                     </div>
 
-                    {/* Integrações API */}
+                    {/* Integrations API */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200">
                             <h3 className="text-lg font-medium text-gray-900 flex items-center">
                                 <UserCheck className="w-5 h-5 text-purple-600 mr-2" />
-                                Integrações
+                                Integrations
                             </h3>
                         </div>
                         <div className="p-6">
@@ -240,33 +241,33 @@ export default function EnterpriseDashboard() {
                                             <p className="text-xs text-gray-500">Sync: {integration.sync}</p>
                                         </div>
                                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(integration.status)}`}>
-                                            {integration.status === 'active' ? 'Ativo' : 'Pendente'}
+                                            {integration.status === 'active' ? 'Active' : 'Pending'}
                                         </span>
                                     </div>
                                 ))}
                             </div>
                             <button className="w-full mt-4 bg-purple-50 text-purple-700 py-2 px-4 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
-                                Gerenciar Integrações
+                                Manage integrations
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/* Ações Rápidas Enterprise */}
+                {/* Quick Actions Enterprise */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-4">Ações Executivas</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-4">Executive Actions</h3>
                         <div className="space-y-3">
                             <button className="w-full text-left p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                                 <div className="flex items-center">
                                     <Building className="w-5 h-5 text-blue-600 mr-3" />
-                                    <span className="text-sm font-medium text-blue-900">Nova Unidade</span>
+                                    <span className="text-sm font-medium text-blue-900">New Branch</span>
                                 </div>
                             </button>
                             <button className="w-full text-left p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                                 <div className="flex items-center">
                                     <PieChart className="w-5 h-5 text-green-600 mr-3" />
-                                    <span className="text-sm font-medium text-green-900">Relatório Executivo</span>
+                                    <span className="text-sm font-medium text-green-900">Report Executivo</span>
                                 </div>
                             </button>
                             <button className="w-full text-left p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
@@ -279,12 +280,12 @@ export default function EnterpriseDashboard() {
                     </div>
 
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-4">Configurações</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-4">Settings</h3>
                         <div className="space-y-3">
                             <button className="w-full text-left p-3 bg-red-50 rounded-lg hover:bg-red-100 transition-colors">
                                 <div className="flex items-center">
                                     <Shield className="w-5 h-5 text-red-600 mr-3" />
-                                    <span className="text-sm font-medium text-red-900">Segurança</span>
+                                    <span className="text-sm font-medium text-red-900">Security</span>
                                 </div>
                             </button>
                             <button className="w-full text-left p-3 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
@@ -296,13 +297,13 @@ export default function EnterpriseDashboard() {
                             <button className="w-full text-left p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                                 <div className="flex items-center">
                                     <Settings className="w-5 h-5 text-gray-600 mr-3" />
-                                    <span className="text-sm font-medium text-gray-900">Configurações</span>
+                                    <span className="text-sm font-medium text-gray-900">Settings</span>
                                 </div>
                             </button>
                         </div>
                     </div>
 
-                    {/* Analytics Avançado */}
+                    {/* Advanced Analytics */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                         <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
                             <BarChart3 className="w-5 h-5 text-blue-600 mr-2" />
@@ -310,7 +311,7 @@ export default function EnterpriseDashboard() {
                         </h3>
                         <div className="space-y-3">
                             <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-600">Conversão Total</span>
+                                <span className="text-sm text-gray-600">Total Conversion</span>
                                 <span className="text-sm font-medium text-green-600">+23%</span>
                             </div>
                             <div className="flex justify-between items-center">
@@ -318,46 +319,46 @@ export default function EnterpriseDashboard() {
                                 <span className="text-sm font-medium text-green-600">340%</span>
                             </div>
                             <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-600">Ticket Médio</span>
-                                <span className="text-sm font-medium text-blue-600">R$ 127</span>
+                                <span className="text-sm text-gray-600">Average Ticket</span>
+                                <span className="text-sm font-medium text-blue-600">{formatUSD(127)}</span>
                             </div>
                             <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-600">Retenção</span>
+                                <span className="text-sm text-gray-600">Retention</span>
                                 <span className="text-sm font-medium text-green-600">89%</span>
                             </div>
                         </div>
                     </div>
 
-                    {/* Resumo Enterprise */}
+                    {/* Enterprise summary */}
                     <div className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg p-6 text-white">
                         <h3 className="text-lg font-medium mb-2 flex items-center">
                             <Crown className="w-5 h-5 mr-2" />
                             Enterprise
                         </h3>
                         <p className="text-amber-100 text-sm mb-4">
-                            Solução completa para grandes redes de salões.
+                            Complete solution for large salon networks.
                         </p>
                         <div className="space-y-2 text-sm">
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>Unidades ilimitadas</span>
+                                <span>Unlimited branches</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>White-label completo</span>
+                                <span>Full white-label</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>APIs personalizadas</span>
+                                <span>Custom APIs</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>Suporte dedicado</span>
+                                <span>Dedicated support</span>
                             </div>
                         </div>
                         <div className="mt-4 flex items-center">
                             <Zap className="w-4 h-4 mr-2" />
-                            <span className="text-sm font-medium">Máxima Performance</span>
+                            <span className="text-sm font-medium">Peak Performance</span>
                         </div>
                     </div>
                 </div>

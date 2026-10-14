@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
@@ -35,10 +36,10 @@ export default function ClientDashboardPage() {
             id: "1",
             date: "2024-11-12",
             time: "14:30",
-            service: "Corte de Cabelo",
-            unit: "Unidade Centro",
-            address: "Rua das Flores, 123 - Centro",
-            phone: "(11) 3325-4400",
+            service: "Haircut",
+            unit: "Osu Branch",
+            address: "Oxford Street, 123 - Osu, Accra",
+            phone: "+233 24 325 4400",
             status: "confirmed",
             price: 45,
             duration: 45
@@ -47,10 +48,10 @@ export default function ClientDashboardPage() {
             id: "2",
             date: "2024-11-08",
             time: "16:00",
-            service: "Corte + Barba",
-            unit: "Unidade Zona Sul",
-            address: "Av. Paulista, 1000 - Bela Vista",
-            phone: "(11) 2240-5500",
+            service: "Haircut + Beard Trim",
+            unit: "East Legon Branch",
+            address: "Boundary Road, 1000 - East Legon, Accra",
+            phone: "+233 24 240 5500",
             status: "completed",
             price: 75,
             duration: 75
@@ -61,10 +62,10 @@ export default function ClientDashboardPage() {
     const [searchTerm, setSearchTerm] = useState("");
 
     const statusConfig = {
-        confirmed: { label: "Confirmado", color: "bg-green-100 text-green-800" },
-        pending: { label: "Pendente", color: "bg-yellow-100 text-yellow-800" },
-        completed: { label: "Concluído", color: "bg-blue-100 text-blue-800" },
-        cancelled: { label: "Cancelado", color: "bg-red-100 text-red-800" }
+        confirmed: { label: "Confirmed", color: "bg-green-100 text-green-800" },
+        pending: { label: "Pending", color: "bg-yellow-100 text-yellow-800" },
+        completed: { label: "Completed", color: "bg-blue-100 text-blue-800" },
+        cancelled: { label: "Cancelled", color: "bg-red-100 text-red-800" }
     };
 
     const filteredAppointments = appointments.filter(appointment => {
@@ -96,8 +97,8 @@ export default function ClientDashboardPage() {
                                 <Calendar className="h-5 w-5 text-white" />
                             </div>
                             <div>
-                                <h1 className="text-xl font-bold text-black">Meus Agendamentos</h1>
-                                <p className="text-sm text-gray-600">Gerencie seus horários</p>
+                                <h1 className="text-xl font-bold text-black">My Bookings</h1>
+                                <p className="text-sm text-gray-600">Manage your appointments</p>
                             </div>
                         </div>
                         <button
@@ -105,7 +106,7 @@ export default function ClientDashboardPage() {
                             className="px-4 py-2 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-all duration-200 flex items-center gap-2"
                         >
                             <Plus className="h-4 w-4" />
-                            Novo Agendamento
+                            New Booking
                         </button>
                     </div>
                 </div>
@@ -120,7 +121,7 @@ export default function ClientDashboardPage() {
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                             <input
                                 type="text"
-                                placeholder="Buscar por serviço ou unidade..."
+                                placeholder="Search by service or branch..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
@@ -134,11 +135,11 @@ export default function ClientDashboardPage() {
                             onChange={(e) => setFilter(e.target.value)}
                             className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                         >
-                            <option value="all">Todos</option>
-                            <option value="confirmed">Confirmados</option>
-                            <option value="pending">Pendentes</option>
-                            <option value="completed">Concluídos</option>
-                            <option value="cancelled">Cancelados</option>
+                            <option value="all">All</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
                         </select>
                     </div>
                 </div>
@@ -149,18 +150,18 @@ export default function ClientDashboardPage() {
                         <Card className="border-gray-200">
                             <CardContent className="p-12 text-center">
                                 <Calendar className="h-12 w-12 mx-auto mb-4 text-gray-400" />
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Nenhum agendamento encontrado</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">No bookings found</h3>
                                 <p className="text-gray-600 mb-6">
                                     {searchTerm || filter !== "all"
-                                        ? "Tente ajustar os filtros ou buscar por outros termos."
-                                        : "Você ainda não possui agendamentos. Que tal fazer o primeiro?"
+                                        ? "Try adjusting your filters or searching for other terms."
+                                        : "You don't have any bookings yet. How about making your first one?"
                                     }
                                 </p>
                                 <button
                                     onClick={() => router.push('/client')}
                                     className="px-6 py-3 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-all duration-200"
                                 >
-                                    Fazer Agendamento
+                                    Make a Booking
                                 </button>
                             </CardContent>
                         </Card>
@@ -180,7 +181,7 @@ export default function ClientDashboardPage() {
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
                                                 <div className="flex items-center gap-2">
                                                     <Calendar className="h-4 w-4" />
-                                                    <span>{new Date(appointment.date).toLocaleDateString('pt-BR')}</span>
+                                                    <span>{new Date(appointment.date).toLocaleDateString('en-US')}</span>
                                                 </div>
                                                 <div className="flex items-center gap-2">
                                                     <Clock className="h-4 w-4" />
@@ -203,7 +204,7 @@ export default function ClientDashboardPage() {
 
                                         <div className="flex flex-col items-end gap-4 ml-6">
                                             <div className="text-right">
-                                                <div className="text-2xl font-bold text-black">R$ {appointment.price}</div>
+                                                <div className="text-2xl font-bold text-black">{formatUSD(appointment.price)}</div>
                                             </div>
 
                                             {appointment.status === "confirmed" && (
@@ -211,14 +212,14 @@ export default function ClientDashboardPage() {
                                                     <button
                                                         onClick={() => rescheduleAppointment(appointment.id)}
                                                         className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-200"
-                                                        title="Reagendar"
+                                                        title="Reschedule"
                                                     >
                                                         <Edit3 className="h-4 w-4 text-gray-600" />
                                                     </button>
                                                     <button
                                                         onClick={() => cancelAppointment(appointment.id)}
                                                         className="p-2 border border-red-300 text-red-600 rounded-lg hover:bg-red-50 transition-all duration-200"
-                                                        title="Cancelar"
+                                                        title="Cancel"
                                                     >
                                                         <X className="h-4 w-4" />
                                                     </button>
@@ -230,7 +231,7 @@ export default function ClientDashboardPage() {
                                                     onClick={() => router.push('/client')}
                                                     className="px-4 py-2 bg-black text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200"
                                                 >
-                                                    Agendar Novamente
+                                                    Book Again
                                                 </button>
                                             )}
                                         </div>
@@ -248,8 +249,8 @@ export default function ClientDashboardPage() {
                             <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Plus className="h-6 w-6 text-white" />
                             </div>
-                            <h3 className="font-semibold text-black mb-2">Novo Agendamento</h3>
-                            <p className="text-sm text-gray-600">Agende um novo horário</p>
+                            <h3 className="font-semibold text-black mb-2">New Booking</h3>
+                            <p className="text-sm text-gray-600">Book a new appointment</p>
                         </CardContent>
                     </Card>
 
@@ -258,8 +259,8 @@ export default function ClientDashboardPage() {
                             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Calendar className="h-6 w-6 text-black" />
                             </div>
-                            <h3 className="font-semibold text-black mb-2">Histórico</h3>
-                            <p className="text-sm text-gray-600">Veja seus agendamentos passados</p>
+                            <h3 className="font-semibold text-black mb-2">History</h3>
+                            <p className="text-sm text-gray-600">View your past bookings</p>
                         </CardContent>
                     </Card>
 
@@ -268,8 +269,8 @@ export default function ClientDashboardPage() {
                             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                                 <Phone className="h-6 w-6 text-black" />
                             </div>
-                            <h3 className="font-semibold text-black mb-2">Suporte</h3>
-                            <p className="text-sm text-gray-600">Entre em contato conosco</p>
+                            <h3 className="font-semibold text-black mb-2">Support</h3>
+                            <p className="text-sm text-gray-600">Get in touch</p>
                         </CardContent>
                     </Card>
                 </div>
@@ -279,11 +280,11 @@ export default function ClientDashboardPage() {
             <footer className="bg-gray-50 border-t border-gray-200 mt-20">
                 <div className="max-w-6xl mx-auto px-4 py-8">
                     <div className="text-center text-gray-600">
-                        <p className="mb-4">© 2024 HairBooking. Todos os direitos reservados.</p>
+                        <p className="mb-4">© 2024 HairBooking. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-8 text-sm">
-                            <a href="#" className="hover:text-black transition-colors font-medium">Termos de Uso</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Política de Privacidade</a>
-                            <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Support</a>
                         </div>
                     </div>
                 </div>

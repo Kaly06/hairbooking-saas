@@ -29,7 +29,7 @@ export interface Service {
   id: string
   name: string
   description: string
-  duration: number // em minutos
+  duration: number // in minutes
   price: number
   image?: string
   category: string
