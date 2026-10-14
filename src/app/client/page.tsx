@@ -19,6 +19,7 @@ import {
     Minus,
     Trash2
 } from "lucide-react";
+import { searchPlaces, type Place } from "@/lib/places";
 
 interface Professional {
     id: number;
@@ -77,6 +78,8 @@ export default function ClientBookingPage() {
     const [rideOpen, setRideOpen] = useState(false);
     const [rideAddress, setRideAddress] = useState("");
     const [rideSent, setRideSent] = useState(false);
+    const [rideSuggestionsOpen, setRideSuggestionsOpen] = useState(false);
+    const rideSuggestions: Place[] = searchPlaces(rideAddress);
     const [customServices, setCustomServices] = useState<Service[]>([]);
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
@@ -467,13 +470,41 @@ export default function ClientBookingPage() {
 
                                         {rideOpen && !rideSent && (
                                             <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                                                <input
-                                                    type="text"
-                                                    value={rideAddress}
-                                                    onChange={(e) => setRideAddress(e.target.value)}
-                                                    placeholder="Pickup address"
-                                                    className="flex-1 p-3 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
-                                                />
+                                                <div className="relative flex-1">
+                                                    <input
+                                                        type="text"
+                                                        value={rideAddress}
+                                                        onChange={(e) => {
+                                                            setRideAddress(e.target.value);
+                                                            setRideSuggestionsOpen(true);
+                                                        }}
+                                                        onFocus={() => setRideSuggestionsOpen(true)}
+                                                        onBlur={() => setRideSuggestionsOpen(false)}
+                                                        placeholder="Pickup address, e.g. Cape Coast or Kotokuraba"
+                                                        autoComplete="off"
+                                                        className="w-full p-3 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
+                                                    />
+                                                    {rideSuggestionsOpen && rideSuggestions.length > 0 && (
+                                                        <ul className="absolute z-20 left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg max-h-72 overflow-auto">
+                                                            {rideSuggestions.map((place) => (
+                                                                <li key={`${place.city}-${place.name}`}>
+                                                                    <button
+                                                                        type="button"
+                                                                        onMouseDown={(e) => e.preventDefault()}
+                                                                        onClick={() => {
+                                                                            setRideAddress(`${place.name}, ${place.city}`);
+                                                                            setRideSuggestionsOpen(false);
+                                                                        }}
+                                                                        className="w-full text-left px-4 py-2 hover:bg-gray-100 text-sm"
+                                                                    >
+                                                                        <span className="font-semibold text-black">{place.name}</span>
+                                                                        <span className="text-gray-500">, {place.city}</span>
+                                                                    </button>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>
                                                 <button
                                                     type="button"
                                                     disabled={!rideAddress.trim()}
