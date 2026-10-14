@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
@@ -203,7 +204,7 @@ export default function ClientDashboardPage() {
 
                                         <div className="flex flex-col items-end gap-4 ml-6">
                                             <div className="text-right">
-                                                <div className="text-2xl font-bold text-black">R$ {appointment.price}</div>
+                                                <div className="text-2xl font-bold text-black">{formatUSD(appointment.price)}</div>
                                             </div>
 
                                             {appointment.status === "confirmed" && (

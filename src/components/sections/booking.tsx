@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { useState } from "react";
 import { Calendar, Clock, MapPin, User, Scissors, ChevronRight } from "lucide-react";
 
@@ -133,7 +134,7 @@ export default function BookingForm() {
                                                     </div>
                                                 </div>
                                                 <div className="text-lg font-bold text-gray-900">
-                                                    R$ {service.price}
+                                                    {formatUSD(service.price)}
                                                 </div>
                                             </label>
                                         ))}
@@ -377,7 +378,7 @@ export default function BookingForm() {
                                             <div className="flex justify-between pt-2 border-t border-gray-200">
                                                 <span className="font-semibold">Total:</span>
                                                 <span className="font-semibold">
-                                                    R$ {services.find(s => s.id === formData.service)?.price}
+                                                    {formatUSD(services.find(s => s.id === formData.service)?.price ?? 0)}
                                                 </span>
                                             </div>
                                         </div>

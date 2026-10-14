@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, TrendingUp, Download, Calendar, FileText, Filter, PieChart, LineChart, Target, Users, DollarSign, Clock, Building } from "lucide-react";
@@ -33,7 +34,7 @@ export default function EnterpriseReportsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Revenue YTD</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 5.24M</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(5240000)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+24.7% vs ano anterior</span>
@@ -278,11 +279,11 @@ export default function EnterpriseReportsPage() {
                                 </div>
                                 <div className="grid grid-cols-3 gap-4">
                                     <div className="text-center p-3 bg-blue-50 rounded-lg">
-                                        <p className="text-lg font-bold text-blue-600">R$ 2.8M</p>
+                                        <p className="text-lg font-bold text-blue-600">{formatUSD(2800000)}</p>
                                         <p className="text-xs text-gray-600">Forecast Q1</p>
                                     </div>
                                     <div className="text-center p-3 bg-green-50 rounded-lg">
-                                        <p className="text-lg font-bold text-green-600">R$ 3.1M</p>
+                                        <p className="text-lg font-bold text-green-600">{formatUSD(3100000)}</p>
                                         <p className="text-xs text-gray-600">Forecast Q2</p>
                                     </div>
                                     <div className="text-center p-3 bg-purple-50 rounded-lg">
@@ -350,9 +351,9 @@ export default function EnterpriseReportsPage() {
                                                 <span className="font-medium">Shopping Center</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-blue-600">R$ 2.14M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-blue-600">{formatUSD(2140000)}</td>
                                         <td className="py-3 px-4 text-right">42.389</td>
-                                        <td className="py-3 px-4 text-right">R$ 135</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(135)}</td>
                                         <td className="py-3 px-4 text-right">91.2%</td>
                                         <td className="py-3 px-4 text-right">92</td>
                                         <td className="py-3 px-4 text-right">
@@ -368,9 +369,9 @@ export default function EnterpriseReportsPage() {
                                                 <span className="font-medium">Centro</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-green-600">R$ 1.68M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-green-600">{formatUSD(1680000)}</td>
                                         <td className="py-3 px-4 text-right">34.256</td>
-                                        <td className="py-3 px-4 text-right">R$ 118</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(118)}</td>
                                         <td className="py-3 px-4 text-right">87.4%</td>
                                         <td className="py-3 px-4 text-right">89</td>
                                         <td className="py-3 px-4 text-right">
@@ -386,9 +387,9 @@ export default function EnterpriseReportsPage() {
                                                 <span className="font-medium">Zona Norte</span>
                                             </div>
                                         </td>
-                                        <td className="py-3 px-4 text-right font-bold text-orange-600">R$ 1.42M</td>
+                                        <td className="py-3 px-4 text-right font-bold text-orange-600">{formatUSD(1420000)}</td>
                                         <td className="py-3 px-4 text-right">21.902</td>
-                                        <td className="py-3 px-4 text-right">R$ 104</td>
+                                        <td className="py-3 px-4 text-right">{formatUSD(104)}</td>
                                         <td className="py-3 px-4 text-right">76.8%</td>
                                         <td className="py-3 px-4 text-right">81</td>
                                         <td className="py-3 px-4 text-right">

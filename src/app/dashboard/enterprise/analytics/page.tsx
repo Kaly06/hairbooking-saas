@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, TrendingDown, Users, Calendar, DollarSign, Target, BarChart3, PieChart, Activity, Zap, Clock, Star } from "lucide-react";
@@ -31,7 +32,7 @@ export default function EnterpriseAnalyticsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 2.847.520</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(2847520)}</p>
                                     <div className="flex items-center mt-2">
                                         <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+23.4%</span>
@@ -118,11 +119,11 @@ export default function EnterpriseAnalyticsPage() {
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-4 bg-green-50 rounded-lg">
-                                    <p className="text-2xl font-bold text-green-600">R$ 485.2K</p>
+                                    <p className="text-2xl font-bold text-green-600">{formatUSD(485200)}</p>
                                     <p className="text-sm text-gray-600">This Month</p>
                                 </div>
                                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                                    <p className="text-2xl font-bold text-blue-600">R$ 394.8K</p>
+                                    <p className="text-2xl font-bold text-blue-600">{formatUSD(394800)}</p>
                                     <p className="text-sm text-gray-600">Previous Month</p>
                                 </div>
                             </div>
@@ -302,15 +303,15 @@ export default function EnterpriseAnalyticsPage() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">Next Month</span>
-                                        <span className="font-medium text-green-600">R$ 520K</span>
+                                        <span className="font-medium text-green-600">{formatUSD(520000)}</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">Next Trimestre</span>
-                                        <span className="font-medium text-blue-600">R$ 1.6M</span>
+                                        <span className="font-medium text-blue-600">{formatUSD(1600000)}</span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">Next Year</span>
-                                        <span className="font-medium text-purple-600">R$ 6.8M</span>
+                                        <span className="font-medium text-purple-600">{formatUSD(6800000)}</span>
                                     </div>
                                 </div>
                             </div>
@@ -338,11 +339,11 @@ export default function EnterpriseAnalyticsPage() {
                                 <div className="space-y-3">
                                     <div className="p-3 bg-green-50 rounded-lg">
                                         <p className="text-sm font-medium text-green-800">Time Slot Expansion</p>
-                                        <p className="text-xs text-green-600">+R$ 85K potencial</p>
+                                        <p className="text-xs text-green-600">+{formatUSD(85000)} potencial</p>
                                     </div>
                                     <div className="p-3 bg-blue-50 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">New Services</p>
-                                        <p className="text-xs text-blue-600">+R$ 120K potencial</p>
+                                        <p className="text-xs text-blue-600">+{formatUSD(120000)} potencial</p>
                                     </div>
                                     <div className="p-3 bg-purple-50 rounded-lg">
                                         <p className="text-sm font-medium text-purple-800">Programa Fidelidade</p>

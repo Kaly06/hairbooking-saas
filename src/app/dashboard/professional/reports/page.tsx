@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     BarChart3,
@@ -217,7 +218,7 @@ export default function ProfessionalReports() {
                         <div>
                             <p className="text-sm font-medium text-gray-600">Revenue</p>
                             <p className="text-2xl font-semibold text-gray-900">
-                                R$ {advancedData.revenue.current.toLocaleString('en-US')}
+                                {formatUSD(advancedData.revenue.current.toLocaleString('en-US'))}
                             </p>
                             <div className="mt-2 bg-gray-200 rounded-full h-2">
                                 <div
@@ -288,10 +289,10 @@ export default function ProfessionalReports() {
                         <div>
                             <p className="text-sm font-medium text-gray-600">Average Ticket</p>
                             <p className="text-2xl font-semibold text-gray-900">
-                                R$ {advancedData.averageTicket.current.toFixed(2)}
+                                {formatUSD(advancedData.averageTicket.current.toFixed(2))}
                             </p>
                             <p className="text-xs text-gray-500 mt-1">
-                                +R$ {(advancedData.averageTicket.current - advancedData.averageTicket.previous).toFixed(2)} vs previous period
+                                +{formatUSD((advancedData.averageTicket.current - advancedData.averageTicket.previous).toFixed(2))} vs previous period
                             </p>
                         </div>
                     </div>
@@ -342,11 +343,11 @@ export default function ProfessionalReports() {
                                         </div>
                                         <div>
                                             <p className="text-gray-600">Revenue</p>
-                                            <p className="font-medium text-green-600">R$ {professional.revenue.toLocaleString('en-US')}</p>
+                                            <p className="font-medium text-green-600">{formatUSD(professional.revenue.toLocaleString('en-US'))}</p>
                                         </div>
                                         <div>
                                             <p className="text-gray-600">Average Ticket</p>
-                                            <p className="font-medium">R$ {professional.averageTicket.toFixed(2)}</p>
+                                            <p className="font-medium">{formatUSD(professional.averageTicket.toFixed(2))}</p>
                                         </div>
                                         <div>
                                             <p className="text-gray-600">Satisfaction</p>
@@ -393,7 +394,7 @@ export default function ProfessionalReports() {
                                     </div>
                                     <div className="text-right">
                                         <p className="text-sm font-medium text-green-600">
-                                            R$ {service.revenue.toLocaleString('en-US')}
+                                            {formatUSD(service.revenue.toLocaleString('en-US'))}
                                         </p>
                                         <div className="flex items-center">
                                             {service.growth > 0 ? <TrendingUp className="w-3 h-3 text-green-600 mr-1" /> : <TrendingDown className="w-3 h-3 text-red-600 mr-1" />}
@@ -433,7 +434,7 @@ export default function ProfessionalReports() {
                                                 className="bg-green-600 h-4 rounded-full transition-all duration-300 flex items-center justify-end pr-2"
                                                 style={{ width: `${(hour.revenue / getMaxRevenue()) * 100}%` }}
                                             >
-                                                <span className="text-xs text-white font-medium">R$ {hour.revenue}</span>
+                                                <span className="text-xs text-white font-medium">{formatUSD(hour.revenue)}</span>
                                             </div>
                                         </div>
                                         <p className="text-xs text-gray-500 mt-1">Revenue</p>
@@ -456,7 +457,7 @@ export default function ProfessionalReports() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-900">Revenue Previsto</p>
                                     <p className="text-2xl font-semibold text-blue-600">
-                                        R$ {trends.nextMonthPrediction.revenue.toLocaleString('en-US')}
+                                        {formatUSD(trends.nextMonthPrediction.revenue.toLocaleString('en-US'))}
                                     </p>
                                 </div>
                                 <div className="text-right">

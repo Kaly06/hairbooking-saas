@@ -31,7 +31,7 @@ export default function StarterAppointments() {
             date: "2025-11-05",
             time: "09:00",
             duration: "1h 30min",
-            price: "R$ 120",
+            price: "$20",
             status: "confirmed",
             professional: "Ana",
             notes: "Client regular, prefere corte em camadas"
@@ -44,7 +44,7 @@ export default function StarterAppointments() {
             date: "2025-11-05",
             time: "10:30",
             duration: "45min",
-            price: "R$ 45",
+            price: "$7.50",
             status: "completed",
             professional: "Carlos",
             notes: ""
@@ -57,7 +57,7 @@ export default function StarterAppointments() {
             date: "2025-11-05",
             time: "14:00",
             duration: "2h",
-            price: "R$ 180",
+            price: "$30",
             status: "confirmed",
             professional: "Maria",
             notes: "First coloring session"
@@ -70,7 +70,7 @@ export default function StarterAppointments() {
             date: "2025-11-05",
             time: "15:30",
             duration: "30min",
-            price: "R$ 25",
+            price: "$4.17",
             status: "pending",
             professional: "Carlos",
             notes: ""
@@ -83,7 +83,7 @@ export default function StarterAppointments() {
             date: "2025-11-06",
             time: "09:00",
             duration: "1h",
-            price: "R$ 80",
+            price: "$13",
             status: "confirmed",
             professional: "Ana",
             notes: "Cabelo muito ressecado"

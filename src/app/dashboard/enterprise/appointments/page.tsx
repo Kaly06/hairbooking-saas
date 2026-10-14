@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, Users, Building, Filter, Plus, Search, MoreHorizontal, CheckCircle, XCircle, AlertCircle } from "lucide-react";
@@ -162,7 +163,7 @@ export default function EnterpriseAppointmentsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-gray-900">R$ 120,00</p>
+                                        <p className="font-semibold text-gray-900">{formatUSD(120)}</p>
                                         <p className="text-sm text-gray-600">Dinheiro</p>
                                     </div>
                                 </div>
@@ -196,7 +197,7 @@ export default function EnterpriseAppointmentsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-gray-900">R$ 45,00</p>
+                                        <p className="font-semibold text-gray-900">{formatUSD(45)}</p>
                                         <p className="text-sm text-gray-600">Card</p>
                                     </div>
                                 </div>
@@ -230,7 +231,7 @@ export default function EnterpriseAppointmentsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-gray-900">R$ 280,00</p>
+                                        <p className="font-semibold text-gray-900">{formatUSD(280)}</p>
                                         <p className="text-sm text-gray-600">PIX</p>
                                     </div>
                                 </div>
@@ -264,7 +265,7 @@ export default function EnterpriseAppointmentsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-red-600 line-through">R$ 35,00</p>
+                                        <p className="font-semibold text-red-600 line-through">{formatUSD(35)}</p>
                                         <p className="text-sm text-gray-600">Cancelled</p>
                                     </div>
                                 </div>

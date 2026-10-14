@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -502,7 +503,7 @@ export default function ClientBookingPage() {
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-2xl font-black text-black">R$ 45</div>
+                                                        <div className="text-2xl font-black text-black">{formatUSD(45)}</div>
                                                         <div className="text-xs text-gray-500 flex items-center gap-1">
                                                             <Clock className="h-3 w-3" />
                                                             <span>45 min</span>
@@ -546,8 +547,8 @@ export default function ClientBookingPage() {
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-2xl font-black text-black">R$ 75<span className="text-sm text-gray-500">/month</span></div>
-                                                        <div className="text-xs text-gray-500 line-through">R$ 120</div>
+                                                        <div className="text-2xl font-black text-black">{formatUSD(75)}<span className="text-sm text-gray-500">/month</span></div>
+                                                        <div className="text-xs text-gray-500 line-through">{formatUSD(120)}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -581,7 +582,7 @@ export default function ClientBookingPage() {
                                                     </div>
                                                     <div className="text-right">
                                                         <div className="text-lg font-black text-black">Personalizar</div>
-                                                        <div className="text-xs text-gray-500">A partir de R$ 60</div>
+                                                        <div className="text-xs text-gray-500">A partir de {formatUSD(60)}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -680,10 +681,10 @@ export default function ClientBookingPage() {
                                                                     </div>
 
                                                                     <div className="flex items-center gap-3 mb-3">
-                                                                        <div className="text-3xl font-black text-black">R$ {plan.price}</div>
-                                                                        <div className="text-sm text-gray-500 line-through">R$ {plan.originalPrice}</div>
+                                                                        <div className="text-3xl font-black text-black">{formatUSD(plan.price)}</div>
+                                                                        <div className="text-sm text-gray-500 line-through">{formatUSD(plan.originalPrice)}</div>
                                                                         <div className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-bold">
-                                                                            Economize R$ {plan.savings}
+                                                                            Economize {formatUSD(plan.savings)}
                                                                         </div>
                                                                     </div>
 
@@ -762,7 +763,7 @@ export default function ClientBookingPage() {
                                                             <div className="flex-1">
                                                                 <h4 className="font-semibold text-black">{service.name}</h4>
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
-                                                                    <span className="font-medium">R$ {service.price}</span>
+                                                                    <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
                                                                     <span>{service.duration} minutos</span>
                                                                 </div>
@@ -791,7 +792,7 @@ export default function ClientBookingPage() {
                                                             <div className="flex-1">
                                                                 <h4 className="font-semibold text-black">{service.name}</h4>
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
-                                                                    <span className="font-medium">R$ {service.price}</span>
+                                                                    <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
                                                                     <span>{service.duration} minutos</span>
                                                                 </div>
@@ -824,7 +825,7 @@ export default function ClientBookingPage() {
                                                                         <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-bold">PROMO</span>
                                                                     </div>
                                                                     <div className="flex items-center gap-4 text-sm text-gray-600">
-                                                                        <span className="text-xl font-black text-black">R$ {pkg.price}</span>
+                                                                        <span className="text-xl font-black text-black">{formatUSD(pkg.price)}</span>
                                                                         <span>•</span>
                                                                         <span>{pkg.duration} minutos</span>
                                                                     </div>
@@ -889,7 +890,7 @@ export default function ClientBookingPage() {
                                                                             <Plus className="h-3 w-3" />
                                                                         </button>
                                                                     </div>
-                                                                    <span className="font-bold text-black">R$ {service.price * (service.quantity || 1)}</span>
+                                                                    <span className="font-bold text-black">{formatUSD(service.price * (service.quantity || 1))}</span>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -899,7 +900,7 @@ export default function ClientBookingPage() {
                                                     <div className="border-t border-gray-200 pt-4">
                                                         <div className="flex justify-between items-center mb-3">
                                                             <span className="text-sm font-medium text-gray-600">Subtotal:</span>
-                                                            <span className="font-bold text-black">R$ {calculateTotal()}</span>
+                                                            <span className="font-bold text-black">{formatUSD(calculateTotal())}</span>
                                                         </div>
                                                         <div className="flex justify-between items-center mb-4">
                                                             <span className="text-sm font-medium text-gray-600 flex items-center gap-1">
@@ -910,7 +911,7 @@ export default function ClientBookingPage() {
                                                         </div>
                                                         <div className="bg-black text-white p-3 rounded-lg text-center">
                                                             <div className="text-sm mb-1">Combo Total</div>
-                                                            <div className="text-2xl font-black">R$ {calculateTotal()}</div>
+                                                            <div className="text-2xl font-black">{formatUSD(calculateTotal())}</div>
                                                         </div>
                                                     </div>
                                                 </>
@@ -1110,7 +1111,7 @@ export default function ClientBookingPage() {
                                         {/* Total */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center">
                                             <div className="text-sm mb-1">Total Amount</div>
-                                            <div className="text-3xl font-black">R$ {calculateTotal()}</div>
+                                            <div className="text-3xl font-black">{formatUSD(calculateTotal())}</div>
                                         </div>
 
                                         {/* Additional Info */}
@@ -1250,8 +1251,8 @@ export default function ClientBookingPage() {
                                                 <div>
                                                     <h4 className="font-bold text-blue-900 mb-1">Como funciona o pagamento</h4>
                                                     <p className="text-sm text-blue-800">
-                                                        • You only pay <strong>R$ 5.00 as a booking fee</strong><br />
-                                                        • The remainder (R$ {calculateTotal() - 5}) will be paid directly at the branch<br />
+                                                        • You only pay <strong>{formatUSD(5)} as a booking fee</strong><br />
+                                                        • The remainder ({formatUSD(calculateTotal() - 5)}) will be paid directly at the branch<br />
                                                         • If you cancel more than 24h in advance, we refund the fee
                                                     </p>
                                                 </div>
@@ -1319,22 +1320,22 @@ export default function ClientBookingPage() {
                                         <div className="bg-gray-50 p-4 rounded-xl mb-6">
                                             <div className="flex justify-between items-center mb-2">
                                                 <span className="text-sm text-gray-600">Total service value:</span>
-                                                <span className="font-semibold">R$ {calculateTotal()}</span>
+                                                <span className="font-semibold">{formatUSD(calculateTotal())}</span>
                                             </div>
                                             <div className="flex justify-between items-center mb-2">
                                                 <span className="text-sm text-gray-600">Fee de booking:</span>
-                                                <span className="font-semibold">R$ 5,00</span>
+                                                <span className="font-semibold">{formatUSD(5)}</span>
                                             </div>
                                             <div className="flex justify-between items-center">
                                                 <span className="text-sm text-gray-600">Payment at the branch:</span>
-                                                <span className="font-semibold">R$ {calculateTotal() - 5}</span>
+                                                <span className="font-semibold">{formatUSD(calculateTotal() - 5)}</span>
                                             </div>
                                         </div>
 
                                         {/* Total to Pay Now */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center mb-6">
                                             <div className="text-sm mb-1">Pay Agora</div>
-                                            <div className="text-3xl font-black">R$ 5,00</div>
+                                            <div className="text-3xl font-black">{formatUSD(5)}</div>
                                             <div className="text-xs mt-1 opacity-75">Fee de booking</div>
                                         </div>
 
@@ -1365,8 +1366,8 @@ export default function ClientBookingPage() {
                                         }`}
                                 >
                                     <Shield className="h-4 sm:h-5 w-4 sm:w-5" />
-                                    <span className="hidden sm:inline">Confirmar e Pay R$ 5,00</span>
-                                    <span className="sm:hidden">Pay R$ 5,00</span>
+                                    <span className="hidden sm:inline">Confirmar e Pay {formatUSD(5)}</span>
+                                    <span className="sm:hidden">Pay {formatUSD(5)}</span>
                                 </button>
                             </div>
                         </div>

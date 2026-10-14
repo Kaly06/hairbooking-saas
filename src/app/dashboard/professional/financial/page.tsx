@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     DollarSign,
@@ -175,7 +176,7 @@ export default function ProfessionalFinancial() {
                         </div>
                         <div>
                             <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                            <p className="text-2xl font-bold text-gray-900">R$ {financialStats.totalRevenue.toLocaleString()}</p>
+                            <p className="text-2xl font-bold text-gray-900">{formatUSD(financialStats.totalRevenue.toLocaleString())}</p>
                             <div className="mt-2 bg-gray-200 rounded-full h-2">
                                 <div
                                     className="bg-green-600 h-2 rounded-full transition-all duration-300"
@@ -200,7 +201,7 @@ export default function ProfessionalFinancial() {
                         </div>
                         <div>
                             <p className="text-sm font-medium text-gray-600">Despesas Totais</p>
-                            <p className="text-2xl font-bold text-gray-900">R$ {financialStats.expenses.toLocaleString()}</p>
+                            <p className="text-2xl font-bold text-gray-900">{formatUSD(financialStats.expenses.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
                                 {((financialStats.expenses / financialStats.totalRevenue) * 100).toFixed(1)}% da receita
                             </p>
@@ -218,7 +219,7 @@ export default function ProfessionalFinancial() {
                         </div>
                         <div>
                             <p className="text-sm font-medium text-gray-600">Net Profit</p>
-                            <p className="text-2xl font-bold text-blue-600">R$ {financialStats.netProfit.toLocaleString()}</p>
+                            <p className="text-2xl font-bold text-blue-600">{formatUSD(financialStats.netProfit.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
                                 Margin: {financialStats.profitMargin.toFixed(1)}%
                             </p>
@@ -236,7 +237,7 @@ export default function ProfessionalFinancial() {
                         </div>
                         <div>
                             <p className="text-sm font-medium text-gray-600">Fluxo de Caixa</p>
-                            <p className="text-2xl font-bold text-purple-600">R$ {financialStats.cashFlow.toLocaleString()}</p>
+                            <p className="text-2xl font-bold text-purple-600">{formatUSD(financialStats.cashFlow.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
                                 Available balance
                             </p>
@@ -293,7 +294,7 @@ export default function ProfessionalFinancial() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-green-600">R$ {category.amount.toLocaleString()}</p>
+                                        <p className="font-semibold text-green-600">{formatUSD(category.amount.toLocaleString())}</p>
                                         <div className={`flex items-center ${category.change > 0 ? 'text-green-600' : 'text-red-600'}`}>
                                             {category.change > 0 ? <TrendingUp className="w-3 h-3 mr-1" /> : <TrendingDown className="w-3 h-3 mr-1" />}
                                             <span className="text-xs font-medium">{Math.abs(category.change)}%</span>
@@ -318,7 +319,7 @@ export default function ProfessionalFinancial() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-red-600">R$ {category.amount.toLocaleString()}</p>
+                                        <p className="font-semibold text-red-600">{formatUSD(category.amount.toLocaleString())}</p>
                                     </div>
                                 </div>
                             ))}
@@ -338,15 +339,15 @@ export default function ProfessionalFinancial() {
                                 </div>
                                 <div className="text-center">
                                     <p className="text-sm text-gray-600">Entrada</p>
-                                    <p className="font-semibold text-green-600">R$ {day.income}</p>
+                                    <p className="font-semibold text-green-600">{formatUSD(day.income)}</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-sm text-gray-600">Outflow</p>
-                                    <p className="font-semibold text-red-600">R$ {day.expenses}</p>
+                                    <p className="font-semibold text-red-600">{formatUSD(day.expenses)}</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-sm text-gray-600">Saldo</p>
-                                    <p className="font-semibold text-blue-600">R$ {day.balance}</p>
+                                    <p className="font-semibold text-blue-600">{formatUSD(day.balance)}</p>
                                 </div>
                             </div>
                         ))}
@@ -369,7 +370,7 @@ export default function ProfessionalFinancial() {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <p className="font-semibold text-gray-900">R$ {method.amount.toLocaleString()}</p>
+                                    <p className="font-semibold text-gray-900">{formatUSD(method.amount.toLocaleString())}</p>
                                     <p className="text-sm text-gray-600">{method.percentage}%</p>
                                 </div>
                             </div>
@@ -407,7 +408,7 @@ export default function ProfessionalFinancial() {
                                             {account.description}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                            R$ {account.amount.toLocaleString()}
+                                            {formatUSD(account.amount.toLocaleString())}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-600">
                                             {account.dueDate}

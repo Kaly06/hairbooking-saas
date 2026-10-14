@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Calendar,
@@ -243,7 +244,7 @@ export default function ProfessionalAppointments() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-xs font-medium text-gray-600 uppercase">Revenue</p>
-                                <p className="text-2xl font-semibold text-green-600">R$ {todayStats.revenue}</p>
+                                <p className="text-2xl font-semibold text-green-600">{formatUSD(todayStats.revenue)}</p>
                             </div>
                             <DollarSign className="w-8 h-8 text-green-600" />
                         </div>
@@ -379,7 +380,7 @@ export default function ProfessionalAppointments() {
                                                 </div>
                                                 <div className="flex items-center">
                                                     <DollarSign className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span className="font-medium text-green-600">R$ {appointment.price}</span>
+                                                    <span className="font-medium text-green-600">{formatUSD(appointment.price)}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Star className="w-4 h-4 mr-1 text-yellow-400 fill-current" />

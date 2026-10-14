@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Megaphone,
@@ -409,7 +410,7 @@ export default function ProfessionalMarketing() {
                                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                                                         <div>
                                                             <p className="text-gray-600">Budget</p>
-                                                            <p className="font-medium">R$ {campaign.budget}</p>
+                                                            <p className="font-medium">{formatUSD(campaign.budget)}</p>
                                                             <div className="mt-1 bg-gray-200 rounded-full h-2">
                                                                 <div
                                                                     className="bg-blue-600 h-2 rounded-full"

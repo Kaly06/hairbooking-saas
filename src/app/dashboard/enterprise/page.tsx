@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Calendar,
@@ -24,7 +25,7 @@ export default function EnterpriseDashboard() {
     const globalStats = [
         {
             name: "Total Revenue",
-            value: "R$ 87.450",
+            value: "$14,575",
             change: "+23.1%",
             changeType: "increase" as const,
             icon: DollarSign,
@@ -73,11 +74,11 @@ export default function EnterpriseDashboard() {
     ];
 
     const unitsData = [
-        { name: "Downtown Branch", revenue: "R$ 23.450", clients: 487, appointments: 45, growth: "+15%" },
-        { name: "Shopping Branch", revenue: "R$ 19.230", clients: 398, appointments: 38, growth: "+22%" },
-        { name: "Branch Bela Vista", revenue: "R$ 16.890", clients: 356, appointments: 32, growth: "+8%" },
-        { name: "Branch Vila Madalena", revenue: "R$ 14.320", clients: 289, appointments: 28, growth: "+18%" },
-        { name: "Branch Moema", revenue: "R$ 13.560", clients: 267, appointments: 13, growth: "+12%" }
+        { name: "Downtown Branch", revenue: "$3,908", clients: 487, appointments: 45, growth: "+15%" },
+        { name: "Shopping Branch", revenue: "$3,205", clients: 398, appointments: 38, growth: "+22%" },
+        { name: "Branch Bela Vista", revenue: "$2,815", clients: 356, appointments: 32, growth: "+8%" },
+        { name: "Branch Vila Madalena", revenue: "$2,387", clients: 289, appointments: 28, growth: "+18%" },
+        { name: "Branch Moema", revenue: "$2,260", clients: 267, appointments: 13, growth: "+12%" }
     ];
 
     const securityAlerts = [
@@ -319,7 +320,7 @@ export default function EnterpriseDashboard() {
                             </div>
                             <div className="flex justify-between items-center">
                                 <span className="text-sm text-gray-600">Average Ticket</span>
-                                <span className="text-sm font-medium text-blue-600">R$ 127</span>
+                                <span className="text-sm font-medium text-blue-600">{formatUSD(127)}</span>
                             </div>
                             <div className="flex justify-between items-center">
                                 <span className="text-sm text-gray-600">Retention</span>

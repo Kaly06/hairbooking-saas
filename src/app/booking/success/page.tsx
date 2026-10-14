@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     CheckCircle,
@@ -178,7 +179,7 @@ export default function BookingSuccessPage() {
                                                         <p className="text-sm text-gray-600">{service.duration} min</p>
                                                     </div>
                                                 </div>
-                                                <span className="font-medium text-gray-900">R$ {service.price}</span>
+                                                <span className="font-medium text-gray-900">{formatUSD(service.price)}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -189,15 +190,15 @@ export default function BookingSuccessPage() {
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Subtotal:</span>
-                                            <span>R$ {booking.total - 2.5}</span>
+                                            <span>{formatUSD(booking.total - 2.5)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Service fee:</span>
-                                            <span>R$ 2,50</span>
+                                            <span>{formatUSD(2.5)}</span>
                                         </div>
                                         <div className="border-t pt-2 flex justify-between font-bold">
                                             <span>Total Paid:</span>
-                                            <span className="text-green-600">R$ {booking.total}</span>
+                                            <span className="text-green-600">{formatUSD(booking.total)}</span>
                                         </div>
                                         <div className="text-sm text-gray-600 mt-2">
                                             <span>Forma de pagamento: {booking.paymentMethod}</span>

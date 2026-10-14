@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     BarChart3,
@@ -104,7 +105,7 @@ export default function StarterReports() {
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Revenue</p>
                                 <p className="text-2xl font-semibold text-gray-900">
-                                    R$ {monthlyData.revenue.toLocaleString('en-US')}
+                                    {formatUSD(monthlyData.revenue.toLocaleString('en-US'))}
                                 </p>
                                 <div className="flex items-center mt-1">
                                     <TrendingUp className={`w-4 h-4 mr-1 ${revenueGrowth.isPositive ? 'text-green-600' : 'text-red-600'}`} />
@@ -160,7 +161,7 @@ export default function StarterReports() {
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Average Ticket</p>
                                 <p className="text-2xl font-semibold text-gray-900">
-                                    R$ {monthlyData.averageTicket.toFixed(2)}
+                                    {formatUSD(monthlyData.averageTicket.toFixed(2))}
                                 </p>
                                 <div className="flex items-center mt-1">
                                     <TrendingUp className={`w-4 h-4 mr-1 ${ticketGrowth.isPositive ? 'text-green-600' : 'text-red-600'}`} />
@@ -216,7 +217,7 @@ export default function StarterReports() {
                                     </div>
                                     <div className="text-right">
                                         <p className="text-sm font-medium text-gray-900">
-                                            R$ {service.revenue.toLocaleString('en-US')}
+                                            {formatUSD(service.revenue.toLocaleString('en-US'))}
                                         </p>
                                         <p className="text-xs text-gray-500">{service.percentage}%</p>
                                     </div>
@@ -262,7 +263,7 @@ export default function StarterReports() {
                                                 {professional.appointments}
                                             </td>
                                             <td className="py-4 px-4 text-sm font-medium text-green-600">
-                                                R$ {professional.revenue.toLocaleString('en-US')}
+                                                {formatUSD(professional.revenue.toLocaleString('en-US'))}
                                             </td>
                                             <td className="py-4 px-4">
                                                 <div className="flex items-center">
@@ -271,7 +272,7 @@ export default function StarterReports() {
                                                 </div>
                                             </td>
                                             <td className="py-4 px-4 text-sm text-gray-900">
-                                                R$ {(professional.revenue / professional.appointments).toFixed(2)}
+                                                {formatUSD((professional.revenue / professional.appointments).toFixed(2))}
                                             </td>
                                         </tr>
                                     ))}

@@ -33,7 +33,7 @@ export default function StarterDashboard() {
         },
         {
             name: "Monthly Revenue",
-            value: "R$ 8.450",
+            value: "$1,408",
             change: "+12.3%",
             changeType: "increase" as const,
             icon: DollarSign,

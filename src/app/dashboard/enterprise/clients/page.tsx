@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, UserPlus, Star, TrendingUp, Search, Filter, Mail, Phone, Calendar, DollarSign, Building } from "lucide-react";
@@ -65,7 +66,7 @@ export default function EnterpriseClientsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Average Ticket</p>
-                                    <p className="text-2xl font-bold text-green-600">R$ 127</p>
+                                    <p className="text-2xl font-bold text-green-600">{formatUSD(127)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+8.2%</span>
@@ -270,7 +271,7 @@ export default function EnterpriseClientsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-purple-600">R$ 2.450</p>
+                                        <p className="font-semibold text-purple-600">{formatUSD(2450)}</p>
                                         <p className="text-sm text-gray-600">Gasto total</p>
                                         <p className="text-sm text-gray-600">28 visitas</p>
                                     </div>
@@ -308,7 +309,7 @@ export default function EnterpriseClientsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-gray-900">R$ 890</p>
+                                        <p className="font-semibold text-gray-900">{formatUSD(890)}</p>
                                         <p className="text-sm text-gray-600">Gasto total</p>
                                         <p className="text-sm text-gray-600">15 visitas</p>
                                     </div>
@@ -346,7 +347,7 @@ export default function EnterpriseClientsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-gray-900">R$ 320</p>
+                                        <p className="font-semibold text-gray-900">{formatUSD(320)}</p>
                                         <p className="text-sm text-gray-600">Gasto total</p>
                                         <p className="text-sm text-gray-600">6 visitas</p>
                                     </div>
@@ -384,7 +385,7 @@ export default function EnterpriseClientsPage() {
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-semibold text-red-600">R$ 180</p>
+                                        <p className="font-semibold text-red-600">{formatUSD(180)}</p>
                                         <p className="text-sm text-gray-600">Gasto total</p>
                                         <p className="text-sm text-gray-600">3 visitas</p>
                                         <p className="text-xs text-red-600">Inactive for 67 days</p>

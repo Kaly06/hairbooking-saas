@@ -58,9 +58,7 @@ export default function EnterpriseSettingsPage() {
                                 <div className="p-3 bg-gray-50 rounded-lg">
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Default Currency</label>
                                     <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
-                                        <option>BRL - Real Brasileiro</option>
                                         <option>USD - US Dollar</option>
-                                        <option>EUR - Euro</option>
                                     </select>
                                 </div>
                             </div>

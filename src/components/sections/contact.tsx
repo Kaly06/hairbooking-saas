@@ -29,9 +29,9 @@ export default function Contact() {
     };
 
     const plans = [
-        { id: "starter", name: "Starter - R$ 97/month" },
-        { id: "professional", name: "Professional - R$ 197/month" },
-        { id: "enterprise", name: "Enterprise - R$ 397/month" },
+        { id: "starter", name: "Starter - $16/month" },
+        { id: "professional", name: "Professional - $33/month" },
+        { id: "enterprise", name: "Enterprise - $66/month" },
         { id: "custom", name: "Custom Plan" }
     ];
 

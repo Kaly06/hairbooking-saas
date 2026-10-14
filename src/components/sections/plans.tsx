@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { Check } from "lucide-react";
 import Link from "next/link";
 
@@ -55,7 +56,7 @@ export default function Plans() {
                                     {plan.name}
                                 </h3>
                                 <div className="text-2xl font-bold text-gray-900">
-                                    R$ {plan.price}<span className="text-sm text-gray-500">/month</span>
+                                    {formatUSD(plan.price)}<span className="text-sm text-gray-500">/month</span>
                                 </div>
                             </div>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building, Users, Calendar, DollarSign, TrendingUp, MapPin, Plus, Settings, BarChart3, Eye } from "lucide-react";
@@ -80,7 +81,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Monthly Revenue</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 485K</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(485000)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+12.5%</span>
@@ -126,7 +127,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
                                     <span>Monthly Revenue:</span>
-                                    <span className="font-medium text-green-600">R$ 45.2K</span>
+                                    <span className="font-medium text-green-600">{formatUSD(45200)}</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
                                     <span>Occupancy Rate:</span>
@@ -180,7 +181,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
                                     <span>Monthly Revenue:</span>
-                                    <span className="font-medium text-green-600">R$ 68.5K</span>
+                                    <span className="font-medium text-green-600">{formatUSD(68500)}</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
                                     <span>Occupancy Rate:</span>
@@ -234,7 +235,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
                                     <span>Monthly Revenue:</span>
-                                    <span className="font-medium text-green-600">R$ 28.8K</span>
+                                    <span className="font-medium text-green-600">{formatUSD(28800)}</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
                                     <span>Occupancy Rate:</span>
@@ -279,7 +280,7 @@ export default function EnterpriseUnitsPage() {
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-green-500 h-3 rounded-full" style={{ width: '100%' }}></div>
                                             </div>
-                                            <span className="text-sm font-medium min-w-[80px] text-right">R$ 68.5K</span>
+                                            <span className="text-sm font-medium min-w-[80px] text-right">{formatUSD(68500)}</span>
                                         </div>
                                     </div>
 
@@ -289,7 +290,7 @@ export default function EnterpriseUnitsPage() {
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-blue-500 h-3 rounded-full" style={{ width: '66%' }}></div>
                                             </div>
-                                            <span className="text-sm font-medium min-w-[80px] text-right">R$ 45.2K</span>
+                                            <span className="text-sm font-medium min-w-[80px] text-right">{formatUSD(45200)}</span>
                                         </div>
                                     </div>
 
@@ -299,7 +300,7 @@ export default function EnterpriseUnitsPage() {
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-yellow-500 h-3 rounded-full" style={{ width: '42%' }}></div>
                                             </div>
-                                            <span className="text-sm font-medium min-w-[80px] text-right">R$ 28.8K</span>
+                                            <span className="text-sm font-medium min-w-[80px] text-right">{formatUSD(28800)}</span>
                                         </div>
                                     </div>
                                 </div>

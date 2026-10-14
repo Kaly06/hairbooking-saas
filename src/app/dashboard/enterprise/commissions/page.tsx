@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Trophy, TrendingUp, DollarSign, Award, BarChart3, Star, Target, Calendar, Settings } from "lucide-react";
@@ -32,7 +33,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Commissions Pagas</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 89.2K</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(89200)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+15.8% vs last month</span>
@@ -86,7 +87,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Top Performer</p>
-                                    <p className="text-2xl font-bold text-orange-600">R$ 8.5K</p>
+                                    <p className="text-2xl font-bold text-orange-600">{formatUSD(8500)}</p>
                                     <div className="flex items-center mt-1">
                                         <Star className="h-3 w-3 text-orange-500 mr-1" />
                                         <span className="text-sm text-orange-600">Marina Silva</span>
@@ -122,7 +123,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <p className="font-bold text-yellow-900">R$ 8.532</p>
+                                    <p className="font-bold text-yellow-900">{formatUSD(8532)}</p>
                                     <p className="text-sm text-yellow-700">147 services • 22.5%</p>
                                 </div>
                             </div>
@@ -139,7 +140,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <p className="font-bold text-gray-900">R$ 7.284</p>
+                                    <p className="font-bold text-gray-900">{formatUSD(7284)}</p>
                                     <p className="text-sm text-gray-700">129 services • 19.8%</p>
                                 </div>
                             </div>
@@ -156,7 +157,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <p className="font-bold text-orange-900">R$ 6.947</p>
+                                    <p className="font-bold text-orange-900">{formatUSD(6947)}</p>
                                     <p className="text-sm text-orange-700">118 services • 21.2%</p>
                                 </div>
                             </div>
@@ -183,7 +184,7 @@ export default function EnterpriseCommissionsPage() {
                                             </div>
                                         </div>
                                         <div className="text-right">
-                                            <p className="font-bold text-gray-900">R$ {professional.commission}</p>
+                                            <p className="font-bold text-gray-900">{formatUSD(professional.commission)}</p>
                                             <p className="text-sm text-gray-600">{professional.services} services • {professional.rate}</p>
                                         </div>
                                     </div>
@@ -212,15 +213,15 @@ export default function EnterpriseCommissionsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-blue-700">R$ 0 - R$ 3.000:</span>
+                                        <span className="text-blue-700">{formatUSD(0)} - {formatUSD(3000)}:</span>
                                         <span className="font-medium text-blue-900">15%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-blue-700">R$ 3.001 - R$ 6.000:</span>
+                                        <span className="text-blue-700">{formatUSD(3001)} - {formatUSD(6000)}:</span>
                                         <span className="font-medium text-blue-900">18%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-blue-700">Acima de R$ 6.000:</span>
+                                        <span className="text-blue-700">Acima de {formatUSD(6000)}:</span>
                                         <span className="font-medium text-blue-900">20%</span>
                                     </div>
                                 </div>
@@ -234,15 +235,15 @@ export default function EnterpriseCommissionsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-green-700">R$ 0 - R$ 4.000:</span>
+                                        <span className="text-green-700">{formatUSD(0)} - {formatUSD(4000)}:</span>
                                         <span className="font-medium text-green-900">18%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-green-700">R$ 4.001 - R$ 8.000:</span>
+                                        <span className="text-green-700">{formatUSD(4001)} - {formatUSD(8000)}:</span>
                                         <span className="font-medium text-green-900">22%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-green-700">Acima de R$ 8.000:</span>
+                                        <span className="text-green-700">Acima de {formatUSD(8000)}:</span>
                                         <span className="font-medium text-green-900">25%</span>
                                     </div>
                                 </div>
@@ -256,15 +257,15 @@ export default function EnterpriseCommissionsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-purple-700">R$ 0 - R$ 5.000:</span>
+                                        <span className="text-purple-700">{formatUSD(0)} - {formatUSD(5000)}:</span>
                                         <span className="font-medium text-purple-900">20%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-purple-700">R$ 5.001 - R$ 10.000:</span>
+                                        <span className="text-purple-700">{formatUSD(5001)} - {formatUSD(10000)}:</span>
                                         <span className="font-medium text-purple-900">25%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-purple-700">Acima de R$ 10.000:</span>
+                                        <span className="text-purple-700">Acima de {formatUSD(10000)}:</span>
                                         <span className="font-medium text-purple-900">30%</span>
                                     </div>
                                 </div>
@@ -293,7 +294,7 @@ export default function EnterpriseCommissionsPage() {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <p className="text-sm text-blue-700">Commissions Pagas:</p>
-                                        <p className="font-bold text-blue-900">R$ 42.8K</p>
+                                        <p className="font-bold text-blue-900">{formatUSD(42800)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-blue-700">Professionals:</p>
@@ -301,7 +302,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-blue-700">Individual Average:</p>
-                                        <p className="font-bold text-blue-900">R$ 2.378</p>
+                                        <p className="font-bold text-blue-900">{formatUSD(2378)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-blue-700">Average Fee:</p>
@@ -319,7 +320,7 @@ export default function EnterpriseCommissionsPage() {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <p className="text-sm text-green-700">Commissions Pagas:</p>
-                                        <p className="font-bold text-green-900">R$ 28.7K</p>
+                                        <p className="font-bold text-green-900">{formatUSD(28700)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-green-700">Professionals:</p>
@@ -327,7 +328,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-green-700">Individual Average:</p>
-                                        <p className="font-bold text-green-900">R$ 1.913</p>
+                                        <p className="font-bold text-green-900">{formatUSD(1913)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-green-700">Average Fee:</p>
@@ -345,7 +346,7 @@ export default function EnterpriseCommissionsPage() {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <p className="text-sm text-orange-700">Commissions Pagas:</p>
-                                        <p className="font-bold text-orange-900">R$ 17.7K</p>
+                                        <p className="font-bold text-orange-900">{formatUSD(17700)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-orange-700">Professionals:</p>
@@ -353,7 +354,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-orange-700">Individual Average:</p>
-                                        <p className="font-bold text-orange-900">R$ 1.264</p>
+                                        <p className="font-bold text-orange-900">{formatUSD(1264)}</p>
                                     </div>
                                     <div>
                                         <p className="text-sm text-orange-700">Average Fee:</p>
@@ -384,11 +385,11 @@ export default function EnterpriseCommissionsPage() {
                             </div>
                             <div className="grid grid-cols-3 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
-                                    <p className="text-lg font-bold text-blue-600">R$ 89K</p>
+                                    <p className="text-lg font-bold text-blue-600">{formatUSD(89000)}</p>
                                     <p className="text-xs text-gray-600">Novembro</p>
                                 </div>
                                 <div className="text-center p-3 bg-green-50 rounded-lg">
-                                    <p className="text-lg font-bold text-green-600">R$ 77K</p>
+                                    <p className="text-lg font-bold text-green-600">{formatUSD(77000)}</p>
                                     <p className="text-xs text-gray-600">Outubro</p>
                                 </div>
                                 <div className="text-center p-3 bg-purple-50 rounded-lg">
@@ -415,7 +416,7 @@ export default function EnterpriseCommissionsPage() {
                                         <h4 className="font-semibold text-green-900">Meta Mensal</h4>
                                         <span className="text-xs bg-green-500 text-white px-2 py-1 rounded-full">Active</span>
                                     </div>
-                                    <p className="text-sm text-green-700 mb-3">R$ 500 bonus for anyone reaching R$ 8,000 in commissions</p>
+                                    <p className="text-sm text-green-700 mb-3">{formatUSD(500)} bonus for anyone reaching {formatUSD(8)} in commissions</p>
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Eligible:</span>
@@ -453,15 +454,15 @@ export default function EnterpriseCommissionsPage() {
                                         <h4 className="font-semibold text-purple-900">Meta de Team</h4>
                                         <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded-full">87%</span>
                                     </div>
-                                    <p className="text-sm text-purple-700 mb-3">R$ 100K in commissions = team celebration</p>
+                                    <p className="text-sm text-purple-700 mb-3">{formatUSD(100000)} in commissions = team celebration</p>
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Meta:</span>
-                                            <span className="font-medium">R$ 100.000</span>
+                                            <span className="font-medium">{formatUSD(100000)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Atual:</span>
-                                            <span className="font-medium text-purple-600">R$ 87.200</span>
+                                            <span className="font-medium text-purple-600">{formatUSD(87200)}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -484,19 +485,19 @@ export default function EnterpriseCommissionsPage() {
                                 <h4 className="font-semibold text-gray-900">Distribution by Tier</h4>
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg">
-                                        <span className="text-sm font-medium text-red-800">R$ 0 - R$ 2.000</span>
+                                        <span className="text-sm font-medium text-red-800">{formatUSD(0)} - {formatUSD(2000)}</span>
                                         <span className="font-bold text-red-600">12 profissionais</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-yellow-50 rounded-lg">
-                                        <span className="text-sm font-medium text-yellow-800">R$ 2.001 - R$ 5.000</span>
+                                        <span className="text-sm font-medium text-yellow-800">{formatUSD(2001)} - {formatUSD(5000)}</span>
                                         <span className="font-bold text-yellow-600">18 profissionais</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                                        <span className="text-sm font-medium text-green-800">R$ 5.001 - R$ 8.000</span>
+                                        <span className="text-sm font-medium text-green-800">{formatUSD(5001)} - {formatUSD(8000)}</span>
                                         <span className="font-bold text-green-600">12 profissionais</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                                        <span className="text-sm font-medium text-blue-800">Acima de R$ 8.000</span>
+                                        <span className="text-sm font-medium text-blue-800">Acima de {formatUSD(8000)}</span>
                                         <span className="font-bold text-blue-600">5 profissionais</span>
                                     </div>
                                 </div>
@@ -532,7 +533,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">Mentoria New Professionals</p>
-                                        <p className="text-xs text-blue-600">6 profissionais abaixo de R$ 1.500</p>
+                                        <p className="text-xs text-blue-600">6 profissionais abaixo de {formatUSD(1500)}</p>
                                     </div>
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                         <p className="text-sm font-medium text-green-800">Programa de Reconhecimento</p>

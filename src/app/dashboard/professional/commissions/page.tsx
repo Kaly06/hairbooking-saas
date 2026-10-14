@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     CreditCard,
@@ -199,7 +200,7 @@ export default function ProfessionalCommissions() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Total Commissions</p>
-                                <p className="text-2xl font-bold text-gray-900">R$ {commissionStats.totalCommissions.toLocaleString()}</p>
+                                <p className="text-2xl font-bold text-gray-900">{formatUSD(commissionStats.totalCommissions.toLocaleString())}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
                                     <span className="text-sm font-medium text-green-600">+12% vs last month</span>
@@ -215,7 +216,7 @@ export default function ProfessionalCommissions() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Pending Payment</p>
-                                <p className="text-2xl font-bold text-yellow-600">R$ {commissionStats.pendingPayment.toLocaleString()}</p>
+                                <p className="text-2xl font-bold text-yellow-600">{formatUSD(commissionStats.pendingPayment.toLocaleString())}</p>
                                 <p className="text-sm text-gray-600 mt-2">2 profissionais</p>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-lg">
@@ -228,7 +229,7 @@ export default function ProfessionalCommissions() {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Pago This Month</p>
-                                <p className="text-2xl font-bold text-green-600">R$ {commissionStats.paidThisMonth.toLocaleString()}</p>
+                                <p className="text-2xl font-bold text-green-600">{formatUSD(commissionStats.paidThisMonth.toLocaleString())}</p>
                                 <p className="text-sm text-gray-600 mt-2">1 profissional</p>
                             </div>
                             <div className="p-3 bg-green-100 rounded-lg">
@@ -313,11 +314,11 @@ export default function ProfessionalCommissions() {
                                                 </div>
                                                 <div>
                                                     <p className="text-sm text-gray-600">Revenue</p>
-                                                    <p className="text-lg font-semibold text-gray-900">R$ {professional.thisMonth.revenue.toLocaleString()}</p>
+                                                    <p className="text-lg font-semibold text-gray-900">{formatUSD(professional.thisMonth.revenue.toLocaleString())}</p>
                                                 </div>
                                                 <div>
                                                     <p className="text-sm text-gray-600">Commission</p>
-                                                    <p className="text-lg font-semibold text-green-600">R$ {professional.thisMonth.commission.toLocaleString()}</p>
+                                                    <p className="text-lg font-semibold text-green-600">{formatUSD(professional.thisMonth.commission.toLocaleString())}</p>
                                                 </div>
                                                 <div>
                                                     <p className="text-sm text-gray-600">Bookings</p>
@@ -329,7 +330,7 @@ export default function ProfessionalCommissions() {
                                                 <div className="flex items-center">
                                                     <DollarSign className="w-4 h-4 mr-2 text-gray-400" />
                                                     <span className="text-gray-600">Average ticket: </span>
-                                                    <span className="font-medium text-gray-900 ml-1">R$ {professional.averageTicket.toFixed(2)}</span>
+                                                    <span className="font-medium text-gray-900 ml-1">{formatUSD(professional.averageTicket.toFixed(2))}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Award className="w-4 h-4 mr-2 text-gray-400" />
@@ -339,7 +340,7 @@ export default function ProfessionalCommissions() {
                                                 <div className="flex items-center">
                                                     <Calendar className="w-4 h-4 mr-2 text-gray-400" />
                                                     <span className="text-gray-600">Total earned: </span>
-                                                    <span className="font-medium text-gray-900 ml-1">R$ {professional.totalEarned.toLocaleString()}</span>
+                                                    <span className="font-medium text-gray-900 ml-1">{formatUSD(professional.totalEarned.toLocaleString())}</span>
                                                 </div>
                                             </div>
 
@@ -388,11 +389,11 @@ export default function ProfessionalCommissions() {
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between">
                                         <span className="text-sm text-gray-600">Meta Mensal</span>
-                                        <span className="font-medium text-gray-900">R$ {target.monthlyTarget.toLocaleString()}</span>
+                                        <span className="font-medium text-gray-900">{formatUSD(target.monthlyTarget.toLocaleString())}</span>
                                     </div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-sm text-gray-600">Atual</span>
-                                        <span className="font-medium text-green-600">R$ {target.current.toLocaleString()}</span>
+                                        <span className="font-medium text-green-600">{formatUSD(target.current.toLocaleString())}</span>
                                     </div>
                                     <div>
                                         <div className="flex items-center justify-between mb-2">
@@ -443,13 +444,13 @@ export default function ProfessionalCommissions() {
                                             {record.period}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            R$ {record.revenue.toLocaleString()}
+                                            {formatUSD(record.revenue.toLocaleString())}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {record.rate}%
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm font-medium text-green-600">
-                                            R$ {record.commission.toLocaleString()}
+                                            {formatUSD(record.commission.toLocaleString())}
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap">
                                             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getStatusColor(record.status)}`}>

@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, TrendingUp, TrendingDown, Building, PieChart, BarChart3, CreditCard, Banknote, Calendar, Download } from "lucide-react";
@@ -32,7 +33,7 @@ export default function EnterpriseFinancialPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 485.2K</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(485200)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+12.5% vs last month</span>
@@ -50,7 +51,7 @@ export default function EnterpriseFinancialPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Custos Operacionais</p>
-                                    <p className="text-2xl font-bold text-gray-900">R$ 187.8K</p>
+                                    <p className="text-2xl font-bold text-gray-900">{formatUSD(187800)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-red-500 mr-1" />
                                         <span className="text-sm text-red-600">+3.2% vs last month</span>
@@ -68,7 +69,7 @@ export default function EnterpriseFinancialPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Net Profit</p>
-                                    <p className="text-2xl font-bold text-purple-600">R$ 297.4K</p>
+                                    <p className="text-2xl font-bold text-purple-600">{formatUSD(297400)}</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
                                         <span className="text-sm text-green-600">+18.7% vs last month</span>
@@ -119,15 +120,15 @@ export default function EnterpriseFinancialPage() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between">
                                         <span className="text-sm text-blue-700">Revenue:</span>
-                                        <span className="font-semibold text-blue-900">R$ 198.5K</span>
+                                        <span className="font-semibold text-blue-900">{formatUSD(198500)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-blue-700">Custos:</span>
-                                        <span className="font-semibold text-blue-900">R$ 67.2K</span>
+                                        <span className="font-semibold text-blue-900">{formatUSD(67200)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-blue-700">Lucro:</span>
-                                        <span className="font-semibold text-green-600">R$ 131.3K</span>
+                                        <span className="font-semibold text-green-600">{formatUSD(131300)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-blue-700">Margin:</span>
@@ -145,15 +146,15 @@ export default function EnterpriseFinancialPage() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between">
                                         <span className="text-sm text-green-700">Revenue:</span>
-                                        <span className="font-semibold text-green-900">R$ 156.3K</span>
+                                        <span className="font-semibold text-green-900">{formatUSD(156300)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-green-700">Custos:</span>
-                                        <span className="font-semibold text-green-900">R$ 62.1K</span>
+                                        <span className="font-semibold text-green-900">{formatUSD(62100)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-green-700">Lucro:</span>
-                                        <span className="font-semibold text-green-600">R$ 94.2K</span>
+                                        <span className="font-semibold text-green-600">{formatUSD(94200)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-green-700">Margin:</span>
@@ -171,15 +172,15 @@ export default function EnterpriseFinancialPage() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between">
                                         <span className="text-sm text-orange-700">Revenue:</span>
-                                        <span className="font-semibold text-orange-900">R$ 130.4K</span>
+                                        <span className="font-semibold text-orange-900">{formatUSD(130400)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-orange-700">Custos:</span>
-                                        <span className="font-semibold text-orange-900">R$ 58.5K</span>
+                                        <span className="font-semibold text-orange-900">{formatUSD(58500)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-orange-700">Lucro:</span>
-                                        <span className="font-semibold text-green-600">R$ 71.9K</span>
+                                        <span className="font-semibold text-green-600">{formatUSD(71900)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-sm text-orange-700">Margin:</span>
@@ -210,15 +211,15 @@ export default function EnterpriseFinancialPage() {
                             </div>
                             <div className="grid grid-cols-3 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
-                                    <p className="text-lg font-bold text-blue-600">R$ 485K</p>
+                                    <p className="text-lg font-bold text-blue-600">{formatUSD(485000)}</p>
                                     <p className="text-xs text-gray-600">This Month</p>
                                 </div>
                                 <div className="text-center p-3 bg-green-50 rounded-lg">
-                                    <p className="text-lg font-bold text-green-600">R$ 431K</p>
+                                    <p className="text-lg font-bold text-green-600">{formatUSD(431000)}</p>
                                     <p className="text-xs text-gray-600">Previous Month</p>
                                 </div>
                                 <div className="text-center p-3 bg-purple-50 rounded-lg">
-                                    <p className="text-lg font-bold text-purple-600">R$ 2.4M</p>
+                                    <p className="text-lg font-bold text-purple-600">{formatUSD(2400000)}</p>
                                     <p className="text-xs text-gray-600">Semestre</p>
                                 </div>
                             </div>
@@ -294,7 +295,7 @@ export default function EnterpriseFinancialPage() {
                                             <p className="text-sm text-blue-600">45.2% of transactions</p>
                                         </div>
                                     </div>
-                                    <span className="font-bold text-blue-900">R$ 219.4K</span>
+                                    <span className="font-bold text-blue-900">{formatUSD(219400)}</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
@@ -305,7 +306,7 @@ export default function EnterpriseFinancialPage() {
                                             <p className="text-sm text-green-600">32.8% of transactions</p>
                                         </div>
                                     </div>
-                                    <span className="font-bold text-green-900">R$ 159.1K</span>
+                                    <span className="font-bold text-green-900">{formatUSD(159100)}</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
@@ -316,7 +317,7 @@ export default function EnterpriseFinancialPage() {
                                             <p className="text-sm text-purple-600">15.7% of transactions</p>
                                         </div>
                                     </div>
-                                    <span className="font-bold text-purple-900">R$ 76.2K</span>
+                                    <span className="font-bold text-purple-900">{formatUSD(76200)}</span>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
@@ -327,7 +328,7 @@ export default function EnterpriseFinancialPage() {
                                             <p className="text-sm text-orange-600">6.3% of transactions</p>
                                         </div>
                                     </div>
-                                    <span className="font-bold text-orange-900">R$ 30.5K</span>
+                                    <span className="font-bold text-orange-900">{formatUSD(30500)}</span>
                                 </div>
                             </div>
                         </CardContent>
@@ -346,7 +347,7 @@ export default function EnterpriseFinancialPage() {
                                 <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                     <div className="flex justify-between items-center">
                                         <span className="font-medium text-green-900">Entradas Previstas</span>
-                                        <span className="font-bold text-green-600">R$ 526.8K</span>
+                                        <span className="font-bold text-green-600">{formatUSD(526800)}</span>
                                     </div>
                                     <p className="text-sm text-green-600 mt-1">Receitas confirmadas e estimadas</p>
                                 </div>
@@ -354,7 +355,7 @@ export default function EnterpriseFinancialPage() {
                                 <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
                                     <div className="flex justify-between items-center">
                                         <span className="font-medium text-red-900">Expected Outflows</span>
-                                        <span className="font-bold text-red-600">R$ 195.3K</span>
+                                        <span className="font-bold text-red-600">{formatUSD(195300)}</span>
                                     </div>
                                     <p className="text-sm text-red-600 mt-1">Folha, aluguel e fornecedores</p>
                                 </div>
@@ -362,7 +363,7 @@ export default function EnterpriseFinancialPage() {
                                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                     <div className="flex justify-between items-center">
                                         <span className="font-medium text-blue-900">Saldo Projetado</span>
-                                        <span className="font-bold text-blue-600">R$ 331.5K</span>
+                                        <span className="font-bold text-blue-600">{formatUSD(331500)}</span>
                                     </div>
                                     <p className="text-sm text-blue-600 mt-1">Projected net result</p>
                                 </div>
@@ -372,15 +373,15 @@ export default function EnterpriseFinancialPage() {
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Folha de Payment (05/11)</span>
-                                            <span className="font-medium">R$ 89.2K</span>
+                                            <span className="font-medium">{formatUSD(89200)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Aluguel Branches (10/11)</span>
-                                            <span className="font-medium">R$ 45.6K</span>
+                                            <span className="font-medium">{formatUSD(45600)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Fornecedores (15/11)</span>
-                                            <span className="font-medium">R$ 28.4K</span>
+                                            <span className="font-medium">{formatUSD(28400)}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -408,11 +409,11 @@ export default function EnterpriseFinancialPage() {
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                                         <span className="text-sm font-medium">EBITDA</span>
-                                        <span className="font-bold text-purple-600">R$ 342.1K</span>
+                                        <span className="font-bold text-purple-600">{formatUSD(342100)}</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                                         <span className="text-sm font-medium">Fluxo de Caixa Operacional</span>
-                                        <span className="font-bold text-blue-600">R$ 298.5K</span>
+                                        <span className="font-bold text-blue-600">{formatUSD(298500)}</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                                         <span className="text-sm font-medium">Crescimento MoM</span>
@@ -430,7 +431,7 @@ export default function EnterpriseFinancialPage() {
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">Expandir Time Shopping Branch</p>
-                                        <p className="text-xs text-blue-600">High demand - potential +R$ 45K/month</p>
+                                        <p className="text-xs text-blue-600">High demand - potential +{formatUSD(45000)}/month</p>
                                     </div>
                                     <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
                                         <p className="text-sm font-medium text-purple-800">Implementar Programa Fidelidade</p>

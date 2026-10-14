@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Calendar,
@@ -39,7 +40,7 @@ export default function ProfessionalDashboard() {
         },
         {
             name: "Monthly Revenue",
-            value: "R$ 18.750",
+            value: "$3,125",
             change: "+18.3%",
             changeType: "increase" as const,
             icon: DollarSign,
@@ -55,7 +56,7 @@ export default function ProfessionalDashboard() {
         },
         {
             name: "Commissions",
-            value: "R$ 3.250",
+            value: "$542",
             change: "+9.1%",
             changeType: "increase" as const,
             icon: CreditCard,
@@ -72,11 +73,11 @@ export default function ProfessionalDashboard() {
     ];
 
     const recentAppointments = [
-        { id: 1, client: "Maria Silva", service: "Haircut + Escova + Coloring", time: "09:00", value: "R$ 180", status: "completed", professional: "Ana" },
-        { id: 2, client: "João Santos", service: "Men's Haircut Premium", time: "10:30", value: "R$ 65", status: "completed", professional: "Carlos" },
-        { id: 3, client: "Ana Costa", service: "Coloring + Tratamento", time: "14:00", value: "R$ 220", status: "confirmed", professional: "Maria" },
-        { id: 4, client: "Pedro Lima", service: "Barba + Haircut", time: "15:30", value: "R$ 85", status: "pending", professional: "Carlos" },
-        { id: 5, client: "Carla Souza", service: "Hair Treatment Premium", time: "16:00", value: "R$ 120", status: "confirmed", professional: "Ana" }
+        { id: 1, client: "Maria Silva", service: "Haircut + Escova + Coloring", time: "09:00", value: "$30", status: "completed", professional: "Ana" },
+        { id: 2, client: "João Santos", service: "Men's Haircut Premium", time: "10:30", value: "$11", status: "completed", professional: "Carlos" },
+        { id: 3, client: "Ana Costa", service: "Coloring + Tratamento", time: "14:00", value: "$37", status: "confirmed", professional: "Maria" },
+        { id: 4, client: "Pedro Lima", service: "Barba + Haircut", time: "15:30", value: "$14", status: "pending", professional: "Carlos" },
+        { id: 5, client: "Carla Souza", service: "Hair Treatment Premium", time: "16:00", value: "$20", status: "confirmed", professional: "Ana" }
     ];
 
     const marketingStats = [
@@ -164,7 +165,7 @@ export default function ProfessionalDashboard() {
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                             <h3 className="text-lg font-medium text-gray-900">Today's Bookings</h3>
-                            <span className="text-sm text-gray-500">Revenue previsto: R$ 670</span>
+                            <span className="text-sm text-gray-500">Revenue previsto: {formatUSD(670)}</span>
                         </div>
                         <div className="overflow-hidden">
                             <div className="divide-y divide-gray-200">
@@ -234,20 +235,20 @@ export default function ProfessionalDashboard() {
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Ana Silva</span>
-                                    <span className="text-sm font-medium text-gray-900">R$ 1.250</span>
+                                    <span className="text-sm font-medium text-gray-900">{formatUSD(1250)}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Carlos Santos</span>
-                                    <span className="text-sm font-medium text-gray-900">R$ 980</span>
+                                    <span className="text-sm font-medium text-gray-900">{formatUSD(980)}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Maria Costa</span>
-                                    <span className="text-sm font-medium text-gray-900">R$ 1.020</span>
+                                    <span className="text-sm font-medium text-gray-900">{formatUSD(1020)}</span>
                                 </div>
                                 <div className="pt-2 border-t border-gray-200">
                                     <div className="flex items-center justify-between">
                                         <span className="text-sm font-medium text-gray-900">Total</span>
-                                        <span className="text-sm font-bold text-gray-900">R$ 3.250</span>
+                                        <span className="text-sm font-bold text-gray-900">{formatUSD(3250)}</span>
                                     </div>
                                 </div>
                             </div>

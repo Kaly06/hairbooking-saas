@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import DashboardLayout from "@/components/dashboard/DashboardLayout";
 import {
     Users,
@@ -131,7 +132,7 @@ export default function ProfessionalClients() {
             name: "Premium VIP",
             count: clients.filter(c => c.segment === "premium").length,
             color: "bg-purple-100 text-purple-800",
-            description: "Clients de alto valor com gastos > R$ 3000"
+            description: "Clients de alto valor com gastos > $500"
         },
         {
             name: "VIP Potencial",
@@ -265,11 +266,11 @@ export default function ProfessionalClients() {
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Total Revenue</p>
                                 <p className="text-2xl font-semibold text-green-600">
-                                    R$ {clientStats.totalRevenue.toLocaleString('en-US')}
+                                    {formatUSD(clientStats.totalRevenue.toLocaleString('en-US'))}
                                 </p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
-                                        Average ticket: R$ {clientStats.averageTicket.toFixed(2)}
+                                        Average ticket: {formatUSD(clientStats.averageTicket.toFixed(2))}
                                     </span>
                                 </div>
                             </div>
@@ -426,11 +427,11 @@ export default function ProfessionalClients() {
                                                 </div>
                                                 <div className="flex items-center text-green-600 font-medium">
                                                     <DollarSign className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span>R$ {client.totalSpent.toLocaleString('en-US')}</span>
+                                                    <span>{formatUSD(client.totalSpent.toLocaleString('en-US'))}</span>
                                                 </div>
                                                 <div className="flex items-center text-gray-600">
                                                     <Target className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span>Ticket: R$ {client.averageTicket}</span>
+                                                    <span>Ticket: {formatUSD(client.averageTicket)}</span>
                                                 </div>
                                                 <div className="flex items-center text-yellow-600">
                                                     <Star className="w-4 h-4 mr-1 text-yellow-400 fill-current" />

@@ -1,5 +1,6 @@
 "use client";
 
+import { formatUSD } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import {
     Check,
@@ -95,7 +96,7 @@ export default function BookingSuccessPage() {
                             <div className="border-t pt-6">
                                 <div className="flex justify-between items-center">
                                     <span className="text-lg font-medium text-black">Total Paid</span>
-                                    <span className="text-2xl font-bold text-black">R$ 47,50</span>
+                                    <span className="text-2xl font-bold text-black">{formatUSD(47.5)}</span>
                                 </div>
                                 <p className="text-sm text-gray-500 mt-1">Payment processed successfully</p>
                             </div>
