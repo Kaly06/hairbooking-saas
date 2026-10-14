@@ -34,7 +34,7 @@ export default function EnterpriseUnitsPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Total Branches</p>
                                     <p className="text-2xl font-bold text-gray-900">12</p>
-                                    <p className="text-sm text-gray-500 mt-1">3 novas this month</p>
+                                    <p className="text-sm text-gray-500 mt-1">3 new this month</p>
                                 </div>
                                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
                                     <Building className="h-6 w-6 text-purple-600" />
@@ -309,7 +309,7 @@ export default function EnterpriseUnitsPage() {
                             {/* Quick Actions */}
                             <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-200">
                                 <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm">
-                                    Expandir Rede
+                                    Expand network
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
                                     Report Executivo

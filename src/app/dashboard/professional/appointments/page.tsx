@@ -328,7 +328,7 @@ export default function ProfessionalAppointments() {
                         <div className="flex items-center justify-between">
                             <h3 className="text-lg font-medium text-gray-900">Bookings ({filteredAppointments.length})</h3>
                             <div className="flex items-center space-x-2">
-                                <span className="text-sm text-gray-500">Mostrando {filteredAppointments.length} de {appointments.length}</span>
+                                <span className="text-sm text-gray-500">Showing {filteredAppointments.length} of {appointments.length}</span>
                             </div>
                         </div>
                     </div>

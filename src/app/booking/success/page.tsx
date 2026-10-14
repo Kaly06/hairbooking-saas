@@ -201,7 +201,7 @@ export default function BookingSuccessPage() {
                                             <span className="text-green-600">{formatUSD(booking.total)}</span>
                                         </div>
                                         <div className="text-sm text-gray-600 mt-2">
-                                            <span>Forma de pagamento: {booking.paymentMethod}</span>
+                                            <span>Payment method: {booking.paymentMethod}</span>
                                         </div>
                                     </div>
                                 </div>

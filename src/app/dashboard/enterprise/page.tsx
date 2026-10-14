@@ -34,7 +34,7 @@ export default function EnterpriseDashboard() {
         {
             name: "Active branches",
             value: "8",
-            change: "+2 novas",
+            change: "+2 new",
             changeType: "increase" as const,
             icon: Building,
             color: "bg-blue-500"
@@ -329,7 +329,7 @@ export default function EnterpriseDashboard() {
                         </div>
                     </div>
 
-                    {/* Resumo Enterprise */}
+                    {/* Enterprise summary */}
                     <div className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg p-6 text-white">
                         <h3 className="text-lg font-medium mb-2 flex items-center">
                             <Crown className="w-5 h-5 mr-2" />

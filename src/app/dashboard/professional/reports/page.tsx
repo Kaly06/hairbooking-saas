@@ -227,7 +227,7 @@ export default function ProfessionalReports() {
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mt-1">
-                                {((advancedData.revenue.current / advancedData.revenue.target) * 100).toFixed(1)}% da meta
+                                {((advancedData.revenue.current / advancedData.revenue.target) * 100).toFixed(1)}% of target
                             </p>
                         </div>
                     </div>
@@ -252,7 +252,7 @@ export default function ProfessionalReports() {
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mt-1">
-                                {((advancedData.appointments.current / advancedData.appointments.target) * 100).toFixed(1)}% da meta
+                                {((advancedData.appointments.current / advancedData.appointments.target) * 100).toFixed(1)}% of target
                             </p>
                         </div>
                     </div>

@@ -395,7 +395,7 @@ export default function EnterpriseFinancialPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <BarChart3 className="h-5 w-5 text-purple-600" />
-                            Resumo Executivo
+                            Executive summary
                         </CardTitle>
                     </CardHeader>
                     <CardContent>

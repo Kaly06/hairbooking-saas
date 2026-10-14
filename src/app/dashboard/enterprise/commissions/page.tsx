@@ -221,7 +221,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="font-medium text-blue-900">18%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-blue-700">Acima de {formatUSD(6000)}:</span>
+                                        <span className="text-blue-700">Above {formatUSD(6000)}:</span>
                                         <span className="font-medium text-blue-900">20%</span>
                                     </div>
                                 </div>
@@ -243,7 +243,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="font-medium text-green-900">22%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-green-700">Acima de {formatUSD(8000)}:</span>
+                                        <span className="text-green-700">Above {formatUSD(8000)}:</span>
                                         <span className="font-medium text-green-900">25%</span>
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="font-medium text-purple-900">25%</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-purple-700">Acima de {formatUSD(10000)}:</span>
+                                        <span className="text-purple-700">Above {formatUSD(10000)}:</span>
                                         <span className="font-medium text-purple-900">30%</span>
                                     </div>
                                 </div>
@@ -497,7 +497,7 @@ export default function EnterpriseCommissionsPage() {
                                         <span className="font-bold text-green-600">12 professionals</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                                        <span className="text-sm font-medium text-blue-800">Acima de {formatUSD(8000)}</span>
+                                        <span className="text-sm font-medium text-blue-800">Above {formatUSD(8000)}</span>
                                         <span className="font-bold text-blue-600">5 professionals</span>
                                     </div>
                                 </div>
@@ -533,7 +533,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">Mentoria New Professionals</p>
-                                        <p className="text-xs text-blue-600">6 professionals abaixo de {formatUSD(1500)}</p>
+                                        <p className="text-xs text-blue-600">6 professionals below {formatUSD(1500)}</p>
                                     </div>
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                         <p className="text-sm font-medium text-green-800">Recognition program</p>

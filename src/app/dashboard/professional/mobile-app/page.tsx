@@ -421,7 +421,7 @@ export default function ProfessionalMobileApp() {
                                     <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
                                         <div>
                                             <p className="font-medium text-gray-900">{feature.feature}</p>
-                                            <p className="text-sm text-gray-600">{feature.usage}% de uso</p>
+                                            <p className="text-sm text-gray-600">{feature.usage}% usage</p>
                                         </div>
                                         <div className={`flex items-center ${feature.change > 0 ? 'text-green-600' : 'text-red-600'}`}>
                                             {feature.change > 0 ? <TrendingUp className="w-4 h-4 mr-1" /> : <TrendingUp className="w-4 h-4 mr-1 transform rotate-180" />}

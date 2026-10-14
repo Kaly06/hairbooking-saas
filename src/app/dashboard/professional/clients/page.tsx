@@ -251,7 +251,7 @@ export default function ProfessionalClients() {
                                 <p className="text-2xl font-semibold text-purple-600">{clientStats.vip}</p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
-                                        {((clientStats.vip / clientStats.total) * 100).toFixed(1)}% do total
+                                        {((clientStats.vip / clientStats.total) * 100).toFixed(1)}% of total
                                     </span>
                                 </div>
                             </div>
@@ -287,7 +287,7 @@ export default function ProfessionalClients() {
                                 <p className="text-2xl font-semibold text-orange-600">{clientStats.totalReferrals}</p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
-                                        {clientStats.totalLoyaltyPoints} pontos de fidelidade
+                                        {clientStats.totalLoyaltyPoints} loyalty points
                                     </span>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function ProfessionalClients() {
                         <div className="flex items-center justify-between">
                             <h3 className="text-lg font-medium text-gray-900">Clients ({filteredClients.length})</h3>
                             <div className="flex items-center space-x-2">
-                                <span className="text-sm text-gray-500">Mostrando {filteredClients.length} de {clients.length}</span>
+                                <span className="text-sm text-gray-500">Showing {filteredClients.length} of {clients.length}</span>
                             </div>
                         </div>
                     </div>

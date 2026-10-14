@@ -235,7 +235,7 @@ export default function ProfessionalMarketing() {
                                 : "text-gray-600 hover:text-gray-900"
                             }`}
                     >
-                        Redes Sociais
+                        Social media
                     </button>
                     <button
                         onClick={() => setActiveTab("leads")}
@@ -383,7 +383,7 @@ export default function ProfessionalMarketing() {
                                     <option value="completed">Completed</option>
                                 </select>
                                 <div className="text-sm text-gray-500">
-                                    {filteredCampaigns.length} campanhas encontradas
+                                    {filteredCampaigns.length} campaigns found
                                 </div>
                             </div>
                         </div>

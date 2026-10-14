@@ -42,7 +42,7 @@ export default function ProfessionalFinancial() {
         { name: "Coloring", amount: 5940, percentage: 32.2, change: 18.3 },
         { name: "Tratamentos", amount: 3420, percentage: 18.5, change: 8.7 },
         { name: "Products", amount: 1890, percentage: 10.2, change: -2.1 },
-        { name: "Outros", amount: 420, percentage: 2.3, change: 5.2 }
+        { name: "Other", amount: 420, percentage: 2.3, change: 5.2 }
     ];
 
     // Expenses por categoria
@@ -184,7 +184,7 @@ export default function ProfessionalFinancial() {
                                 />
                             </div>
                             <p className="text-xs text-gray-500 mt-1">
-                                {((financialStats.totalRevenue / financialStats.targetRevenue) * 100).toFixed(1)}% da meta
+                                {((financialStats.totalRevenue / financialStats.targetRevenue) * 100).toFixed(1)}% of target
                             </p>
                         </div>
                     </div>
@@ -203,7 +203,7 @@ export default function ProfessionalFinancial() {
                             <p className="text-sm font-medium text-gray-600">Total expenses</p>
                             <p className="text-2xl font-bold text-gray-900">{formatUSD(financialStats.expenses.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
-                                {((financialStats.expenses / financialStats.totalRevenue) * 100).toFixed(1)}% da receita
+                                {((financialStats.expenses / financialStats.totalRevenue) * 100).toFixed(1)}% of revenue
                             </p>
                         </div>
                     </div>
@@ -290,7 +290,7 @@ export default function ProfessionalFinancial() {
                                         <div className="w-4 h-4 bg-green-600 rounded-full"></div>
                                         <div>
                                             <p className="font-medium text-gray-900">{category.name}</p>
-                                            <p className="text-sm text-gray-600">{category.percentage}% do total</p>
+                                            <p className="text-sm text-gray-600">{category.percentage}% of total</p>
                                         </div>
                                     </div>
                                     <div className="text-right">

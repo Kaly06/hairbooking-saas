@@ -268,7 +268,7 @@ export default function ClientBookingPage() {
                     {/* Mobile Progress Bar */}
                     <div className="block sm:hidden">
                         <div className="flex items-center justify-between mb-3">
-                            <span className="text-sm font-bold text-black">Etapa {step} de 5</span>
+                            <span className="text-sm font-bold text-black">Step {step} of 5</span>
                             <span className="text-xs text-gray-500">{Math.round((step / 5) * 100)}% complete</span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -896,7 +896,7 @@ export default function ClientBookingPage() {
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
                                                                     <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
-                                                                    <span>{service.duration} minutos</span>
+                                                                    <span>{service.duration} min</span>
                                                                 </div>
                                                             </div>
                                                             <button
@@ -925,7 +925,7 @@ export default function ClientBookingPage() {
                                                                 <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
                                                                     <span className="font-medium">{formatUSD(service.price)}</span>
                                                                     <span>•</span>
-                                                                    <span>{service.duration} minutos</span>
+                                                                    <span>{service.duration} min</span>
                                                                 </div>
                                                             </div>
                                                             <button
@@ -958,7 +958,7 @@ export default function ClientBookingPage() {
                                                                     <div className="flex items-center gap-4 text-sm text-gray-600">
                                                                         <span className="text-xl font-black text-black">{formatUSD(pkg.price)}</span>
                                                                         <span>•</span>
-                                                                        <span>{pkg.duration} minutos</span>
+                                                                        <span>{pkg.duration} min</span>
                                                                     </div>
                                                                 </div>
                                                                 <button
