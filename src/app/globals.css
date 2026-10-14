@@ -321,6 +321,22 @@ textarea:focus {
   animation: infiniteSlideReveal 10s ease-in-out infinite;
 }
 
+/* Plain title words: the brand h1 rule above makes text transparent,
+   so give non-gradient words their own solid colour. */
+h1:has(.animate-title-word) {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #111827;
+}
+
+.animate-title-word:not(.gradient-word) {
+  color: #111827;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
 .animate-title-word:nth-child(1) {
   animation-delay: 0s;
 }
