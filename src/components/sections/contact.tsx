@@ -40,6 +40,7 @@ export default function Contact() {
             icon: Phone,
             title: "Phone",
             description: "Talk directly with our team",
+            href: "tel:+5511932049040",
             value: "(11) 93204-9040",
             action: "Call Now"
         },
@@ -47,6 +48,7 @@ export default function Contact() {
             icon: MessageSquare,
             title: "WhatsApp",
             description: "Get quick answers to your questions",
+            href: "https://wa.me/5511932049040",
             value: "(11) 93204-9040",
             action: "Message on WhatsApp"
         },
@@ -54,6 +56,7 @@ export default function Contact() {
             icon: Mail,
             title: "Email",
             description: "Send us a detailed message",
+            href: "mailto:matheusviniciusdrs5555@gmail.com",
             value: "matheusviniciusdrs5555@gmail.com",
             action: "Send Email"
         }
@@ -251,9 +254,9 @@ export default function Contact() {
                                             <p className="font-medium text-gray-900 mb-3 text-sm sm:text-base">
                                                 {method.value}
                                             </p>
-                                            <button className="text-xs sm:text-sm text-gray-700 hover:text-gray-900 font-medium">
+                                            <a href={method.href} className="inline-block text-xs sm:text-sm text-gray-700 hover:text-gray-900 font-medium">
                                                 {method.action} →
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
