@@ -140,7 +140,7 @@ export default function EnterpriseFinancialPage() {
                             {/* Unit 2 */}
                             <div className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="font-semibold text-green-900">Downtown Branch</h3>
+                                    <h3 className="font-semibold text-green-900">Osu Branch</h3>
                                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                                 </div>
                                 <div className="space-y-3">
@@ -166,7 +166,7 @@ export default function EnterpriseFinancialPage() {
                             {/* Unit 3 */}
                             <div className="p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg border border-orange-200">
                                 <div className="flex items-center justify-between mb-4">
-                                    <h3 className="font-semibold text-orange-900">North Zone Branch</h3>
+                                    <h3 className="font-semibold text-orange-900">Airport Residential Branch</h3>
                                     <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
                                 </div>
                                 <div className="space-y-3">
@@ -426,7 +426,7 @@ export default function EnterpriseFinancialPage() {
                                 <h4 className="font-semibold text-gray-900">Recommended Actions</h4>
                                 <div className="space-y-3">
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                                        <p className="text-sm font-medium text-green-800">Otimizar North Zone Branch</p>
+                                        <p className="text-sm font-medium text-green-800">Otimizar Airport Residential Branch</p>
                                         <p className="text-xs text-green-600">Margin below average - review operating costs</p>
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">

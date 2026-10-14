@@ -31,7 +31,7 @@ export default function BookingSuccessPage() {
         status: "confirmed",
         unit: {
             name: "Shopping Center Branch",
-            address: "Av. das Américas, 4666 - Barra da Tijuca",
+            address: "Independence Avenue, 4666 - Ridge, Accra",
             phone: "(21) 3325-4400"
         },
         customer: {

@@ -74,11 +74,11 @@ export default function EnterpriseDashboard() {
     ];
 
     const unitsData = [
-        { name: "Downtown Branch", revenue: "$3,908", clients: 487, appointments: 45, growth: "+15%" },
+        { name: "Osu Branch", revenue: "$3,908", clients: 487, appointments: 45, growth: "+15%" },
         { name: "Shopping Branch", revenue: "$3,205", clients: 398, appointments: 38, growth: "+22%" },
-        { name: "Branch Bela Vista", revenue: "$2,815", clients: 356, appointments: 32, growth: "+8%" },
-        { name: "Branch Vila Madalena", revenue: "$2,387", clients: 289, appointments: 28, growth: "+18%" },
-        { name: "Branch Moema", revenue: "$2,260", clients: 267, appointments: 13, growth: "+12%" }
+        { name: "Branch Labone", revenue: "$2,815", clients: 356, appointments: 32, growth: "+8%" },
+        { name: "Branch East Legon", revenue: "$2,387", clients: 289, appointments: 28, growth: "+18%" },
+        { name: "Branch Airport Residential", revenue: "$2,260", clients: 267, appointments: 13, growth: "+12%" }
     ];
 
     const securityAlerts = [

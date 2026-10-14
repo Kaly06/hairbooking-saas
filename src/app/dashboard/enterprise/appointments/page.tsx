@@ -107,9 +107,9 @@ export default function EnterpriseAppointmentsPage() {
                             <div className="flex gap-2">
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                                     <option>Todas as unidades</option>
-                                    <option>Downtown Branch</option>
+                                    <option>Osu Branch</option>
                                     <option>Shopping Branch</option>
-                                    <option>North Zone Branch</option>
+                                    <option>Airport Residential Branch</option>
                                 </select>
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                                     <option>Today</option>
@@ -156,7 +156,7 @@ export default function EnterpriseAppointmentsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Downtown Branch
+                                                Osu Branch
                                             </div>
                                             <span>Haircut + Escova</span>
                                             <span>Ana Paula (Professional)</span>
@@ -224,7 +224,7 @@ export default function EnterpriseAppointmentsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Downtown Branch
+                                                Osu Branch
                                             </div>
                                             <span>Coloring + Haircut</span>
                                             <span>Fernanda Costa (Professional)</span>
@@ -258,7 +258,7 @@ export default function EnterpriseAppointmentsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                North Zone Branch
+                                                Airport Residential Branch
                                             </div>
                                             <span>Barba + Bigode</span>
                                             <span>Motivo: Client cancelou</span>
@@ -325,7 +325,7 @@ export default function EnterpriseAppointmentsPage() {
                             </div>
 
                             <div className="flex items-center justify-between">
-                                <span className="text-sm font-medium">Downtown Branch</span>
+                                <span className="text-sm font-medium">Osu Branch</span>
                                 <div className="flex items-center gap-2">
                                     <div className="w-24 bg-gray-200 rounded-full h-2">
                                         <div className="bg-blue-500 h-2 rounded-full" style={{ width: '89%' }}></div>
@@ -335,7 +335,7 @@ export default function EnterpriseAppointmentsPage() {
                             </div>
 
                             <div className="flex items-center justify-between">
-                                <span className="text-sm font-medium">North Zone Branch</span>
+                                <span className="text-sm font-medium">Airport Residential Branch</span>
                                 <div className="flex items-center gap-2">
                                     <div className="w-24 bg-gray-200 rounded-full h-2">
                                         <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '65%' }}></div>

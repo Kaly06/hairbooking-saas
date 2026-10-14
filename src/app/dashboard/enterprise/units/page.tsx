@@ -101,7 +101,7 @@ export default function EnterpriseUnitsPage() {
                     <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
-                                <CardTitle className="text-lg">Downtown Branch</CardTitle>
+                                <CardTitle className="text-lg">Osu Branch</CardTitle>
                                 <div className="flex items-center gap-1">
                                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                     <span className="text-xs text-green-600">Online</span>
@@ -109,7 +109,7 @@ export default function EnterpriseUnitsPage() {
                             </div>
                             <div className="flex items-center text-sm text-gray-600">
                                 <MapPin className="h-4 w-4 mr-1" />
-                                Rua das Flores, 123 - Centro
+                                Oxford Street, 123 - Osu, Accra
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -209,7 +209,7 @@ export default function EnterpriseUnitsPage() {
                     <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
-                                <CardTitle className="text-lg">North Zone Branch</CardTitle>
+                                <CardTitle className="text-lg">Airport Residential Branch</CardTitle>
                                 <div className="flex items-center gap-1">
                                     <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                                     <span className="text-xs text-yellow-600">Maintenance</span>
@@ -217,7 +217,7 @@ export default function EnterpriseUnitsPage() {
                             </div>
                             <div className="flex items-center text-sm text-gray-600">
                                 <MapPin className="h-4 w-4 mr-1" />
-                                Av. Principal, 456 - Zona Norte
+                                Airport Ridge, 456 - Accra
                             </div>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -285,7 +285,7 @@ export default function EnterpriseUnitsPage() {
                                     </div>
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium">Downtown Branch</span>
+                                        <span className="text-sm font-medium">Osu Branch</span>
                                         <div className="flex items-center gap-4 flex-1 mx-4">
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-blue-500 h-3 rounded-full" style={{ width: '66%' }}></div>
@@ -295,7 +295,7 @@ export default function EnterpriseUnitsPage() {
                                     </div>
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium">North Zone Branch</span>
+                                        <span className="text-sm font-medium">Airport Residential Branch</span>
                                         <div className="flex items-center gap-4 flex-1 mx-4">
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-yellow-500 h-3 rounded-full" style={{ width: '42%' }}></div>

@@ -67,8 +67,8 @@ export default function BookingSuccessPage() {
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-semibold text-black">Local</h3>
-                                    <p className="text-gray-600">Downtown Branch</p>
-                                    <p className="text-gray-600">Rua das Flores, 123 - Centro</p>
+                                    <p className="text-gray-600">Osu Branch</p>
+                                    <p className="text-gray-600">Oxford Street, 123 - Osu, Accra</p>
                                 </div>
                             </div>
 

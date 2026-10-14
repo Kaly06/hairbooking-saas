@@ -84,7 +84,7 @@ export default function Footer() {
                             <div className="flex items-start text-gray-300">
                                 <MapPin className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
-                                    Rua Augusta, 123 - Centro<br />
+                                    Oxford Street, 123, Osu, Accra<br />
                                     Accra, Greater Accra, Ghana
                                 </span>
                             </div>

@@ -366,7 +366,7 @@ export default function EnterpriseReportsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                                <span className="font-medium">Centro</span>
+                                                <span className="font-medium">Osu</span>
                                             </div>
                                         </td>
                                         <td className="py-3 px-4 text-right font-bold text-green-600">{formatUSD(1680000)}</td>
@@ -384,7 +384,7 @@ export default function EnterpriseReportsPage() {
                                         <td className="py-3 px-4">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                                <span className="font-medium">Zona Norte</span>
+                                                <span className="font-medium">Airport Residential</span>
                                             </div>
                                         </td>
                                         <td className="py-3 px-4 text-right font-bold text-orange-600">{formatUSD(1420000)}</td>
@@ -472,7 +472,7 @@ export default function EnterpriseReportsPage() {
                                         <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                                         <div>
                                             <p className="font-medium text-blue-900">Oportunidade de Crescimento</p>
-                                            <p className="text-sm text-blue-700">North Zone branch has potential for +30% revenue with optimization of schedules.</p>
+                                            <p className="text-sm text-blue-700">Airport Residential branch has potential for +30% revenue with optimization of schedules.</p>
                                         </div>
                                     </div>
                                 </div>

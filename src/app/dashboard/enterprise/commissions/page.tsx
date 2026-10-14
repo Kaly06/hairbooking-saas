@@ -136,7 +136,7 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-gray-900">Carlos Mendes</p>
-                                        <p className="text-sm text-gray-700">Downtown Branch • Barber Specialist</p>
+                                        <p className="text-sm text-gray-700">Osu Branch • Barber Specialist</p>
                                     </div>
                                 </div>
                                 <div className="text-right">
@@ -165,13 +165,13 @@ export default function EnterpriseCommissionsPage() {
                             {/* Remaining Top 10 */}
                             <div className="space-y-2">
                                 {[
-                                    { name: "Paula Costa", unit: "Centro", role: "Manicure", commission: "6.451", services: "98", rate: "18.7%" },
-                                    { name: "Roberto Lima", unit: "Zona Norte", role: "Cabeleireiro", commission: "5.873", services: "85", rate: "17.9%" },
+                                    { name: "Paula Costa", unit: "Osu", role: "Manicure", commission: "6.451", services: "98", rate: "18.7%" },
+                                    { name: "Roberto Lima", unit: "Airport Residential", role: "Cabeleireiro", commission: "5.873", services: "85", rate: "17.9%" },
                                     { name: "Lucia Ferreira", unit: "Shopping", role: "Esthetician", commission: "5.629", services: "92", rate: "19.3%" },
-                                    { name: "Jorge Santos", unit: "Centro", role: "Barber", commission: "5.284", services: "74", rate: "16.8%" },
-                                    { name: "Carla Oliveira", unit: "Zona Norte", role: "Hairdresser", commission: "4.932", services: "67", rate: "18.1%" },
+                                    { name: "Jorge Santos", unit: "Osu", role: "Barber", commission: "5.284", services: "74", rate: "16.8%" },
+                                    { name: "Carla Oliveira", unit: "Airport Residential", role: "Hairdresser", commission: "4.932", services: "67", rate: "18.1%" },
                                     { name: "Fernando Souza", unit: "Shopping", role: "Barber", commission: "4.657", services: "71", rate: "17.2%" },
-                                    { name: "Mariana Alves", unit: "Centro", role: "Colorist", commission: "4.389", services: "59", rate: "20.4%" }
+                                    { name: "Mariana Alves", unit: "Osu", role: "Colorist", commission: "4.389", services: "59", rate: "20.4%" }
                                 ].map((professional, index) => (
                                     <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                         <div className="flex items-center gap-3">
@@ -314,7 +314,7 @@ export default function EnterpriseCommissionsPage() {
                             {/* Unit 2 */}
                             <div className="p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h4 className="font-semibold text-green-900">Downtown Branch</h4>
+                                    <h4 className="font-semibold text-green-900">Osu Branch</h4>
                                     <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">Crescimento</span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
@@ -340,7 +340,7 @@ export default function EnterpriseCommissionsPage() {
                             {/* Unit 3 */}
                             <div className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg border border-orange-200">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h4 className="font-semibold text-orange-900">North Zone Branch</h4>
+                                    <h4 className="font-semibold text-orange-900">Airport Residential Branch</h4>
                                     <span className="text-xs bg-orange-200 text-orange-800 px-2 py-1 rounded-full">Potencial</span>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">

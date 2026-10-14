@@ -94,8 +94,8 @@ export default function ClientBookingPage() {
     const units = [
         {
             id: 1,
-            name: "Downtown Branch",
-            address: "Rua das Flores, 123 - Downtown",
+            name: "Osu Branch",
+            address: "Oxford Street, 123 - Osu, Accra",
             rating: 4.9,
             reviews: 847,
             phone: "+233 24 325 4400",
@@ -103,8 +103,8 @@ export default function ClientBookingPage() {
         },
         {
             id: 2,
-            name: "South Zone Branch",
-            address: "Av. Paulista, 1000 - Bela Vista",
+            name: "East Legon Branch",
+            address: "Boundary Road, 1000 - East Legon, Accra",
             rating: 4.8,
             reviews: 623,
             phone: "+233 24 240 5500",
@@ -112,8 +112,8 @@ export default function ClientBookingPage() {
         },
         {
             id: 3,
-            name: "North Zone Branch",
-            address: "Rua Augusta, 500 - Consolação",
+            name: "Airport Residential Branch",
+            address: "Liberation Road, 500 - Airport Residential, Accra",
             rating: 4.7,
             reviews: 412,
             phone: "+233 24 596 7800",

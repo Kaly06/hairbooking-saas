@@ -20,20 +20,20 @@ export default function BookingForm() {
     const services = [
         { id: "classic", name: "Corte Clássico", price: 45, duration: "45 min" },
         { id: "custom", name: "Corte Personalizado com IA", price: 85, duration: "60 min" },
-        { id: "color", name: "Coloração", price: 120, duration: "120 min" },
+        { id: "color", name: "Colouring", price: 120, duration: "120 min" },
         { id: "treatment", name: "Tratamento Capilar", price: 80, duration: "90 min" }
     ];
 
     const locations = [
-        { id: "centro", name: "HairBooking Centro", address: "Rua Augusta, 123" },
-        { id: "vila", name: "HairBooking Vila Madalena", address: "Rua Harmonia, 456" },
-        { id: "moema", name: "HairBooking Moema", address: "Av. Ibirapuera, 789" }
+        { id: "centro", name: "HairBooking Osu", address: "Oxford Street, 123, Osu, Accra" },
+        { id: "vila", name: "HairBooking East Legon", address: "Boundary Road, 456, East Legon, Accra" },
+        { id: "moema", name: "HairBooking Airport Residential", address: "Liberation Road, 789, Airport Residential, Accra" }
     ];
 
     const professionals = [
-        { id: "ana", name: "Ana Silva", rating: 4.9, specialty: "Cortes Femininos", image: "ana" },
-        { id: "carlos", name: "Carlos Santos", rating: 4.8, specialty: "Barbas e Cortes", image: "carlos" },
-        { id: "maria", name: "Maria Costa", rating: 5.0, specialty: "Coloração", image: "maria" }
+        { id: "ana", name: "Ana Silva", rating: 4.9, specialty: "Women's Cuts", image: "ana" },
+        { id: "carlos", name: "Carlos Santos", rating: 4.8, specialty: "Beard & Cuts", image: "carlos" },
+        { id: "maria", name: "Maria Costa", rating: 5.0, specialty: "Colouring", image: "maria" }
     ];
 
     const timeSlots = [

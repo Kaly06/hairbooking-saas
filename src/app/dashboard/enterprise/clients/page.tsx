@@ -112,9 +112,9 @@ export default function EnterpriseClientsPage() {
                             <div className="flex flex-wrap gap-2">
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                                     <option>Todas as unidades</option>
-                                    <option>Downtown Branch</option>
+                                    <option>Osu Branch</option>
                                     <option>Shopping Branch</option>
-                                    <option>North Zone Branch</option>
+                                    <option>Airport Residential Branch</option>
                                 </select>
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                                     <option>All os segmentos</option>
@@ -188,7 +188,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">Downtown Branch</span>
+                                    <span className="text-sm">Osu Branch</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-16 bg-gray-200 rounded-full h-2">
                                             <div className="bg-green-500 h-2 rounded-full" style={{ width: '35%' }}></div>
@@ -197,7 +197,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">North Zone Branch</span>
+                                    <span className="text-sm">Airport Residential Branch</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-16 bg-gray-200 rounded-full h-2">
                                             <div className="bg-purple-500 h-2 rounded-full" style={{ width: '20%' }}></div>
@@ -300,7 +300,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Downtown Branch
+                                                Osu Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
@@ -338,7 +338,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                North Zone Branch
+                                                Airport Residential Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
@@ -376,7 +376,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Downtown Branch
+                                                Osu Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
