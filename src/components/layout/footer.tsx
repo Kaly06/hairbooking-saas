@@ -30,16 +30,16 @@ export default function Footer() {
             { name: "Platform status", href: "#status" }
         ],
         company: [
-            { name: "About us", href: "#sobre" },
-            { name: "Careers", href: "#carreiras" },
-            { name: "Partners", href: "#parceiros" },
-            { name: "Press", href: "#imprensa" }
+            { name: "About us", href: "/info/about" },
+            { name: "Careers", href: "/info/careers" },
+            { name: "Partners", href: "/info/partners" },
+            { name: "Press", href: "/info/press" }
         ],
         legal: [
-            { name: "Terms of use", href: "#termos" },
-            { name: "Privacy policy", href: "#privacidade" },
-            { name: "Cookies", href: "#cookies" },
-            { name: "Data Protection", href: "#lgpd" }
+            { name: "Terms of use", href: "/info/terms" },
+            { name: "Privacy policy", href: "/info/privacy" },
+            { name: "Cookies", href: "/info/cookies" },
+            { name: "Data Protection", href: "/info/data-protection" }
         ]
     };
 
