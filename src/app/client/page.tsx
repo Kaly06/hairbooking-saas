@@ -630,6 +630,25 @@ export default function ClientBookingPage() {
                 {/* Step 3: Service Details */}
                 {step === 3 && (
                     <div className="space-y-6 sm:space-y-8">
+                        {selectedService === "simple" && (
+                            <div className="max-w-4xl mx-auto">
+                                <div className="mb-6 sm:mb-8 text-center sm:text-left">
+                                    <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Single Service</h2>
+                                    <p className="text-gray-600 text-base sm:text-lg">One professional haircut, pay only for this visit</p>
+                                </div>
+
+                                <div className="bg-white border-2 border-black rounded-2xl p-6 sm:p-8 shadow-sm">
+                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                        <div>
+                                            <h3 className="text-xl font-black text-black">Professional Haircut</h3>
+                                            <p className="text-gray-600 mt-1">Duration: {calculateDuration()} min</p>
+                                        </div>
+                                        <div className="text-3xl font-black text-black">{formatUSD(calculateTotal())}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
                         {selectedService === "plan" && (
                             <div className="max-w-4xl mx-auto">
                                 <div className="mb-6 sm:mb-8 text-center sm:text-left">
