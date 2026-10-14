@@ -26,7 +26,7 @@ export default function Testimonials() {
             <div className="container-width section-padding">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        O que <span className="text-gray-600">nossos clientes dizem</span>
+                        What <span className="text-gray-600">our clients say</span>
                     </h2>
                 </div>
 

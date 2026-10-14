@@ -56,8 +56,8 @@ export default function FAQ() {
             answer: "Sim! Nossa plataforma se integra com os principais gateways de pagamento do mercado, incluindo Mercado Pago, PagSeguro, Stripe e outros. Também suportamos cartões, PIX e dinheiro."
         },
         {
-            question: "Quantos profissionais podem usar a plataforma?",
-            answer: "Depende do plano: Starter (até 3 profissionais), Professional (até 10 profissionais) e Enterprise (ilimitado). Você pode fazer upgrade do plano a qualquer momento conforme seu salão cresce."
+            question: "Quantos professionals podem usar a plataforma?",
+            answer: "Depende do plano: Starter (até 3 professionals), Professional (até 10 professionals) e Enterprise (ilimitado). Você pode fazer upgrade do plano a qualquer momento conforme seu salão cresce."
         },
         {
             question: "A plataforma gera relatórios financeiros?",

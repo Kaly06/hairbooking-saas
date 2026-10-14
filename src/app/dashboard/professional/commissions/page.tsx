@@ -215,9 +215,9 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Pending Payment</p>
+                                <p className="text-sm font-medium text-gray-600">Pending payment</p>
                                 <p className="text-2xl font-bold text-yellow-600">{formatUSD(commissionStats.pendingPayment.toLocaleString())}</p>
-                                <p className="text-sm text-gray-600 mt-2">2 profissionais</p>
+                                <p className="text-sm text-gray-600 mt-2">2 professionals</p>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-lg">
                                 <Clock className="w-6 h-6 text-yellow-600" />
@@ -230,7 +230,7 @@ export default function ProfessionalCommissions() {
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Pago This Month</p>
                                 <p className="text-2xl font-bold text-green-600">{formatUSD(commissionStats.paidThisMonth.toLocaleString())}</p>
-                                <p className="text-sm text-gray-600 mt-2">1 profissional</p>
+                                <p className="text-sm text-gray-600 mt-2">1 professional</p>
                             </div>
                             <div className="p-3 bg-green-100 rounded-lg">
                                 <CheckCircle className="w-6 h-6 text-green-600" />
@@ -243,7 +243,7 @@ export default function ProfessionalCommissions() {
                             <div>
                                 <p className="text-sm font-medium text-gray-600">Average Commission</p>
                                 <p className="text-2xl font-bold text-blue-600">{commissionStats.averageCommission}%</p>
-                                <p className="text-sm text-gray-600 mt-2">{commissionStats.totalProfessionals} profissionais</p>
+                                <p className="text-sm text-gray-600 mt-2">{commissionStats.totalProfessionals} professionals</p>
                             </div>
                             <div className="p-3 bg-blue-100 rounded-lg">
                                 <Calculator className="w-6 h-6 text-blue-600" />
@@ -309,7 +309,7 @@ export default function ProfessionalCommissions() {
 
                                             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Fee de Commission</p>
+                                                    <p className="text-sm text-gray-600">Commission fee</p>
                                                     <p className="text-lg font-semibold text-purple-600">{professional.commissionRate}%</p>
                                                 </div>
                                                 <div>
@@ -376,7 +376,7 @@ export default function ProfessionalCommissions() {
 
                 {/* Targets */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Metas de Commission</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Commission targets</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {targets.map((target, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-6">
@@ -419,7 +419,7 @@ export default function ProfessionalCommissions() {
                 {/* Commission History */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Payment History</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Payment history</h3>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">

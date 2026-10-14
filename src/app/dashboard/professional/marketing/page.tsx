@@ -194,7 +194,7 @@ export default function ProfessionalMarketing() {
                             <Megaphone className="w-6 h-6 text-purple-600 mr-2" />
                             Marketing Digital
                         </h1>
-                        <p className="text-gray-600">Manage campanhas e monitore performance</p>
+                        <p className="text-gray-600">Manage campaigns and monitor performance</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
@@ -316,7 +316,7 @@ export default function ProfessionalMarketing() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {/* Top Performing Campaigns */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-4">Campanhas com Melhor Performance</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-4">Top-performing campaigns</h3>
                             <div className="space-y-4">
                                 {campaigns.slice(0, 3).map((campaign) => (
                                     <div key={campaign.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
@@ -345,7 +345,7 @@ export default function ProfessionalMarketing() {
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Instagram className="w-6 h-6 text-pink-600 mb-2" />
                                     <p className="text-sm font-medium text-gray-900">Post Instagram</p>
-                                    <p className="text-xs text-gray-500">Create novo post</p>
+                                    <p className="text-xs text-gray-500">Create new post</p>
                                 </button>
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Mail className="w-6 h-6 text-blue-600 mb-2" />
@@ -355,7 +355,7 @@ export default function ProfessionalMarketing() {
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <MessageSquare className="w-6 h-6 text-green-600 mb-2" />
                                     <p className="text-sm font-medium text-gray-900">WhatsApp</p>
-                                    <p className="text-xs text-gray-500">Message em massa</p>
+                                    <p className="text-xs text-gray-500">Bulk message</p>
                                 </button>
                                 <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left">
                                     <Award className="w-6 h-6 text-purple-600 mb-2" />
@@ -504,7 +504,7 @@ export default function ProfessionalMarketing() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {/* Leads Overview */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-6">Resumo de Leads</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-6">Lead summary</h3>
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
                                     <div>
@@ -522,7 +522,7 @@ export default function ProfessionalMarketing() {
                                 </div>
                                 <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">Conversion Fee</p>
+                                        <p className="text-sm font-medium text-gray-900">Conversion fee</p>
                                         <p className="text-2xl font-semibold text-purple-600">{leadsData.conversionRate}%</p>
                                     </div>
                                     <Award className="w-8 h-8 text-purple-600" />
@@ -532,7 +532,7 @@ export default function ProfessionalMarketing() {
 
                         {/* Lead Sources */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-6">Fontes de Leads</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-6">Lead sources</h3>
                             <div className="space-y-4">
                                 {leadsData.leadSources.map((source, index) => (
                                     <div key={index} className="flex items-center justify-between">
@@ -554,7 +554,7 @@ export default function ProfessionalMarketing() {
                 {/* Templates Section */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                     <div className="flex items-center justify-between mb-6">
-                        <h3 className="text-lg font-medium text-gray-900">Templates de Campanha</h3>
+                        <h3 className="text-lg font-medium text-gray-900">Campaign templates</h3>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
                             New Template

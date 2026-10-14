@@ -78,7 +78,7 @@ export default function BookingSuccessPage() {
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-semibold text-black">Services</h3>
-                                    <p className="text-gray-600">Haircut de Cabelo</p>
+                                    <p className="text-gray-600">Haircut</p>
                                     <p className="text-gray-600">Duration: 45 minutes</p>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ export default function BookingSuccessPage() {
 
                             <div className="border-t pt-6">
                                 <div className="flex justify-between items-center">
-                                    <span className="text-lg font-medium text-black">Total Paid</span>
+                                    <span className="text-lg font-medium text-black">Total paid</span>
                                     <span className="text-2xl font-bold text-black">{formatUSD(47.5)}</span>
                                 </div>
                                 <p className="text-sm text-gray-500 mt-1">Payment processed successfully</p>
@@ -158,7 +158,7 @@ export default function BookingSuccessPage() {
                     <div className="text-center text-gray-600">
                         <p className="mb-4">© 2024 HairBooking. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-8 text-sm">
-                            <a href="#" className="hover:text-black transition-colors font-medium">Termos de Uso</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
                         </div>

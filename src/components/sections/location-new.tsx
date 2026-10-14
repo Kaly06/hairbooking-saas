@@ -66,7 +66,7 @@ export default function Location() {
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                         Seu salão
-                        <span className="gradient-text"> em qualquer lugar</span>
+                        <span className="gradient-text"> anywhere</span>
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">

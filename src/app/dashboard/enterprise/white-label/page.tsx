@@ -109,7 +109,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Cor de Destaque</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Accent colour</label>
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 bg-green-500 rounded-lg border border-gray-200"></div>
                                         <input
@@ -126,7 +126,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Cor de Fundo</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Background colour</label>
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 bg-gray-50 rounded-lg border border-gray-200"></div>
                                         <input
@@ -191,7 +191,7 @@ export default function EnterpriseWhiteLabelPage() {
                                         </select>
                                     </div>
                                     <div>
-                                        <label className="text-sm font-medium text-gray-700 mb-2 block">Peso da Fonte</label>
+                                        <label className="text-sm font-medium text-gray-700 mb-2 block">Font weighte</label>
                                         <select className="w-full px-3 py-2 border border-gray-200 rounded-lg">
                                             <option>Normal</option>
                                             <option>Medium</option>
@@ -231,7 +231,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Raio de Borda</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Border radius</label>
                                     <input
                                         type="range"
                                         min="0"
@@ -247,7 +247,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Intensidade da Sombra</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Shadow intensity</label>
                                     <input
                                         type="range"
                                         min="0"
@@ -332,7 +332,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Splash Screen</label>
                                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
                                     <Upload className="h-6 w-6 text-gray-400 mx-auto mb-1" />
-                                    <p className="text-xs text-gray-600">Upload da tela</p>
+                                    <p className="text-xs text-gray-600">Screen upload</p>
                                 </div>
                             </div>
                             <div className="space-y-2">
@@ -409,7 +409,7 @@ export default function EnterpriseWhiteLabelPage() {
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Preview em Tempo Real</h4>
+                                <h4 className="font-semibold text-gray-900">Live preview</h4>
                                 <div className="border border-gray-200 rounded-lg p-4 bg-gray-50 min-h-64">
                                     <div className="bg-white rounded shadow-sm p-4 h-full">
                                         <div className="flex items-center gap-3 mb-4">
@@ -445,8 +445,8 @@ export default function EnterpriseWhiteLabelPage() {
                                         <div className="flex items-center gap-3">
                                             <Download className="h-5 w-5 text-purple-600" />
                                             <div className="text-left">
-                                                <p className="font-medium">Package de Marca</p>
-                                                <p className="text-sm text-gray-600">Logos, cores e assets</p>
+                                                <p className="font-medium">Brand package</p>
+                                                <p className="text-sm text-gray-600">Logos, colours and assets</p>
                                             </div>
                                         </div>
                                         <span className="text-sm text-gray-500">ZIP</span>

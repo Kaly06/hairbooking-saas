@@ -78,7 +78,7 @@ export default function Footer() {
 
                             <div className="flex items-center text-gray-300">
                                 <Mail className="w-4 h-4 mr-3" />
-                                <span className="text-sm">contato@hairbooking.com</span>
+                                <span className="text-sm">contact@hairbooking.com</span>
                             </div>
 
                             <div className="flex items-start text-gray-300">

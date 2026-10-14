@@ -13,7 +13,7 @@ export default function EnterpriseAppointmentsPage() {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900">Bookings Enterprise</h1>
-                        <p className="text-gray-600 mt-2">Centralized management of bookings em todas as unidades</p>
+                        <p className="text-gray-600 mt-2">Centralized management of bookings across all branches</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
@@ -35,7 +35,7 @@ export default function EnterpriseAppointmentsPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Today</p>
                                     <p className="text-2xl font-bold text-gray-900">347</p>
-                                    <p className="text-sm text-gray-500 mt-1">Todas as unidades</p>
+                                    <p className="text-sm text-gray-500 mt-1">All branches</p>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
                                     <Calendar className="h-6 w-6 text-blue-600" />
@@ -50,7 +50,7 @@ export default function EnterpriseAppointmentsPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Confirmed</p>
                                     <p className="text-2xl font-bold text-green-600">312</p>
-                                    <p className="text-sm text-gray-500 mt-1">89.9% do total</p>
+                                    <p className="text-sm text-gray-500 mt-1">89.9% of total</p>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">
                                     <CheckCircle className="h-6 w-6 text-green-600" />
@@ -80,7 +80,7 @@ export default function EnterpriseAppointmentsPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Cancelled</p>
                                     <p className="text-2xl font-bold text-red-600">12</p>
-                                    <p className="text-sm text-gray-500 mt-1">3.5% do total</p>
+                                    <p className="text-sm text-gray-500 mt-1">3.5% of total</p>
                                 </div>
                                 <div className="h-12 w-12 bg-red-100 rounded-full flex items-center justify-center">
                                     <XCircle className="h-6 w-6 text-red-600" />
@@ -106,7 +106,7 @@ export default function EnterpriseAppointmentsPage() {
                             </div>
                             <div className="flex gap-2">
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                    <option>Todas as unidades</option>
+                                    <option>All branches</option>
                                     <option>Osu Branch</option>
                                     <option>Shopping Branch</option>
                                     <option>Airport Residential Branch</option>

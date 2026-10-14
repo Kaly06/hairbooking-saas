@@ -86,7 +86,7 @@ export default function EnterpriseFinancialPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Margin de Lucro</p>
+                                    <p className="text-sm font-medium text-gray-600">Profit margin</p>
                                     <p className="text-2xl font-bold text-blue-600">61.3%</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
@@ -245,28 +245,28 @@ export default function EnterpriseFinancialPage() {
                                 <div className="flex justify-between items-center">
                                     <div className="flex items-center gap-2">
                                         <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                        <span className="text-sm">Folha de Payment</span>
+                                        <span className="text-sm">Payroll</span>
                                     </div>
                                     <span className="font-medium">42.3%</span>
                                 </div>
                                 <div className="flex justify-between items-center">
                                     <div className="flex items-center gap-2">
                                         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                        <span className="text-sm">Aluguel e Utilities</span>
+                                        <span className="text-sm">Rent & utilities</span>
                                     </div>
                                     <span className="font-medium">28.7%</span>
                                 </div>
                                 <div className="flex justify-between items-center">
                                     <div className="flex items-center gap-2">
                                         <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                                        <span className="text-sm">Products e Materiais</span>
+                                        <span className="text-sm">Products & supplies</span>
                                     </div>
                                     <span className="font-medium">18.5%</span>
                                 </div>
                                 <div className="flex justify-between items-center">
                                     <div className="flex items-center gap-2">
                                         <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                                        <span className="text-sm">Marketing e Outros</span>
+                                        <span className="text-sm">Marketing & other</span>
                                     </div>
                                     <span className="font-medium">10.5%</span>
                                 </div>
@@ -349,7 +349,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-medium text-green-900">Entradas Previstas</span>
                                         <span className="font-bold text-green-600">{formatUSD(526800)}</span>
                                     </div>
-                                    <p className="text-sm text-green-600 mt-1">Receitas confirmadas e estimadas</p>
+                                    <p className="text-sm text-green-600 mt-1">Confirmed and estimated revenue</p>
                                 </div>
 
                                 <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
@@ -357,7 +357,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-medium text-red-900">Expected Outflows</span>
                                         <span className="font-bold text-red-600">{formatUSD(195300)}</span>
                                     </div>
-                                    <p className="text-sm text-red-600 mt-1">Folha, aluguel e fornecedores</p>
+                                    <p className="text-sm text-red-600 mt-1">Payroll, rent and suppliers</p>
                                 </div>
 
                                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
@@ -372,15 +372,15 @@ export default function EnterpriseFinancialPage() {
                                     <h4 className="font-semibold text-gray-900 mb-2">Upcoming Due Dates</h4>
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
-                                            <span>Folha de Payment (05/11)</span>
+                                            <span>Payroll (05/11)</span>
                                             <span className="font-medium">{formatUSD(89200)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
-                                            <span>Aluguel Branches (10/11)</span>
+                                            <span>Branch rent (10/11)</span>
                                             <span className="font-medium">{formatUSD(45600)}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
-                                            <span>Fornecedores (15/11)</span>
+                                            <span>Suppliers (15/11)</span>
                                             <span className="font-medium">{formatUSD(28400)}</span>
                                         </div>
                                     </div>
@@ -412,7 +412,7 @@ export default function EnterpriseFinancialPage() {
                                         <span className="font-bold text-purple-600">{formatUSD(342100)}</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                                        <span className="text-sm font-medium">Fluxo de Caixa Operacional</span>
+                                        <span className="text-sm font-medium">Operating cash flow</span>
                                         <span className="font-bold text-blue-600">{formatUSD(298500)}</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
@@ -438,8 +438,8 @@ export default function EnterpriseFinancialPage() {
                                         <p className="text-xs text-purple-600">Increase average ticket and recurring revenue</p>
                                     </div>
                                     <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                                        <p className="text-sm font-medium text-orange-800">Renegociar Contratos Fornecedores</p>
-                                        <p className="text-xs text-orange-600">Potencial economia de 8-12% nos custos</p>
+                                        <p className="text-sm font-medium text-orange-800">Renegotiate supplier contracts</p>
+                                        <p className="text-xs text-orange-600">Potential savings of 8-12% on costs</p>
                                     </div>
                                 </div>
                             </div>

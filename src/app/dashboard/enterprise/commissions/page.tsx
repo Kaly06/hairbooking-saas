@@ -12,7 +12,7 @@ export default function EnterpriseCommissionsPage() {
                 {/* Header */}
                 <div className="flex justify-between items-start">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Commissions e Performance</h1>
+                        <h1 className="text-3xl font-bold text-gray-900">Commissions & performance</h1>
                         <p className="text-gray-600 mt-2">Advanced commission and incentive management across branches</p>
                     </div>
                     <div className="flex gap-3">
@@ -209,7 +209,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                                 <div className="flex justify-between items-center mb-3">
                                     <h4 className="font-semibold text-blue-900">Basic Plan</h4>
-                                    <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">15 profissionais</span>
+                                    <span className="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">15 professionals</span>
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
@@ -231,7 +231,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
                                 <div className="flex justify-between items-center mb-3">
                                     <h4 className="font-semibold text-green-900">Plan Professional</h4>
-                                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">22 profissionais</span>
+                                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">22 professionals</span>
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
@@ -253,7 +253,7 @@ export default function EnterpriseCommissionsPage() {
                             <div className="p-4 bg-purple-50 border border-purple-200 rounded-lg">
                                 <div className="flex justify-between items-center mb-3">
                                     <h4 className="font-semibold text-purple-900">Plan Premium</h4>
-                                    <span className="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded-full">10 profissionais</span>
+                                    <span className="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded-full">10 professionals</span>
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
@@ -305,7 +305,7 @@ export default function EnterpriseCommissionsPage() {
                                         <p className="font-bold text-blue-900">{formatUSD(2378)}</p>
                                     </div>
                                     <div>
-                                        <p className="text-sm text-blue-700">Average Fee:</p>
+                                        <p className="text-sm text-blue-700">Average fee:</p>
                                         <p className="font-bold text-blue-900">21.6%</p>
                                     </div>
                                 </div>
@@ -331,7 +331,7 @@ export default function EnterpriseCommissionsPage() {
                                         <p className="font-bold text-green-900">{formatUSD(1913)}</p>
                                     </div>
                                     <div>
-                                        <p className="text-sm text-green-700">Average Fee:</p>
+                                        <p className="text-sm text-green-700">Average fee:</p>
                                         <p className="font-bold text-green-900">18.4%</p>
                                     </div>
                                 </div>
@@ -357,7 +357,7 @@ export default function EnterpriseCommissionsPage() {
                                         <p className="font-bold text-orange-900">{formatUSD(1264)}</p>
                                     </div>
                                     <div>
-                                        <p className="text-sm text-orange-700">Average Fee:</p>
+                                        <p className="text-sm text-orange-700">Average fee:</p>
                                         <p className="font-bold text-orange-900">15.2%</p>
                                     </div>
                                 </div>
@@ -420,11 +420,11 @@ export default function EnterpriseCommissionsPage() {
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Eligible:</span>
-                                            <span className="font-medium">8 profissionais</span>
+                                            <span className="font-medium">8 professionals</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Already earned:</span>
-                                            <span className="font-medium text-green-600">3 profissionais</span>
+                                            <span className="font-medium text-green-600">3 professionals</span>
                                         </div>
                                     </div>
                                 </div>
@@ -439,7 +439,7 @@ export default function EnterpriseCommissionsPage() {
                                     <div className="space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Participantes:</span>
-                                            <span className="font-medium">47 profissionais</span>
+                                            <span className="font-medium">47 professionals</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
                                             <span>Current leader:</span>
@@ -451,7 +451,7 @@ export default function EnterpriseCommissionsPage() {
                                 {/* Team Achievement */}
                                 <div className="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
                                     <div className="flex justify-between items-center mb-2">
-                                        <h4 className="font-semibold text-purple-900">Meta de Team</h4>
+                                        <h4 className="font-semibold text-purple-900">Team target</h4>
                                         <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded-full">87%</span>
                                     </div>
                                     <p className="text-sm text-purple-700 mb-3">{formatUSD(100000)} in commissions = team celebration</p>
@@ -486,40 +486,40 @@ export default function EnterpriseCommissionsPage() {
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg">
                                         <span className="text-sm font-medium text-red-800">{formatUSD(0)} - {formatUSD(2000)}</span>
-                                        <span className="font-bold text-red-600">12 profissionais</span>
+                                        <span className="font-bold text-red-600">12 professionals</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-yellow-50 rounded-lg">
                                         <span className="text-sm font-medium text-yellow-800">{formatUSD(2001)} - {formatUSD(5000)}</span>
-                                        <span className="font-bold text-yellow-600">18 profissionais</span>
+                                        <span className="font-bold text-yellow-600">18 professionals</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
                                         <span className="text-sm font-medium text-green-800">{formatUSD(5001)} - {formatUSD(8000)}</span>
-                                        <span className="font-bold text-green-600">12 profissionais</span>
+                                        <span className="font-bold text-green-600">12 professionals</span>
                                     </div>
                                     <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
                                         <span className="text-sm font-medium text-blue-800">Acima de {formatUSD(8000)}</span>
-                                        <span className="font-bold text-blue-600">5 profissionais</span>
+                                        <span className="font-bold text-blue-600">5 professionals</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Metas e Conquistas</h4>
+                                <h4 className="font-semibold text-gray-900">Goals & achievements</h4>
                                 <div className="space-y-3">
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                         <p className="text-sm font-medium text-green-800">Metas Atingidas</p>
                                         <p className="text-2xl font-bold text-green-600">28</p>
-                                        <p className="text-xs text-green-600">59.6% dos profissionais</p>
+                                        <p className="text-xs text-green-600">59.6% of professionals</p>
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">Em Progresso</p>
                                         <p className="text-2xl font-bold text-blue-600">13</p>
-                                        <p className="text-xs text-blue-600">27.7% dos profissionais</p>
+                                        <p className="text-xs text-blue-600">27.7% of professionals</p>
                                     </div>
                                     <div className="p-3 bg-orange-50 border border-orange-200 rounded-lg">
                                         <p className="text-sm font-medium text-orange-800">Necessitam Suporte</p>
                                         <p className="text-2xl font-bold text-orange-600">6</p>
-                                        <p className="text-xs text-orange-600">12.7% dos profissionais</p>
+                                        <p className="text-xs text-orange-600">12.7% of professionals</p>
                                     </div>
                                 </div>
                             </div>
@@ -533,10 +533,10 @@ export default function EnterpriseCommissionsPage() {
                                     </div>
                                     <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                                         <p className="text-sm font-medium text-blue-800">Mentoria New Professionals</p>
-                                        <p className="text-xs text-blue-600">6 profissionais abaixo de {formatUSD(1500)}</p>
+                                        <p className="text-xs text-blue-600">6 professionals abaixo de {formatUSD(1500)}</p>
                                     </div>
                                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-                                        <p className="text-sm font-medium text-green-800">Programa de Reconhecimento</p>
+                                        <p className="text-sm font-medium text-green-800">Recognition program</p>
                                         <p className="text-xs text-green-600">Keep top performers motivated</p>
                                     </div>
                                 </div>

@@ -12,7 +12,7 @@ export default function EnterpriseIntegrationsPage() {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900">Integrations</h1>
-                        <p className="text-gray-600 mt-2">APIs e conectores para sistemas externos</p>
+                        <p className="text-gray-600 mt-2">APIs and connectors for external systems</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
@@ -106,7 +106,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">Stripe</h4>
-                                            <p className="text-sm text-gray-600">Gateway de Payment</p>
+                                            <p className="text-sm text-gray-600">Payment gateway</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -120,7 +120,7 @@ export default function EnterpriseIntegrationsPage() {
                                         <span className="font-medium">247</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Fee de sucesso:</span>
+                                        <span>Success fee:</span>
                                         <span className="font-medium text-green-600">98.5%</span>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@ export default function EnterpriseIntegrationsPage() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold">SendGrid</h4>
-                                            <p className="text-sm text-gray-600">Service de Email</p>
+                                            <p className="text-sm text-gray-600">Email service</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-1">
@@ -152,7 +152,7 @@ export default function EnterpriseIntegrationsPage() {
                                         <span className="font-medium">1.2K</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Fee de entrega:</span>
+                                        <span>Delivery fee:</span>
                                         <span className="font-medium text-green-600">97.8%</span>
                                     </div>
                                 </div>
@@ -180,11 +180,11 @@ export default function EnterpriseIntegrationsPage() {
                                 </div>
                                 <div className="space-y-2">
                                     <div className="flex justify-between text-sm">
-                                        <span>Messages hoje:</span>
+                                        <span>Messages today:</span>
                                         <span className="font-medium">89</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Fee de leitura:</span>
+                                        <span>Read fee:</span>
                                         <span className="font-medium text-green-600">94.2%</span>
                                     </div>
                                 </div>
@@ -248,7 +248,7 @@ export default function EnterpriseIntegrationsPage() {
                                         <span className="font-medium">45</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span>Canal ativo:</span>
+                                        <span>Active channel:</span>
                                         <span className="font-medium text-indigo-600">#alerts</span>
                                     </div>
                                 </div>
@@ -424,7 +424,7 @@ export default function EnterpriseIntegrationsPage() {
                                     <div className="flex items-center gap-2">
                                         <CheckCircle className="h-4 w-4 text-green-600" />
                                         <div>
-                                            <p className="text-sm font-medium">Stripe - Payment processado</p>
+                                            <p className="text-sm font-medium">Stripe - payment processed</p>
                                             <p className="text-xs text-gray-600">Transaction ID: tx_1234567890</p>
                                         </div>
                                     </div>

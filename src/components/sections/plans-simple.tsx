@@ -9,18 +9,18 @@ export default function Plans() {
         {
             name: "Starter",
             price: 89,
-            features: ["Agendamento online", "Site personalizado", "1 profissional", "Suporte básico"]
+            features: ["Agendamento online", "Site personalizado", "1 professional", "Suporte básico"]
         },
         {
             name: "Professional",
             price: 149,
             popular: true,
-            features: ["Tudo do Starter", "App mobile", "3 profissionais", "Relatórios", "Suporte prioritário"]
+            features: ["Tudo do Starter", "App mobile", "3 professionals", "Relatórios", "Suporte prioritário"]
         },
         {
             name: "Enterprise",
             price: 299,
-            features: ["Tudo do Professional", "Profissionais ilimitados", "Multi-unidades", "API personalizada"]
+            features: ["Tudo do Professional", "Profissionais ilimitados", "Multi-branch", "API personalizada"]
         }
     ];
 
@@ -31,7 +31,7 @@ export default function Plans() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
                         Planos <span className="text-gray-600">simples</span>
                     </h2>
-                    <p className="text-gray-600">Escolha o que faz sentido para seu negócio</p>
+                    <p className="text-gray-600">Choose what works best for your business</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export default function Plans() {
                                     {plan.name}
                                 </h3>
                                 <div className="text-2xl font-bold text-gray-900">
-                                    {formatUSD(plan.price)}<span className="text-sm text-gray-500">/mês</span>
+                                    {formatUSD(plan.price)}<span className="text-sm text-gray-500">/month</span>
                                 </div>
                             </div>
 

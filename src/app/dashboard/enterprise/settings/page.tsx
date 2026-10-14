@@ -37,7 +37,7 @@ export default function EnterpriseSettingsPage() {
                         <CardContent className="space-y-4">
                             <div className="space-y-3">
                                 <div className="p-3 bg-gray-50 rounded-lg">
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Name da Empresa</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Company name</label>
                                     <input type="text" value="HairBooking Enterprise" className="w-full px-3 py-2 border border-gray-300 rounded-md" />
                                 </div>
 
@@ -85,7 +85,7 @@ export default function EnterpriseSettingsPage() {
 
                                 <div className="p-3 bg-green-50 rounded-lg border border-green-200">
                                     <div className="flex justify-between items-center mb-2">
-                                        <span className="font-medium text-green-900">Gerentes de Branch</span>
+                                        <span className="font-medium text-green-900">Branch managers</span>
                                         <span className="text-sm bg-green-200 text-green-800 px-2 py-1 rounded">12 users</span>
                                     </div>
                                     <button className="text-sm text-green-600 hover:text-green-800">Gerenciar gerentes</button>
@@ -96,7 +96,7 @@ export default function EnterpriseSettingsPage() {
                                         <span className="font-medium text-purple-900">Professionals</span>
                                         <span className="text-sm bg-purple-200 text-purple-800 px-2 py-1 rounded">47 users</span>
                                     </div>
-                                    <button className="text-sm text-purple-600 hover:text-purple-800">Gerenciar profissionais</button>
+                                    <button className="text-sm text-purple-600 hover:text-purple-800">Gerenciar professionals</button>
                                 </div>
 
                                 <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
@@ -139,7 +139,7 @@ export default function EnterpriseSettingsPage() {
                                 <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
                                     <div className="flex items-center gap-2">
                                         <Eye className="h-4 w-4 text-green-600" />
-                                        <span className="text-sm font-medium text-green-900">Auditoria de Acesso</span>
+                                        <span className="text-sm font-medium text-green-900">Access audit</span>
                                     </div>
                                     <button className="bg-green-600 text-white px-3 py-1 rounded text-sm">Active</button>
                                 </div>
@@ -181,7 +181,7 @@ export default function EnterpriseSettingsPage() {
 
                                     <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
                                         <div>
-                                            <p className="font-medium text-blue-900">Alertas de Sistema</p>
+                                            <p className="font-medium text-blue-900">System alerts</p>
                                             <p className="text-sm text-blue-700">Notifications importantes</p>
                                         </div>
                                         <button className="w-12 h-6 bg-blue-500 rounded-full relative">
@@ -207,7 +207,7 @@ export default function EnterpriseSettingsPage() {
                                     <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
                                         <div>
                                             <p className="font-medium text-purple-900">New Bookings</p>
-                                            <p className="text-sm text-purple-700">Em tempo real</p>
+                                            <p className="text-sm text-purple-700">Live</p>
                                         </div>
                                         <button className="w-12 h-6 bg-purple-500 rounded-full relative">
                                             <div className="w-5 h-5 bg-white rounded-full absolute right-0.5 top-0.5"></div>
@@ -258,8 +258,8 @@ export default function EnterpriseSettingsPage() {
                                                 <span className="text-white text-sm font-bold">$</span>
                                             </div>
                                             <div>
-                                                <p className="font-medium text-green-900">Stripe Payment</p>
-                                                <p className="text-sm text-green-700">Processamento de pagamentos</p>
+                                                <p className="font-medium text-green-900">Stripe payment</p>
+                                                <p className="text-sm text-green-700">Payment processing</p>
                                             </div>
                                         </div>
                                         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -272,7 +272,7 @@ export default function EnterpriseSettingsPage() {
                                             </div>
                                             <div>
                                                 <p className="font-medium text-blue-900">SendGrid</p>
-                                                <p className="text-sm text-blue-700">Envio de emails transacionais</p>
+                                                <p className="text-sm text-blue-700">Transactional email sending</p>
                                             </div>
                                         </div>
                                         <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -301,7 +301,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="font-medium text-gray-900">API REST v2</span>
                                             <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Ativa</span>
                                         </div>
-                                        <p className="text-sm text-gray-600 mb-2">Acesso completo aos dados</p>
+                                        <p className="text-sm text-gray-600 mb-2">Full data access</p>
                                         <button className="text-sm text-blue-600 hover:text-blue-800">View documentation</button>
                                     </div>
 
@@ -310,7 +310,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="font-medium text-gray-900">Webhooks</span>
                                             <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Configurado</span>
                                         </div>
-                                        <p className="text-sm text-gray-600 mb-2">Eventos em tempo real</p>
+                                        <p className="text-sm text-gray-600 mb-2">Real-time events</p>
                                         <button className="text-sm text-blue-600 hover:text-blue-800">Configurar endpoints</button>
                                     </div>
 
@@ -384,7 +384,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="font-medium text-green-900">Certificado SSL</span>
                                             <span className="text-xs bg-green-500 text-white px-2 py-1 rounded">Valid</span>
                                         </div>
-                                        <p className="text-sm text-green-700">Expira em 12/03/2025</p>
+                                        <p className="text-sm text-green-700">Expires 12/03/2025</p>
                                     </div>
 
                                     <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
@@ -415,7 +415,7 @@ export default function EnterpriseSettingsPage() {
                                 <h4 className="font-semibold text-gray-900">Automatic Backup</h4>
                                 <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                                     <p className="text-sm font-medium text-green-900 mb-1">Frequency: Daily</p>
-                                    <p className="text-sm text-green-700 mb-1">Hora: 02:00 AM</p>
+                                    <p className="text-sm text-green-700 mb-1">Time: 02:00 AM</p>
                                     <p className="text-sm text-green-700">Last backup: Today, 02:15</p>
                                 </div>
                                 <button className="w-full px-3 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700">
@@ -424,9 +424,9 @@ export default function EnterpriseSettingsPage() {
                             </div>
 
                             <div className="space-y-3">
-                                <h4 className="font-semibold text-gray-900">Retention de Data</h4>
+                                <h4 className="font-semibold text-gray-900">Data retention</h4>
                                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                                    <p className="text-sm font-medium text-blue-900 mb-1">Backups locais: 30 dias</p>
+                                    <p className="text-sm font-medium text-blue-900 mb-1">Local backups: 30 days</p>
                                     <p className="text-sm text-blue-700 mb-1">Cloud backup: 1 ano</p>
                                     <p className="text-sm text-blue-700">Arquivos: 2 anos</p>
                                 </div>

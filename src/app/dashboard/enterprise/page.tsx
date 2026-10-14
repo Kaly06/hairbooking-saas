@@ -141,7 +141,7 @@ export default function EnterpriseDashboard() {
                         </button>
                         <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
                             <Building className="w-4 h-4 mr-2" />
-                            Multi-unidades
+                            Multi-branch
                         </button>
                         <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center">
                             <PieChart className="w-4 h-4 mr-2" />

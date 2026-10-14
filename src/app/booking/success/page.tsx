@@ -115,7 +115,7 @@ export default function BookingSuccessPage() {
                                                         day: 'numeric'
                                                     })}
                                                 </p>
-                                                <p className="text-sm text-gray-600">Data do booking</p>
+                                                <p className="text-sm text-gray-600">Booking date</p>
                                             </div>
                                         </div>
 
@@ -186,7 +186,7 @@ export default function BookingSuccessPage() {
                                 </div>
 
                                 <div>
-                                    <h3 className="font-semibold text-gray-900 mb-4">Payment Summary</h3>
+                                    <h3 className="font-semibold text-gray-900 mb-4">Payment summary</h3>
                                     <div className="bg-gray-50 p-4 rounded-lg space-y-2">
                                         <div className="flex justify-between text-sm">
                                             <span>Subtotal:</span>
@@ -197,7 +197,7 @@ export default function BookingSuccessPage() {
                                             <span>{formatUSD(2.5)}</span>
                                         </div>
                                         <div className="border-t pt-2 flex justify-between font-bold">
-                                            <span>Total Paid:</span>
+                                            <span>Total paid:</span>
                                             <span className="text-green-600">{formatUSD(booking.total)}</span>
                                         </div>
                                         <div className="text-sm text-gray-600 mt-2">

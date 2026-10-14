@@ -30,7 +30,7 @@ export default function EnterpriseSecurityPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Status de Security</p>
+                                    <p className="text-sm font-medium text-gray-600">Security status</p>
                                     <p className="text-2xl font-bold text-green-600">Seguro</p>
                                     <p className="text-sm text-gray-500 mt-1">98.5% Score</p>
                                 </div>
@@ -106,7 +106,7 @@ export default function EnterpriseSecurityPage() {
                                         </div>
                                         <div>
                                             <p className="font-medium">Administradores</p>
-                                            <p className="text-sm text-gray-600">Acesso total ao sistema</p>
+                                            <p className="text-sm text-gray-600">Full system access</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -122,7 +122,7 @@ export default function EnterpriseSecurityPage() {
                                         </div>
                                         <div>
                                             <p className="font-medium">Gerentes</p>
-                                            <p className="text-sm text-gray-600">Management de unidades</p>
+                                            <p className="text-sm text-gray-600">Branch management</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -345,7 +345,7 @@ export default function EnterpriseSecurityPage() {
                                         <Lock className="h-4 w-4 text-purple-600" />
                                         <span className="text-sm font-medium text-purple-800">PCI DSS</span>
                                     </div>
-                                    <p className="text-xs text-purple-600">Card Data Security</p>
+                                    <p className="text-xs text-purple-600">Card data security</p>
                                 </div>
 
                                 <div className="p-3 bg-yellow-50 rounded-lg">
@@ -403,7 +403,7 @@ export default function EnterpriseSecurityPage() {
                                     <Shield className="h-5 w-5 text-blue-600" />
                                     <div>
                                         <p className="font-medium text-blue-800">Security backup completed</p>
-                                        <p className="text-sm text-blue-600">All os dados protegidos com sucesso</p>
+                                        <p className="text-sm text-blue-600">All data protected successfully</p>
                                     </div>
                                 </div>
                                 <div className="text-right text-sm text-blue-600">

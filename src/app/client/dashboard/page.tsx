@@ -270,7 +270,7 @@ export default function ClientDashboardPage() {
                                 <Phone className="h-6 w-6 text-black" />
                             </div>
                             <h3 className="font-semibold text-black mb-2">Suporte</h3>
-                            <p className="text-sm text-gray-600">Entre em contato conosco</p>
+                            <p className="text-sm text-gray-600">Get in touch</p>
                         </CardContent>
                     </Card>
                 </div>
@@ -282,7 +282,7 @@ export default function ClientDashboardPage() {
                     <div className="text-center text-gray-600">
                         <p className="mb-4">© 2024 HairBooking. All rights reserved.</p>
                         <div className="flex items-center justify-center gap-8 text-sm">
-                            <a href="#" className="hover:text-black transition-colors font-medium">Termos de Uso</a>
+                            <a href="#" className="hover:text-black transition-colors font-medium">Terms of Use</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Privacy Policy</a>
                             <a href="#" className="hover:text-black transition-colors font-medium">Suporte</a>
                         </div>

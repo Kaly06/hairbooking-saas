@@ -236,7 +236,7 @@ export default function ProfessionalFinancial() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Fluxo de Caixa</p>
+                            <p className="text-sm font-medium text-gray-600">Cash flow</p>
                             <p className="text-2xl font-bold text-purple-600">{formatUSD(financialStats.cashFlow.toLocaleString())}</p>
                             <p className="text-xs text-gray-500 mt-2">
                                 Available balance
@@ -356,7 +356,7 @@ export default function ProfessionalFinancial() {
 
                 {/* Payment Methods */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Formas de Payment</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Payment methods</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {paymentMethods.map((method, index) => (
                             <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">

@@ -32,9 +32,9 @@ export default function Services() {
             <div className="container-width section-padding">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Tudo que <span className="text-gray-600">seu salão precisa</span>
+                        Everything your <span className="text-gray-600">salon needs</span>
                     </h2>
-                    <p className="text-gray-600">Sistema completo de gestão</p>
+                    <p className="text-gray-600">Complete management system</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -85,7 +85,7 @@ export default function EnterpriseAnalyticsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Conversion Fee</p>
+                                    <p className="text-sm font-medium text-gray-600">Conversion fee</p>
                                     <p className="text-2xl font-bold text-gray-900">78.6%</p>
                                     <div className="flex items-center mt-2">
                                         <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
@@ -268,7 +268,7 @@ export default function EnterpriseAnalyticsPage() {
                         <CardContent className="space-y-4">
                             <div className="space-y-3">
                                 <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
-                                    <span className="text-sm">Pico de Demanda</span>
+                                    <span className="text-sm">Peak demand</span>
                                     <span className="font-medium text-purple-600">14h-17h</span>
                                 </div>
                                 <div className="flex justify-between items-center p-2 bg-gray-50 rounded">
@@ -299,7 +299,7 @@ export default function EnterpriseAnalyticsPage() {
                     <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Forecasts de Revenue</h4>
+                                <h4 className="font-semibold text-gray-900">Revenue forecasts</h4>
                                 <div className="space-y-3">
                                     <div className="flex justify-between items-center">
                                         <span className="text-sm">Next Month</span>

@@ -225,7 +225,7 @@ export default function ClientBookingPage() {
                         <div className="flex items-center gap-2 sm:gap-3">
                             <div className="hidden md:flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 sm:px-4 py-2 rounded-full">
                                 <Shield className="h-3 w-3 sm:h-4 sm:w-4 text-black" />
-                                <span className="font-medium text-xs sm:text-sm">Secure SSL Payment</span>
+                                <span className="font-medium text-xs sm:text-sm">Secure SSL payment</span>
                             </div>
                             <div className="text-xs sm:text-sm text-gray-500">
                                 <div className="flex items-center gap-1">
@@ -431,7 +431,7 @@ export default function ClientBookingPage() {
                                     <div className="pt-6 border-t border-gray-200">
                                         <div className="flex items-center justify-between">
                                             <div>
-                                                <h4 className="font-bold text-black mb-1">Precisa de transporte?</h4>
+                                                <h4 className="font-bold text-black mb-1">Need a ride?</h4>
                                                 <p className="text-sm text-gray-600">We offer pickup and delivery service (additional fee)</p>
                                             </div>
                                             <button className="text-black hover:bg-gray-100 px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition-colors">
@@ -634,7 +634,7 @@ export default function ClientBookingPage() {
                             <div className="max-w-4xl mx-auto">
                                 <div className="mb-6 sm:mb-8 text-center sm:text-left">
                                     <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Choose Your Plan</h2>
-                                    <p className="text-gray-600 text-base sm:text-lg">Economia garantida com nossos planos mensais</p>
+                                    <p className="text-gray-600 text-base sm:text-lg">Guaranteed savings with our monthly plans</p>
                                 </div>
 
                                 <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm">
@@ -910,7 +910,7 @@ export default function ClientBookingPage() {
                                                             <span className="font-bold text-black">{calculateDuration()} min</span>
                                                         </div>
                                                         <div className="bg-black text-white p-3 rounded-lg text-center">
-                                                            <div className="text-sm mb-1">Combo Total</div>
+                                                            <div className="text-sm mb-1">Combo total</div>
                                                             <div className="text-2xl font-black">{formatUSD(calculateTotal())}</div>
                                                         </div>
                                                     </div>
@@ -1062,7 +1062,7 @@ export default function ClientBookingPage() {
                                                 <span className="font-semibold text-black text-right">{selectedUnit?.name}</span>
                                             </div>
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                                                <span className="text-gray-600">Data:</span>
+                                                <span className="text-gray-600">Date:</span>
                                                 <span className="font-semibold text-black">
                                                     {selectedDate ? new Date(selectedDate).toLocaleDateString('en-US', {
                                                         weekday: 'long',
@@ -1110,7 +1110,7 @@ export default function ClientBookingPage() {
 
                                         {/* Total */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center">
-                                            <div className="text-sm mb-1">Total Amount</div>
+                                            <div className="text-sm mb-1">Total amount</div>
                                             <div className="text-3xl font-black">{formatUSD(calculateTotal())}</div>
                                         </div>
 
@@ -1157,7 +1157,7 @@ export default function ClientBookingPage() {
                         <div className="max-w-6xl mx-auto">
                             <div className="mb-6 sm:mb-8 text-center sm:text-left">
                                 <h2 className="text-2xl sm:text-3xl font-black text-black mb-3 tracking-tight">Complete Booking</h2>
-                                <p className="text-gray-600 text-base sm:text-lg">Confirme seus dados e forma de pagamento</p>
+                                <p className="text-gray-600 text-base sm:text-lg">Confirm your details and payment method</p>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -1249,7 +1249,7 @@ export default function ClientBookingPage() {
                                                     <span className="text-white text-xs font-bold">i</span>
                                                 </div>
                                                 <div>
-                                                    <h4 className="font-bold text-blue-900 mb-1">Como funciona o pagamento</h4>
+                                                    <h4 className="font-bold text-blue-900 mb-1">How payment works</h4>
                                                     <p className="text-sm text-blue-800">
                                                         • You only pay <strong>{formatUSD(5)} as a booking fee</strong><br />
                                                         • The remainder ({formatUSD(calculateTotal() - 5)}) will be paid directly at the branch<br />
@@ -1263,7 +1263,7 @@ export default function ClientBookingPage() {
                                         <div className="flex items-start gap-3">
                                             <input type="checkbox" className="w-5 h-5 mt-0.5" />
                                             <p className="text-sm text-gray-700">
-                                                Aceito os <a href="#" className="text-black font-bold underline">termos de uso</a> e
+                                                I accept the <a href="#" className="text-black font-bold underline">terms of use</a> and
                                                 <a href="#" className="text-black font-bold underline ml-1">privacy policy</a>.
                                                 I confirm that the information provided is correct.
                                             </p>
@@ -1274,7 +1274,7 @@ export default function ClientBookingPage() {
                                 {/* Summary Sidebar */}
                                 <div className="lg:col-span-1">
                                     <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm sticky top-24">
-                                        <h3 className="text-xl font-black text-black mb-6">Resumo Final</h3>
+                                        <h3 className="text-xl font-black text-black mb-6">Final summary</h3>
 
                                         {/* Booking Details */}
                                         <div className="space-y-4 mb-6">
@@ -1323,7 +1323,7 @@ export default function ClientBookingPage() {
                                                 <span className="font-semibold">{formatUSD(calculateTotal())}</span>
                                             </div>
                                             <div className="flex justify-between items-center mb-2">
-                                                <span className="text-sm text-gray-600">Fee de booking:</span>
+                                                <span className="text-sm text-gray-600">Booking fee:</span>
                                                 <span className="font-semibold">{formatUSD(5)}</span>
                                             </div>
                                             <div className="flex justify-between items-center">
@@ -1336,7 +1336,7 @@ export default function ClientBookingPage() {
                                         <div className="bg-black text-white p-4 rounded-xl text-center mb-6">
                                             <div className="text-sm mb-1">Pay Agora</div>
                                             <div className="text-3xl font-black">{formatUSD(5)}</div>
-                                            <div className="text-xs mt-1 opacity-75">Fee de booking</div>
+                                            <div className="text-xs mt-1 opacity-75">Booking fee</div>
                                         </div>
 
                                         {/* Security */}

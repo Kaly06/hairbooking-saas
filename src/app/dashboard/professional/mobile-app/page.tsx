@@ -74,7 +74,7 @@ export default function ProfessionalMobileApp() {
         },
         {
             icon: <Award className="w-6 h-6" />,
-            title: "Programa de Fidelidade",
+            title: "Loyalty program",
             description: "Points and rewards for clients",
             status: "development",
             usage: 0
@@ -208,7 +208,7 @@ export default function ProfessionalMobileApp() {
                                 <p className="text-2xl font-bold text-gray-900">{appStats.activeUsers}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
-                                    <span className="text-sm font-medium text-green-600">+8% esta semana</span>
+                                    <span className="text-sm font-medium text-green-600">+8% this week</span>
                                 </div>
                             </div>
                             <div className="p-3 bg-green-100 rounded-lg">
@@ -255,7 +255,7 @@ export default function ProfessionalMobileApp() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* App Preview */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Preview do App</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-6">App preview</h3>
                             <div className="flex justify-center">
                                 <div className="relative">
                                     <div className="w-64 h-96 bg-gray-900 rounded-3xl p-2">
@@ -338,7 +338,7 @@ export default function ProfessionalMobileApp() {
                 {activeTab === "features" && (
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
                         <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-xl font-semibold text-gray-900">Funcionalidades do App</h3>
+                            <h3 className="text-xl font-semibold text-gray-900">App features</h3>
                             <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                                 <Settings className="w-4 h-4 mr-2" />
                                 Gerenciar
@@ -436,7 +436,7 @@ export default function ProfessionalMobileApp() {
 
                 {activeTab === "settings" && (
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Settings do App</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">App settings</h3>
                         <div className="space-y-8">
                             {appSettings.map((category, index) => (
                                 <div key={index}>

@@ -64,7 +64,7 @@ export default function BookingForm() {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Agende seu
-                            <span className="gradient-text"> horário</span>
+                            <span className="gradient-text"> time</span>
                         </h2>
                         <p className="text-lg text-gray-600">
                             Processo simples e rápido para garantir seu atendimento
@@ -307,7 +307,7 @@ export default function BookingForm() {
                                                     setFormData({ ...formData, name: e.target.value })
                                                 }
                                                 className="w-full p-4 border border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none"
-                                                placeholder="Digite seu nome completo"
+                                                placeholder="Enter your full name"
                                                 required
                                             />
                                         </div>
@@ -339,7 +339,7 @@ export default function BookingForm() {
                                                     setFormData({ ...formData, email: e.target.value })
                                                 }
                                                 className="w-full p-4 border border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none"
-                                                placeholder="seu@email.com"
+                                                placeholder="you@email.com"
                                                 required
                                             />
                                         </div>
@@ -370,7 +370,7 @@ export default function BookingForm() {
                                                 </span>
                                             </div>
                                             <div className="flex justify-between">
-                                                <span className="text-gray-600">Data e hora:</span>
+                                                <span className="text-gray-600">Date & time:</span>
                                                 <span className="font-medium">
                                                     {formData.date} às {formData.time}
                                                 </span>

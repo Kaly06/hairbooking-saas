@@ -52,7 +52,7 @@ export default function EnterpriseClientsPage() {
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Clients VIP</p>
                                     <p className="text-2xl font-bold text-purple-600">1.247</p>
-                                    <p className="text-sm text-gray-500 mt-1">14.6% do total</p>
+                                    <p className="text-sm text-gray-500 mt-1">14.6% of total</p>
                                 </div>
                                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
                                     <Star className="h-6 w-6 text-purple-600" />
@@ -83,7 +83,7 @@ export default function EnterpriseClientsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Fee de Retention</p>
+                                    <p className="text-sm font-medium text-gray-600">Retention fee</p>
                                     <p className="text-2xl font-bold text-orange-600">87.3%</p>
                                     <p className="text-sm text-gray-500 mt-1">Last 12 months</p>
                                 </div>
@@ -111,7 +111,7 @@ export default function EnterpriseClientsPage() {
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                    <option>Todas as unidades</option>
+                                    <option>All branches</option>
                                     <option>Osu Branch</option>
                                     <option>Shopping Branch</option>
                                     <option>Airport Residential Branch</option>
@@ -219,11 +219,11 @@ export default function EnterpriseClientsPage() {
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                <span className="text-sm">Programa de Fidelidade</span>
+                                <span className="text-sm">Loyalty program</span>
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                <span className="text-sm">Analysis of Comportamento</span>
+                                <span className="text-sm">Behaviour analysis</span>
                                 <span className="text-purple-600">→</span>
                             </button>
                         </CardContent>
@@ -272,7 +272,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="font-semibold text-purple-600">{formatUSD(2450)}</p>
-                                        <p className="text-sm text-gray-600">Gasto total</p>
+                                        <p className="text-sm text-gray-600">Total spent</p>
                                         <p className="text-sm text-gray-600">28 visitas</p>
                                     </div>
                                 </div>
@@ -310,7 +310,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="font-semibold text-gray-900">{formatUSD(890)}</p>
-                                        <p className="text-sm text-gray-600">Gasto total</p>
+                                        <p className="text-sm text-gray-600">Total spent</p>
                                         <p className="text-sm text-gray-600">15 visitas</p>
                                     </div>
                                 </div>
@@ -348,7 +348,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="font-semibold text-gray-900">{formatUSD(320)}</p>
-                                        <p className="text-sm text-gray-600">Gasto total</p>
+                                        <p className="text-sm text-gray-600">Total spent</p>
                                         <p className="text-sm text-gray-600">6 visitas</p>
                                     </div>
                                 </div>
@@ -386,7 +386,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="font-semibold text-red-600">{formatUSD(180)}</p>
-                                        <p className="text-sm text-gray-600">Gasto total</p>
+                                        <p className="text-sm text-gray-600">Total spent</p>
                                         <p className="text-sm text-gray-600">3 visitas</p>
                                         <p className="text-xs text-red-600">Inactive for 67 days</p>
                                     </div>
