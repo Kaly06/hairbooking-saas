@@ -1496,7 +1496,7 @@ export default function ClientBookingPage() {
 
                                         {/* Total to Pay Now */}
                                         <div className="bg-black text-white p-4 rounded-xl text-center mb-6">
-                                            <div className="text-sm mb-1">Pay Agora</div>
+                                            <div className="text-sm mb-1">Pay now</div>
                                             <div className="text-3xl font-black">{formatUSD(5)}</div>
                                             <div className="text-xs mt-1 opacity-75">Booking fee</div>
                                         </div>

@@ -31,7 +31,7 @@ export default function EnterpriseSecurityPage() {
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Security status</p>
-                                    <p className="text-2xl font-bold text-green-600">Seguro</p>
+                                    <p className="text-2xl font-bold text-green-600">Secure</p>
                                     <p className="text-sm text-gray-500 mt-1">98.5% Score</p>
                                 </div>
                                 <div className="h-12 w-12 bg-green-100 rounded-full flex items-center justify-center">

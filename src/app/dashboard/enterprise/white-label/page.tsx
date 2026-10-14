@@ -482,7 +482,7 @@ export default function EnterpriseWhiteLabelPage() {
                                     </p>
                                     <div className="flex gap-2">
                                         <button className="px-3 py-1 bg-purple-600 text-white rounded text-sm">
-                                            Publish Agora
+                                            Publish now
                                         </button>
                                         <button className="px-3 py-1 border border-purple-300 text-purple-600 rounded text-sm">
                                             Book

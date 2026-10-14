@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 export default function EnterpriseDashboard() {
-    // Mock data for the dashboard Enterprise (mais completo)
+    // Mock data for the dashboard Enterprise (most complete)
     const globalStats = [
         {
             name: "Total Revenue",
@@ -345,7 +345,7 @@ export default function EnterpriseDashboard() {
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
-                                <span>White-label completo</span>
+                                <span>Full white-label</span>
                             </div>
                             <div className="flex items-center">
                                 <CheckCircle className="w-4 h-4 mr-2" />
