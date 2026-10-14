@@ -34,7 +34,7 @@ export default function ProfessionalClients() {
     const [segmentFilter, setSegmentFilter] = useState("all");
     const [view, setView] = useState("list"); // list, segments, analytics
 
-    // Dados simulados para clientes
+    // Mock client data
     const clients = [
         {
             id: 1,
@@ -51,13 +51,13 @@ export default function ProfessionalClients() {
             lastVisit: "2024-01-10",
             nextAppointment: "2024-01-20",
             preferredProfessional: "Ana Silva",
-            favoriteServices: ["Corte + Coloração", "Hidratação"],
+            favoriteServices: ["Haircut + Coloring", "Hair Treatment"],
             rating: 4.9,
             segment: "premium",
             loyaltyPoints: 432,
             referrals: 3,
             socialMedia: "Instagram: @mariasantos",
-            notes: "Prefere agendamentos pela manhã. Alérgica a amônia.",
+            notes: "Prefers morning appointments. Allergic to ammonia.",
             marketingConsent: true,
             communicationPreference: "whatsapp"
         },
@@ -76,13 +76,13 @@ export default function ProfessionalClients() {
             lastVisit: "2024-01-05",
             nextAppointment: null,
             preferredProfessional: "Carlos Santos",
-            favoriteServices: ["Corte Masculino"],
+            favoriteServices: ["Men's Haircut"],
             rating: 4.5,
             segment: "standard",
             loyaltyPoints: 28,
             referrals: 0,
             socialMedia: null,
-            notes: "Cliente pontual. Gosta de conversar sobre futebol.",
+            notes: "Client pontual. Gosta de conversar sobre futebol.",
             marketingConsent: false,
             communicationPreference: "phone"
         },
@@ -107,13 +107,13 @@ export default function ProfessionalClients() {
             loyaltyPoints: 38,
             referrals: 1,
             socialMedia: "Instagram: @aninhacosta",
-            notes: "Primeira vez no salão. Muito satisfeita.",
+            notes: "First visit to the salon. Very satisfied.",
             marketingConsent: true,
             communicationPreference: "email"
         }
     ];
 
-    // Estatísticas dos clientes
+    // Client statistics
     const clientStats = {
         total: clients.length,
         new: clients.filter(client => client.status === "new").length,
@@ -125,31 +125,31 @@ export default function ProfessionalClients() {
         totalLoyaltyPoints: clients.reduce((sum, client) => sum + client.loyaltyPoints, 0)
     };
 
-    // Segmentação de clientes
+    // Client segmentation
     const segments = [
         {
             name: "Premium VIP",
             count: clients.filter(c => c.segment === "premium").length,
             color: "bg-purple-100 text-purple-800",
-            description: "Clientes de alto valor com gastos > R$ 3000"
+            description: "Clients de alto valor com gastos > R$ 3000"
         },
         {
             name: "VIP Potencial",
             count: clients.filter(c => c.segment === "potential_vip").length,
             color: "bg-blue-100 text-blue-800",
-            description: "Clientes promissores com potencial de crescimento"
+            description: "Clients promissores com potencial de growth"
         },
         {
             name: "Standard",
             count: clients.filter(c => c.segment === "standard").length,
             color: "bg-green-100 text-green-800",
-            description: "Clientes regulares com frequência estável"
+            description: "Regular clients with stable frequency"
         },
         {
             name: "Em Risco",
             count: 0,
             color: "bg-red-100 text-red-800",
-            description: "Clientes com risco de churn"
+            description: "Clients com risco de churn"
         }
     ];
 
@@ -192,9 +192,9 @@ export default function ProfessionalClients() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <Users className="w-6 h-6 text-purple-600 mr-2" />
-                            Gestão Avançada de Clientes
+                            Advanced Client Management
                         </h1>
-                        <p className="text-gray-600">CRM completo com segmentação e fidelização</p>
+                        <p className="text-gray-600">Complete CRM with segmentation and loyalty</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <div className="flex rounded-lg border border-gray-300 bg-white">
@@ -219,7 +219,7 @@ export default function ProfessionalClients() {
                         </div>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Plus className="w-4 h-4 mr-2" />
-                            Novo Cliente
+                            New Client
                         </button>
                     </div>
                 </div>
@@ -229,11 +229,11 @@ export default function ProfessionalClients() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Total de Clientes</p>
+                                <p className="text-sm font-medium text-gray-600">Total Clients</p>
                                 <p className="text-2xl font-semibold text-gray-900">{clientStats.total}</p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
-                                        {clientStats.new} novos este mês
+                                        {clientStats.new} new this month
                                     </span>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ export default function ProfessionalClients() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Clientes VIP</p>
+                                <p className="text-sm font-medium text-gray-600">Clients VIP</p>
                                 <p className="text-2xl font-semibold text-purple-600">{clientStats.vip}</p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
@@ -263,13 +263,13 @@ export default function ProfessionalClients() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Faturamento Total</p>
+                                <p className="text-sm font-medium text-gray-600">Total Revenue</p>
                                 <p className="text-2xl font-semibold text-green-600">
-                                    R$ {clientStats.totalRevenue.toLocaleString('pt-BR')}
+                                    R$ {clientStats.totalRevenue.toLocaleString('en-US')}
                                 </p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
-                                        Ticket médio: R$ {clientStats.averageTicket.toFixed(2)}
+                                        Average ticket: R$ {clientStats.averageTicket.toFixed(2)}
                                     </span>
                                 </div>
                             </div>
@@ -282,7 +282,7 @@ export default function ProfessionalClients() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Indicações</p>
+                                <p className="text-sm font-medium text-gray-600">Referrals</p>
                                 <p className="text-2xl font-semibold text-orange-600">{clientStats.totalReferrals}</p>
                                 <div className="flex items-center mt-1">
                                     <span className="text-xs text-gray-500">
@@ -299,7 +299,7 @@ export default function ProfessionalClients() {
 
                 {/* Segments Overview */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">Segmentação de Clientes</h3>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">Client Segmentation</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {segments.map((segment, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-4">
@@ -322,7 +322,7 @@ export default function ProfessionalClients() {
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                             <input
                                 type="text"
-                                placeholder="Buscar cliente..."
+                                placeholder="Search client..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
@@ -334,11 +334,11 @@ export default function ProfessionalClients() {
                             onChange={(e) => setStatusFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">Todos os Status</option>
-                            <option value="new">Novo</option>
+                            <option value="all">All os Status</option>
+                            <option value="new">New</option>
                             <option value="regular">Regular</option>
                             <option value="vip">VIP</option>
-                            <option value="inactive">Inativo</option>
+                            <option value="inactive">Inactive</option>
                         </select>
 
                         <select
@@ -346,7 +346,7 @@ export default function ProfessionalClients() {
                             onChange={(e) => setSegmentFilter(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="all">Todos os Segmentos</option>
+                            <option value="all">All os Segmentos</option>
                             <option value="premium">Premium VIP</option>
                             <option value="potential_vip">VIP Potencial</option>
                             <option value="standard">Standard</option>
@@ -354,7 +354,7 @@ export default function ProfessionalClients() {
 
                         <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center">
                             <Filter className="w-4 h-4 mr-2" />
-                            Filtros Avançados
+                            Advanced Filters
                         </button>
 
                         <div className="flex space-x-2">
@@ -373,7 +373,7 @@ export default function ProfessionalClients() {
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
                         <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-medium text-gray-900">Clientes ({filteredClients.length})</h3>
+                            <h3 className="text-lg font-medium text-gray-900">Clients ({filteredClients.length})</h3>
                             <div className="flex items-center space-x-2">
                                 <span className="text-sm text-gray-500">Mostrando {filteredClients.length} de {clients.length}</span>
                             </div>
@@ -426,7 +426,7 @@ export default function ProfessionalClients() {
                                                 </div>
                                                 <div className="flex items-center text-green-600 font-medium">
                                                     <DollarSign className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span>R$ {client.totalSpent.toLocaleString('pt-BR')}</span>
+                                                    <span>R$ {client.totalSpent.toLocaleString('en-US')}</span>
                                                 </div>
                                                 <div className="flex items-center text-gray-600">
                                                     <Target className="w-4 h-4 mr-1 text-gray-400" />
@@ -445,21 +445,21 @@ export default function ProfessionalClients() {
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Users className="w-4 h-4 mr-1 text-blue-400" />
-                                                    <span>{client.referrals} indicações</span>
+                                                    <span>{client.referrals} referrals</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Clock className="w-4 h-4 mr-1 text-gray-400" />
-                                                    <span>Última visita: {client.lastVisit}</span>
+                                                    <span>Last visit: {client.lastVisit}</span>
                                                 </div>
                                             </div>
 
                                             <div className="text-sm text-gray-600">
-                                                <span className="font-medium">Serviços favoritos:</span> {client.favoriteServices.join(", ")}
+                                                <span className="font-medium">Services favoritos:</span> {client.favoriteServices.join(", ")}
                                             </div>
 
                                             {client.notes && (
                                                 <div className="mt-2 text-sm text-gray-600 bg-gray-50 rounded-lg p-2">
-                                                    <span className="font-medium">Observações:</span> {client.notes}
+                                                    <span className="font-medium">Notes:</span> {client.notes}
                                                 </div>
                                             )}
                                         </div>
@@ -488,11 +488,11 @@ export default function ProfessionalClients() {
                 {filteredClients.length === 0 && (
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
                         <Users className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                        <h3 className="text-lg font-medium text-gray-900 mb-2">Nenhum cliente encontrado</h3>
-                        <p className="text-gray-600 mb-6">Ajuste os filtros ou cadastre um novo cliente para começar.</p>
+                        <h3 className="text-lg font-medium text-gray-900 mb-2">No clients found</h3>
+                        <p className="text-gray-600 mb-6">Adjust the filters or add a new client to get started.</p>
                         <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center mx-auto">
                             <Plus className="w-4 h-4 mr-2" />
-                            Novo Cliente
+                            New Client
                         </button>
                     </div>
                 )}

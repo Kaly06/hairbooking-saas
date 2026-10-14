@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Menu, X, Scissors } from "lucide-react";
 
 const navigation = [
-  { name: "Início", href: "#inicio" },
-  { name: "Sobre", href: "#sobre" },
-  { name: "Funcionalidades", href: "#servicos" },
-  { name: "Planos", href: "#planos" },
-  { name: "Depoimentos", href: "#depoimentos" },
+  { name: "Home", href: "#inicio" },
+  { name: "About", href: "#sobre" },
+  { name: "Features", href: "#servicos" },
+  { name: "Plans", href: "#planos" },
+  { name: "Testimonials", href: "#depoimentos" },
   { name: "FAQ", href: "#faq" },
 ];
 
@@ -57,21 +57,21 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/login" className="btn-secondary">
-              Entrar
+              Log in
             </Link>
             <a
               href="#planos"
               onClick={(e) => handleSmoothScroll(e, "#planos")}
               className="btn-secondary cursor-pointer"
             >
-              Ver Planos
+              View Plans
             </a>
             <a
               href="#contato"
               onClick={(e) => handleSmoothScroll(e, "#contato")}
               className="btn-primary cursor-pointer"
             >
-              Começar Agora
+              Get Started
             </a>
           </div>
 
@@ -105,21 +105,21 @@ export function Header() {
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
                 <Link href="/login" className="btn-secondary">
-                  Entrar
+                  Log in
                 </Link>
                 <a
                   href="#planos"
                   onClick={(e) => handleSmoothScroll(e, "#planos")}
                   className="btn-secondary cursor-pointer"
                 >
-                  Ver Planos
+                  View Plans
                 </a>
                 <a
                   href="#contato"
                   onClick={(e) => handleSmoothScroll(e, "#contato")}
                   className="btn-primary cursor-pointer"
                 >
-                  Começar Agora
+                  Get Started
                 </a>
               </div>
             </div>

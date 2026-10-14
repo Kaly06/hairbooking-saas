@@ -7,51 +7,51 @@ export default function Location() {
     const platformFeatures = [
         {
             icon: Globe,
-            title: "Presença Online",
-            description: "Site personalizado para seu salão",
-            benefits: ["Domínio próprio", "Design exclusivo", "SEO otimizado", "Responsivo"]
+            title: "Online Presence",
+            description: "A custom website for your salon",
+            benefits: ["Your own domain", "Exclusive design", "SEO optimized", "Responsive"]
         },
         {
             icon: Smartphone,
             title: "App Mobile",
-            description: "Aplicativo com sua marca",
-            benefits: ["Logo personalizado", "Cores da marca", "Notificações push", "Offline"]
+            description: "An app with your brand",
+            benefits: ["Custom logo", "Brand colors", "Push notifications", "Offline mode"]
         },
         {
             icon: Monitor,
-            title: "Painel Administrativo",
-            description: "Gestão completa do negócio",
-            benefits: ["Dashboard em tempo real", "Relatórios detalhados", "Controle de equipe", "Histórico completo"]
+            title: "Admin Dashboard",
+            description: "Complete business management",
+            benefits: ["Real-time dashboard", "Detailed reports", "Staff management", "Full history"]
         }
     ];
 
     const supportAreas = [
         {
-            title: "Implementação",
-            description: "Configuramos toda a plataforma com os dados do seu salão",
-            items: ["Cadastro de serviços", "Configuração de horários", "Upload de fotos", "Treino da equipe"]
+            title: "Setup",
+            description: "We configure the entire platform with your salon's data",
+            items: ["Service setup", "Schedule configuration", "Photo uploads", "Team training"]
         },
         {
-            title: "Suporte Técnico",
-            description: "Equipe especializada para resolver qualquer problema",
-            items: ["Suporte via WhatsApp", "Videoconferência", "Acesso remoto", "Disponível 6 dias/semana"]
+            title: "Technical Support",
+            description: "A specialized team to solve any issue",
+            items: ["WhatsApp support", "Video calls", "Remote access", "Available 6 days a week"]
         },
         {
-            title: "Marketing Digital",
-            description: "Ajudamos a divulgar seu salão online",
-            items: ["Configuração Google Meu Negócio", "Integração redes sociais", "Templates de posts", "Campanhas de e-mail"]
+            title: "Digital Marketing",
+            description: "We help promote your salon online",
+            items: ["Google Business Profile setup", "Social media integration", "Post templates", "Email campaigns"]
         }
     ];
 
     const coverage = [
-        { state: "São Paulo", regions: "Capital, Interior, Litoral", status: "active" },
-        { state: "Rio de Janeiro", regions: "Capital, Região Metropolitana", status: "active" },
-        { state: "Minas Gerais", regions: "Belo Horizonte, Região Metropolitana", status: "active" },
+        { state: "São Paulo", regions: "Capital, Inland, Coast", status: "active" },
+        { state: "Rio de Janeiro", regions: "Capital, Metropolitan Area", status: "active" },
+        { state: "Minas Gerais", regions: "Belo Horizonte, Metropolitan Area", status: "active" },
         { state: "Paraná", regions: "Curitiba, Maringá, Londrina", status: "active" },
-        { state: "Rio Grande do Sul", regions: "Porto Alegre, Região Metropolitana", status: "active" },
+        { state: "Rio Grande do Sul", regions: "Porto Alegre, Metropolitan Area", status: "active" },
         { state: "Santa Catarina", regions: "Florianópolis, Blumenau", status: "active" },
-        { state: "Bahia", regions: "Salvador e Região", status: "coming-soon" },
-        { state: "Pernambuco", regions: "Recife e Região", status: "coming-soon" }
+        { state: "Bahia", regions: "Salvador and surroundings", status: "coming-soon" },
+        { state: "Pernambuco", regions: "Recife and surroundings", status: "coming-soon" }
     ];
 
     return (
@@ -61,17 +61,17 @@ export default function Location() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <div className="inline-flex items-center px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-600 mb-4">
                         <Globe className="w-4 h-4 mr-2 text-blue-500" />
-                        Cobertura Nacional
+                        Nationwide Coverage
                     </div>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Seu salão
-                        <span className="gradient-text"> em qualquer lugar</span>
+                        Your salon
+                        <span className="gradient-text"> anywhere</span>
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        Nossa plataforma funciona em todo o Brasil. Independente da localização
-                        do seu salão, você terá acesso completo a todas as funcionalidades.
+                        Our platform works across Brazil. Wherever your salon is located,
+                        you get full access to all features.
                     </p>
                 </div>
 
@@ -110,11 +110,11 @@ export default function Location() {
                 <div className="bg-white rounded-2xl p-12 mb-16">
                     <div className="text-center mb-12">
                         <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                            Suporte e Acompanhamento
+                            Support & Guidance
                         </h3>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Não deixamos você sozinho. Nossa equipe acompanha desde a implementação
-                            até o crescimento do seu negócio.
+                            We don't leave you on your own. Our team supports you from setup
+                            through the growth of your business.
                         </p>
                     </div>
 
@@ -150,10 +150,10 @@ export default function Location() {
                 <div className="bg-white rounded-2xl p-8">
                     <div className="text-center mb-8">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                            Disponível em Todo o Brasil
+                            Available Across Brazil
                         </h3>
                         <p className="text-gray-600">
-                            Expandindo constantemente para atender salões em todas as regiões
+                            We're constantly expanding to serve salons in every region
                         </p>
                     </div>
 
@@ -180,7 +180,7 @@ export default function Location() {
                                 </div>
                                 <div className={`text-xs font-medium ${location.status === 'active' ? 'text-green-600' : 'text-yellow-600'
                                     }`}>
-                                    {location.status === 'active' ? 'Disponível' : 'Em breve'}
+                                    {location.status === 'active' ? 'Available' : 'Coming soon'}
                                 </div>
                             </div>
                         ))}
@@ -188,11 +188,11 @@ export default function Location() {
 
                     <div className="text-center mt-8">
                         <p className="text-sm text-gray-600 mb-4">
-                            Quer ser pioneiro na sua região? Entre em contato!
+                            Want to be a pioneer in your region? Get in touch!
                         </p>
                         <Link href="#planos" className="btn-primary">
                             <Smartphone className="w-5 h-5 mr-2" />
-                            Começar Agora
+                            Get Started
                         </Link>
                     </div>
                 </div>

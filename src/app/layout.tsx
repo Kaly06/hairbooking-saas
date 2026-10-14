@@ -9,12 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HairBooking - Plataforma SaaS para Salões de Beleza",
-  description: "Transforme seu salão com nossa plataforma completa de agendamentos, gestão de clientes e planos personalizados.",
-  keywords: "salão de beleza, agendamento, cortes de cabelo, barbearia, SaaS",
+  title: "HairBooking - SaaS Platform for Hair Salons",
+  description: "Grow your salon with our complete platform for bookings, client management and flexible plans.",
+  keywords: "hair salon, booking, haircuts, barbershop, SaaS",
   openGraph: {
-    title: "HairBooking - Plataforma SaaS para Salões de Beleza",
-    description: "Transforme seu salão com nossa plataforma completa de agendamentos, gestão de clientes e planos personalizados.",
+    title: "HairBooking - SaaS Platform for Hair Salons",
+    description: "Grow your salon with our complete platform for bookings, client management and flexible plans.",
     type: "website",
   },
 };
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
       >

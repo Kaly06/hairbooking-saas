@@ -7,17 +7,17 @@ export default function Testimonials() {
         {
             name: "Marina Silva",
             business: "Bella Hair Studio",
-            text: "Sistema prático que organizou nossa agenda. Clientes gostaram do agendamento online."
+            text: "A practical system that organized our schedule. Clients love the online booking."
         },
         {
             name: "Carlos Montenegro", 
             business: "Barbearia Montenegro",
-            text: "App personalizado trouxe profissionalismo. Recomendo."
+            text: "The custom app brought real professionalism. Highly recommended."
         },
         {
             name: "Ana Paula Ribeiro",
             business: "Studio Ana Paula", 
-            text: "Faturamento aumentou 40%. Relatórios ajudam muito."
+            text: "Revenue went up 40%. The reports help a lot."
         }
     ];
 
@@ -26,7 +26,7 @@ export default function Testimonials() {
             <div className="container-width section-padding">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        O que <span className="text-gray-600">nossos clientes dizem</span>
+                        What <span className="text-gray-600">our clients say</span>
                     </h2>
                 </div>
 

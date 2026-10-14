@@ -23,7 +23,7 @@ export default function ProfessionalFinancial() {
     const [dateRange, setDateRange] = useState("thisMonth");
     const [categoryFilter, setCategoryFilter] = useState("all");
 
-    // Dados financeiros
+    // Data financeiros
     const financialStats = {
         totalRevenue: 18450,
         expenses: 5320,
@@ -38,22 +38,22 @@ export default function ProfessionalFinancial() {
     // Receitas por categoria
     const revenueCategories = [
         { name: "Cortes", amount: 6780, percentage: 36.7, change: 12.5 },
-        { name: "Coloração", amount: 5940, percentage: 32.2, change: 18.3 },
+        { name: "Coloring", amount: 5940, percentage: 32.2, change: 18.3 },
         { name: "Tratamentos", amount: 3420, percentage: 18.5, change: 8.7 },
-        { name: "Produtos", amount: 1890, percentage: 10.2, change: -2.1 },
+        { name: "Products", amount: 1890, percentage: 10.2, change: -2.1 },
         { name: "Outros", amount: 420, percentage: 2.3, change: 5.2 }
     ];
 
     // Despesas por categoria
     const expenseCategories = [
         { name: "Aluguel", amount: 2200, percentage: 41.4, type: "fixed" },
-        { name: "Produtos", amount: 1580, percentage: 29.7, type: "variable" },
-        { name: "Salários", amount: 850, percentage: 16.0, type: "fixed" },
+        { name: "Products", amount: 1580, percentage: 29.7, type: "variable" },
+        { name: "Salaries", amount: 850, percentage: 16.0, type: "fixed" },
         { name: "Energia", amount: 420, percentage: 7.9, type: "fixed" },
         { name: "Marketing", amount: 270, percentage: 5.1, type: "variable" }
     ];
 
-    // Fluxo de caixa diário
+    // Daily cash flow
     const dailyCashFlow = [
         { day: "01", income: 850, expenses: 180, balance: 670 },
         { day: "02", income: 920, expenses: 220, balance: 700 },
@@ -66,8 +66,8 @@ export default function ProfessionalFinancial() {
 
     // Formas de pagamento
     const paymentMethods = [
-        { method: "Cartão de Crédito", amount: 8920, percentage: 48.4, transactions: 156 },
-        { method: "Cartão de Débito", amount: 4560, percentage: 24.7, transactions: 89 },
+        { method: "Credit Card", amount: 8920, percentage: 48.4, transactions: 156 },
+        { method: "Debit Card", amount: 4560, percentage: 24.7, transactions: 89 },
         { method: "PIX", amount: 3240, percentage: 17.6, transactions: 67 },
         { method: "Dinheiro", amount: 1730, percentage: 9.4, transactions: 34 }
     ];
@@ -77,7 +77,7 @@ export default function ProfessionalFinancial() {
         {
             id: 1,
             type: "receive",
-            description: "Agendamento - Maria Silva",
+            description: "Booking - Maria Silva",
             amount: 180,
             dueDate: "2024-01-18",
             status: "pending",
@@ -86,7 +86,7 @@ export default function ProfessionalFinancial() {
         {
             id: 2,
             type: "pay",
-            description: "Fornecedor - Produtos Capilares",
+            description: "Fornecedor - Products Capilares",
             amount: 850,
             dueDate: "2024-01-20",
             status: "pending",
@@ -104,7 +104,7 @@ export default function ProfessionalFinancial() {
         {
             id: 4,
             type: "receive",
-            description: "Tratamento - João Santos",
+            description: "Treatment - João Santos",
             amount: 250,
             dueDate: "2024-01-22",
             status: "paid",
@@ -145,18 +145,18 @@ export default function ProfessionalFinancial() {
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 flex items-center">
                             <DollarSign className="w-7 h-7 text-purple-600 mr-3" />
-                            Gestão Financeira
+                            Management Financeira
                         </h1>
-                        <p className="text-gray-600 mt-2">Controle completo das finanças do seu salão</p>
+                        <p className="text-gray-600 mt-2">Complete control of your salon's finances</p>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center font-medium">
                             <Plus className="w-5 h-5 mr-2" />
-                            Nova Transação
+                            New Transaction
                         </button>
                         <button className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center font-medium">
                             <Download className="w-5 h-5 mr-2" />
-                            Relatório
+                            Report
                         </button>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ export default function ProfessionalFinancial() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Receita Total</p>
+                            <p className="text-sm font-medium text-gray-600">Total Revenue</p>
                             <p className="text-2xl font-bold text-gray-900">R$ {financialStats.totalRevenue.toLocaleString()}</p>
                             <div className="mt-2 bg-gray-200 rounded-full h-2">
                                 <div
@@ -217,10 +217,10 @@ export default function ProfessionalFinancial() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-gray-600">Lucro Líquido</p>
+                            <p className="text-sm font-medium text-gray-600">Net Profit</p>
                             <p className="text-2xl font-bold text-blue-600">R$ {financialStats.netProfit.toLocaleString()}</p>
                             <p className="text-xs text-gray-500 mt-2">
-                                Margem: {financialStats.profitMargin.toFixed(1)}%
+                                Margin: {financialStats.profitMargin.toFixed(1)}%
                             </p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@ export default function ProfessionalFinancial() {
                             <p className="text-sm font-medium text-gray-600">Fluxo de Caixa</p>
                             <p className="text-2xl font-bold text-purple-600">R$ {financialStats.cashFlow.toLocaleString()}</p>
                             <p className="text-xs text-gray-500 mt-2">
-                                Saldo disponível
+                                Available balance
                             </p>
                         </div>
                     </div>
@@ -253,11 +253,11 @@ export default function ProfessionalFinancial() {
                                 onChange={(e) => setDateRange(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="thisWeek">Esta Semana</option>
-                                <option value="thisMonth">Este Mês</option>
-                                <option value="lastMonth">Mês Passado</option>
+                                <option value="thisWeek">This Week</option>
+                                <option value="thisMonth">This Month</option>
+                                <option value="lastMonth">Last Month</option>
                                 <option value="quarter">Trimestre</option>
-                                <option value="year">Ano</option>
+                                <option value="year">Year</option>
                             </select>
                             <select
                                 value={categoryFilter}
@@ -265,14 +265,14 @@ export default function ProfessionalFinancial() {
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
                                 <option value="all">Todas Categorias</option>
-                                <option value="services">Serviços</option>
-                                <option value="products">Produtos</option>
+                                <option value="services">Services</option>
+                                <option value="products">Products</option>
                                 <option value="expenses">Despesas</option>
                             </select>
                         </div>
                         <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
                             <Filter className="w-4 h-4 mr-2" />
-                            Filtros Avançados
+                            Advanced Filters
                         </button>
                     </div>
                 </div>
@@ -281,7 +281,7 @@ export default function ProfessionalFinancial() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Revenue Categories */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Receitas por Categoria</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Receitas por Category</h3>
                         <div className="space-y-4">
                             {revenueCategories.map((category, index) => (
                                 <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -306,7 +306,7 @@ export default function ProfessionalFinancial() {
 
                     {/* Expense Categories */}
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Despesas por Categoria</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Despesas por Category</h3>
                         <div className="space-y-4">
                             {expenseCategories.map((category, index) => (
                                 <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -314,7 +314,7 @@ export default function ProfessionalFinancial() {
                                         <div className={`w-4 h-4 rounded-full ${category.type === 'fixed' ? 'bg-red-600' : 'bg-orange-600'}`}></div>
                                         <div>
                                             <p className="font-medium text-gray-900">{category.name}</p>
-                                            <p className="text-sm text-gray-600">{category.percentage}% • {category.type === 'fixed' ? 'Fixa' : 'Variável'}</p>
+                                            <p className="text-sm text-gray-600">{category.percentage}% • {category.type === 'fixed' ? 'Fixed' : 'Variável'}</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -328,12 +328,12 @@ export default function ProfessionalFinancial() {
 
                 {/* Daily Cash Flow */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Fluxo de Caixa Diário</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Daily Cash Flow</h3>
                     <div className="space-y-4">
                         {dailyCashFlow.map((day, index) => (
                             <div key={index} className="grid grid-cols-4 gap-4 p-4 border border-gray-200 rounded-lg">
                                 <div className="text-center">
-                                    <p className="text-sm text-gray-600">Dia {day.day}</p>
+                                    <p className="text-sm text-gray-600">Day {day.day}</p>
                                     <p className="font-medium text-gray-900">Jan</p>
                                 </div>
                                 <div className="text-center">
@@ -341,7 +341,7 @@ export default function ProfessionalFinancial() {
                                     <p className="font-semibold text-green-600">R$ {day.income}</p>
                                 </div>
                                 <div className="text-center">
-                                    <p className="text-sm text-gray-600">Saída</p>
+                                    <p className="text-sm text-gray-600">Outflow</p>
                                     <p className="font-semibold text-red-600">R$ {day.expenses}</p>
                                 </div>
                                 <div className="text-center">
@@ -355,7 +355,7 @@ export default function ProfessionalFinancial() {
 
                 {/* Payment Methods */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Formas de Pagamento</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Formas de Payment</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {paymentMethods.map((method, index) => (
                             <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
@@ -365,7 +365,7 @@ export default function ProfessionalFinancial() {
                                     </div>
                                     <div>
                                         <p className="font-medium text-gray-900">{method.method}</p>
-                                        <p className="text-sm text-gray-600">{method.transactions} transações</p>
+                                        <p className="text-sm text-gray-600">{method.transactions} transactions</p>
                                     </div>
                                 </div>
                                 <div className="text-right">
@@ -380,18 +380,18 @@ export default function ProfessionalFinancial() {
                 {/* Accounts Payable/Receivable */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Contas a Pagar/Receber</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Contas a Pay/Receber</h3>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descrição</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vencimento</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
@@ -400,7 +400,7 @@ export default function ProfessionalFinancial() {
                                         <td className="px-8 py-4 whitespace-nowrap">
                                             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${account.type === 'receive' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                                                 }`}>
-                                                {account.type === 'receive' ? 'Receber' : 'Pagar'}
+                                                {account.type === 'receive' ? 'Receber' : 'Pay'}
                                             </span>
                                         </td>
                                         <td className="px-8 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -423,7 +423,7 @@ export default function ProfessionalFinancial() {
                                                 <Eye className="w-4 h-4" />
                                             </button>
                                             <button className="text-green-600 hover:text-green-900">
-                                                {account.status === 'pending' ? 'Pagar' : 'Ver'}
+                                                {account.status === 'pending' ? 'Pay' : 'View'}
                                             </button>
                                         </td>
                                     </tr>

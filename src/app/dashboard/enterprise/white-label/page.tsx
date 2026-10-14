@@ -12,11 +12,11 @@ export default function EnterpriseWhiteLabelPage() {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900">White Label</h1>
-                        <p className="text-gray-600 mt-2">Personalização completa da marca e identidade visual</p>
+                        <p className="text-gray-600 mt-2">Complete brand and visual identity customization</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                            Publicar Alterações
+                            Publish Changes
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             Visualizar Preview
@@ -40,16 +40,16 @@ export default function EnterpriseWhiteLabelPage() {
                                     <label className="text-sm font-medium text-gray-700 mb-2 block">Logo Principal</label>
                                     <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-purple-400 transition-colors cursor-pointer">
                                         <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                                        <p className="text-sm text-gray-600">Clique para fazer upload</p>
-                                        <p className="text-xs text-gray-500 mt-1">PNG, JPG ou SVG até 2MB</p>
+                                        <p className="text-sm text-gray-600">Click to upload</p>
+                                        <p className="text-xs text-gray-500 mt-1">PNG, JPG or SVG up to 2MB</p>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Logo Secundário (Ícone)</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Secondary Logo (Icon)</label>
                                     <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
                                         <Upload className="h-6 w-6 text-gray-400 mx-auto mb-1" />
-                                        <p className="text-xs text-gray-600">Upload do ícone</p>
+                                        <p className="text-xs text-gray-600">Icon upload</p>
                                     </div>
                                 </div>
 
@@ -75,7 +75,7 @@ export default function EnterpriseWhiteLabelPage() {
                         <CardContent className="space-y-6">
                             <div className="space-y-4">
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Cor Primária</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Primary Color</label>
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 bg-purple-600 rounded-lg border border-gray-200"></div>
                                         <input
@@ -92,7 +92,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Cor Secundária</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Secondary Color</label>
                                     <div className="flex items-center gap-3">
                                         <div className="w-12 h-12 bg-blue-500 rounded-lg border border-gray-200"></div>
                                         <input
@@ -171,7 +171,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Fonte Secundária</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Secondary Font</label>
                                     <select className="w-full px-3 py-2 border border-gray-200 rounded-lg">
                                         <option>System UI</option>
                                         <option>Georgia</option>
@@ -208,13 +208,13 @@ export default function EnterpriseWhiteLabelPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Brush className="h-5 w-5 text-purple-600" />
-                                Estilização Customizada
+                                Custom Styling
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                             <div className="space-y-4">
                                 <div>
-                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Estilo dos Botões</label>
+                                    <label className="text-sm font-medium text-gray-700 mb-2 block">Button Style</label>
                                     <div className="grid grid-cols-3 gap-2">
                                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm">Arredondado</button>
                                         <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded text-sm">Quadrado</button>
@@ -256,8 +256,8 @@ export default function EnterpriseWhiteLabelPage() {
                                         className="w-full"
                                     />
                                     <div className="flex justify-between text-xs text-gray-500 mt-1">
-                                        <span>Nenhuma</span>
-                                        <span>Média</span>
+                                        <span>None</span>
+                                        <span>Medium</span>
                                         <span>Forte</span>
                                     </div>
                                 </div>
@@ -273,12 +273,12 @@ export default function EnterpriseWhiteLabelPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 text-lg">
                                 <Settings className="h-5 w-5 text-purple-600" />
-                                Configuração do App
+                                App Configuration
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">Nome da Aplicação</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">Application Name</label>
                                 <input
                                     type="text"
                                     defaultValue="SalãoPro"
@@ -289,7 +289,7 @@ export default function EnterpriseWhiteLabelPage() {
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Slogan</label>
                                 <input
                                     type="text"
-                                    defaultValue="Sua beleza, nossa prioridade"
+                                    defaultValue="Your beauty, our priority"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg"
                                 />
                             </div>
@@ -302,11 +302,11 @@ export default function EnterpriseWhiteLabelPage() {
                                 />
                             </div>
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">Idioma Padrão</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">Default Language</label>
                                 <select className="w-full px-3 py-2 border border-gray-200 rounded-lg">
-                                    <option>Português (Brasil)</option>
+                                    <option>Portuguese (Brazil)</option>
                                     <option>English (US)</option>
-                                    <option>Español</option>
+                                    <option>Spanish</option>
                                 </select>
                             </div>
                         </CardContent>
@@ -322,7 +322,7 @@ export default function EnterpriseWhiteLabelPage() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
-                                <label className="text-sm font-medium text-gray-700 mb-2 block">Ícone do App</label>
+                                <label className="text-sm font-medium text-gray-700 mb-2 block">App Icon</label>
                                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
                                     <Smartphone className="h-6 w-6 text-gray-400 mx-auto mb-1" />
                                     <p className="text-xs text-gray-600">1024x1024</p>
@@ -338,7 +338,7 @@ export default function EnterpriseWhiteLabelPage() {
                             <div className="space-y-2">
                                 <label className="flex items-center gap-2">
                                     <input type="checkbox" defaultChecked className="rounded" />
-                                    <span className="text-sm">Notificações Push</span>
+                                    <span className="text-sm">Notifications Push</span>
                                 </label>
                                 <label className="flex items-center gap-2">
                                     <input type="checkbox" defaultChecked className="rounded" />
@@ -357,7 +357,7 @@ export default function EnterpriseWhiteLabelPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 text-lg">
                                 <Globe className="h-5 w-5 text-purple-600" />
-                                Configuração Web
+                                Web Configuration
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -365,14 +365,14 @@ export default function EnterpriseWhiteLabelPage() {
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Meta Title</label>
                                 <input
                                     type="text"
-                                    defaultValue="SalãoPro - Sistema de Gestão"
+                                    defaultValue="SalãoPro - Management System"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg"
                                 />
                             </div>
                             <div>
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Meta Description</label>
                                 <textarea
-                                    defaultValue="Sistema completo para gestão de salões de beleza"
+                                    defaultValue="Complete management system for beauty salons"
                                     className="w-full px-3 py-2 border border-gray-200 rounded-lg h-20 resize-none"
                                 />
                             </div>
@@ -387,11 +387,11 @@ export default function EnterpriseWhiteLabelPage() {
                             <div className="space-y-2">
                                 <label className="flex items-center gap-2">
                                     <input type="checkbox" defaultChecked className="rounded" />
-                                    <span className="text-sm">SSL Forçado</span>
+                                    <span className="text-sm">Forced SSL</span>
                                 </label>
                                 <label className="flex items-center gap-2">
                                     <input type="checkbox" defaultChecked className="rounded" />
-                                    <span className="text-sm">Compressão GZIP</span>
+                                    <span className="text-sm">GZIP Compression</span>
                                 </label>
                             </div>
                         </CardContent>
@@ -403,7 +403,7 @@ export default function EnterpriseWhiteLabelPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Monitor className="h-5 w-5 text-purple-600" />
-                            Preview e Exportação
+                            Preview & Export
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -416,7 +416,7 @@ export default function EnterpriseWhiteLabelPage() {
                                             <div className="w-8 h-8 bg-purple-600 rounded"></div>
                                             <div>
                                                 <h3 className="font-semibold text-gray-900">SalãoPro</h3>
-                                                <p className="text-xs text-gray-600">Sua beleza, nossa prioridade</p>
+                                                <p className="text-xs text-gray-600">Your beauty, our priority</p>
                                             </div>
                                         </div>
                                         <div className="space-y-2">
@@ -439,13 +439,13 @@ export default function EnterpriseWhiteLabelPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <h4 className="font-semibold text-gray-900">Opções de Exportação</h4>
+                                <h4 className="font-semibold text-gray-900">Export Options</h4>
                                 <div className="space-y-3">
                                     <button className="w-full flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                         <div className="flex items-center gap-3">
                                             <Download className="h-5 w-5 text-purple-600" />
                                             <div className="text-left">
-                                                <p className="font-medium">Pacote de Marca</p>
+                                                <p className="font-medium">Package de Marca</p>
                                                 <p className="text-sm text-gray-600">Logos, cores e assets</p>
                                             </div>
                                         </div>
@@ -456,8 +456,8 @@ export default function EnterpriseWhiteLabelPage() {
                                         <div className="flex items-center gap-3">
                                             <Share2 className="h-5 w-5 text-purple-600" />
                                             <div className="text-left">
-                                                <p className="font-medium">Kit de Mídia</p>
-                                                <p className="text-sm text-gray-600">Para marketing e divulgação</p>
+                                                <p className="font-medium">Media Kit</p>
+                                                <p className="text-sm text-gray-600">For marketing and promotion</p>
                                             </div>
                                         </div>
                                         <span className="text-sm text-gray-500">ZIP</span>
@@ -467,8 +467,8 @@ export default function EnterpriseWhiteLabelPage() {
                                         <div className="flex items-center gap-3">
                                             <Settings className="h-5 w-5 text-purple-600" />
                                             <div className="text-left">
-                                                <p className="font-medium">Configurações CSS</p>
-                                                <p className="text-sm text-gray-600">Variáveis e estilos</p>
+                                                <p className="font-medium">Settings CSS</p>
+                                                <p className="text-sm text-gray-600">Variables and styles</p>
                                             </div>
                                         </div>
                                         <span className="text-sm text-gray-500">CSS</span>
@@ -476,13 +476,13 @@ export default function EnterpriseWhiteLabelPage() {
                                 </div>
 
                                 <div className="mt-6 p-4 bg-purple-50 rounded-lg">
-                                    <h5 className="font-medium text-purple-900 mb-2">Publicação Automática</h5>
+                                    <h5 className="font-medium text-purple-900 mb-2">Automatic Publishing</h5>
                                     <p className="text-sm text-purple-700 mb-3">
-                                        As alterações serão aplicadas automaticamente em todos os pontos de contato.
+                                        Changes will be applied automatically across all touchpoints.
                                     </p>
                                     <div className="flex gap-2">
                                         <button className="px-3 py-1 bg-purple-600 text-white rounded text-sm">
-                                            Publicar Agora
+                                            Publish Agora
                                         </button>
                                         <button className="px-3 py-1 border border-purple-300 text-purple-600 rounded text-sm">
                                             Agendar

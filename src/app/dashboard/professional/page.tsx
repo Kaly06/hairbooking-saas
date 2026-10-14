@@ -19,10 +19,10 @@ import {
 } from "lucide-react";
 
 export default function ProfessionalDashboard() {
-    // Dados simulados para o dashboard Professional (mais avançado)
+    // Mock data for the Professional dashboard
     const stats = [
         {
-            name: "Agendamentos Hoje",
+            name: "Today's Bookings",
             value: "28",
             change: "+8.2%",
             changeType: "increase" as const,
@@ -30,7 +30,7 @@ export default function ProfessionalDashboard() {
             color: "bg-blue-500"
         },
         {
-            name: "Total de Clientes",
+            name: "Total Clients",
             value: "567",
             change: "+12.4%",
             changeType: "increase" as const,
@@ -38,7 +38,7 @@ export default function ProfessionalDashboard() {
             color: "bg-green-500"
         },
         {
-            name: "Faturamento Mensal",
+            name: "Monthly Revenue",
             value: "R$ 18.750",
             change: "+18.3%",
             changeType: "increase" as const,
@@ -46,7 +46,7 @@ export default function ProfessionalDashboard() {
             color: "bg-purple-500"
         },
         {
-            name: "Taxa de Ocupação",
+            name: "Occupancy Rate",
             value: "92%",
             change: "+5.7%",
             changeType: "increase" as const,
@@ -54,7 +54,7 @@ export default function ProfessionalDashboard() {
             color: "bg-orange-500"
         },
         {
-            name: "Comissões",
+            name: "Commissions",
             value: "R$ 3.250",
             change: "+9.1%",
             changeType: "increase" as const,
@@ -62,7 +62,7 @@ export default function ProfessionalDashboard() {
             color: "bg-indigo-500"
         },
         {
-            name: "Conversão Marketing",
+            name: "Marketing Conversion",
             value: "24%",
             change: "+4.8%",
             changeType: "increase" as const,
@@ -72,11 +72,11 @@ export default function ProfessionalDashboard() {
     ];
 
     const recentAppointments = [
-        { id: 1, client: "Maria Silva", service: "Corte + Escova + Coloração", time: "09:00", value: "R$ 180", status: "completed", professional: "Ana" },
-        { id: 2, client: "João Santos", service: "Corte Masculino Premium", time: "10:30", value: "R$ 65", status: "completed", professional: "Carlos" },
-        { id: 3, client: "Ana Costa", service: "Coloração + Tratamento", time: "14:00", value: "R$ 220", status: "confirmed", professional: "Maria" },
-        { id: 4, client: "Pedro Lima", service: "Barba + Corte", time: "15:30", value: "R$ 85", status: "pending", professional: "Carlos" },
-        { id: 5, client: "Carla Souza", service: "Hidratação Premium", time: "16:00", value: "R$ 120", status: "confirmed", professional: "Ana" }
+        { id: 1, client: "Maria Silva", service: "Haircut + Escova + Coloring", time: "09:00", value: "R$ 180", status: "completed", professional: "Ana" },
+        { id: 2, client: "João Santos", service: "Men's Haircut Premium", time: "10:30", value: "R$ 65", status: "completed", professional: "Carlos" },
+        { id: 3, client: "Ana Costa", service: "Coloring + Tratamento", time: "14:00", value: "R$ 220", status: "confirmed", professional: "Maria" },
+        { id: 4, client: "Pedro Lima", service: "Barba + Haircut", time: "15:30", value: "R$ 85", status: "pending", professional: "Carlos" },
+        { id: 5, client: "Carla Souza", service: "Hair Treatment Premium", time: "16:00", value: "R$ 120", status: "confirmed", professional: "Ana" }
     ];
 
     const marketingStats = [
@@ -121,7 +121,7 @@ export default function ProfessionalDashboard() {
                             <Crown className="w-6 h-6 text-purple-600 mr-2" />
                             Dashboard Professional
                         </h1>
-                        <p className="text-gray-600">Painel avançado com todas as funcionalidades premium</p>
+                        <p className="text-gray-600">Advanced panel with all premium features</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
@@ -160,11 +160,11 @@ export default function ProfessionalDashboard() {
 
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {/* Agendamentos com Valores */}
+                    {/* Bookings com Valores */}
                     <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200">
                         <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-                            <h3 className="text-lg font-medium text-gray-900">Agendamentos de Hoje</h3>
-                            <span className="text-sm text-gray-500">Faturamento previsto: R$ 670</span>
+                            <h3 className="text-lg font-medium text-gray-900">Today's Bookings</h3>
+                            <span className="text-sm text-gray-500">Revenue previsto: R$ 670</span>
                         </div>
                         <div className="overflow-hidden">
                             <div className="divide-y divide-gray-200">
@@ -210,14 +210,14 @@ export default function ProfessionalDashboard() {
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
                                 <MessageSquare className="w-5 h-5 text-green-600 mr-2" />
-                                Marketing Automático
+                                Automatic Marketing
                             </h3>
                             <div className="space-y-4">
                                 {marketingStats.map((stat, index) => (
                                     <div key={index} className="flex items-center justify-between">
                                         <div>
                                             <p className="text-sm font-medium text-gray-900">{stat.name}</p>
-                                            <p className="text-xs text-gray-500">{stat.sent} enviados • {stat.opened} abertos</p>
+                                            <p className="text-xs text-gray-500">{stat.sent} sent • {stat.opened} opened</p>
                                         </div>
                                         <span className="text-sm font-medium text-green-600">{stat.conversion}</span>
                                     </div>
@@ -225,11 +225,11 @@ export default function ProfessionalDashboard() {
                             </div>
                         </div>
 
-                        {/* Comissões */}
+                        {/* Commissions */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
                                 <CreditCard className="w-5 h-5 text-indigo-600 mr-2" />
-                                Comissões dos Profissionais
+                                Commissions dos Professionals
                             </h3>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
@@ -253,26 +253,26 @@ export default function ProfessionalDashboard() {
                             </div>
                         </div>
 
-                        {/* Ações Rápidas Professional */}
+                        {/* Quick Actions Professional */}
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                            <h3 className="text-lg font-medium text-gray-900 mb-4">Ações Rápidas</h3>
+                            <h3 className="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
                             <div className="space-y-3">
                                 <button className="w-full text-left p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                                     <div className="flex items-center">
                                         <Calendar className="w-5 h-5 text-blue-600 mr-3" />
-                                        <span className="text-sm font-medium text-blue-900">Novo Agendamento</span>
+                                        <span className="text-sm font-medium text-blue-900">New Booking</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
                                     <div className="flex items-center">
                                         <MessageSquare className="w-5 h-5 text-green-600 mr-3" />
-                                        <span className="text-sm font-medium text-green-900">Enviar Campanha</span>
+                                        <span className="text-sm font-medium text-green-900">Send Campanha</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
                                     <div className="flex items-center">
                                         <BarChart3 className="w-5 h-5 text-purple-600 mr-3" />
-                                        <span className="text-sm font-medium text-purple-900">Relatórios Completos</span>
+                                        <span className="text-sm font-medium text-purple-900">Reports Completos</span>
                                     </div>
                                 </button>
                                 <button className="w-full text-left p-3 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
@@ -284,31 +284,31 @@ export default function ProfessionalDashboard() {
                             </div>
                         </div>
 
-                        {/* Resumo do Plano Professional */}
+                        {/* Resumo do Plan Professional */}
                         <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-6 text-white">
                             <h3 className="text-lg font-medium mb-2 flex items-center">
                                 <Crown className="w-5 h-5 mr-2" />
-                                Plano Professional
+                                Plan Professional
                             </h3>
                             <p className="text-purple-100 text-sm mb-4">
-                                Funcionalidades avançadas para acelerar o crescimento do seu negócio.
+                                Advanced features to accelerate the growth of your business.
                             </p>
                             <div className="space-y-2 text-sm">
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Até 10 profissionais</span>
+                                    <span>Up to 10 professionals</span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>App com sua marca</span>
+                                    <span>App with your brand</span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Marketing automático</span>
+                                    <span>Automatic marketing</span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="w-4 h-4 mr-2" />
-                                    <span>Comissões automáticas</span>
+                                    <span>Automatic commissions</span>
                                 </div>
                             </div>
                             <button className="mt-4 bg-white text-purple-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors">

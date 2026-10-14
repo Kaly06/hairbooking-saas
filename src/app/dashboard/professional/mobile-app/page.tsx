@@ -25,7 +25,7 @@ import { useState } from "react";
 export default function ProfessionalMobileApp() {
     const [activeTab, setActiveTab] = useState("overview");
 
-    // Dados do app mobile
+    // Data do app mobile
     const appStats = {
         downloads: 1247,
         activeUsers: 892,
@@ -39,43 +39,43 @@ export default function ProfessionalMobileApp() {
     const appFeatures = [
         {
             icon: <Calendar className="w-6 h-6" />,
-            title: "Agendamento Online",
-            description: "Clientes podem agendar diretamente pelo app",
+            title: "Booking Online",
+            description: "Clients podem agendar diretamente pelo app",
             status: "active",
             usage: 89
         },
         {
             icon: <Bell className="w-6 h-6" />,
-            title: "Notificações Push",
-            description: "Lembretes automáticos para clientes e profissionais",
+            title: "Notifications Push",
+            description: "Automatic reminders for clients and professionals",
             status: "active",
             usage: 95
         },
         {
             icon: <MessageSquare className="w-6 h-6" />,
             title: "Chat Integrado",
-            description: "Comunicação direta entre salon e clientes",
+            description: "Direct communication between salon and clients",
             status: "active",
             usage: 73
         },
         {
             icon: <Star className="w-6 h-6" />,
-            title: "Sistema de Avaliações",
-            description: "Feedback e avaliações dos serviços",
+            title: "Review System",
+            description: "Feedback and service reviews",
             status: "active",
             usage: 82
         },
         {
             icon: <QrCode className="w-6 h-6" />,
             title: "Check-in QR Code",
-            description: "Check-in rápido via QR Code",
+            description: "Quick check-in via QR Code",
             status: "beta",
             usage: 45
         },
         {
             icon: <Award className="w-6 h-6" />,
             title: "Programa de Fidelidade",
-            description: "Pontos e recompensas para clientes",
+            description: "Points and rewards for clients",
             status: "development",
             usage: 0
         }
@@ -84,34 +84,34 @@ export default function ProfessionalMobileApp() {
     // Analytics do app
     const analytics = {
         dailyUsers: [
-            { day: "Seg", users: 124 },
-            { day: "Ter", users: 142 },
-            { day: "Qua", users: 158 },
-            { day: "Qui", users: 167 },
-            { day: "Sex", users: 189 },
-            { day: "Sáb", users: 201 },
-            { day: "Dom", users: 156 }
+            { day: "Mon", users: 124 },
+            { day: "Tue", users: 142 },
+            { day: "Wed", users: 158 },
+            { day: "Thu", users: 167 },
+            { day: "Fri", users: 189 },
+            { day: "Sat", users: 201 },
+            { day: "Sun", users: 156 }
         ],
         topFeatures: [
-            { feature: "Agendamentos", usage: 89, change: 12 },
-            { feature: "Notificações", usage: 95, change: 8 },
+            { feature: "Bookings", usage: 89, change: 12 },
+            { feature: "Notifications", usage: 95, change: 8 },
             { feature: "Perfil", usage: 78, change: 5 },
-            { feature: "Histórico", usage: 67, change: -2 }
+            { feature: "History", usage: 67, change: -2 }
         ]
     };
 
-    // Configurações do app
+    // Settings do app
     const appSettings = [
         {
-            category: "Notificações",
+            category: "Notifications",
             settings: [
-                { name: "Lembrete de agendamento", enabled: true },
-                { name: "Promoções especiais", enabled: true },
-                { name: "Novidades do salão", enabled: false }
+                { name: "Booking reminder", enabled: true },
+                { name: "Special promotions", enabled: true },
+                { name: "Salon news", enabled: false }
             ]
         },
         {
-            category: "Aparência",
+            category: "Appearance",
             settings: [
                 { name: "Tema escuro", enabled: false },
                 { name: "Cores personalizadas", enabled: true },
@@ -121,8 +121,8 @@ export default function ProfessionalMobileApp() {
         {
             category: "Funcionalidades",
             settings: [
-                { name: "Agendamento online", enabled: true },
-                { name: "Chat com clientes", enabled: true },
+                { name: "Booking online", enabled: true },
+                { name: "Chat with clients", enabled: true },
                 { name: "Programa fidelidade", enabled: false }
             ]
         }
@@ -150,12 +150,12 @@ export default function ProfessionalMobileApp() {
                             <Smartphone className="w-7 h-7 text-purple-600 mr-3" />
                             App Mobile
                         </h1>
-                        <p className="text-gray-600 mt-2">Gerencie seu aplicativo móvel personalizado</p>
+                        <p className="text-gray-600 mt-2">Manage your custom mobile app</p>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center font-medium">
                             <Download className="w-5 h-5 mr-2" />
-                            Publicar Atualização
+                            Publish Update
                         </button>
                         <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center font-medium">
                             <Settings className="w-5 h-5 mr-2" />
@@ -175,10 +175,10 @@ export default function ProfessionalMobileApp() {
                                     : "text-gray-600 hover:text-gray-900"
                                 }`}
                         >
-                            {tab === "overview" && "Visão Geral"}
+                            {tab === "overview" && "Overview"}
                             {tab === "features" && "Funcionalidades"}
                             {tab === "analytics" && "Analytics"}
-                            {tab === "settings" && "Configurações"}
+                            {tab === "settings" && "Settings"}
                         </button>
                     ))}
                 </div>
@@ -192,7 +192,7 @@ export default function ProfessionalMobileApp() {
                                 <p className="text-2xl font-bold text-gray-900">{appStats.downloads.toLocaleString()}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
-                                    <span className="text-sm font-medium text-green-600">+12% este mês</span>
+                                    <span className="text-sm font-medium text-green-600">+12% this month</span>
                                 </div>
                             </div>
                             <div className="p-3 bg-blue-100 rounded-lg">
@@ -204,7 +204,7 @@ export default function ProfessionalMobileApp() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Usuários Ativos</p>
+                                <p className="text-sm font-medium text-gray-600">Active Users</p>
                                 <p className="text-2xl font-bold text-gray-900">{appStats.activeUsers}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
@@ -220,11 +220,11 @@ export default function ProfessionalMobileApp() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Avaliação</p>
+                                <p className="text-sm font-medium text-gray-600">Rating</p>
                                 <p className="text-2xl font-bold text-gray-900">{appStats.rating}</p>
                                 <div className="flex items-center mt-2">
                                     <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                                    <span className="text-sm text-gray-600">{appStats.reviews} avaliações</span>
+                                    <span className="text-sm text-gray-600">{appStats.reviews} reviews</span>
                                 </div>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-lg">
@@ -262,7 +262,7 @@ export default function ProfessionalMobileApp() {
                                         <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
                                             <div className="bg-purple-600 p-4 text-white">
                                                 <div className="flex items-center justify-between">
-                                                    <h4 className="font-semibold">Meu Salão</h4>
+                                                    <h4 className="font-semibold">My Salon</h4>
                                                     <Bell className="w-5 h-5" />
                                                 </div>
                                             </div>
@@ -270,9 +270,9 @@ export default function ProfessionalMobileApp() {
                                                 <div className="bg-gray-100 rounded-lg p-3">
                                                     <div className="flex items-center space-x-2">
                                                         <Calendar className="w-4 h-4 text-purple-600" />
-                                                        <span className="text-sm font-medium">Próximo agendamento</span>
+                                                        <span className="text-sm font-medium">Next booking</span>
                                                     </div>
-                                                    <p className="text-xs text-gray-600 mt-1">Hoje, 14:30</p>
+                                                    <p className="text-xs text-gray-600 mt-1">Today, 14:30</p>
                                                 </div>
                                                 <div className="space-y-2">
                                                     <div className="h-8 bg-gray-100 rounded"></div>
@@ -297,29 +297,29 @@ export default function ProfessionalMobileApp() {
 
                         {/* Quick Actions */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Ações Rápidas</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Quick Actions</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 <button className="p-6 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors text-left group">
                                     <div className="p-3 bg-blue-100 rounded-lg mb-4 group-hover:bg-blue-200 transition-colors">
                                         <Bell className="w-6 h-6 text-blue-600" />
                                     </div>
-                                    <p className="font-medium text-gray-900 mb-1">Enviar Notificação</p>
-                                    <p className="text-sm text-gray-600">Push para todos os usuários</p>
+                                    <p className="font-medium text-gray-900 mb-1">Send Notification</p>
+                                    <p className="text-sm text-gray-600">Push to all users</p>
                                 </button>
 
                                 <button className="p-6 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors text-left group">
                                     <div className="p-3 bg-green-100 rounded-lg mb-4 group-hover:bg-green-200 transition-colors">
                                         <Download className="w-6 h-6 text-green-600" />
                                     </div>
-                                    <p className="font-medium text-gray-900 mb-1">Nova Versão</p>
-                                    <p className="text-sm text-gray-600">Publicar atualização</p>
+                                    <p className="font-medium text-gray-900 mb-1">New Version</p>
+                                    <p className="text-sm text-gray-600">Publish update</p>
                                 </button>
 
                                 <button className="p-6 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors text-left group">
                                     <div className="p-3 bg-purple-100 rounded-lg mb-4 group-hover:bg-purple-200 transition-colors">
                                         <Settings className="w-6 h-6 text-purple-600" />
                                     </div>
-                                    <p className="font-medium text-gray-900 mb-1">Configurações</p>
+                                    <p className="font-medium text-gray-900 mb-1">Settings</p>
                                     <p className="text-sm text-gray-600">Personalizar app</p>
                                 </button>
 
@@ -328,7 +328,7 @@ export default function ProfessionalMobileApp() {
                                         <Eye className="w-6 h-6 text-orange-600" />
                                     </div>
                                     <p className="font-medium text-gray-900 mb-1">Analytics</p>
-                                    <p className="text-sm text-gray-600">Ver relatórios</p>
+                                    <p className="text-sm text-gray-600">View reports</p>
                                 </button>
                             </div>
                         </div>
@@ -393,7 +393,7 @@ export default function ProfessionalMobileApp() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Daily Users Chart */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Usuários Diários</h3>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-6">Daily Users</h3>
                             <div className="space-y-4">
                                 {analytics.dailyUsers.map((day, index) => (
                                     <div key={index} className="flex items-center">
@@ -436,7 +436,7 @@ export default function ProfessionalMobileApp() {
 
                 {activeTab === "settings" && (
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Configurações do App</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-6">Settings do App</h3>
                         <div className="space-y-8">
                             {appSettings.map((category, index) => (
                                 <div key={index}>

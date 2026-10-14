@@ -24,7 +24,7 @@ export default function ProfessionalCommissions() {
     const [dateRange, setDateRange] = useState("thisMonth");
     const [professionalFilter, setProfessionalFilter] = useState("all");
 
-    // Dados de comissões
+    // Commission data
     const commissionStats = {
         totalCommissions: 3250,
         pendingPayment: 890,
@@ -34,14 +34,14 @@ export default function ProfessionalCommissions() {
         topPerformer: "Ana Silva"
     };
 
-    // Configurações de comissão por profissional
+    // Commission settings per professional
     const professionals = [
         {
             id: 1,
             name: "Ana Silva",
-            role: "Cabeleireira Senior",
+            role: "Hairdresser Senior",
             commissionRate: 18,
-            services: ["Corte", "Coloração", "Hidratação"],
+            services: ["Haircut", "Coloring", "Hair Treatment"],
             thisMonth: {
                 revenue: 8920,
                 commission: 1605,
@@ -56,9 +56,9 @@ export default function ProfessionalCommissions() {
         {
             id: 2,
             name: "Carlos Santos",
-            role: "Barbeiro",
+            role: "Barber",
             commissionRate: 15,
-            services: ["Corte Masculino", "Barba", "Bigode"],
+            services: ["Men's Haircut", "Barba", "Bigode"],
             thisMonth: {
                 revenue: 4680,
                 commission: 702,
@@ -73,7 +73,7 @@ export default function ProfessionalCommissions() {
         {
             id: 3,
             name: "Maria Costa",
-            role: "Esteticista",
+            role: "Esthetician",
             commissionRate: 20,
             services: ["Escova", "Progressiva", "Tratamentos"],
             thisMonth: {
@@ -89,7 +89,7 @@ export default function ProfessionalCommissions() {
         }
     ];
 
-    // Histórico de comissões
+    // Commission history
     const commissionHistory = [
         {
             id: 1,
@@ -123,7 +123,7 @@ export default function ProfessionalCommissions() {
         }
     ];
 
-    // Metas de comissão
+    // Commission goals
     const targets = [
         {
             professional: "Ana Silva",
@@ -177,18 +177,18 @@ export default function ProfessionalCommissions() {
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 flex items-center">
                             <CreditCard className="w-7 h-7 text-purple-600 mr-3" />
-                            Gestão de Comissões
+                            Commission Management
                         </h1>
-                        <p className="text-gray-600 mt-2">Controle e pagamento de comissões dos profissionais</p>
+                        <p className="text-gray-600 mt-2">Track and pay professional commissions</p>
                     </div>
                     <div className="flex items-center space-x-4">
                         <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center font-medium">
                             <DollarSign className="w-5 h-5 mr-2" />
-                            Processar Pagamentos
+                            Processar Payments
                         </button>
                         <button className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors flex items-center font-medium">
                             <Download className="w-5 h-5 mr-2" />
-                            Relatório
+                            Report
                         </button>
                     </div>
                 </div>
@@ -198,11 +198,11 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Total de Comissões</p>
+                                <p className="text-sm font-medium text-gray-600">Total Commissions</p>
                                 <p className="text-2xl font-bold text-gray-900">R$ {commissionStats.totalCommissions.toLocaleString()}</p>
                                 <div className="flex items-center mt-2">
                                     <TrendingUp className="w-4 h-4 text-green-600 mr-1" />
-                                    <span className="text-sm font-medium text-green-600">+12% vs mês anterior</span>
+                                    <span className="text-sm font-medium text-green-600">+12% vs last month</span>
                                 </div>
                             </div>
                             <div className="p-3 bg-purple-100 rounded-lg">
@@ -214,7 +214,7 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Pendente Pagamento</p>
+                                <p className="text-sm font-medium text-gray-600">Pending Payment</p>
                                 <p className="text-2xl font-bold text-yellow-600">R$ {commissionStats.pendingPayment.toLocaleString()}</p>
                                 <p className="text-sm text-gray-600 mt-2">2 profissionais</p>
                             </div>
@@ -227,7 +227,7 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Pago Este Mês</p>
+                                <p className="text-sm font-medium text-gray-600">Pago This Month</p>
                                 <p className="text-2xl font-bold text-green-600">R$ {commissionStats.paidThisMonth.toLocaleString()}</p>
                                 <p className="text-sm text-gray-600 mt-2">1 profissional</p>
                             </div>
@@ -240,7 +240,7 @@ export default function ProfessionalCommissions() {
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Comissão Média</p>
+                                <p className="text-sm font-medium text-gray-600">Average Commission</p>
                                 <p className="text-2xl font-bold text-blue-600">{commissionStats.averageCommission}%</p>
                                 <p className="text-sm text-gray-600 mt-2">{commissionStats.totalProfessionals} profissionais</p>
                             </div>
@@ -260,17 +260,17 @@ export default function ProfessionalCommissions() {
                                 onChange={(e) => setDateRange(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="thisMonth">Este Mês</option>
-                                <option value="lastMonth">Mês Passado</option>
+                                <option value="thisMonth">This Month</option>
+                                <option value="lastMonth">Last Month</option>
                                 <option value="quarter">Trimestre</option>
-                                <option value="year">Ano</option>
+                                <option value="year">Year</option>
                             </select>
                             <select
                                 value={professionalFilter}
                                 onChange={(e) => setProfessionalFilter(e.target.value)}
                                 className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                             >
-                                <option value="all">Todos Profissionais</option>
+                                <option value="all">All Professionals</option>
                                 {professionals.map(prof => (
                                     <option key={prof.id} value={prof.name}>{prof.name}</option>
                                 ))}
@@ -278,7 +278,7 @@ export default function ProfessionalCommissions() {
                         </div>
                         <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
                             <Filter className="w-4 h-4 mr-2" />
-                            Filtros Avançados
+                            Advanced Filters
                         </button>
                     </div>
                 </div>
@@ -286,7 +286,7 @@ export default function ProfessionalCommissions() {
                 {/* Professionals Commission Overview */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Comissões por Profissional</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Commissions por Professional</h3>
                     </div>
                     <div className="divide-y divide-gray-200">
                         {filteredProfessionals.map((professional) => (
@@ -308,19 +308,19 @@ export default function ProfessionalCommissions() {
 
                                             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4">
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Taxa de Comissão</p>
+                                                    <p className="text-sm text-gray-600">Fee de Commission</p>
                                                     <p className="text-lg font-semibold text-purple-600">{professional.commissionRate}%</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Faturamento</p>
+                                                    <p className="text-sm text-gray-600">Revenue</p>
                                                     <p className="text-lg font-semibold text-gray-900">R$ {professional.thisMonth.revenue.toLocaleString()}</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Comissão</p>
+                                                    <p className="text-sm text-gray-600">Commission</p>
                                                     <p className="text-lg font-semibold text-green-600">R$ {professional.thisMonth.commission.toLocaleString()}</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm text-gray-600">Agendamentos</p>
+                                                    <p className="text-sm text-gray-600">Bookings</p>
                                                     <p className="text-lg font-semibold text-blue-600">{professional.thisMonth.appointments}</p>
                                                 </div>
                                             </div>
@@ -328,23 +328,23 @@ export default function ProfessionalCommissions() {
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                                 <div className="flex items-center">
                                                     <DollarSign className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Ticket médio: </span>
+                                                    <span className="text-gray-600">Average ticket: </span>
                                                     <span className="font-medium text-gray-900 ml-1">R$ {professional.averageTicket.toFixed(2)}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Award className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Satisfação: </span>
+                                                    <span className="text-gray-600">Satisfaction: </span>
                                                     <span className="font-medium text-gray-900 ml-1">{professional.clientSatisfaction}</span>
                                                 </div>
                                                 <div className="flex items-center">
                                                     <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-                                                    <span className="text-gray-600">Total ganho: </span>
+                                                    <span className="text-gray-600">Total earned: </span>
                                                     <span className="font-medium text-gray-900 ml-1">R$ {professional.totalEarned.toLocaleString()}</span>
                                                 </div>
                                             </div>
 
                                             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                                                <p className="text-sm font-medium text-gray-900 mb-2">Serviços:</p>
+                                                <p className="text-sm font-medium text-gray-900 mb-2">Services:</p>
                                                 <div className="flex flex-wrap gap-2">
                                                     {professional.services.map((service, index) => (
                                                         <span key={index} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
@@ -364,7 +364,7 @@ export default function ProfessionalCommissions() {
                                             <Edit className="w-5 h-5" />
                                         </button>
                                         <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                                            Pagar
+                                            Pay
                                         </button>
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@ export default function ProfessionalCommissions() {
 
                 {/* Targets */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Metas de Comissão</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Metas de Commission</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {targets.map((target, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg p-6">
@@ -418,19 +418,19 @@ export default function ProfessionalCommissions() {
                 {/* Commission History */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200">
                     <div className="px-8 py-6 border-b border-gray-200">
-                        <h3 className="text-xl font-semibold text-gray-900">Histórico de Pagamentos</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Payment History</h3>
                     </div>
                     <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profissional</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Período</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Faturamento</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Taxa</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comissão</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Professional</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Period</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fee</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Commission</th>
                                     <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Pagamento</th>
+                                    <th className="px-8 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Payment</th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">

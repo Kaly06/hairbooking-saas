@@ -12,15 +12,15 @@ export default function EnterpriseUnitsPage() {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900">Multi-unidades</h1>
-                        <p className="text-gray-600 mt-2">Gestão centralizada de todas as unidades da rede</p>
+                        <p className="text-gray-600 mt-2">Centralized management of todas as unidades da rede</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                             <Plus className="h-4 w-4 inline mr-2" />
-                            Nova Unidade
+                            New Branch
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Relatório Consolidado
+                            Report Consolidado
                         </button>
                     </div>
                 </div>
@@ -31,9 +31,9 @@ export default function EnterpriseUnitsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Total de Unidades</p>
+                                    <p className="text-sm font-medium text-gray-600">Total Branches</p>
                                     <p className="text-2xl font-bold text-gray-900">12</p>
-                                    <p className="text-sm text-gray-500 mt-1">3 novas este mês</p>
+                                    <p className="text-sm text-gray-500 mt-1">3 novas this month</p>
                                 </div>
                                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
                                     <Building className="h-6 w-6 text-purple-600" />
@@ -46,11 +46,11 @@ export default function EnterpriseUnitsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Funcionários Total</p>
+                                    <p className="text-sm font-medium text-gray-600">Total Staff</p>
                                     <p className="text-2xl font-bold text-gray-900">156</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
-                                        <span className="text-sm text-green-600">+8 este mês</span>
+                                        <span className="text-sm text-green-600">+8 this month</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -64,7 +64,7 @@ export default function EnterpriseUnitsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Agendamentos Hoje</p>
+                                    <p className="text-sm font-medium text-gray-600">Today's Bookings</p>
                                     <p className="text-2xl font-bold text-gray-900">347</p>
                                     <p className="text-sm text-gray-500 mt-1">Todas as unidades</p>
                                 </div>
@@ -79,7 +79,7 @@ export default function EnterpriseUnitsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Receita Mensal</p>
+                                    <p className="text-sm font-medium text-gray-600">Monthly Revenue</p>
                                     <p className="text-2xl font-bold text-gray-900">R$ 485K</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
@@ -100,7 +100,7 @@ export default function EnterpriseUnitsPage() {
                     <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
-                                <CardTitle className="text-lg">Unidade Centro</CardTitle>
+                                <CardTitle className="text-lg">Downtown Branch</CardTitle>
                                 <div className="flex items-center gap-1">
                                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                     <span className="text-xs text-green-600">Online</span>
@@ -115,25 +115,25 @@ export default function EnterpriseUnitsPage() {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
                                     <p className="text-lg font-bold text-blue-600">18</p>
-                                    <p className="text-xs text-gray-600">Funcionários</p>
+                                    <p className="text-xs text-gray-600">Staff</p>
                                 </div>
                                 <div className="text-center p-3 bg-green-50 rounded-lg">
                                     <p className="text-lg font-bold text-green-600">32</p>
-                                    <p className="text-xs text-gray-600">Agendamentos</p>
+                                    <p className="text-xs text-gray-600">Bookings</p>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
-                                    <span>Receita Mensal:</span>
+                                    <span>Monthly Revenue:</span>
                                     <span className="font-medium text-green-600">R$ 45.2K</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Taxa de Ocupação:</span>
+                                    <span>Occupancy Rate:</span>
                                     <span className="font-medium">89%</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Avaliação Média:</span>
+                                    <span>Average Rating:</span>
                                     <span className="font-medium text-yellow-600">4.8/5</span>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="flex gap-2 pt-2">
                                 <button className="flex-1 px-3 py-2 text-sm bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                                     <Eye className="h-4 w-4 inline mr-1" />
-                                    Ver Detalhes
+                                    View Detalhes
                                 </button>
                                 <button className="px-3 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     <Settings className="h-4 w-4" />
@@ -154,7 +154,7 @@ export default function EnterpriseUnitsPage() {
                     <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
-                                <CardTitle className="text-lg">Unidade Shopping</CardTitle>
+                                <CardTitle className="text-lg">Shopping Branch</CardTitle>
                                 <div className="flex items-center gap-1">
                                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                     <span className="text-xs text-green-600">Online</span>
@@ -169,25 +169,25 @@ export default function EnterpriseUnitsPage() {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
                                     <p className="text-lg font-bold text-blue-600">25</p>
-                                    <p className="text-xs text-gray-600">Funcionários</p>
+                                    <p className="text-xs text-gray-600">Staff</p>
                                 </div>
                                 <div className="text-center p-3 bg-green-50 rounded-lg">
                                     <p className="text-lg font-bold text-green-600">48</p>
-                                    <p className="text-xs text-gray-600">Agendamentos</p>
+                                    <p className="text-xs text-gray-600">Bookings</p>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
-                                    <span>Receita Mensal:</span>
+                                    <span>Monthly Revenue:</span>
                                     <span className="font-medium text-green-600">R$ 68.5K</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Taxa de Ocupação:</span>
+                                    <span>Occupancy Rate:</span>
                                     <span className="font-medium">94%</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Avaliação Média:</span>
+                                    <span>Average Rating:</span>
                                     <span className="font-medium text-yellow-600">4.9/5</span>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="flex gap-2 pt-2">
                                 <button className="flex-1 px-3 py-2 text-sm bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                                     <Eye className="h-4 w-4 inline mr-1" />
-                                    Ver Detalhes
+                                    View Detalhes
                                 </button>
                                 <button className="px-3 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     <Settings className="h-4 w-4" />
@@ -208,10 +208,10 @@ export default function EnterpriseUnitsPage() {
                     <Card className="hover:shadow-lg transition-shadow">
                         <CardHeader className="pb-3">
                             <div className="flex items-center justify-between">
-                                <CardTitle className="text-lg">Unidade Zona Norte</CardTitle>
+                                <CardTitle className="text-lg">North Zone Branch</CardTitle>
                                 <div className="flex items-center gap-1">
                                     <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                                    <span className="text-xs text-yellow-600">Manutenção</span>
+                                    <span className="text-xs text-yellow-600">Maintenance</span>
                                 </div>
                             </div>
                             <div className="flex items-center text-sm text-gray-600">
@@ -223,25 +223,25 @@ export default function EnterpriseUnitsPage() {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="text-center p-3 bg-blue-50 rounded-lg">
                                     <p className="text-lg font-bold text-blue-600">15</p>
-                                    <p className="text-xs text-gray-600">Funcionários</p>
+                                    <p className="text-xs text-gray-600">Staff</p>
                                 </div>
                                 <div className="text-center p-3 bg-yellow-50 rounded-lg">
                                     <p className="text-lg font-bold text-yellow-600">12</p>
-                                    <p className="text-xs text-gray-600">Agendamentos</p>
+                                    <p className="text-xs text-gray-600">Bookings</p>
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm">
-                                    <span>Receita Mensal:</span>
+                                    <span>Monthly Revenue:</span>
                                     <span className="font-medium text-green-600">R$ 28.8K</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Taxa de Ocupação:</span>
+                                    <span>Occupancy Rate:</span>
                                     <span className="font-medium">65%</span>
                                 </div>
                                 <div className="flex justify-between text-sm">
-                                    <span>Avaliação Média:</span>
+                                    <span>Average Rating:</span>
                                     <span className="font-medium text-yellow-600">4.6/5</span>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@ export default function EnterpriseUnitsPage() {
                             <div className="flex gap-2 pt-2">
                                 <button className="flex-1 px-3 py-2 text-sm bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                                     <Eye className="h-4 w-4 inline mr-1" />
-                                    Ver Detalhes
+                                    View Detalhes
                                 </button>
                                 <button className="px-3 py-2 text-sm border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     <Settings className="h-4 w-4" />
@@ -271,10 +271,10 @@ export default function EnterpriseUnitsPage() {
                         <div className="space-y-6">
                             {/* Revenue Comparison */}
                             <div>
-                                <h4 className="font-semibold text-gray-900 mb-4">Receita por Unidade (Último Mês)</h4>
+                                <h4 className="font-semibold text-gray-900 mb-4">Revenue by Branch (Last Month)</h4>
                                 <div className="space-y-3">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium">Unidade Shopping</span>
+                                        <span className="text-sm font-medium">Shopping Branch</span>
                                         <div className="flex items-center gap-4 flex-1 mx-4">
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-green-500 h-3 rounded-full" style={{ width: '100%' }}></div>
@@ -284,7 +284,7 @@ export default function EnterpriseUnitsPage() {
                                     </div>
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium">Unidade Centro</span>
+                                        <span className="text-sm font-medium">Downtown Branch</span>
                                         <div className="flex items-center gap-4 flex-1 mx-4">
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-blue-500 h-3 rounded-full" style={{ width: '66%' }}></div>
@@ -294,7 +294,7 @@ export default function EnterpriseUnitsPage() {
                                     </div>
 
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium">Unidade Zona Norte</span>
+                                        <span className="text-sm font-medium">North Zone Branch</span>
                                         <div className="flex items-center gap-4 flex-1 mx-4">
                                             <div className="flex-1 bg-gray-200 rounded-full h-3">
                                                 <div className="bg-yellow-500 h-3 rounded-full" style={{ width: '42%' }}></div>
@@ -311,10 +311,10 @@ export default function EnterpriseUnitsPage() {
                                     Expandir Rede
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
-                                    Relatório Executivo
+                                    Report Executivo
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
-                                    Análise de Mercado
+                                    Analysis of Mercado
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
                                     Configurar Metas

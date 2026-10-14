@@ -11,13 +11,13 @@ export default function EnterpriseClientsPage() {
                 {/* Header */}
                 <div className="flex justify-between items-start">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Clientes Enterprise</h1>
-                        <p className="text-gray-600 mt-2">CRM avançado com gestão unificada de clientes em todas as unidades</p>
+                        <h1 className="text-3xl font-bold text-gray-900">Clients Enterprise</h1>
+                        <p className="text-gray-600 mt-2">Advanced CRM with unified client management across all branches</p>
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                             <UserPlus className="h-4 w-4 inline mr-2" />
-                            Novo Cliente
+                            New Client
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             Exportar Lista
@@ -31,11 +31,11 @@ export default function EnterpriseClientsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Total de Clientes</p>
+                                    <p className="text-sm font-medium text-gray-600">Total Clients</p>
                                     <p className="text-2xl font-bold text-gray-900">8.547</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
-                                        <span className="text-sm text-green-600">+156 este mês</span>
+                                        <span className="text-sm text-green-600">+156 this month</span>
                                     </div>
                                 </div>
                                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -49,7 +49,7 @@ export default function EnterpriseClientsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Clientes VIP</p>
+                                    <p className="text-sm font-medium text-gray-600">Clients VIP</p>
                                     <p className="text-2xl font-bold text-purple-600">1.247</p>
                                     <p className="text-sm text-gray-500 mt-1">14.6% do total</p>
                                 </div>
@@ -64,7 +64,7 @@ export default function EnterpriseClientsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Ticket Médio</p>
+                                    <p className="text-sm font-medium text-gray-600">Average Ticket</p>
                                     <p className="text-2xl font-bold text-green-600">R$ 127</p>
                                     <div className="flex items-center mt-1">
                                         <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
@@ -82,9 +82,9 @@ export default function EnterpriseClientsPage() {
                         <CardContent className="p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <p className="text-sm font-medium text-gray-600">Taxa de Retenção</p>
+                                    <p className="text-sm font-medium text-gray-600">Fee de Retention</p>
                                     <p className="text-2xl font-bold text-orange-600">87.3%</p>
-                                    <p className="text-sm text-gray-500 mt-1">Últimos 12 meses</p>
+                                    <p className="text-sm text-gray-500 mt-1">Last 12 months</p>
                                 </div>
                                 <div className="h-12 w-12 bg-orange-100 rounded-full flex items-center justify-center">
                                     <TrendingUp className="h-6 w-6 text-orange-600" />
@@ -103,7 +103,7 @@ export default function EnterpriseClientsPage() {
                                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                                     <input
                                         type="text"
-                                        placeholder="Buscar por nome, email, telefone ou CPF..."
+                                        placeholder="Search by nome, email, telefone ou CPF..."
                                         className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                                     />
                                 </div>
@@ -111,12 +111,12 @@ export default function EnterpriseClientsPage() {
                             <div className="flex flex-wrap gap-2">
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
                                     <option>Todas as unidades</option>
-                                    <option>Unidade Centro</option>
-                                    <option>Unidade Shopping</option>
-                                    <option>Unidade Zona Norte</option>
+                                    <option>Downtown Branch</option>
+                                    <option>Shopping Branch</option>
+                                    <option>North Zone Branch</option>
                                 </select>
                                 <select className="px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
-                                    <option>Todos os segmentos</option>
+                                    <option>All os segmentos</option>
                                     <option>VIP</option>
                                     <option>Frequentes</option>
                                     <option>Ocasionais</option>
@@ -124,7 +124,7 @@ export default function EnterpriseClientsPage() {
                                 </select>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                                     <Filter className="h-4 w-4 inline mr-2" />
-                                    Mais Filtros
+                                    Mais Filters
                                 </button>
                             </div>
                         </div>
@@ -135,7 +135,7 @@ export default function EnterpriseClientsPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <Card>
                         <CardHeader>
-                            <CardTitle className="text-lg">Segmentação de Clientes</CardTitle>
+                            <CardTitle className="text-lg">Client Segmentation</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div className="space-y-3">
@@ -173,12 +173,12 @@ export default function EnterpriseClientsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle className="text-lg">Distribuição por Unidade</CardTitle>
+                            <CardTitle className="text-lg">Distribution by Branch</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div className="space-y-3">
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">Unidade Shopping</span>
+                                    <span className="text-sm">Shopping Branch</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-16 bg-gray-200 rounded-full h-2">
                                             <div className="bg-blue-500 h-2 rounded-full" style={{ width: '45%' }}></div>
@@ -187,7 +187,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">Unidade Centro</span>
+                                    <span className="text-sm">Downtown Branch</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-16 bg-gray-200 rounded-full h-2">
                                             <div className="bg-green-500 h-2 rounded-full" style={{ width: '35%' }}></div>
@@ -196,7 +196,7 @@ export default function EnterpriseClientsPage() {
                                     </div>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">Unidade Zona Norte</span>
+                                    <span className="text-sm">North Zone Branch</span>
                                     <div className="flex items-center gap-2">
                                         <div className="w-16 bg-gray-200 rounded-full h-2">
                                             <div className="bg-purple-500 h-2 rounded-full" style={{ width: '20%' }}></div>
@@ -210,11 +210,11 @@ export default function EnterpriseClientsPage() {
 
                     <Card>
                         <CardHeader>
-                            <CardTitle className="text-lg">Ações Rápidas</CardTitle>
+                            <CardTitle className="text-lg">Quick Actions</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                <span className="text-sm">Campanha de Reativação</span>
+                                <span className="text-sm">Reactivation Campaign</span>
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
@@ -222,7 +222,7 @@ export default function EnterpriseClientsPage() {
                                 <span className="text-purple-600">→</span>
                             </button>
                             <button className="w-full flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                <span className="text-sm">Análise de Comportamento</span>
+                                <span className="text-sm">Analysis of Comportamento</span>
                                 <span className="text-purple-600">→</span>
                             </button>
                         </CardContent>
@@ -234,7 +234,7 @@ export default function EnterpriseClientsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Users className="h-5 w-5 text-purple-600" />
-                            Lista de Clientes
+                            List of Clients
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -261,11 +261,11 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Unidade Shopping
+                                                Shopping Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
-                                                Última visita: 15/10/2024
+                                                Last visit: 15/10/2024
                                             </div>
                                         </div>
                                     </div>
@@ -299,11 +299,11 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Unidade Centro
+                                                Downtown Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
-                                                Última visita: 20/10/2024
+                                                Last visit: 20/10/2024
                                             </div>
                                         </div>
                                     </div>
@@ -337,11 +337,11 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Unidade Zona Norte
+                                                North Zone Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
-                                                Última visita: 05/10/2024
+                                                Last visit: 05/10/2024
                                             </div>
                                         </div>
                                     </div>
@@ -362,7 +362,7 @@ export default function EnterpriseClientsPage() {
                                     <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-1">
                                             <h4 className="font-semibold text-gray-900">Pedro Costa</h4>
-                                            <span className="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Inativo</span>
+                                            <span className="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Inactive</span>
                                         </div>
                                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                                             <div className="flex items-center gap-1">
@@ -375,11 +375,11 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
-                                                Unidade Centro
+                                                Downtown Branch
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Calendar className="h-4 w-4" />
-                                                Última visita: 15/08/2024
+                                                Last visit: 15/08/2024
                                             </div>
                                         </div>
                                     </div>
@@ -387,7 +387,7 @@ export default function EnterpriseClientsPage() {
                                         <p className="font-semibold text-red-600">R$ 180</p>
                                         <p className="text-sm text-gray-600">Gasto total</p>
                                         <p className="text-sm text-gray-600">3 visitas</p>
-                                        <p className="text-xs text-red-600">Inativo há 67 dias</p>
+                                        <p className="text-xs text-red-600">Inactive for 67 days</p>
                                     </div>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@ export default function EnterpriseClientsPage() {
 
                         <div className="mt-6 text-center">
                             <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                Carregar Mais Clientes
+                                Carregar Mais Clients
                             </button>
                         </div>
                     </CardContent>

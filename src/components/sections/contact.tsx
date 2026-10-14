@@ -17,7 +17,7 @@ export default function Contact() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Aqui seria implementada a lógica de envio do formulário
+        // Form submission logic would go here
         setIsSubmitted(true);
     };
 
@@ -29,33 +29,33 @@ export default function Contact() {
     };
 
     const plans = [
-        { id: "starter", name: "Starter - R$ 97/mês" },
-        { id: "professional", name: "Professional - R$ 197/mês" },
-        { id: "enterprise", name: "Enterprise - R$ 397/mês" },
-        { id: "custom", name: "Plano Personalizado" }
+        { id: "starter", name: "Starter - R$ 97/month" },
+        { id: "professional", name: "Professional - R$ 197/month" },
+        { id: "enterprise", name: "Enterprise - R$ 397/month" },
+        { id: "custom", name: "Custom Plan" }
     ];
 
     const contactMethods = [
         {
             icon: Phone,
-            title: "Telefone",
-            description: "Fale diretamente com nossa equipe",
+            title: "Phone",
+            description: "Talk directly with our team",
             value: "(11) 93204-9040",
-            action: "Ligar Agora"
+            action: "Call Now"
         },
         {
             icon: MessageSquare,
             title: "WhatsApp",
-            description: "Tire suas dúvidas rapidamente",
+            description: "Get quick answers to your questions",
             value: "(11) 93204-9040",
-            action: "Chamar no WhatsApp"
+            action: "Message on WhatsApp"
         },
         {
             icon: Mail,
-            title: "E-mail",
-            description: "Envie sua mensagem detalhada",
+            title: "Email",
+            description: "Send us a detailed message",
             value: "matheusviniciusdrs5555@gmail.com",
-            action: "Enviar E-mail"
+            action: "Send Email"
         }
     ];
 
@@ -68,17 +68,17 @@ export default function Contact() {
                             <CheckCircle className="w-10 h-10 text-green-600" />
                         </div>
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                            Mensagem Enviada com Sucesso!
+                            Message Sent Successfully!
                         </h2>
                         <p className="text-xl text-gray-600 mb-8">
-                            Obrigado pelo seu interesse! Nossa equipe entrará em contato com você
-                            em até 24 horas para agendar uma demonstração personalizada.
+                            Thanks for your interest! Our team will contact you
+                            within 24 hours to schedule a personalized demo.
                         </p>
                         <button
                             onClick={() => setIsSubmitted(false)}
                             className="btn-secondary"
                         >
-                            Enviar Nova Mensagem
+                            Send Another Message
                         </button>
                     </div>
                 </div>
@@ -93,17 +93,17 @@ export default function Contact() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <div className="inline-flex items-center px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-600 mb-4">
                         <MessageSquare className="w-4 h-4 mr-2 text-blue-500" />
-                        Entre em Contato
+                        Contact Us
                     </div>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 break-words">
-                        Pronto para
-                        <span className="gradient-text"> transformar seu salão?</span>
+                        Ready to
+                        <span className="gradient-text"> transform your salon?</span>
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        Fale com nossa equipe e descubra como nossa plataforma pode
-                        aumentar seu faturamento e melhorar a experiência dos seus clientes.
+                        Talk to our team and find out how our platform can
+                        grow your revenue and improve your clients' experience.
                     </p>
                 </div>
 
@@ -111,14 +111,14 @@ export default function Contact() {
                     {/* Contact Form */}
                     <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 max-w-full">
                         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-                            Solicite uma Demonstração
+                            Request a Demo
                         </h3>
 
                         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-full overflow-hidden">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                                        Nome Completo *
+                                        Full Name *
                                     </label>
                                     <input
                                         type="text"
@@ -127,13 +127,13 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
-                                        placeholder="Seu nome"
+                                        placeholder="Your name"
                                     />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                                        Telefone *
+                                        Phone *
                                     </label>
                                     <input
                                         type="tel"
@@ -149,7 +149,7 @@ export default function Contact() {
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    E-mail *
+                                    Email *
                                 </label>
                                 <input
                                     type="email"
@@ -158,13 +158,13 @@ export default function Contact() {
                                     onChange={handleChange}
                                     required
                                     className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
-                                    placeholder="seu@email.com"
+                                    placeholder="you@email.com"
                                 />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Nome do Salão/Empresa
+                                    Salon/Company Name
                                 </label>
                                 <input
                                     type="text"
@@ -172,13 +172,13 @@ export default function Contact() {
                                     value={formData.business}
                                     onChange={handleChange}
                                     className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
-                                    placeholder="Nome do seu salão"
+                                    placeholder="Your salon's name"
                                 />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Plano de Interesse
+                                    Plan of Interest
                                 </label>
                                 <select
                                     name="plan"
@@ -186,7 +186,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
                                 >
-                                    <option value="">Selecione um plano</option>
+                                    <option value="">Select a plan</option>
                                     {plans.map((plan) => (
                                         <option key={plan.id} value={plan.id}>
                                             {plan.name}
@@ -197,7 +197,7 @@ export default function Contact() {
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Mensagem
+                                    Message
                                 </label>
                                 <textarea
                                     name="message"
@@ -205,7 +205,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     rows={4}
                                     className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
-                                    placeholder="Conte-nos sobre seu salão e suas necessidades..."
+                                    placeholder="Tell us about your salon and your needs..."
                                 />
                             </div>
 
@@ -214,7 +214,7 @@ export default function Contact() {
                                 className="w-full btn-primary"
                             >
                                 <Send className="w-5 h-5 mr-2" />
-                                Solicitar Demonstração
+                                Request a Demo
                             </button>
                         </form>
                     </div>
@@ -223,11 +223,11 @@ export default function Contact() {
                     <div className="space-y-6 lg:space-y-8">
                         <div>
                             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
-                                Outras Formas de Contato
+                                Other Ways to Reach Us
                             </h3>
                             <p className="text-sm sm:text-base text-gray-600 mb-6 lg:mb-8">
-                                Prefere falar diretamente? Use um dos canais abaixo
-                                para entrar em contato com nossa equipe especializada.
+                                Prefer to talk directly? Use one of the channels below
+                                to reach our specialized team.
                             </p>
                         </div>
 
@@ -263,20 +263,20 @@ export default function Contact() {
                         {/* Additional Info */}
                         <div className="bg-white rounded-2xl p-4 sm:p-6 border border-gray-200">
                             <h4 className="font-semibold text-gray-900 mb-3 text-sm sm:text-base">
-                                Horário de Atendimento
+                                Opening Hours
                             </h4>
                             <div className="space-y-2 text-xs sm:text-sm text-gray-600">
                                 <div className="flex justify-between">
-                                    <span>Segunda a Sexta:</span>
-                                    <span>8h às 18h</span>
+                                    <span>Monday to Friday:</span>
+                                    <span>8am to 6pm</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span>Sábado:</span>
-                                    <span>9h às 13h</span>
+                                    <span>Saturday:</span>
+                                    <span>9am to 1pm</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span>Domingo:</span>
-                                    <span>Fechado</span>
+                                    <span>Sunday:</span>
+                                    <span>Closed</span>
                                 </div>
                             </div>
                         </div>

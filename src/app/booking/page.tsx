@@ -64,7 +64,7 @@ export default function BookingRedirectPage() {
                     <div className="w-2 h-2 bg-black rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
                     <div className="w-2 h-2 bg-black rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
                 </div>
-                <p className="text-black font-medium">Preparando sua experiência</p>
+                <p className="text-black font-medium">Preparing your experience</p>
             </div>
         </div>
     );

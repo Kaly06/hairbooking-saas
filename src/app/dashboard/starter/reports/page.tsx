@@ -16,7 +16,7 @@ import { useState } from "react";
 export default function StarterReports() {
     const [dateRange, setDateRange] = useState("thisMonth");
 
-    // Dados simulados para relatórios
+    // Mock report data
     const monthlyData = {
         revenue: 8450,
         appointments: 156,
@@ -29,11 +29,11 @@ export default function StarterReports() {
     };
 
     const serviceData = [
-        { name: "Corte Feminino", quantity: 45, revenue: 2700, percentage: 32 },
-        { name: "Corte Masculino", quantity: 38, revenue: 1710, percentage: 24 },
-        { name: "Coloração", quantity: 22, revenue: 1980, percentage: 23 },
+        { name: "Haircut Feminino", quantity: 45, revenue: 2700, percentage: 32 },
+        { name: "Men's Haircut", quantity: 38, revenue: 1710, percentage: 24 },
+        { name: "Coloring", quantity: 22, revenue: 1980, percentage: 23 },
         { name: "Escova", quantity: 28, revenue: 840, percentage: 10 },
-        { name: "Hidratação", quantity: 15, revenue: 900, percentage: 11 }
+        { name: "Hair Treatment", quantity: 15, revenue: 900, percentage: 11 }
     ];
 
     const professionalData = [
@@ -43,13 +43,13 @@ export default function StarterReports() {
     ];
 
     const weeklyAppointments = [
-        { day: "Seg", appointments: 18 },
-        { day: "Ter", appointments: 22 },
-        { day: "Qua", appointments: 25 },
-        { day: "Qui", appointments: 28 },
-        { day: "Sex", appointments: 32 },
-        { day: "Sáb", appointments: 35 },
-        { day: "Dom", appointments: 12 }
+        { day: "Mon", appointments: 18 },
+        { day: "Tue", appointments: 22 },
+        { day: "Wed", appointments: 25 },
+        { day: "Thu", appointments: 28 },
+        { day: "Fri", appointments: 32 },
+        { day: "Sat", appointments: 35 },
+        { day: "Sun", appointments: 12 }
     ];
 
     const calculateGrowth = (current: number, previous: number) => {
@@ -75,9 +75,9 @@ export default function StarterReports() {
                     <div>
                         <h1 className="text-2xl font-bold text-gray-900 flex items-center">
                             <BarChart3 className="w-6 h-6 text-purple-600 mr-2" />
-                            Relatórios Básicos
+                            Basic Reports
                         </h1>
-                        <p className="text-gray-600">Acompanhe o desempenho do seu salão</p>
+                        <p className="text-gray-600">Track your salon's performance</p>
                     </div>
                     <div className="flex items-center space-x-3">
                         <select
@@ -85,10 +85,10 @@ export default function StarterReports() {
                             onChange={(e) => setDateRange(e.target.value)}
                             className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                         >
-                            <option value="thisWeek">Esta Semana</option>
-                            <option value="thisMonth">Este Mês</option>
-                            <option value="lastMonth">Mês Passado</option>
-                            <option value="last3Months">Últimos 3 Meses</option>
+                            <option value="thisWeek">This Week</option>
+                            <option value="thisMonth">This Month</option>
+                            <option value="lastMonth">Last Month</option>
+                            <option value="last3Months">Last 3 Months</option>
                         </select>
                         <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                             <Download className="w-4 h-4 mr-2" />
@@ -102,9 +102,9 @@ export default function StarterReports() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Faturamento</p>
+                                <p className="text-sm font-medium text-gray-600">Revenue</p>
                                 <p className="text-2xl font-semibold text-gray-900">
-                                    R$ {monthlyData.revenue.toLocaleString('pt-BR')}
+                                    R$ {monthlyData.revenue.toLocaleString('en-US')}
                                 </p>
                                 <div className="flex items-center mt-1">
                                     <TrendingUp className={`w-4 h-4 mr-1 ${revenueGrowth.isPositive ? 'text-green-600' : 'text-red-600'}`} />
@@ -122,7 +122,7 @@ export default function StarterReports() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Agendamentos</p>
+                                <p className="text-sm font-medium text-gray-600">Bookings</p>
                                 <p className="text-2xl font-semibold text-gray-900">{monthlyData.appointments}</p>
                                 <div className="flex items-center mt-1">
                                     <TrendingUp className={`w-4 h-4 mr-1 ${appointmentsGrowth.isPositive ? 'text-green-600' : 'text-red-600'}`} />
@@ -140,7 +140,7 @@ export default function StarterReports() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Clientes Ativos</p>
+                                <p className="text-sm font-medium text-gray-600">Active Clients</p>
                                 <p className="text-2xl font-semibold text-gray-900">{monthlyData.clients}</p>
                                 <div className="flex items-center mt-1">
                                     <TrendingUp className={`w-4 h-4 mr-1 ${clientsGrowth.isPositive ? 'text-green-600' : 'text-red-600'}`} />
@@ -158,7 +158,7 @@ export default function StarterReports() {
                     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-sm font-medium text-gray-600">Ticket Médio</p>
+                                <p className="text-sm font-medium text-gray-600">Average Ticket</p>
                                 <p className="text-2xl font-semibold text-gray-900">
                                     R$ {monthlyData.averageTicket.toFixed(2)}
                                 </p>
@@ -180,7 +180,7 @@ export default function StarterReports() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Weekly Appointments Chart */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Agendamentos por Dia da Semana</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Bookings por Day of the Week</h3>
                         <div className="space-y-4">
                             {weeklyAppointments.map((day, index) => (
                                 <div key={index} className="flex items-center">
@@ -201,7 +201,7 @@ export default function StarterReports() {
 
                     {/* Services Performance */}
                     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-medium text-gray-900 mb-6">Serviços Mais Vendidos</h3>
+                        <h3 className="text-lg font-medium text-gray-900 mb-6">Top Services</h3>
                         <div className="space-y-4">
                             {serviceData.map((service, index) => (
                                 <div key={index} className="flex items-center justify-between">
@@ -211,12 +211,12 @@ export default function StarterReports() {
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium text-gray-900">{service.name}</p>
-                                            <p className="text-xs text-gray-500">{service.quantity} serviços</p>
+                                            <p className="text-xs text-gray-500">{service.quantity} services</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
                                         <p className="text-sm font-medium text-gray-900">
-                                            R$ {service.revenue.toLocaleString('pt-BR')}
+                                            R$ {service.revenue.toLocaleString('en-US')}
                                         </p>
                                         <p className="text-xs text-gray-500">{service.percentage}%</p>
                                     </div>
@@ -229,18 +229,18 @@ export default function StarterReports() {
                 {/* Professional Performance */}
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                     <div className="px-6 py-4 border-b border-gray-200">
-                        <h3 className="text-lg font-medium text-gray-900">Performance dos Profissionais</h3>
+                        <h3 className="text-lg font-medium text-gray-900">Performance dos Professionals</h3>
                     </div>
                     <div className="p-6">
                         <div className="overflow-x-auto">
                             <table className="min-w-full">
                                 <thead>
                                     <tr className="border-b border-gray-200">
-                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Profissional</th>
-                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Agendamentos</th>
-                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Faturamento</th>
-                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Avaliação</th>
-                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Ticket Médio</th>
+                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Professional</th>
+                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Bookings</th>
+                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Revenue</th>
+                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Rating</th>
+                                        <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Average Ticket</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200">
@@ -262,7 +262,7 @@ export default function StarterReports() {
                                                 {professional.appointments}
                                             </td>
                                             <td className="py-4 px-4 text-sm font-medium text-green-600">
-                                                R$ {professional.revenue.toLocaleString('pt-BR')}
+                                                R$ {professional.revenue.toLocaleString('en-US')}
                                             </td>
                                             <td className="py-4 px-4">
                                                 <div className="flex items-center">
@@ -285,14 +285,14 @@ export default function StarterReports() {
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white">
                     <div className="flex items-center justify-between">
                         <div>
-                            <h3 className="text-lg font-medium mb-2">Quer relatórios mais detalhados?</h3>
+                            <h3 className="text-lg font-medium mb-2">Want more detailed reports?</h3>
                             <p className="text-blue-100">
-                                Faça upgrade para o plano Professional e tenha acesso a relatórios completos,
-                                analytics avançados e muito mais!
+                                Upgrade to the Professional plan for full reports,
+                                advanced analytics and much more!
                             </p>
                         </div>
                         <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors">
-                            Fazer Upgrade
+                            Upgrade
                         </button>
                     </div>
                 </div>

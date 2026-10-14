@@ -12,33 +12,33 @@ export default function About() {
     const features = [
         {
             icon: Clock,
-            title: "Agendamentos 24/7",
-            description: "Seus clientes podem agendar a qualquer hora, mesmo quando você está dormindo."
+            title: "24/7 Bookings",
+            description: "Your clients can book at any time, even while you're asleep."
         },
         {
             icon: DollarSign,
-            title: "Aumente sua Receita",
-            description: "Sistema inteligente que otimiza sua agenda e aumenta o faturamento."
+            title: "Grow Your Revenue",
+            description: "A smart system that optimizes your schedule and increases earnings."
         },
         {
             icon: Users,
-            title: "Gestão de Clientes",
-            description: "Histórico completo e lembretes automáticos para fidelizar clientes."
+            title: "Client Management",
+            description: "Full client history and automatic reminders to keep clients coming back."
         },
         {
             icon: Shield,
-            title: "Dados Seguros",
-            description: "Proteção bancária e backup automático dos seus dados."
+            title: "Secure Data",
+            description: "Bank-level protection and automatic backups of your data."
         },
         {
             icon: TrendingUp,
-            title: "Relatórios de Vendas",
-            description: "Acompanhe faturamento e performance em tempo real."
+            title: "Sales Reports",
+            description: "Track revenue and performance in real time."
         },
         {
             icon: Award,
-            title: "Suporte Dedicado",
-            description: "Equipe especializada e treinamento gratuito para sua equipe."
+            title: "Dedicated Support",
+            description: "Specialized team and free training for your staff."
         }
     ];
 
@@ -183,17 +183,17 @@ export default function About() {
                 <div className="section-header text-center max-w-3xl mx-auto pt-20 pb-16">
                     <div className="inline-flex items-center px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-600 mb-4">
                         <Heart className="w-4 h-4 mr-2 text-red-500" />
-                        Por que escolher a HairBooking
+                        Why choose HairBooking
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                        Transforme seu salão em um
-                        <span className="gradient-text"> negócio digital</span>
+                        Turn your salon into a
+                        <span className="gradient-text"> digital business</span>
                     </h2>
 
                     <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                        Nossa plataforma oferece todas as ferramentas que você precisa para
-                        modernizar seu salão e aumentar a receita.
+                        Our platform gives you every tool you need to
+                        modernize your salon and grow your revenue.
                     </p>
                 </div>
 
@@ -237,19 +237,19 @@ export default function About() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mt-32">
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">+40%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Aumento na Receita</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Revenue Increase</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">-60%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Menos Cancelamentos</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Fewer Cancellations</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">24/7</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Agendamentos Online</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Online Bookings</div>
                     </div>
                     <div className="text-center">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">100%</div>
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Agenda Organizada</div>
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600">Organized Schedule</div>
                     </div>
                 </div>
             </div>
