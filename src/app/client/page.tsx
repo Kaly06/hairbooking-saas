@@ -20,6 +20,13 @@ import {
     Trash2
 } from "lucide-react";
 
+interface Professional {
+    id: number;
+    name: string;
+    specialty: string;
+    rating: number;
+}
+
 interface Unit {
     id: number;
     name: string;
@@ -63,6 +70,8 @@ export default function ClientBookingPage() {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
     const [selectedService, setSelectedService] = useState("simple");
     const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
+    const [professionalMode, setProfessionalMode] = useState<"any" | "specific">("any");
+    const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
     const [customServices, setCustomServices] = useState<Service[]>([]);
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
@@ -119,6 +128,12 @@ export default function ClientBookingPage() {
             phone: "+233 24 596 7800",
             distance: "8.1 km"
         }
+    ];
+
+    const professionals: Professional[] = [
+        { id: 1, name: "Ama Owusu", specialty: "Women's cuts & styling", rating: 4.9 },
+        { id: 2, name: "Kwesi Asare", specialty: "Beard & cuts", rating: 4.8 },
+        { id: 3, name: "Akua Darko", specialty: "Colour & highlights", rating: 5.0 }
     ];
 
     const services = {
@@ -592,16 +607,45 @@ export default function ClientBookingPage() {
                                     {/* Professional Preference */}
                                     <div className="pt-6 border-t border-gray-200">
                                         <h4 className="font-bold text-black mb-3">Professional Preference</h4>
-                                        <div className="flex gap-4">
+                                        <div className="flex flex-wrap gap-4">
                                             <label className="flex items-center gap-2 cursor-pointer">
-                                                <input type="radio" name="professional" className="text-black" defaultChecked />
+                                                <input
+                                                    type="radio"
+                                                    name="professional"
+                                                    className="text-black"
+                                                    checked={professionalMode === "any"}
+                                                    onChange={() => { setProfessionalMode("any"); setSelectedProfessional(null); }}
+                                                />
                                                 <span className="text-sm">Any available professional</span>
                                             </label>
                                             <label className="flex items-center gap-2 cursor-pointer">
-                                                <input type="radio" name="professional" className="text-black" />
+                                                <input
+                                                    type="radio"
+                                                    name="professional"
+                                                    className="text-black"
+                                                    checked={professionalMode === "specific"}
+                                                    onChange={() => setProfessionalMode("specific")}
+                                                />
                                                 <span className="text-sm">Choose a specific professional</span>
                                             </label>
                                         </div>
+
+                                        {professionalMode === "specific" && (
+                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+                                                {professionals.map((pro) => (
+                                                    <button
+                                                        type="button"
+                                                        key={pro.id}
+                                                        onClick={() => setSelectedProfessional(pro)}
+                                                        className={`text-left p-4 border-2 rounded-xl transition-all ${selectedProfessional?.id === pro.id ? "border-black bg-gray-50" : "border-gray-200 hover:border-gray-400"}`}
+                                                    >
+                                                        <div className="font-bold text-black">{pro.name}</div>
+                                                        <div className="text-sm text-gray-600">{pro.specialty}</div>
+                                                        <div className="text-xs text-gray-500 mt-1">★ {pro.rating}</div>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -951,7 +995,7 @@ export default function ClientBookingPage() {
                             </button>
                             <button
                                 onClick={() => handleStepChange(4)}
-                                disabled={selectedService === "plan" && !selectedPlan || selectedService === "custom" && customServices.length === 0}
+                                disabled={selectedService === "plan" && !selectedPlan || selectedService === "custom" && customServices.length === 0 || professionalMode === "specific" && !selectedProfessional}
                                 className="order-1 sm:order-2 w-full sm:w-auto px-6 sm:px-8 py-3 bg-black text-white rounded-xl font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-all duration-200 flex items-center justify-center gap-2"
                             >
                                 Continue
@@ -1079,6 +1123,10 @@ export default function ClientBookingPage() {
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
                                                 <span className="text-gray-600">Branch:</span>
                                                 <span className="font-semibold text-black text-right">{selectedUnit?.name}</span>
+                                            </div>
+                                            <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                                                <span className="text-gray-600">Professional:</span>
+                                                <span className="font-semibold text-black text-right">{professionalMode === "specific" && selectedProfessional ? selectedProfessional.name : "Any available professional"}</span>
                                             </div>
                                             <div className="flex justify-between items-center py-3 border-b border-gray-100">
                                                 <span className="text-gray-600">Date:</span>
@@ -1300,6 +1348,10 @@ export default function ClientBookingPage() {
                                             <div className="pb-3 border-b border-gray-100">
                                                 <div className="text-sm text-gray-600 mb-1">Branch</div>
                                                 <div className="font-semibold text-black">{selectedUnit?.name}</div>
+                                            </div>
+                                            <div className="pb-3 border-b border-gray-100">
+                                                <div className="text-sm text-gray-600 mb-1">Professional</div>
+                                                <div className="font-semibold text-black">{professionalMode === "specific" && selectedProfessional ? selectedProfessional.name : "Any available professional"}</div>
                                             </div>
                                             <div className="pb-3 border-b border-gray-100">
                                                 <div className="text-sm text-gray-600 mb-1">Date & Time</div>
