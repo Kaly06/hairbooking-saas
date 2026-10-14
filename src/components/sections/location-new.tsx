@@ -44,14 +44,14 @@ export default function Location() {
     ];
 
     const coverage = [
-        { state: "São Paulo", regions: "Capital, Interior, Litoral", status: "active" },
-        { state: "Rio de Janeiro", regions: "Capital, Região Metropolitana", status: "active" },
-        { state: "Minas Gerais", regions: "Belo Horizonte, Região Metropolitana", status: "active" },
-        { state: "Paraná", regions: "Curitiba, Maringá, Londrina", status: "active" },
-        { state: "Rio Grande do Sul", regions: "Porto Alegre, Região Metropolitana", status: "active" },
-        { state: "Santa Catarina", regions: "Florianópolis, Blumenau", status: "active" },
-        { state: "Bahia", regions: "Salvador e Região", status: "coming-soon" },
-        { state: "Pernambuco", regions: "Recife e Região", status: "coming-soon" }
+        { state: "Greater Accra", regions: "Accra, Tema", status: "active" },
+        { state: "Ashanti", regions: "Kumasi e região", status: "active" },
+        { state: "Western", regions: "Takoradi, Tarkwa", status: "active" },
+        { state: "Central", regions: "Cape Coast, Winneba", status: "active" },
+        { state: "Eastern", regions: "Koforidua, Nkawkaw", status: "active" },
+        { state: "Bono", regions: "Sunyani, Berekum", status: "active" },
+        { state: "Northern", regions: "Tamale e região", status: "coming-soon" },
+        { state: "Volta", regions: "Ho e região", status: "coming-soon" }
     ];
 
     return (
@@ -70,7 +70,7 @@ export default function Location() {
                     </h2>
 
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        Nossa plataforma funciona em todo o Brasil. Independente da localização
+                        Nossa plataforma funciona em todo o Gana. Independente da localização
                         do seu salão, você terá acesso completo a todas as funcionalidades.
                     </p>
                 </div>
@@ -150,7 +150,7 @@ export default function Location() {
                 <div className="bg-white rounded-2xl p-8">
                     <div className="text-center mb-8">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                            Disponível em Todo o Brasil
+                            Disponível em todo o Gana
                         </h3>
                         <p className="text-gray-600">
                             Expandindo constantemente para atender salões em todas as regiões

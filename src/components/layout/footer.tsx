@@ -39,7 +39,7 @@ export default function Footer() {
             { name: "Terms of use", href: "#termos" },
             { name: "Privacy policy", href: "#privacidade" },
             { name: "Cookies", href: "#cookies" },
-            { name: "LGPD", href: "#lgpd" }
+            { name: "Data Protection", href: "#lgpd" }
         ]
     };
 
@@ -73,7 +73,7 @@ export default function Footer() {
                         <div className="space-y-3">
                             <div className="flex items-center text-gray-300">
                                 <Phone className="w-4 h-4 mr-3" />
-                                <span className="text-sm">(11) 4000-0000</span>
+                                <span className="text-sm">+233 24 000 0000</span>
                             </div>
 
                             <div className="flex items-center text-gray-300">
@@ -85,7 +85,7 @@ export default function Footer() {
                                 <MapPin className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
                                     Rua Augusta, 123 - Centro<br />
-                                    São Paulo, SP - 01305-000
+                                    Accra, Greater Accra, Ghana
                                 </span>
                             </div>
 
@@ -219,7 +219,7 @@ export default function Footer() {
                         <div className="flex items-center text-sm text-gray-400">
                             <span>Made with</span>
                             <Heart className="w-4 h-4 mx-1 text-red-500" />
-                            <span>in São Paulo</span>
+                            <span>in Accra</span>
                         </div>
                     </div>
                 </div>

@@ -292,7 +292,7 @@ export default function EnterpriseSecurityPage() {
                                 </div>
 
                                 <div className="flex justify-between items-center">
-                                    <span className="text-sm">LGPD</span>
+                                    <span className="text-sm">Data Protection Act</span>
                                     <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Conforme</span>
                                 </div>
 
@@ -327,9 +327,9 @@ export default function EnterpriseSecurityPage() {
                                 <div className="p-3 bg-green-50 rounded-lg">
                                     <div className="flex items-center gap-2 mb-1">
                                         <Shield className="h-4 w-4 text-green-600" />
-                                        <span className="text-sm font-medium text-green-800">LGPD</span>
+                                        <span className="text-sm font-medium text-green-800">Data Protection Act</span>
                                     </div>
-                                    <p className="text-xs text-green-600">General Data Protection Law (LGPD)</p>
+                                    <p className="text-xs text-green-600">Data Protection Act, 2012 (Act 843)</p>
                                 </div>
 
                                 <div className="p-3 bg-blue-50 rounded-lg">

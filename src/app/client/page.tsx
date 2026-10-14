@@ -98,7 +98,7 @@ export default function ClientBookingPage() {
             address: "Rua das Flores, 123 - Downtown",
             rating: 4.9,
             reviews: 847,
-            phone: "(11) 3325-4400",
+            phone: "+233 24 325 4400",
             distance: "2.3 km"
         },
         {
@@ -107,7 +107,7 @@ export default function ClientBookingPage() {
             address: "Av. Paulista, 1000 - Bela Vista",
             rating: 4.8,
             reviews: 623,
-            phone: "(11) 2240-5500",
+            phone: "+233 24 240 5500",
             distance: "5.7 km"
         },
         {
@@ -116,7 +116,7 @@ export default function ClientBookingPage() {
             address: "Rua Augusta, 500 - Consolação",
             rating: 4.7,
             reviews: 412,
-            phone: "(11) 2596-7800",
+            phone: "+233 24 596 7800",
             distance: "8.1 km"
         }
     ];
@@ -1187,7 +1187,7 @@ export default function ClientBookingPage() {
                                                     value={customerInfo.phone}
                                                     onChange={(e) => setCustomerInfo({ ...customerInfo, phone: e.target.value })}
                                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-black transition-colors"
-                                                    placeholder="(11) 99999-9999"
+                                                    placeholder="+233 24 999 9999"
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
@@ -1418,7 +1418,7 @@ export default function ClientBookingPage() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="h-4 w-4" />
-                                <span>(11) 4000-0000</span>
+                                <span>+233 24 000 0000</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Clock className="h-4 w-4" />
@@ -1432,7 +1432,7 @@ export default function ClientBookingPage() {
                                 © 2024 HairBooking SaaS. All rights reserved.
                                 <span className="block sm:inline mx-0 sm:mx-2 mt-1 sm:mt-0">
                                     <span className="hidden sm:inline">•</span>
-                                    CNPJ: 12.345.678/0001-90
+                                    Business Reg. No.: GH-000000
                                 </span>
                             </p>
                         </div>

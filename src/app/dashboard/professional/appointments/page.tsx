@@ -38,7 +38,7 @@ export default function ProfessionalAppointments() {
         {
             id: 1,
             clientName: "Maria Santos",
-            clientPhone: "(11) 99999-0001",
+            clientPhone: "+233 24 999 0001",
             service: "Haircut + Coloring",
             professional: "Ana Silva",
             date: "2024-01-15",
@@ -55,7 +55,7 @@ export default function ProfessionalAppointments() {
         {
             id: 2,
             clientName: "João Silva",
-            clientPhone: "(11) 99999-0002",
+            clientPhone: "+233 24 999 0002",
             service: "Men's Haircut",
             professional: "Carlos Santos",
             date: "2024-01-15",
@@ -72,7 +72,7 @@ export default function ProfessionalAppointments() {
         {
             id: 3,
             clientName: "Ana Costa",
-            clientPhone: "(11) 99999-0003",
+            clientPhone: "+233 24 999 0003",
             service: "Escova Progressiva",
             professional: "Maria Costa",
             date: "2024-01-15",
@@ -89,7 +89,7 @@ export default function ProfessionalAppointments() {
         {
             id: 4,
             clientName: "Pedro Lima",
-            clientPhone: "(11) 99999-0004",
+            clientPhone: "+233 24 999 0004",
             service: "Barba + Bigode",
             professional: "Carlos Santos",
             date: "2024-01-15",

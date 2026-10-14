@@ -39,7 +39,7 @@ export default function ClientDashboardPage() {
             service: "Haircut",
             unit: "Downtown Branch",
             address: "Rua das Flores, 123 - Downtown",
-            phone: "(11) 3325-4400",
+            phone: "+233 24 325 4400",
             status: "confirmed",
             price: 45,
             duration: 45
@@ -51,7 +51,7 @@ export default function ClientDashboardPage() {
             service: "Haircut + Beard Trim",
             unit: "South Zone Branch",
             address: "Av. Paulista, 1000 - Bela Vista",
-            phone: "(11) 2240-5500",
+            phone: "+233 24 240 5500",
             status: "completed",
             price: 75,
             duration: 75

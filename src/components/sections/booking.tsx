@@ -323,7 +323,7 @@ export default function BookingForm() {
                                                     setFormData({ ...formData, phone: e.target.value })
                                                 }
                                                 className="w-full p-4 border border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none"
-                                                placeholder="(11) 99999-9999"
+                                                placeholder="+233 24 999 9999"
                                                 required
                                             />
                                         </div>

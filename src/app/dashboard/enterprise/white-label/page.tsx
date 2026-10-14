@@ -304,7 +304,7 @@ export default function EnterpriseWhiteLabelPage() {
                             <div>
                                 <label className="text-sm font-medium text-gray-700 mb-2 block">Default Language</label>
                                 <select className="w-full px-3 py-2 border border-gray-200 rounded-lg">
-                                    <option>Portuguese (Brazil)</option>
+                                    <option>English (Ghana)</option>
                                     <option>English (US)</option>
                                     <option>Spanish</option>
                                 </select>

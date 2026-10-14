@@ -104,7 +104,7 @@ export default function EnterpriseClientsPage() {
                                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                                     <input
                                         type="text"
-                                        placeholder="Search by nome, email, telefone ou CPF..."
+                                        placeholder="Search by name, email, phone or ID..."
                                         className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                                     />
                                 </div>
@@ -258,7 +258,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
-                                                (11) 99999-9999
+                                                +233 24 999 9999
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
@@ -296,7 +296,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
-                                                (11) 88888-8888
+                                                +233 24 888 8888
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
@@ -334,7 +334,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
-                                                (11) 77777-7777
+                                                +233 24 777 7777
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />
@@ -372,7 +372,7 @@ export default function EnterpriseClientsPage() {
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Phone className="h-4 w-4" />
-                                                (11) 66666-6666
+                                                +233 24 666 6666
                                             </div>
                                             <div className="flex items-center gap-1">
                                                 <Building className="h-4 w-4" />

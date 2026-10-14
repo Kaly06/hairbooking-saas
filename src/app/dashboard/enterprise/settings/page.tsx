@@ -42,7 +42,7 @@ export default function EnterpriseSettingsPage() {
                                 </div>
 
                                 <div className="p-3 bg-gray-50 rounded-lg">
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">CNPJ</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Business Registration No.</label>
                                     <input type="text" value="00.000.000/0001-00" className="w-full px-3 py-2 border border-gray-300 rounded-md" />
                                 </div>
 
@@ -50,8 +50,8 @@ export default function EnterpriseSettingsPage() {
                                     <label className="block text-sm font-medium text-gray-700 mb-2">Fuso Time</label>
                                     <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
                                         <option>America/Sao_Paulo</option>
-                                        <option>America/Brasilia</option>
-                                        <option>America/Recife</option>
+                                        <option>Africa/Accra</option>
+                                        <option>Africa/Accra</option>
                                     </select>
                                 </div>
 
@@ -375,7 +375,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="font-medium text-blue-900">Custom Domain</span>
                                             <span className="text-xs bg-blue-500 text-white px-2 py-1 rounded">Active</span>
                                         </div>
-                                        <p className="text-sm text-blue-700">booking.suasalao.com.br</p>
+                                        <p className="text-sm text-blue-700">booking.suasalao.com.gh</p>
                                         <button className="text-sm text-blue-600 hover:text-blue-800 mt-1">Change domain</button>
                                     </div>
 

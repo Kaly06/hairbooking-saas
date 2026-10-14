@@ -89,7 +89,7 @@ export default function BookingSuccessPage() {
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-semibold text-black">Branch Contact</h3>
-                                    <p className="text-gray-600">(11) 3325-4400</p>
+                                    <p className="text-gray-600">+233 24 325 4400</p>
                                 </div>
                             </div>
 

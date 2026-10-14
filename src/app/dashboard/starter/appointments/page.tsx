@@ -26,7 +26,7 @@ export default function StarterAppointments() {
         {
             id: 1,
             client: "Maria Silva",
-            phone: "(11) 99999-1234",
+            phone: "+233 24 999 1234",
             service: "Haircut + Escova",
             date: "2025-11-05",
             time: "09:00",
@@ -39,7 +39,7 @@ export default function StarterAppointments() {
         {
             id: 2,
             client: "João Santos",
-            phone: "(11) 98888-5678",
+            phone: "+233 24 888 5678",
             service: "Men's Haircut",
             date: "2025-11-05",
             time: "10:30",
@@ -52,7 +52,7 @@ export default function StarterAppointments() {
         {
             id: 3,
             client: "Ana Costa",
-            phone: "(11) 97777-9012",
+            phone: "+233 24 777 9012",
             service: "Coloring",
             date: "2025-11-05",
             time: "14:00",
@@ -65,7 +65,7 @@ export default function StarterAppointments() {
         {
             id: 4,
             client: "Pedro Lima",
-            phone: "(11) 96666-3456",
+            phone: "+233 24 666 3456",
             service: "Barba",
             date: "2025-11-05",
             time: "15:30",
@@ -78,7 +78,7 @@ export default function StarterAppointments() {
         {
             id: 5,
             client: "Carla Souza",
-            phone: "(11) 95555-7890",
+            phone: "+233 24 555 7890",
             service: "Hair Treatment",
             date: "2025-11-06",
             time: "09:00",

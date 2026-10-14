@@ -145,7 +145,7 @@ export default function Contact() {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent text-sm sm:text-base"
-                                        placeholder="(11) 99999-9999"
+                                        placeholder="+233 24 000 0000"
                                     />
                                 </div>
                             </div>
