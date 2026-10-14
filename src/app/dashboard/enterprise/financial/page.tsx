@@ -302,7 +302,7 @@ export default function EnterpriseFinancialPage() {
                                     <div className="flex items-center gap-3">
                                         <Banknote className="h-5 w-5 text-green-600" />
                                         <div>
-                                            <p className="font-medium text-green-900">PIX</p>
+                                            <p className="font-medium text-green-900">MTN MoMo</p>
                                             <p className="text-sm text-green-600">32.8% of transactions</p>
                                         </div>
                                     </div>

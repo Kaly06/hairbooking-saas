@@ -72,6 +72,8 @@ export default function ClientBookingPage() {
     const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
     const [professionalMode, setProfessionalMode] = useState<"any" | "specific">("any");
     const [selectedProfessional, setSelectedProfessional] = useState<Professional | null>(null);
+    const [paymentMethod, setPaymentMethod] = useState<string>("mtn");
+    const [mobileMoneyNumber, setMobileMoneyNumber] = useState("");
     const [customServices, setCustomServices] = useState<Service[]>([]);
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
@@ -1289,25 +1291,48 @@ export default function ClientBookingPage() {
 
                                         {/* Payment Methods */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                            <div className="p-4 border-2 border-black rounded-xl bg-gray-50">
-                                                <div className="flex items-center gap-3">
-                                                    <input type="radio" name="payment" defaultChecked className="w-5 h-5" />
-                                                    <div>
-                                                        <h4 className="font-bold text-black">PIX</h4>
-                                                        <p className="text-sm text-gray-600">Instant payment</p>
+                                            {[
+                                                { id: "mtn", name: "MTN MoMo", desc: "Mobile money wallet" },
+                                                { id: "telecel", name: "Telecel Cash", desc: "Formerly Vodafone Cash" },
+                                                { id: "at", name: "AT Money", desc: "Formerly AirtelTigo Money" },
+                                                { id: "card", name: "Card", desc: "Credit or debit" }
+                                            ].map((method) => (
+                                                <label
+                                                    key={method.id}
+                                                    className={`p-4 border-2 rounded-xl cursor-pointer transition-colors ${paymentMethod === method.id ? "border-black bg-gray-50" : "border-gray-200 hover:border-gray-400"}`}
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <input
+                                                            type="radio"
+                                                            name="payment"
+                                                            className="w-5 h-5"
+                                                            checked={paymentMethod === method.id}
+                                                            onChange={() => setPaymentMethod(method.id)}
+                                                        />
+                                                        <div>
+                                                            <h4 className="font-bold text-black">{method.name}</h4>
+                                                            <p className="text-sm text-gray-600">{method.desc}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div className="p-4 border-2 border-gray-200 rounded-xl hover:border-gray-400 transition-colors cursor-pointer">
-                                                <div className="flex items-center gap-3">
-                                                    <input type="radio" name="payment" className="w-5 h-5" />
-                                                    <div>
-                                                        <h4 className="font-bold text-black">Card</h4>
-                                                        <p className="text-sm text-gray-600">Credit or debit</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                </label>
+                                            ))}
                                         </div>
+
+                                        {/* Mobile money number */}
+                                        {paymentMethod !== "card" && (
+                                            <div className="mb-6">
+                                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                                    Mobile money number (you'll get a prompt to approve the booking fee)
+                                                </label>
+                                                <input
+                                                    type="tel"
+                                                    value={mobileMoneyNumber}
+                                                    onChange={(e) => setMobileMoneyNumber(e.target.value)}
+                                                    placeholder="+233 24 000 0000"
+                                                    className="w-full p-4 border border-gray-200 rounded-xl focus:border-black focus:outline-none"
+                                                />
+                                            </div>
+                                        )}
 
                                         {/* Payment Notice */}
                                         <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">

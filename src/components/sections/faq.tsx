@@ -67,7 +67,7 @@ export default function FAQ() {
         },
         {
             question: "Can I integrate with my current payment system?",
-            answer: "Yes! Our platform integrates with the main payment gateways on the market, including Mercado Pago, PagSeguro, Stripe and more. We also support cards, PIX and cash."
+            answer: "Yes! Our platform integrates with the main payment gateways on the market, including Paystack, Flutterwave, Stripe and more. We also support cards, PIX and cash."
         },
         {
             question: "How many professionals can use the platform?",

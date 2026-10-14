@@ -69,7 +69,7 @@ export default function ProfessionalFinancial() {
     const paymentMethods = [
         { method: "Credit Card", amount: 8920, percentage: 48.4, transactions: 156 },
         { method: "Debit Card", amount: 4560, percentage: 24.7, transactions: 89 },
-        { method: "PIX", amount: 3240, percentage: 17.6, transactions: 67 },
+        { method: "MTN MoMo", amount: 3240, percentage: 17.6, transactions: 67 },
         { method: "Dinheiro", amount: 1730, percentage: 9.4, transactions: 34 }
     ];
 

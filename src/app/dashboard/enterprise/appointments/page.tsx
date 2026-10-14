@@ -232,7 +232,7 @@ export default function EnterpriseAppointmentsPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="font-semibold text-gray-900">{formatUSD(280)}</p>
-                                        <p className="text-sm text-gray-600">PIX</p>
+                                        <p className="text-sm text-gray-600">MTN MoMo</p>
                                     </div>
                                 </div>
                                 <button className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors">

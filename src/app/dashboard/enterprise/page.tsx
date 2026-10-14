@@ -92,7 +92,7 @@ export default function EnterpriseDashboard() {
         { name: "WhatsApp Business", status: "active", sync: "98%" },
         { name: "Instagram", status: "active", sync: "95%" },
         { name: "Facebook", status: "pending", sync: "0%" },
-        { name: "PagSeguro", status: "active", sync: "100%" },
+        { name: "Paystack", status: "active", sync: "100%" },
         { name: "Stripe", status: "active", sync: "100%" }
     ];
 

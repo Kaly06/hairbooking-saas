@@ -315,7 +315,7 @@ export default function EnterpriseUnitsPage() {
                                     Report Executivo
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
-                                    Analysis of Mercado
+                                    Market analysis
                                 </button>
                                 <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-sm">
                                     Set targets
