@@ -63,7 +63,7 @@ export default function Footer() {
                             <span className="text-xl font-bold text-white">HairBooking</span>
                         </Link>
 
-                        <p className="text-gray-300 leading-relaxed mb-6">
+                        <p className="text-white leading-relaxed mb-6">
                             The platform that transforms the salon experience,
                             connecting you with the best professionals through cutting-edge technology
                             and personalized service.
@@ -71,17 +71,17 @@ export default function Footer() {
 
                         {/* Contact Info */}
                         <div className="space-y-3">
-                            <div className="flex items-center text-gray-300">
+                            <div className="flex items-center text-white">
                                 <Phone className="w-4 h-4 mr-3" />
                                 <span className="text-sm">+233 24 000 0000</span>
                             </div>
 
-                            <div className="flex items-center text-gray-300">
+                            <div className="flex items-center text-white">
                                 <Mail className="w-4 h-4 mr-3" />
                                 <span className="text-sm">contact@hairbooking.com</span>
                             </div>
 
-                            <div className="flex items-start text-gray-300">
+                            <div className="flex items-start text-white">
                                 <MapPin className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
                                     Oxford Street, 123, Osu, Accra<br />
@@ -89,7 +89,7 @@ export default function Footer() {
                                 </span>
                             </div>
 
-                            <div className="flex items-start text-gray-300">
+                            <div className="flex items-start text-white">
                                 <Clock className="w-4 h-4 mr-3 mt-0.5" />
                                 <span className="text-sm">
                                     Support: Mon-Fri 8am to 6pm<br />
@@ -107,7 +107,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -155,7 +155,7 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="text-gray-300 hover:text-white transition-colors text-sm"
+                                        className="text-white hover:text-white transition-colors text-sm"
                                     >
                                         {link.name}
                                     </Link>
@@ -172,7 +172,7 @@ export default function Footer() {
                             <h3 className="text-xl font-semibold text-white mb-2">
                                 Stay up to date
                             </h3>
-                            <p className="text-gray-300">
+                            <p className="text-white">
                                 Get beauty tips, exclusive offers and platform news
                             </p>
                         </div>
@@ -181,7 +181,7 @@ export default function Footer() {
                             <input
                                 type="email"
                                 placeholder="Your email address"
-                                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-white focus:outline-none"
+                                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-white focus:border-white focus:outline-none"
                             />
                             <button className="btn-primary whitespace-nowrap">
                                 Subscribe
@@ -196,13 +196,13 @@ export default function Footer() {
                 <div className="container-width section-padding py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         {/* Copyright */}
-                        <div className="text-sm text-gray-400">
+                        <div className="text-sm text-white">
                             © {currentYear} HairBooking. All rights reserved.
                         </div>
 
                         {/* Social Links */}
                         <div className="flex items-center space-x-4">
-                            <span className="text-sm text-gray-400 mr-2">Follow us:</span>
+                            <span className="text-sm text-white mr-2">Follow us:</span>
                             {socialLinks.map((social, index) => (
                                 <Link
                                     key={index}
@@ -210,13 +210,13 @@ export default function Footer() {
                                     className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
                                     aria-label={social.name}
                                 >
-                                    <social.icon className="w-4 h-4 text-gray-300" />
+                                    <social.icon className="w-4 h-4 text-white" />
                                 </Link>
                             ))}
                         </div>
 
                         {/* Made with love */}
-                        <div className="flex items-center text-sm text-gray-400">
+                        <div className="flex items-center text-sm text-white">
                             <span>Made with</span>
                             <Heart className="w-4 h-4 mx-1 text-red-500" />
                             <span>in Accra</span>
