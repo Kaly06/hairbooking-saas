@@ -211,7 +211,7 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Users className="h-5 w-5 text-purple-600" />
-                                Reports de Clients
+                                Client reports
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-3">
@@ -326,7 +326,7 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Building className="h-5 w-5 text-purple-600" />
-                            Comparativo Detalhado por Branch
+                            Detailed comparison by branch
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -376,7 +376,7 @@ export default function EnterpriseReportsPage() {
                                         <td className="py-3 px-4 text-right">89</td>
                                         <td className="py-3 px-4 text-right">
                                             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                                Muito Bom
+                                                Very good
                                             </span>
                                         </td>
                                     </tr>
@@ -451,7 +451,7 @@ export default function EnterpriseReportsPage() {
 
                             <div className="pt-4 border-t border-gray-200">
                                 <button className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                                    Configurar New Reports
+                                    Configure new reports
                                 </button>
                             </div>
                         </CardContent>
@@ -462,7 +462,7 @@ export default function EnterpriseReportsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Target className="h-5 w-5 text-purple-600" />
-                                Insights de IA
+                                AI insights
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -516,7 +516,7 @@ export default function EnterpriseReportsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <FileText className="h-5 w-5 text-purple-600" />
-                            Construtor de Reports Custom
+                            Custom report builder
                         </CardTitle>
                     </CardHeader>
                     <CardContent>

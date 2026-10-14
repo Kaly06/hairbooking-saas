@@ -18,7 +18,7 @@ export default function EnterpriseCommissionsPage() {
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                             <Settings className="h-4 w-4 inline mr-2" />
-                            Configurar Plans
+                            Configure plans
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             Monthly Report
@@ -106,7 +106,7 @@ export default function EnterpriseCommissionsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Trophy className="h-5 w-5 text-purple-600" />
-                            Top 10 Professionals - Commissions do Month
+                            Top 10 Professionals - Commissions this month
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -201,7 +201,7 @@ export default function EnterpriseCommissionsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Target className="h-5 w-5 text-purple-600" />
-                                Estruturas de Commission
+                                Commission structures
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
@@ -405,7 +405,7 @@ export default function EnterpriseCommissionsPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Award className="h-5 w-5 text-purple-600" />
-                                Programas de Incentivo
+                                Incentive programmes
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
@@ -476,7 +476,7 @@ export default function EnterpriseCommissionsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <BarChart3 className="h-5 w-5 text-purple-600" />
-                            Analysis Detalhada de Performance
+                            Detailed performance analysis
                         </CardTitle>
                     </CardHeader>
                     <CardContent>

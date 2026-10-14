@@ -69,7 +69,7 @@ export default function EnterpriseWhiteLabelPage() {
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                                 <Palette className="h-5 w-5 text-purple-600" />
-                                Paleta de Cores
+                                Colour palette
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">

@@ -106,7 +106,7 @@ export default function EnterpriseFinancialPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Building className="h-5 w-5 text-purple-600" />
-                            Performance Financeira por Branch
+                            Financial performance by branch
                         </CardTitle>
                     </CardHeader>
                     <CardContent>

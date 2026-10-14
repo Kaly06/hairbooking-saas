@@ -125,7 +125,7 @@ export default function EnterpriseIntegrationsPage() {
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -157,7 +157,7 @@ export default function EnterpriseIntegrationsPage() {
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -189,7 +189,7 @@ export default function EnterpriseIntegrationsPage() {
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -221,7 +221,7 @@ export default function EnterpriseIntegrationsPage() {
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -253,7 +253,7 @@ export default function EnterpriseIntegrationsPage() {
                                     </div>
                                 </div>
                                 <button className="w-full mt-3 px-3 py-2 border border-gray-200 rounded text-sm hover:bg-gray-50 transition-colors">
-                                    Configurar
+                                    Configure
                                 </button>
                             </div>
 
@@ -349,7 +349,7 @@ export default function EnterpriseIntegrationsPage() {
                                     <h4 className="font-semibold mb-1">Webhook</h4>
                                     <p className="text-sm text-gray-600 mb-3">Custom API</p>
                                     <button className="w-full px-3 py-2 bg-purple-600 text-white rounded text-sm hover:bg-purple-700 transition-colors">
-                                        Configurar
+                                        Configure
                                     </button>
                                 </div>
                             </div>
@@ -372,7 +372,7 @@ export default function EnterpriseIntegrationsPage() {
                                 <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                                     <div>
                                         <p className="font-medium text-sm">GET /api/appointments</p>
-                                        <p className="text-xs text-gray-600">Listar bookings</p>
+                                        <p className="text-xs text-gray-600">List bookings</p>
                                     </div>
                                     <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Active</span>
                                 </div>

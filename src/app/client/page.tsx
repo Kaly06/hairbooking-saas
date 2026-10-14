@@ -664,8 +664,8 @@ export default function ClientBookingPage() {
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <div className="text-lg font-black text-black">Personalizar</div>
-                                                        <div className="text-xs text-gray-500">A partir de {formatUSD(60)}</div>
+                                                        <div className="text-lg font-black text-black">Customise</div>
+                                                        <div className="text-xs text-gray-500">From {formatUSD(60)}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1528,7 +1528,7 @@ export default function ClientBookingPage() {
                                         }`}
                                 >
                                     <Shield className="h-4 sm:h-5 w-4 sm:w-5" />
-                                    <span className="hidden sm:inline">Confirmar e Pay {formatUSD(5)}</span>
+                                    <span className="hidden sm:inline">Confirm and pay {formatUSD(5)}</span>
                                     <span className="sm:hidden">Pay {formatUSD(5)}</span>
                                 </button>
                             </div>

@@ -232,7 +232,7 @@ export default function BookingSuccessPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                     <button className="flex items-center justify-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-purple-300">
                         <Download className="h-5 w-5 text-purple-600" />
-                        <span className="font-medium text-gray-900">Baixar Comprovante</span>
+                        <span className="font-medium text-gray-900">Download receipt</span>
                     </button>
 
                     <button className="flex items-center justify-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-all duration-300 hover:border-blue-300">

@@ -230,7 +230,7 @@ export default function ProfessionalDashboard() {
                         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                             <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
                                 <CreditCard className="w-5 h-5 text-indigo-600 mr-2" />
-                                Commissions dos Professionals
+                                Professional commissions
                             </h3>
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
@@ -279,7 +279,7 @@ export default function ProfessionalDashboard() {
                                 <button className="w-full text-left p-3 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
                                     <div className="flex items-center">
                                         <Smartphone className="w-5 h-5 text-indigo-600 mr-3" />
-                                        <span className="text-sm font-medium text-indigo-900">Personalizar App</span>
+                                        <span className="text-sm font-medium text-indigo-900">Customise app</span>
                                     </div>
                                 </button>
                             </div>
@@ -313,7 +313,7 @@ export default function ProfessionalDashboard() {
                                 </div>
                             </div>
                             <button className="mt-4 bg-white text-purple-600 text-sm font-medium px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors">
-                                Upgrade para Enterprise
+                                Upgrade to Enterprise
                             </button>
                         </div>
                     </div>

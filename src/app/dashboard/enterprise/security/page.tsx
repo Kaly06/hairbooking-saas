@@ -16,7 +16,7 @@ export default function EnterpriseSecurityPage() {
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
-                            Report de Security
+                            Security report
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             Settings
@@ -365,7 +365,7 @@ export default function EnterpriseSecurityPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <FileText className="h-5 w-5 text-purple-600" />
-                            Logs de Security
+                            Security logs
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -436,14 +436,14 @@ export default function EnterpriseSecurityPage() {
                                 </div>
                                 <div className="text-right text-sm text-purple-600">
                                     <p>16:20</p>
-                                    <p>Ontem</p>
+                                    <p>Yesterday</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mt-6 text-center">
                             <button className="px-6 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                                View All os Logs
+                                View all logs
                             </button>
                         </div>
                     </CardContent>

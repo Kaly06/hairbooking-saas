@@ -265,7 +265,7 @@ export default function EnterpriseUnitsPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <BarChart3 className="h-5 w-5 text-purple-600" />
-                            Comparativo de Performance
+                            Performance comparison
                         </CardTitle>
                     </CardHeader>
                     <CardContent>

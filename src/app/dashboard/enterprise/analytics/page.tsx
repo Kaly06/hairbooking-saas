@@ -20,7 +20,7 @@ export default function EnterpriseAnalyticsPage() {
                             Exportar Report
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                            Configurar Dashboard
+                            Configure dashboard
                         </button>
                     </div>
                 </div>

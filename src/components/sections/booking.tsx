@@ -314,7 +314,7 @@ export default function BookingForm() {
 
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Telefone
+                                                Phone
                                             </label>
                                             <input
                                                 type="tel"
@@ -394,7 +394,7 @@ export default function BookingForm() {
                                         onClick={handleBack}
                                         className="btn-secondary"
                                     >
-                                        Voltar
+                                        Back
                                     </button>
                                 )}
 
@@ -410,7 +410,7 @@ export default function BookingForm() {
                                                 (step === 3 && (!formData.date || !formData.time))
                                             }
                                         >
-                                            Continuar
+                                            Continue
                                             <ChevronRight className="w-5 h-5 ml-2" />
                                         </button>
                                     ) : (

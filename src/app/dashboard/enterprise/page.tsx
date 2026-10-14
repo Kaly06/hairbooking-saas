@@ -247,7 +247,7 @@ export default function EnterpriseDashboard() {
                                 ))}
                             </div>
                             <button className="w-full mt-4 bg-purple-50 text-purple-700 py-2 px-4 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
-                                Gerenciar Integrations
+                                Manage integrations
                             </button>
                         </div>
                     </div>

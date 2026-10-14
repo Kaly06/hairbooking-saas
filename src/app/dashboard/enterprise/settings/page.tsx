@@ -16,7 +16,7 @@ export default function EnterpriseSettingsPage() {
                     </div>
                     <div className="flex gap-3">
                         <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                            Save Todas as Settings
+                            Save all settings
                         </button>
                         <button className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                             Exportar Settings
@@ -80,7 +80,7 @@ export default function EnterpriseSettingsPage() {
                                         <span className="font-medium text-blue-900">Administradores</span>
                                         <span className="text-sm bg-blue-200 text-blue-800 px-2 py-1 rounded">5 users</span>
                                     </div>
-                                    <button className="text-sm text-blue-600 hover:text-blue-800">Gerenciar administradores</button>
+                                    <button className="text-sm text-blue-600 hover:text-blue-800">Manage administrators</button>
                                 </div>
 
                                 <div className="p-3 bg-green-50 rounded-lg border border-green-200">
@@ -96,7 +96,7 @@ export default function EnterpriseSettingsPage() {
                                         <span className="font-medium text-purple-900">Professionals</span>
                                         <span className="text-sm bg-purple-200 text-purple-800 px-2 py-1 rounded">47 users</span>
                                     </div>
-                                    <button className="text-sm text-purple-600 hover:text-purple-800">Gerenciar professionals</button>
+                                    <button className="text-sm text-purple-600 hover:text-purple-800">Manage professionals</button>
                                 </div>
 
                                 <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
@@ -104,7 +104,7 @@ export default function EnterpriseSettingsPage() {
                                         <span className="font-medium text-orange-900">Atendentes</span>
                                         <span className="text-sm bg-orange-200 text-orange-800 px-2 py-1 rounded">18 users</span>
                                     </div>
-                                    <button className="text-sm text-orange-600 hover:text-orange-800">Gerenciar atendentes</button>
+                                    <button className="text-sm text-orange-600 hover:text-orange-800">Manage staff</button>
                                 </div>
                             </div>
                         </CardContent>
@@ -133,7 +133,7 @@ export default function EnterpriseSettingsPage() {
                                         <Key className="h-4 w-4 text-yellow-600" />
                                         <span className="text-sm font-medium text-yellow-900">Password Policies</span>
                                     </div>
-                                    <button className="bg-yellow-600 text-white px-3 py-1 rounded text-sm">Configurar</button>
+                                    <button className="bg-yellow-600 text-white px-3 py-1 rounded text-sm">Configure</button>
                                 </div>
 
                                 <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
@@ -311,7 +311,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Configured</span>
                                         </div>
                                         <p className="text-sm text-gray-600 mb-2">Real-time events</p>
-                                        <button className="text-sm text-blue-600 hover:text-blue-800">Configurar endpoints</button>
+                                        <button className="text-sm text-blue-600 hover:text-blue-800">Configure endpoints</button>
                                     </div>
 
                                     <div className="p-3 bg-gray-50 border border-gray-200 rounded-lg">
@@ -393,7 +393,7 @@ export default function EnterpriseSettingsPage() {
                                             <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded">Available</span>
                                         </div>
                                         <p className="text-sm text-purple-700">Custom iOS & Android apps</p>
-                                        <button className="text-sm text-purple-600 hover:text-purple-800 mt-1">Configurar apps</button>
+                                        <button className="text-sm text-purple-600 hover:text-purple-800 mt-1">Configure apps</button>
                                     </div>
                                 </div>
                             </div>
@@ -419,7 +419,7 @@ export default function EnterpriseSettingsPage() {
                                     <p className="text-sm text-green-700">Last backup: Today, 02:15</p>
                                 </div>
                                 <button className="w-full px-3 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700">
-                                    Configurar Backup
+                                    Configure backup
                                 </button>
                             </div>
 

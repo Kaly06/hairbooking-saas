@@ -159,7 +159,7 @@ export default function ProfessionalMobileApp() {
                         </button>
                         <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center font-medium">
                             <Settings className="w-5 h-5 mr-2" />
-                            Configurar
+                            Configure
                         </button>
                     </div>
                 </div>
@@ -290,7 +290,7 @@ export default function ProfessionalMobileApp() {
                             <div className="text-center mt-6">
                                 <button className="bg-gray-100 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors flex items-center mx-auto">
                                     <QrCode className="w-4 h-4 mr-2" />
-                                    QR Code para Download
+                                    QR code to download
                                 </button>
                             </div>
                         </div>
@@ -320,7 +320,7 @@ export default function ProfessionalMobileApp() {
                                         <Settings className="w-6 h-6 text-purple-600" />
                                     </div>
                                     <p className="font-medium text-gray-900 mb-1">Settings</p>
-                                    <p className="text-sm text-gray-600">Personalizar app</p>
+                                    <p className="text-sm text-gray-600">Customise app</p>
                                 </button>
 
                                 <button className="p-6 border border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-colors text-left group">
@@ -341,7 +341,7 @@ export default function ProfessionalMobileApp() {
                             <h3 className="text-xl font-semibold text-gray-900">App features</h3>
                             <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors flex items-center">
                                 <Settings className="w-4 h-4 mr-2" />
-                                Gerenciar
+                                Manage
                             </button>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
