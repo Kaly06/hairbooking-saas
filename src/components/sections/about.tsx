@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const CARD_WIDTH = 340;
 const CARD_GAP = 50;
-const AUTOPLAY_MS = 3000;
+const AUTOPLAY_MS = 1500;
 
 export default function About() {
     const [active, setActive] = useState(0);
@@ -122,7 +122,7 @@ export default function About() {
                                     transform: `translate(-50%, -50%) translateX(${offset * (CARD_WIDTH + CARD_GAP)}px) scale(${offset === 0 ? 1 : 0.8}) rotateY(${-offset * 15}deg)`,
                                     opacity: isVisible ? (offset === 0 ? 1 : 0.5) : 0,
                                     zIndex: total - distance,
-                                    transition: "transform 0.8s ease, opacity 0.8s ease",
+                                    transition: "transform 0.5s ease, opacity 0.5s ease",
                                     willChange: "transform, opacity",
                                     pointerEvents: offset === 0 ? "auto" : "none",
                                 }}
